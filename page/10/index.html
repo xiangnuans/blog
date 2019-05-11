@@ -4,7 +4,17 @@
 
   
 
+<!--Google adSense start-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9635448289270412",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!--Google Adsense end-->
 
+<!-- Google AdSense end -->
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
@@ -18,8 +28,6 @@
 
 
 
-  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
-
 
 
 
@@ -34,9 +42,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -52,35 +58,17 @@
   
 
   
-    
-      
-    
 
-    
+  
+
   
 
   
 
   
     
-      
     
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,20 +76,16 @@
 
 
 
-  
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
 
 
 
@@ -113,15 +97,15 @@
 
 
 
-<meta name="description" content="胡编一通，乱写一气">
+<meta name="description" content="数据采集、数据处理、机器学习。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="IIssNan's Notes">
-<meta property="og:url" content="http://notes.iissnan.com/page/10/index.html">
-<meta property="og:site_name" content="IIssNan's Notes">
-<meta property="og:description" content="胡编一通，乱写一气">
+<meta property="og:title" content="coco的博客">
+<meta property="og:url" content="https://zhangslob.github.io/page/10/index.html">
+<meta property="og:site_name" content="coco的博客">
+<meta property="og:description" content="数据采集、数据处理、机器学习。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IIssNan's Notes">
-<meta name="twitter:description" content="胡编一通，乱写一气">
+<meta name="twitter:title" content="coco的博客">
+<meta name="twitter:description" content="数据采集、数据处理、机器学习。">
 
 
 
@@ -130,33 +114,35 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
-      applicationID: 'H27WMII02H',
-      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
-      indexName: 'notes',
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://notes.iissnan.com/page/10/"/>
+  <link rel="canonical" href="https://zhangslob.github.io/page/10/"/>
 
 
 
 
 
-  <title> IIssNan's Notes </title>
+  <title> coco的博客 </title>
 </head>
+
+
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -166,16 +152,6 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 
 
@@ -190,11 +166,11 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
-
+    <a href="https://github.com/zhangslob"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -203,12 +179,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">IIssNan's Notes</span>
+        <span class="site-title">coco的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Quick notes</p>
+        <p class="site-subtitle">人生苦短，我学Python</p>
       
   </div>
 
@@ -238,6 +214,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -259,47 +255,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -324,16 +282,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/reading-list-2014-11-17/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2017/03/14/Python练习第九题，爬取贴吧图片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -346,8 +304,8 @@
             
               
                 
-                <a class="post-title-link" href="/2014/reading-list-2014-11-17/" itemprop="url">
-                  今日阅读列表
+                <a class="post-title-link" href="/2017/03/14/Python练习第九题，爬取贴吧图片/" itemprop="url">
+                  Python练习第九题，爬取贴吧图片
                 </a>
               
             
@@ -363,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-17T09:55:14+08:00">
-                2014-11-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-14T19:56:07+08:00">
+                2017-03-14
               </time>
             
 
@@ -374,47 +332,14 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reading-list/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading List</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2014/reading-list-2014-11-17/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2014/reading-list-2014-11-17/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
           
           
-             <span id="/2014/reading-list-2014-11-17/" class="leancloud_visitors" data-flag-title="今日阅读列表">
+             <span id="/2017/03/14/Python练习第九题，爬取贴吧图片/" class="leancloud_visitors" data-flag-title="Python练习第九题，爬取贴吧图片">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -444,16 +369,16 @@
 
       
         
-          
-            <ul>
-<li><a href="http://www.w3.org/TR/css-variables/" target="_blank" rel="external">CSS Custom Properties for Cascading Variables Module Level 1</a></li>
-<li><a href="https://github.com/segmentio/myth" target="_blank" rel="external">Myth - A preprocessor lets you write pure CSS</a></li>
-<li><a href="http://browserify.org/" target="_blank" rel="external">Broswerrify</a></li>
-<li><a href="http://thesassway.com/beginner/how-to-structure-a-sass-project" target="_blank" rel="external">How to structure a Sass project</a></li>
-<li><a href="https://medium.com/@wanderingmatt/a-little-structure-for-your-large-sass-project-7fe19ab647fa" target="_blank" rel="external">A Little Structure For Your Large Sass Project</a></li>
-</ul>
-
-          
+          <pre><code>这是coco的第四篇原创文章
+</code></pre><h1 id="一、问题：用-Python爬取妹子图片"><a href="#一、问题：用-Python爬取妹子图片" class="headerlink" title="一、问题：用 Python爬取妹子图片 :)"></a>一、问题：用 Python爬取妹子图片 :)</h1><p><img src="http://i.imgur.com/MwvaPyU.jpg" alt=""></p>
+<p><a href="http://tieba.baidu.com/p/2166231880">http://tieba.baidu.com/p/2166231880</a><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/14/Python练习第九题，爬取贴吧图片/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -466,172 +391,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-link " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/reading-list-2014-11-16/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-              <a class="post-title-link post-title-link-external" target="_blank" href="http://doc.rust-lang.org/guide.html" itemprop="url">
-                The Rust Guide
-                <i class="fa fa-external-link"></i>
-              </a>
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-16T00:14:15+08:00">
-                2014-11-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reading-list/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading List</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2014/reading-list-2014-11-16/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2014/reading-list-2014-11-16/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2014/reading-list-2014-11-16/" class="leancloud_visitors" data-flag-title="The Rust Guide">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -658,16 +417,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/reading-list-2014-11-14/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2017/03/06/Python练习第七题，我要倒过来看/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -680,8 +439,8 @@
             
               
                 
-                <a class="post-title-link" href="/2014/reading-list-2014-11-14/" itemprop="url">
-                  今日阅读列表
+                <a class="post-title-link" href="/2017/03/06/Python练习第七题，我要倒过来看/" itemprop="url">
+                  Python练习第七题，我要倒过来看
                 </a>
               
             
@@ -697,8 +456,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-14T13:49:41+08:00">
-                2014-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-06T18:47:46+08:00">
+                2017-03-06
               </time>
             
 
@@ -708,47 +467,14 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reading-list/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading List</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2014/reading-list-2014-11-14/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2014/reading-list-2014-11-14/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
           
           
-             <span id="/2014/reading-list-2014-11-14/" class="leancloud_visitors" data-flag-title="今日阅读列表">
+             <span id="/2017/03/06/Python练习第七题，我要倒过来看/" class="leancloud_visitors" data-flag-title="Python练习第七题，我要倒过来看">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -778,15 +504,16 @@
 
       
         
-          
-            <ul>
-<li><a href="http://markdotto.com/2014/07/23/githubs-css/" target="_blank" rel="external">GitHub’s CSS - @mdo</a></li>
-<li><a href="http://tobiasahlin.com/blog/css-trick-animating-link-underlines/" target="_blank" rel="external">Animating Link Underlines</a></li>
-<li><a href="http://www.typogui.de/" target="_blank" rel="external">A Pocket Guide to Master Every Day’s Typographic Adventures</a></li>
-<li><a href="http://lesscss.org/" target="_blank" rel="external">LESS: Getting Started</a></li>
-</ul>
-
-          
+          <pre><code>这是coco的第三篇原创文章
+</code></pre><p><img src="http://i.imgur.com/oGUF8CL.jpg" alt=""></p>
+<h1 id="一、Challenge"><a href="#一、Challenge" class="headerlink" title="一、Challenge"></a>一、Challenge</h1><p>Using the Python language, have the function FirstReverse(str) take the str parameter being passed and return the string in reversed（颠倒的） order. For example: if the input string is “Hello World and Coders” then your program should return the string sredoC dna dlroW olleH.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/06/Python练习第七题，我要倒过来看/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -799,9 +526,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -828,16 +552,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/sticky-footer/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -850,8 +574,8 @@
             
               
                 
-                <a class="post-title-link" href="/2014/sticky-footer/" itemprop="url">
-                  CSS Trick: Sticky Footer
+                <a class="post-title-link" href="/2017/02/28/教你免费搭建个人博客，Hexo-Github/" itemprop="url">
+                  教你免费搭建个人博客，Hexo&Github
                 </a>
               
             
@@ -867,8 +591,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-14T10:06:28+08:00">
-                2014-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-28T20:01:50+08:00">
+                2017-02-28
               </time>
             
 
@@ -881,22 +605,11 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2014/sticky-footer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2014/sticky-footer/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
-             <span id="/2014/sticky-footer/" class="leancloud_visitors" data-flag-title="CSS Trick: Sticky Footer">
+             <span id="/2017/02/28/教你免费搭建个人博客，Hexo-Github/" class="leancloud_visitors" data-flag-title="教你免费搭建个人博客，Hexo&Github">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -926,48 +639,17 @@
 
       
         
-          
-            <p>A sticky footer means the footer is always sticky to bottom and comes after the content.</p>
-<p class="translation-zh translation">固定的页脚是指页脚紧跟在内容区域后面，并且一直处于页面的底部。</p>
-
-
-<p>That is to say, the position of Footer is independent with content’s height, it always sticky to the bottom of the page:</p>
-<p class="translation-zh translation">也就是说，无论内容的多少都不影响到Footer的位置，Footer总是出现在页面的最底部：</p>
-
-
-<ul>
-<li><p>When height of content is greater than viewport’s height, Footer follows the content, so it won’t appear on the first screen. </p>
-<p class="translation-zh translation">当页面的内容的高度大于Viewport的高度时，Footer的位置在内容之后，首屏是无法看见的；</p>
-</li>
-<li><p>When hegiht of content is less than viewport’s height, Footer still appear on the bottom of page.</p>
-<p class="translation-zh translation">当页面的内容的高度少于Viewport的高度时，Footer依然保持在Viewport的底部；</p>
-
-</li>
-</ul>
-<p>Obviously, <code>position: fixed</code> does not suite for this case. Elements with <code>position: fixed</code> use viewport as the reference, so these elements will always appear at the bottom of viewport whatever the content’s height is. This does not meet the first requirment.</p>
-<p class="translation-zh translation">显然，<code>position: fixed</code>并不适用于当前的场景，因为<code>fixed</code>定位的元素是以viewport作为参照物，所以在<code>fixed</code>的情况下，无论内容多于少，这些元素总是出现在浏览器窗口的底部，这并不满足需求的第一个要求。</p>
-
-<p>Rule <code>position</code> has two value to take elements out of normal flow, the first we just talk about, is <code>fixed</code>, the other one is <code>absolute</code>. Elements’s position with <code>absolute</code> is relative to thier parent whose <code>position</code> value is not <code>static</code>. So we can use this feature to design a container, it meets the following conditions:</p>
-<p class="translation-zh translation">元素脱离文档流的定位除了<code>fixed</code>以外，还有一个是<code>absolute</code>。使用<code>absolute</code>定位的元素是以最近一个<code>position</code>属性不是<code>static</code>的父元素作为参照物。此时，就可以设计一个Footer的参照容器，这个容器满足以下条件：</p>
-
-<ul>
-<li><p>It should Wrap the content and Footer.<br></p><p class="translation-zh translation">包含内容和Footer.</p>
-</li>
-<li><p>It’s minimum height should be 100 percent of viewport.<br></p><p class="translation-zh translation">容器高度至少是viewport的100%.</p>
-</li>
-</ul>
-<p>For this container, it will be automaticlly expand when the content’s height is bigger than viewport’s; while the content’s height is less than viewport’s, the container still as tall as viewport so that Footer will locate at the bottom of the viewport.</p>
-<p class="translation-zh translation">满足以上条件的容器，在页面内容高度大于viewport的高度时，容器自动被撑开；当页面内容的高度小于viewport的高度时，自动取viewport的高度，从而保证Footer还是在页面的底部。</p>
-
-<p>Enough theory, let’s take a look at the code.</p>
-<p class="translation-zh translation">讨论完足够的理论之后，让我们来看看代码。</p>
-
-
-<p>HTML</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"container"</span>&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"header"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"content-wrap"</span>&gt;</div><div class="line">        &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"content"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">    &lt;/<span class="keyword">div</span>&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">"footer"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
-<p>CSS</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span> &#123; </div><div class="line">    <span class="comment">/* For container-wrap to inherit */</span></div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.container-wrap</span> &#123;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">min-height</span>: <span class="number">100%</span>; <span class="comment">/* </span></div><div class="line">&#125;</div><div class="line"></div><div class="line">.content &#123;</div><div class="line">    /* The space for footer */</div><div class="line">    <span class="attribute">padding-bottom</span>: $footerHeight;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.footer</span> &#123;</div><div class="line">    <span class="attribute">position</span>: absolute;</div><div class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">height</span>: footerHeight;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          <pre><code>这是coco的第二篇原创文章
+</code></pre><blockquote>
+<p>说在前面：</p>
+<p>为什么自己搭建博客，知乎不行吗？<br>可以看看刘未鹏<a href="http://mindhacks.cn/2009/02/15/why-you-should-start-blogging-now/"> | Mind Hacks</a>，前些天发布了某篇文章应该是被人举报了，结果知乎就删了。有自己的博客自由，自在。更多请看为什么要自建博客？<a href="https://www.zhihu.com/question/19916345">https://www.zhihu.com/question/19916345</a><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/28/教你免费搭建个人博客，Hexo-Github/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -980,9 +662,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -1009,16 +688,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/reading-list-2014-11-13/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2017/02/26/利用HEXO搭建的博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -1031,8 +710,8 @@
             
               
                 
-                <a class="post-title-link" href="/2014/reading-list-2014-11-13/" itemprop="url">
-                  今日阅读列表
+                <a class="post-title-link" href="/2017/02/26/利用HEXO搭建的博客/" itemprop="url">
+                  利用HEXO搭建的博客及Markdown语法介绍
                 </a>
               
             
@@ -1048,8 +727,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-13T11:15:21+08:00">
-                2014-11-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-26T17:20:57+08:00">
+                2017-02-26
               </time>
             
 
@@ -1059,47 +738,14 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reading-list/" itemprop="url" rel="index">
-                    <span itemprop="name">Reading List</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2014/reading-list-2014-11-13/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2014/reading-list-2014-11-13/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
           
           
-             <span id="/2014/reading-list-2014-11-13/" class="leancloud_visitors" data-flag-title="今日阅读列表">
+             <span id="/2017/02/26/利用HEXO搭建的博客/" class="leancloud_visitors" data-flag-title="利用HEXO搭建的博客及Markdown语法介绍">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1129,13 +775,16 @@
 
       
         
-          
-            <ul>
-<li><a href="http://eisenbergeffect.bluespire.com/all-about-angular-2-0" target="_blank" rel="external">All About Angular 2.0</a></li>
-<li><a href="https://speakerdeck.com/addyosmani/front-end-tooling-workflows" target="_blank" rel="external">Front-end Tooling Workflows - Addy Osmani</a></li>
-</ul>
-
-          
+          <pre><code>这是coco的第一篇原创文章
+</code></pre><h1 id="Markdown的一些语法"><a href="#Markdown的一些语法" class="headerlink" title="Markdown的一些语法"></a>Markdown的一些语法</h1><blockquote>
+<p>花了不少时间。终于把自己的第一个博客搭建成功了。但是遇到新问题，发表文章需要使用Markdown语法，下面就来说说。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/02/26/利用HEXO搭建的博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1148,9 +797,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -1172,17 +818,16 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span>
   </nav>
 
 
-
+          
           </div>
           
 
 
           
-
         </div>
         
           
@@ -1205,41 +850,37 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/m3.jpg"
-               alt="IIssNan" />
-          <p class="site-author-name" itemprop="name">IIssNan</p>
+               src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg"
+               alt="coco" />
+          <p class="site-author-name" itemprop="name">coco</p>
            
-              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+              <p class="site-description motion-element" itemprop="description">数据采集、数据处理、机器学习。</p>
           
         </div>
         <nav class="site-state motion-element">
-
+        
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-count">94</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+              <a href="/categories">
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">111</span>
+              <a href="/tags">
+                <span class="site-state-item-count">80</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1248,19 +889,12 @@
         </nav>
 
         
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                <a href="https://github.com/zhangslob" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -1269,29 +903,29 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                <a href="mailto:zhangslob@gmail.com" target="_blank" title="E-Mail">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  豆瓣
+                  E-Mail
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/cuishite" target="_blank" title="知乎">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
                   知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.quora.com/profile/Zhangslob" target="_blank" title="Quora">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Quora
                 </a>
               </span>
             
@@ -1323,14 +957,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
+您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
+
+<div class="copyright" >
   
-  &copy;  2011 - 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+  <span class="author" itemprop="copyrightHolder">coco</span>
 </div>
 
 
@@ -1346,6 +986,12 @@
 </div>
 
 
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
         
 
         
@@ -1356,11 +1002,9 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
     
-
+    
   </div>
 
   
@@ -1385,22 +1029,22 @@
 
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
@@ -1434,13 +1078,6 @@
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -1469,33 +1106,16 @@
 
 
 
-
-
-
-  
-
-
-
-
   
   
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
 
   
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
-
-
 
   
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -1604,7 +1224,8 @@
 
   
 
+
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

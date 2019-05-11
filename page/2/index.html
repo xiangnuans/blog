@@ -4,7 +4,17 @@
 
   
 
+<!--Google adSense start-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9635448289270412",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!--Google Adsense end-->
 
+<!-- Google AdSense end -->
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
@@ -18,8 +28,6 @@
 
 
 
-  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
-
 
 
 
@@ -34,9 +42,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -52,35 +58,17 @@
   
 
   
-    
-      
-    
 
-    
+  
+
   
 
   
 
   
     
-      
     
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,20 +76,16 @@
 
 
 
-  
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
 
 
 
@@ -113,15 +97,15 @@
 
 
 
-<meta name="description" content="胡编一通，乱写一气">
+<meta name="description" content="数据采集、数据处理、机器学习。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="IIssNan's Notes">
-<meta property="og:url" content="http://notes.iissnan.com/page/2/index.html">
-<meta property="og:site_name" content="IIssNan's Notes">
-<meta property="og:description" content="胡编一通，乱写一气">
+<meta property="og:title" content="coco的博客">
+<meta property="og:url" content="https://zhangslob.github.io/page/2/index.html">
+<meta property="og:site_name" content="coco的博客">
+<meta property="og:description" content="数据采集、数据处理、机器学习。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IIssNan's Notes">
-<meta name="twitter:description" content="胡编一通，乱写一气">
+<meta name="twitter:title" content="coco的博客">
+<meta name="twitter:description" content="数据采集、数据处理、机器学习。">
 
 
 
@@ -130,33 +114,35 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
-      applicationID: 'H27WMII02H',
-      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
-      indexName: 'notes',
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://notes.iissnan.com/page/2/"/>
+  <link rel="canonical" href="https://zhangslob.github.io/page/2/"/>
 
 
 
 
 
-  <title> IIssNan's Notes </title>
+  <title> coco的博客 </title>
 </head>
+
+
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -166,16 +152,6 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 
 
@@ -190,11 +166,11 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container one-collumn sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
-
+    <a href="https://github.com/zhangslob"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -203,12 +179,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">IIssNan's Notes</span>
+        <span class="site-title">coco的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Quick notes</p>
+        <p class="site-subtitle">人生苦短，我学Python</p>
       
   </div>
 
@@ -238,6 +214,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -259,47 +255,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -324,16 +282,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/angularjs-application-unit-testing-getting-stated/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2019/01/22/刷题之合并K个排序链表/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -346,8 +304,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/angularjs-application-unit-testing-getting-stated/" itemprop="url">
-                  AngularJS 应用单元测试起步
+                <a class="post-title-link" href="/2019/01/22/刷题之合并K个排序链表/" itemprop="url">
+                  刷题之合并K个排序链表
                 </a>
               
             
@@ -363,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-06-05T15:44:49+08:00">
-                2015-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-22T20:51:17+08:00">
+                2019-01-22
               </time>
             
 
@@ -374,25 +332,36 @@
           </span>
 
           
-
-          
+            <span class="post-category" >
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/angularjs-application-unit-testing-getting-stated/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/angularjs-application-unit-testing-getting-stated/" itemprop="commentCount"></span>
-                </a>
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
               </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
             
           
 
           
           
-             <span id="/2015/angularjs-application-unit-testing-getting-stated/" class="leancloud_visitors" data-flag-title="AngularJS 应用单元测试起步">
+             <span id="/2019/01/22/刷题之合并K个排序链表/" class="leancloud_visitors" data-flag-title="刷题之合并K个排序链表">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -422,13 +391,12 @@
 
       
         
-          <p>AngularJS 很重视测试，所以提供了很多特性使得编写测试变得更容易。AngularJS 应用的单元测试与普通的 JavaScript 应用测试有些不同。</p>
-<p>AngularJS 应用是以 module（模块）为单位来组织应用，将不同的功能放进各自的模块。测试可以从整个应用级别，或者从特定的模块开始。正是由于测试可以从模块开始，在测试的时候需要指定引用的模块。</p>
-<p>AngularJS 应用在启动的时候，会寻找 <code>ng-app</code> 指定的模块，而后创建一个 <code>$rootScope</code> 以及一个管理依赖的 <code>$injector</code>，而后依赖将通过 <code>$injector</code> 自动注入。在测试的时候，需要手动处理这个过程。因为在编写测试的时候，希望的是能够进行单元性的测试，能够针对特定的模块进行测试。所以在编写 AngularJS 测试的时候，我们需要手动去引用某个模块 ，同时手动创建 <code>$rootScope</code> 和手动引入依赖。</p>
-<p>AngularJS 提供了 <a href="https://docs.angularjs.org/api/ngMock">ngModule</a> 这个模块，包含一些方法用来处理这个过程。这个过程主要使用到的是两个方法，分别是 <code>module</code> 以及 <code>inject</code> 方法。前者用于引入模块，后者用于处理依赖。例如：</p>
+          <pre><code>这是coco的第八十四篇原创文章
+</code></pre><p>拼命刷题  (๑• . •๑)</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fzfnohkg6ej30w00u0n2q.jpg" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/angularjs-application-unit-testing-getting-stated/" rel="contents">
+            <a class="btn" href="/2019/01/22/刷题之合并K个排序链表/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -445,9 +413,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -474,16 +439,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/interview/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2019/01/16/Golang写爬虫/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -496,8 +461,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/interview/" itemprop="url">
-                  希桅的第一次面试
+                <a class="post-title-link" href="/2019/01/16/Golang写爬虫/" itemprop="url">
+                  用Golang写爬虫（一）
                 </a>
               
             
@@ -513,8 +478,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-23T12:52:58+08:00">
-                2015-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-16T15:38:28+08:00">
+                2019-01-16
               </time>
             
 
@@ -536,8 +501,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/叙事高手/" itemprop="url" rel="index">
-                    <span itemprop="name">叙事高手</span>
+                  <a href="/categories/Golang/" itemprop="url" rel="index">
+                    <span itemprop="name">Golang</span>
                   </a>
                 </span>
 
@@ -549,22 +514,11 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/interview/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/interview/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
-             <span id="/2015/interview/" class="leancloud_visitors" data-flag-title="希桅的第一次面试">
+             <span id="/2019/01/16/Golang写爬虫/" class="leancloud_visitors" data-flag-title="用Golang写爬虫（一）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -594,14 +548,12 @@
 
       
         
-          <p>路上车来车往。“红灯停绿灯行，这个世界能够一致的规则貌似不多”，希桅望着车窗天马行空的想着。</p>
-<p>世界需要规则，但同时又不能完全遵行规则。这本身就是一件多么矛盾的事情。中庸之道只是一个结论，这个结论的推进过程估计充斥着各种矛盾的上下波动。时期不同，环境不同，心态不同。同样的条件背景，有人追求本质极致，有人追求无为而治。微观变数聚集而成宏观不变。</p>
-<p>希桅是一个乐观主义差不多派，他的乐观也是差不多的。这个时候，他正在车上，去往一场面试。在车上他胡乱的想着一些不着边际的事情，完全没有为接下来的面试考虑。希桅虽然性格优柔寡断，但他有船到桥头自然直，以及抱佛脚不够优雅两个护盾驱使他表现的有那么点从容。</p>
-<p>学校的课希桅仅上了开学第一节，领了新书后再没有踏过教室的门。既然闲着也是闲着，于是他决定出去找份工做，今天正是他的第一次面试。与往常一样，他睡到快中午。然后草草地洗过，草草地吃过被忽略的早餐，然后悠然地出发。坐公车对他来说是一件愉快的事情，在公车上他可以无聊地想一些无聊的事情来打发无聊。</p>
-<p>准时一词绝对不能用在希桅身上，而今天他意外的提前到了面试的公司。想来，第一次面试对于他来说还是比较重大的。接待他的是一个年轻的女孩，估计二十来岁，给希桅引到一间办公室并倒了杯水就此消失不见。</p>
+          <pre><code>这是coco的第八十三篇原创文章
+</code></pre><p>新的旅程开始了  (๑• . •๑)</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fz8qeqbn5ej30u00ulq74.jpg" alt=""></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2015/interview/" rel="contents">
+            <a class="btn" href="/2019/01/16/Golang写爬虫/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -618,9 +570,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -647,16 +596,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/questions-in-writing/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2019/01/14/Python重试的多重方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -669,8 +618,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/questions-in-writing/" itemprop="url">
-                  关于如何写作的知乎问答
+                <a class="post-title-link" href="/2019/01/14/Python重试的多重方法/" itemprop="url">
+                  Python重试的多重方法
                 </a>
               
             
@@ -686,8 +635,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-17T12:32:01+08:00">
-                2015-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-14T18:56:03+08:00">
+                2019-01-14
               </time>
             
 
@@ -709,8 +658,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/叙事高手/" itemprop="url" rel="index">
-                    <span itemprop="name">叙事高手</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -722,22 +671,11 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/questions-in-writing/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/questions-in-writing/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
-             <span id="/2015/questions-in-writing/" class="leancloud_visitors" data-flag-title="关于如何写作的知乎问答">
+             <span id="/2019/01/14/Python重试的多重方法/" class="leancloud_visitors" data-flag-title="Python重试的多重方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -767,33 +705,16 @@
 
       
         
-          
-            <p>如何写出 <strong>信手拈来</strong>、<strong>惊鸿一瞥</strong>、<strong>深入其境</strong>、<strong>欲罢不能</strong> 等等等等的文章？</p>
-<ul>
-<li><a href="http://www.zhihu.com/question/27969484" target="_blank" rel="external">对于新手来讲，写小说要做好哪些准备？</a></li>
-<li><a href="http://www.zhihu.com/question/21845666" target="_blank" rel="external">新手写小说常会陷入哪些误区？</a></li>
-<li><a href="http://www.zhihu.com/question/20815158" target="_blank" rel="external">什么叫做文字的张力？</a></li>
-<li><a href="http://www.zhihu.com/question/22411485" target="_blank" rel="external">如何把人物写得立体？</a></li>
-<li><a href="http://www.zhihu.com/question/28102971" target="_blank" rel="external">如何用 150 字写出一个让人欲罢不能的开头？</a></li>
-<li><a href="http://www.zhihu.com/question/22460344" target="_blank" rel="external">作家都是如何提高构思能力的？</a></li>
-<li><a href="http://www.zhihu.com/question/23820465" target="_blank" rel="external">如何写好一部小说的情色部分？</a></li>
-<li><a href="http://www.zhihu.com/question/26395133" target="_blank" rel="external">怎样才算文笔好？</a></li>
-<li><a href="http://www.zhihu.com/question/19591218" target="_blank" rel="external">怎样提升一个人的文笔？</a></li>
-<li><a href="http://www.zhihu.com/question/22576459" target="_blank" rel="external">写作过程中如何控制节奏？</a></li>
-<li><a href="http://www.zhihu.com/question/21306861" target="_blank" rel="external">如何创作一个多线叙事结构？</a></li>
-</ul>
-<p>扩展视野，乔老爷的脑洞：</p>
-<ul>
-<li><a href="http://www.zhihu.com/question/25148516" target="_blank" rel="external">为什么明知道故事是编的，人们还是那么在乎结局？</a></li>
-<li><a href="http://www.zhihu.com/question/28548133" target="_blank" rel="external">怎样将《喜羊羊与灰太狼》写出《冰与火之歌》的感觉？</a></li>
-<li><a href="http://www.zhihu.com/question/21771525" target="_blank" rel="external">有哪些美哭你的句子？</a></li>
-<li><a href="http://www.zhihu.com/question/20121040" target="_blank" rel="external">你看过文笔最美的书是什么？</a></li>
-<li><a href="http://www.zhihu.com/question/27073171" target="_blank" rel="external">如何把平常的事物写出恐怖的感觉？</a></li>
-</ul>
+          <p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fz6fuu2fq0j30tw0wen15.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第八十二篇原创文章</div></pre></td></tr></table></figure>
 <hr>
-<p>集大家之成，悟小家之道。取法乎上，得乎其中。</p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/14/Python重试的多重方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -806,9 +727,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -835,16 +753,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/ten-years/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2019/01/03/pyspark操作MongoDB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -857,8 +775,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/ten-years/" itemprop="url">
-                  十年
+                <a class="post-title-link" href="/2019/01/03/pyspark操作MongoDB/" itemprop="url">
+                  pyspark操作MongoDB
                 </a>
               
             
@@ -874,8 +792,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-08T07:50:08+08:00">
-                2015-03-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T18:31:23+08:00">
+                2019-01-03
               </time>
             
 
@@ -897,8 +815,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/spark/" itemprop="url" rel="index">
+                    <span itemprop="name">spark</span>
                   </a>
                 </span>
 
@@ -910,22 +828,11 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/ten-years/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/ten-years/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
-             <span id="/2015/ten-years/" class="leancloud_visitors" data-flag-title="十年">
+             <span id="/2019/01/03/pyspark操作MongoDB/" class="leancloud_visitors" data-flag-title="pyspark操作MongoDB">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -955,13 +862,16 @@
 
       
         
-          
-            <p>昨日之事已在风中冷却，明天的回忆会不会被忘却？我想在这黑暗的城市上空飞行，看看灯火里别人的故事是否也如此的彷徨？</p>
-<p>千家灯火万家难。望着他人的幸福，徒生向往；注目他人的难处，油然怜悯。他们时而欢笑，时而落泪。因为小事而倍感幸福，因为小事而万分感伤。</p>
-<p>那些绽放如花的笑容，那些泪洒如雨的忧伤，都随着时间的流逝或被遗忘，或被掩藏。万物皆无法摆脱时间的摆弄。时间是一个随意的雕刻家，雕塑着一幕幕的喜怒哀乐。</p>
-<p>落寞一幕无人视，繁华一曲谁人听。半生浮萍，一世漂泊，肝肠寸断，所为几何？</p>
-
-          
+          <p>pyspark对mongo数据库的基本操作  (๑• . •๑)</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fytrgust8kj318i0u0q8c.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第八十一篇原创文章</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/03/pyspark操作MongoDB/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -974,9 +884,6 @@
       
     </div>
 
-    <div>
-      
-    </div>
 
     <footer class="post-footer">
       
@@ -1003,16 +910,16 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/station/">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/12/21/Chrome断点JS寻找淘宝签名sign/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="name" content="coco">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/m3.jpg">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IIssNan's Notes">
+      <meta itemprop="name" content="coco的博客">
     </span>
 
     
@@ -1025,8 +932,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/station/" itemprop="url">
-                  车站
+                <a class="post-title-link" href="/2018/12/21/Chrome断点JS寻找淘宝签名sign/" itemprop="url">
+                  Chrome断点JS寻找淘宝签名sign
                 </a>
               
             
@@ -1042,8 +949,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-03-05T21:29:38+08:00">
-                2015-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-21T18:45:00+08:00">
+                2018-12-21
               </time>
             
 
@@ -1065,8 +972,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/叙事高手/" itemprop="url" rel="index">
-                    <span itemprop="name">叙事高手</span>
+                  <a href="/categories/解密/" itemprop="url" rel="index">
+                    <span itemprop="name">解密</span>
                   </a>
                 </span>
 
@@ -1078,22 +985,11 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/station/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/station/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
           
-             <span id="/2015/station/" class="leancloud_visitors" data-flag-title="车站">
+             <span id="/2018/12/21/Chrome断点JS寻找淘宝签名sign/" class="leancloud_visitors" data-flag-title="Chrome断点JS寻找淘宝签名sign">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1123,16 +1019,16 @@
 
       
         
-          
-            <p>希桅的性格是犹豫柔断型的。这一天是周日，他与月杉走在人来人往的车站附近。他们手牵着手漫无目的的走着，周边都是匆匆忙忙赶车的人群。他们缓慢的脚步使得他们与周围人群格格不入。</p>
-<p>这已经不记得是第几个他们两人的周末。他们在这个二级城市里念大学，但是两所大学之间还有着将近两个小时的车程。每个周末他们都早早的出来相聚，走遍这个城市中心的每个角落。尽管每次都走上一整天，直到走的脚都麻了，但对于他们来说是幸福无比的。</p>
-<p>周日的下午，他们徘徊在车站附近。希桅在这个车站送月衫坐车回学校。在离别的时刻，他们的话开始变少。时间在一秒一秒的流逝，他们的不舍在空气中慢慢的扩散。说回来，这真是一个奇怪的事情，当时间越是有限，他们之间的话语越是稀少，仿佛多说一句话就会将他们的不舍完全的吞噬，于是只能以这种特殊的形式来面对接下来的分离。尽管下周他们依然可以再次见面，但这一周对于他们来说如同一年那么的长久。</p>
-<p>在他乡异地，他们相依偎在一起。在他人眼中，他们是再平凡不过的一对情侣。而对于他们来说，对方都是对方的全世界，这气候的他们没有羁绊，如同在广阔草原上的马群，无拘无束。</p>
-<p>时间如滴水，暂离的时间来临。月衫回学校的最后一班车终于准备发车。留恋在此刻升华，随着车的越驶越远而加深。</p>
-<p>当月衫的车驶离希桅的视线后，希桅转身走出车站，搭车回他的学校。在车上，他们各自开始回忆着这个周末的点点滴滴，如同在回味着刚吃完了的糖果，满满的都是甜味。然后靠着这些余味等待下一个周末的重逢。</p>
-<p>尽是如此，如若两颗星星，天各一方，遥遥相望。</p>
-
-          
+          <pre><code>这是coco的第八十篇原创文章
+</code></pre><p>Chrome断点JS寻找淘宝签名sign  (๑• . •๑)</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fyekf65za5j30eb08kt9f.jpg" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/21/Chrome断点JS寻找淘宝签名sign/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1145,9 +1041,791 @@
       
     </div>
 
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/12/18/MongoDB保存数据的优化方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coco">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/12/18/MongoDB保存数据的优化方法/" itemprop="url">
+                  MongoDB保存数据的优化方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T18:53:31+08:00">
+                2018-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/18/MongoDB保存数据的优化方法/" class="leancloud_visitors" data-flag-title="MongoDB保存数据的优化方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <pre><code>这是coco的第七十九篇原创文章
+</code></pre><p>MongoDB保存数据的优化方法  (๑• . •๑)</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fyb6n6xo51j319o0owdjl.jpg" alt=""></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/18/MongoDB保存数据的优化方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
     <div>
       
     </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/12/05/Python堆排序之heapq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coco">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/12/05/Python堆排序之heapq/" itemprop="url">
+                  Python堆排序之heapq
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-05T22:37:54+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/05/Python堆排序之heapq/" class="leancloud_visitors" data-flag-title="Python堆排序之heapq">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>堆排序  (๑• . •๑)</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxwa1w3pt0j30i5080jrv.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第七十八篇原创文章</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/05/Python堆排序之heapq/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/12/04/聊一聊足球/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coco">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/12/04/聊一聊足球/" itemprop="url">
+                  聊一聊足球
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-04T18:12:13+08:00">
+                2018-12-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/爱好/" itemprop="url" rel="index">
+                    <span itemprop="name">爱好</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/12/04/聊一聊足球/" class="leancloud_visitors" data-flag-title="聊一聊足球">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxv2qe0vikj30dw098jse.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第七十七篇原创文章</div></pre></td></tr></table></figure>
+<p>喜爱足球  (๑• . •๑)</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/04/聊一聊足球/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/11/27/说一道排序题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coco">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/11/27/说一道排序题/" itemprop="url">
+                  说一道排序题
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T21:47:25+08:00">
+                2018-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/27/说一道排序题/" class="leancloud_visitors" data-flag-title="说一道排序题">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxmyfbq0lgj311r0u0n0l.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第七十六篇原创文章</div></pre></td></tr></table></figure>
+<p>很经典的排序问题  (๑• . •๑)</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/27/说一道排序题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://zhangslob.github.io/2018/11/22/用node来DNS抓包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="coco">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coco的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/11/22/用node来DNS抓包/" itemprop="url">
+                  用node来DNS抓包
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-22T19:18:11+08:00">
+                2018-11-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/22/用node来DNS抓包/" class="leancloud_visitors" data-flag-title="用node来DNS抓包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fxh2063t84j30m805zq38.jpg" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">这是coco的第七十四篇原创文章</div></pre></td></tr></table></figure>
+<p>用node来DNS抓包  (๑• . •๑)</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/22/用node来DNS抓包/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
 
     <footer class="post-footer">
       
@@ -1169,17 +1847,16 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
-
+          
           </div>
           
 
 
           
-
         </div>
         
           
@@ -1202,41 +1879,37 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/m3.jpg"
-               alt="IIssNan" />
-          <p class="site-author-name" itemprop="name">IIssNan</p>
+               src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg"
+               alt="coco" />
+          <p class="site-author-name" itemprop="name">coco</p>
            
-              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+              <p class="site-description motion-element" itemprop="description">数据采集、数据处理、机器学习。</p>
           
         </div>
         <nav class="site-state motion-element">
-
+        
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-count">94</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+              <a href="/categories">
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">111</span>
+              <a href="/tags">
+                <span class="site-state-item-count">80</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1245,19 +1918,12 @@
         </nav>
 
         
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                <a href="https://github.com/zhangslob" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -1266,29 +1932,29 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                <a href="mailto:zhangslob@gmail.com" target="_blank" title="E-Mail">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  豆瓣
+                  E-Mail
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/cuishite" target="_blank" title="知乎">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
                   知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.quora.com/profile/Zhangslob" target="_blank" title="Quora">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Quora
                 </a>
               </span>
             
@@ -1320,14 +1986,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
+您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
+
+<div class="copyright" >
   
-  &copy;  2011 - 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+  <span class="author" itemprop="copyrightHolder">coco</span>
 </div>
 
 
@@ -1343,6 +2015,12 @@
 </div>
 
 
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
         
 
         
@@ -1353,11 +2031,9 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
     
-
+    
   </div>
 
   
@@ -1382,22 +2058,22 @@
 
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
@@ -1431,13 +2107,6 @@
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -1466,33 +2135,16 @@
 
 
 
-
-
-
-  
-
-
-
-
   
   
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
 
   
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
-
-
 
   
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -1601,7 +2253,8 @@
 
   
 
+
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

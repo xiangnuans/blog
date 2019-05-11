@@ -4,7 +4,17 @@
 
   
 
+<!--Google adSense start-->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-9635448289270412",
+        enable_page_level_ads: true
+      });
+    </script>
+    <!--Google Adsense end-->
 
+<!-- Google AdSense end -->
 <html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
@@ -18,8 +28,6 @@
 
 
 
-  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
-
 
 
 
@@ -34,9 +42,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -52,35 +58,17 @@
   
 
   
-    
-      
-    
 
-    
+  
+
   
 
   
 
   
     
-      
     
-
-    
-  
-
-  
-    
-      
-    
-
-    
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -88,20 +76,16 @@
 
 
 
-  
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
-
-  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
 
 
 
@@ -113,15 +97,15 @@
 
 
 
-<meta name="description" content="胡编一通，乱写一气">
+<meta name="description" content="数据采集、数据处理、机器学习。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="IIssNan's Notes">
-<meta property="og:url" content="http://notes.iissnan.com/archives/page/6/index.html">
-<meta property="og:site_name" content="IIssNan's Notes">
-<meta property="og:description" content="胡编一通，乱写一气">
+<meta property="og:title" content="coco的博客">
+<meta property="og:url" content="https://zhangslob.github.io/archives/page/6/index.html">
+<meta property="og:site_name" content="coco的博客">
+<meta property="og:description" content="数据采集、数据处理、机器学习。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IIssNan's Notes">
-<meta name="twitter:description" content="胡编一通，乱写一气">
+<meta name="twitter:title" content="coco的博客">
+<meta name="twitter:description" content="数据采集、数据处理、机器学习。">
 
 
 
@@ -130,33 +114,35 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '0',
+      userId: 'undefined',
       author: '博主'
     },
     algolia: {
-      applicationID: 'H27WMII02H',
-      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
-      indexName: 'notes',
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
 
 
-  <link rel="canonical" href="http://notes.iissnan.com/archives/page/6/"/>
+  <link rel="canonical" href="https://zhangslob.github.io/archives/page/6/"/>
 
 
 
 
 
-  <title> 归档 | IIssNan's Notes </title>
+  <title> 归档 | coco的博客 </title>
 </head>
+
+
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -166,16 +152,6 @@
 
 
 
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
 
 
 
@@ -190,9 +166,9 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left  page-archive  ">
     <div class="headband"></div>
-
+    <a href="https://github.com/zhangslob"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
@@ -201,12 +177,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">IIssNan's Notes</span>
+        <span class="site-title">coco的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Quick notes</p>
+        <p class="site-subtitle">人生苦短，我学Python</p>
       
   </div>
 
@@ -236,6 +212,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -257,47 +253,9 @@
       
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
-      
     </ul>
   
 
-  
-    <div class="site-search">
-      
-  
-  <div class="algolia-popup popup search-popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
-
-
-    </div>
   
 </nav>
 
@@ -320,7 +278,7 @@
       
        
         
-      非常好! 目前共计 183 篇日志。 继续努力。
+      很好! 目前共计 94 篇日志。 继续努力。
     </span>
 
     
@@ -332,7 +290,7 @@
       
         
         <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2013">2013</h2>
+          <h2 class="archive-year motion-element" id="archive-year-2018">2018</h2>
         </div>
       
       
@@ -344,9 +302,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/parseint-function-in-javascript/" itemprop="url">
+            <a class="post-title-link" href="/2018/05/11/linux下安装python3-6/" itemprop="url">
               
-                <span itemprop="name">详解 JavaScript 中的 parseInt 函数</span>
+                <span itemprop="name">linux下安装python3.6</span>
               
             </a>
         
@@ -354,9 +312,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-09T16:12:36+08:00"
-              content="2013-08-09" >
-          08-09
+              datetime="2018-05-11T22:26:54+08:00"
+              content="2018-05-11" >
+          05-11
         </time>
       </div>
 
@@ -381,9 +339,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/getting-started-qunit/" itemprop="url">
+            <a class="post-title-link" href="/2018/05/08/护眼神器了解下/" itemprop="url">
               
-                <span itemprop="name">QUnit快速上手</span>
+                <span itemprop="name">护眼神器了解下</span>
               
             </a>
         
@@ -391,9 +349,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-07T22:30:37+08:00"
-              content="2013-08-07" >
-          08-07
+              datetime="2018-05-08T22:05:24+08:00"
+              content="2018-05-08" >
+          05-08
         </time>
       </div>
 
@@ -418,9 +376,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/simpledataformat/" itemprop="url">
+            <a class="post-title-link" href="/2018/05/01/awesome-crawl-一-：腾讯新闻/" itemprop="url">
               
-                <span itemprop="name">SimpleDateFormat 一小时之谜</span>
+                <span itemprop="name">awesome_crawl(一)：腾讯新闻</span>
               
             </a>
         
@@ -428,9 +386,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-07T11:03:40+08:00"
-              content="2013-08-07" >
-          08-07
+              datetime="2018-05-01T21:52:11+08:00"
+              content="2018-05-01" >
+          05-01
         </time>
       </div>
 
@@ -455,9 +413,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/dom-foundation-node-objects/" itemprop="url">
+            <a class="post-title-link" href="/2018/04/21/有什么区别？/" itemprop="url">
               
-                <span itemprop="name">DOM基础之Node Objects</span>
+                <span itemprop="name">scrapy-redis 和 scrapy 有什么区别？</span>
               
             </a>
         
@@ -465,9 +423,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-04T13:33:05+08:00"
-              content="2013-08-04" >
-          08-04
+              datetime="2018-04-21T18:03:14+08:00"
+              content="2018-04-21" >
+          04-21
         </time>
       </div>
 
@@ -492,9 +450,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/expose-shuffle-function-of-underscore/" itemprop="url">
+            <a class="post-title-link" href="/2018/04/12/来codewars与我一起玩耍吧/" itemprop="url">
               
-                <span itemprop="name">Expose shuffle function of underscore.js</span>
+                <span itemprop="name">来codewars与我一起玩耍吧</span>
               
             </a>
         
@@ -502,9 +460,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-02T17:43:56+08:00"
-              content="2013-08-02" >
-          08-02
+              datetime="2018-04-12T21:25:13+08:00"
+              content="2018-04-12" >
+          04-12
         </time>
       </div>
 
@@ -529,46 +487,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/singleton-pattern-in-javascript/" itemprop="url">
+            <a class="post-title-link" href="/2018/03/28/Scrapy中如何提高数据的插入速度/" itemprop="url">
               
-                <span itemprop="name">JavaScript中的单例模式（Singleton Pattern ）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-08-01T14:10:59+08:00"
-              content="2013-08-01" >
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/prevent-vmware-workstation-guest-machines-from-sysning-time-with-host/" itemprop="url">
-              
-                <span itemprop="name">Prevent VMWare WorkStation guest machines from sysning time with host</span>
+                <span itemprop="name">Scrapy中如何提高数据的插入速度</span>
               
             </a>
         
@@ -576,81 +497,8 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-07-25T10:31:33+08:00"
-              content="2013-07-25" >
-          07-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/void-operator-in-javascript/" itemprop="url">
-              
-                <span itemprop="name">JavasScript 语言的 void 操作符</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-04-10T11:25:53+08:00"
-              content="2013-04-10" >
-          04-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-link" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-          <a class="post-title-link post-title-link-external" target="_blank" href="http://www.infoq.com/cn/news/2013/03/discover-devtools" itemprop="url">
-            Google通过Code School提供免费Web开发教程
-            <i class="fa fa-external-link"></i>
-          </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-03-28T11:55:24+08:00"
-              content="2013-03-28" >
+              datetime="2018-03-28T21:18:32+08:00"
+              content="2018-03-28" >
           03-28
         </time>
       </div>
@@ -676,9 +524,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/add-items-to-array-in-javascript/" itemprop="url">
+            <a class="post-title-link" href="/2018/03/25/Hi，这里是我的爬虫笔记/" itemprop="url">
               
-                <span itemprop="name">JavaScript数组队尾添加元素的方法</span>
+                <span itemprop="name">Hi，这里是我的爬虫笔记</span>
               
             </a>
         
@@ -686,9 +534,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-23T00:10:16+08:00"
-              content="2013-02-23" >
-          02-23
+              datetime="2018-03-25T21:37:15+08:00"
+              content="2018-03-25" >
+          03-25
         </time>
       </div>
 
@@ -713,9 +561,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/closure-definition-in-javascript-definitive-guide/" itemprop="url">
+            <a class="post-title-link" href="/2018/03/19/学习Git（二）基本操作/" itemprop="url">
               
-                <span itemprop="name">犀牛书中关于闭包的定义</span>
+                <span itemprop="name">学习Git（二）基本操作</span>
               
             </a>
         
@@ -723,9 +571,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-20T22:25:53+08:00"
-              content="2013-02-20" >
-          02-20
+              datetime="2018-03-19T21:11:39+08:00"
+              content="2018-03-19" >
+          03-19
         </time>
       </div>
 
@@ -750,9 +598,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/loops-in-settimeout/" itemprop="url">
+            <a class="post-title-link" href="/2018/03/14/学习Git（一）起步/" itemprop="url">
               
-                <span itemprop="name">循环里的setTimeout</span>
+                <span itemprop="name">学习Git（一）起步</span>
               
             </a>
         
@@ -760,9 +608,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-08T11:40:57+08:00"
-              content="2013-02-08" >
-          02-08
+              datetime="2018-03-14T22:52:36+08:00"
+              content="2018-03-14" >
+          03-14
         </time>
       </div>
 
@@ -787,82 +635,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/2013/bootstrap-themes/" itemprop="url">
+            <a class="post-title-link" href="/2018/03/13/大佬，我代码哪错了？/" itemprop="url">
               
-                <span itemprop="name">Bootstrap themes</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-07T21:19:21+08:00"
-              content="2013-02-07" >
-          02-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-link" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-          <a class="post-title-link post-title-link-external" target="_blank" href="http://rubykoans.com/" itemprop="url">
-            Learning Ruby with the Neo Ruby koans
-            <i class="fa fa-external-link"></i>
-          </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-03T22:45:16+08:00"
-              content="2013-02-03" >
-          02-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/install-ruby-via-rvm-on-mac-osx/" itemprop="url">
-              
-                <span itemprop="name">MacOSX Mountain Lion下使用rvm安装ruby 1.9.3</span>
+                <span itemprop="name">大佬，我代码哪错了？</span>
               
             </a>
         
@@ -870,193 +645,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-02T22:46:06+08:00"
-              content="2013-02-02" >
-          02-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/jquery-mockjax/" itemprop="url">
-              
-                <span itemprop="name">jQuery Mockjax</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-02-01T22:10:13+08:00"
-              content="2013-02-01" >
-          02-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/comments-in-package-json/" itemprop="url">
-              
-                <span itemprop="name">NPM package.json里的注释</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-01-25T17:07:17+08:00"
-              content="2013-01-25" >
-          01-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/delete-specific-commit-git/" itemprop="url">
-              
-                <span itemprop="name">如何删除 Github 上的项目的某一个 commit?</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-01-17T22:05:11+08:00"
-              content="2013-01-17" >
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-link" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-          <a class="post-title-link post-title-link-external" target="_blank" href="http://gruntjs.com/" itemprop="url">
-            Grunt
-            <i class="fa fa-external-link"></i>
-          </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-01-17T19:51:41+08:00"
-              content="2013-01-17" >
-          01-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2013/break-jquery-each-loop/" itemprop="url">
-              
-                <span itemprop="name">Break $.each loop</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2013-01-13T22:00:54+08:00"
-              content="2013-01-13" >
-          01-13
+              datetime="2018-03-13T21:30:03+08:00"
+              content="2018-03-13" >
+          03-13
         </time>
       </div>
 
@@ -1076,13 +667,12 @@
 
 
 
-
+          
           </div>
           
 
 
           
-
         </div>
         
           
@@ -1105,41 +695,37 @@
       <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/uploads/m3.jpg"
-               alt="IIssNan" />
-          <p class="site-author-name" itemprop="name">IIssNan</p>
+               src="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1488291259&di=9b54b1ab9a4a02ec51e4344e960692d6&src=http://ni.ppsrc.com/aR24MryiGC7HFCEJTB-wgQ@640w_640h_75Q.jpeg"
+               alt="coco" />
+          <p class="site-author-name" itemprop="name">coco</p>
            
-              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+              <p class="site-description motion-element" itemprop="description">数据采集、数据处理、机器学习。</p>
           
         </div>
         <nav class="site-state motion-element">
-
+        
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-count">94</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+              <a href="/categories">
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
           
-            
-            
             <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">111</span>
+              <a href="/tags">
+                <span class="site-state-item-count">80</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1148,19 +734,12 @@
         </nav>
 
         
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
 
         <div class="links-of-author motion-element">
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                <a href="https://github.com/zhangslob" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -1169,29 +748,29 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                  Twitter
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                <a href="mailto:zhangslob@gmail.com" target="_blank" title="E-Mail">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  豆瓣
+                  E-Mail
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/cuishite" target="_blank" title="知乎">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
                   知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.quora.com/profile/Zhangslob" target="_blank" title="Quora">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Quora
                 </a>
               </span>
             
@@ -1223,14 +802,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
+您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
+
+<div class="copyright" >
   
-  &copy;  2011 - 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+  <span class="author" itemprop="copyrightHolder">coco</span>
 </div>
 
 
@@ -1246,6 +831,12 @@
 </div>
 
 
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
         
 
         
@@ -1256,11 +847,9 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
-          <span id="scrollpercent"><span>0</span>%</span>
-        
       </div>
     
-
+    
   </div>
 
   
@@ -1285,22 +874,22 @@
 
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
@@ -1340,13 +929,6 @@
   
 
 
-  
-
-    
-      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
-    
-
-    
 
   
 
@@ -1375,33 +957,16 @@
 
 
 
-
-
-
-  
-
-
-
-
   
   
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
 
   
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
-
-
 
   
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");</script>
   <script>
     function showTime(Counter) {
       var query = new AV.Query(Counter);
@@ -1510,7 +1075,8 @@
 
   
 
+
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
