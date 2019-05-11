@@ -1,0 +1,1022 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="NexT,Documentations," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="尽管简单易用一直是 NexT 主题的首要目标，但现实与想法总是有那么一个缝隙，难怪有人说诗要源于生活后低于生活，着实有着深刻的哲学道理。那么无论这背后是什么样的原因导致，总结起来就是 NexT 不好用。在初期使用者比较少的情况，还可以有耐心的一个个解答；后来发现一直在回答类似的问题，加上要做和想做的事情太多而无暇顾及，于是就想写一份文档缓和一下这个问题。
+
+前季剧情回顾起先，我使用 Hexo 搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NexT Documentations Reload">
+<meta property="og:url" content="http://notes.iissnan.com/2016/next-documentations-reload/index.html">
+<meta property="og:site_name" content="IIssNan's Notes">
+<meta property="og:description" content="尽管简单易用一直是 NexT 主题的首要目标，但现实与想法总是有那么一个缝隙，难怪有人说诗要源于生活后低于生活，着实有着深刻的哲学道理。那么无论这背后是什么样的原因导致，总结起来就是 NexT 不好用。在初期使用者比较少的情况，还可以有耐心的一个个解答；后来发现一直在回答类似的问题，加上要做和想做的事情太多而无暇顾及，于是就想写一份文档缓和一下这个问题。
+
+前季剧情回顾起先，我使用 Hexo 搭建">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/next-documentations-reload/brand-new.png">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/what-the-fuck-am-i-reading.jpg">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/an-jing-de-mei-nan-zi.gif">
+<meta property="og:updated_time" content="2016-03-18T12:17:15.229Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NexT Documentations Reload">
+<meta name="twitter:description" content="尽管简单易用一直是 NexT 主题的首要目标，但现实与想法总是有那么一个缝隙，难怪有人说诗要源于生活后低于生活，着实有着深刻的哲学道理。那么无论这背后是什么样的原因导致，总结起来就是 NexT 不好用。在初期使用者比较少的情况，还可以有耐心的一个个解答；后来发现一直在回答类似的问题，加上要做和想做的事情太多而无暇顾及，于是就想写一份文档缓和一下这个问题。
+
+前季剧情回顾起先，我使用 Hexo 搭建">
+<meta name="twitter:image" content="http://notes.iissnan.com/uploads/next-documentations-reload/brand-new.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'H27WMII02H',
+      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
+      indexName: 'notes',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://notes.iissnan.com/2016/next-documentations-reload/"/>
+
+
+
+
+
+  <title> NexT Documentations Reload | IIssNan's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IIssNan's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2016/next-documentations-reload/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/m3.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IIssNan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                NexT Documentations Reload
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-16T00:08:30+08:00">
+                2016-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/next-documentations-reload/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/next-documentations-reload/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2016/next-documentations-reload/" class="leancloud_visitors" data-flag-title="NexT Documentations Reload">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>尽管简单易用一直是 NexT 主题的首要目标，但现实与想法总是有那么一个缝隙，难怪有人说诗要源于生活后低于生活，着实有着深刻的哲学道理。那么无论这背后是什么样的原因导致，总结起来就是 NexT 不好用。在初期使用者比较少的情况，还可以有耐心的一个个解答；后来发现一直在回答类似的问题，加上要做和想做的事情太多而无暇顾及，于是就想写一份文档缓和一下这个问题。</p>
+<span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/uploads/next-documentations-reload/brand-new.png" class="full-image" title="New Documentations for NexT"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<h2 id="前季剧情回顾"><a href="#前季剧情回顾" class="headerlink" title="前季剧情回顾"></a>前季剧情回顾</h2><p>起先，我使用 Hexo 搭建了第一版的 NexT 使用文档站点。UI 框架选择的是 <a href="http://semantic-ui.com/" target="_blank" rel="external">Semantic UI</a>，并且新建了一个主题称为 <a href="https://github.com/iissnan/theme-next-docs/tree/v1/themes/luminosa" target="_blank" rel="external">Luminosa</a>。然而我发现要在 Markdown 里使用 Semantic UI 的组件有点麻烦，以及 Hexo 在解析 Markdown 时会自动加上很多空行的问题。不得已之下，只能创建了几个 Tag Plugins 封装了一下使用到的 Semantic UI 的组件。</p>
+<a id="more"></a>
+<div class="pull-right"><img src="/uploads/what-the-fuck-am-i-reading.jpg" width="150" style="border: none; padding: 0;margin-left: 10px;"></div>
+
+<p>这也就解释了为什么在使用了 Semantic UI 的情况下，整体界面依然如此的粗糙与潦草，因为我把时间都花在写 Plugin 上了。至于文档的质量，早就被忘记在春天的田野里了。夏天是个愉快的季节，毕竟是 Sunshine 与比基尼同在的日子，文档的事情就别提了（我记得有一位热心的用户曾给 Docs 发过一个 PR，我没有 merge，在此说下抱歉）。然而时间就是个无情的戏子，夏天的风景还没看够就火急火燎地带来了秋天。秋天是文人墨客各领风骚的季节，到处是寂寞与沧桑，就在这样一个浮躁的季节里，我回头看了下文档，深刻地意识到只有呵呵能表达我对自己直触灵魂的佩服。</p>
+<h2 id="短期计划乱入"><a href="#短期计划乱入" class="headerlink" title="短期计划乱入"></a>短期计划乱入</h2><p>那么，经过一个工作忙碌周期后得已有些空闲时间，就把最近的空闲时间花在重新制作与编写 NexT 文档。目前的计划是，近期发布一个 Release 出去，版本号从 0.4 直接升级到 5.0.0（紧随 Facebook 大法脚步）。这个 Release 主要包含的是 Pisces Scheme ，修复 Pisces 引入的 Bug 以及更新文档。在此以后应该有一个小的更新，主要解决 Issues 里反馈的 Bug。再下一步是侧栏的重写，以及图片展示（这玩意一直搁着）。短期计划差不多就这样。</p>
+<h2 id="文档的重装上阵"><a href="#文档的重装上阵" class="headerlink" title="文档的重装上阵"></a>文档的重装上阵</h2><p>说回文档。有了第一版的经验，第二版就决定不再使用 Hexo 了。在 Markdown 里写大段的 HTML 代码，干脆就直接写 HTML 代码好了，除了要多写一些结构性标签以外（其实很多），写 HTML 还是比较直接。这样得到的好处是内容层比较好控制后，外观和行为也就没有什么障碍。</p>
+<p>第二版选择了 <a href="http://getbootstrap.com" target="_blank" rel="external">Bootstrap</a> 作为 UI 框架，使用 <a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="external">Nunjucks</a> 模板引擎，<a href="http://sass-lang.com/" target="_blank" rel="external">Sass</a> 预处理语言以及 <a href="http://gulpjs.com/" target="_blank" rel="external">Gulp</a> 构建工具。起初技术栈没这么有档次的感觉，我只想好好的写份文档，但到写第三个页面时，实在受不了了每次都要复制头尾相同的文档内容，这万一要改下这公共的内容，那就不能好好的写文档了。</p>
+<p><img src="/uploads/an-jing-de-mei-nan-zi.gif" alt=""></p>
+<p>于是就引入了 Nunjucks。而使用一个模板引擎的话，就得解决从模板生成页面的问题，这个问题包括开发过程以及部署代码生成过程。幸运的是，这个问题并不难。使用 Nunjucks 的 API 生成一个 Renderer，而后这个 Renderer 可以用在 BrowserSync 的中间件中以及 Gulp 的部署生成任务中。顺利地解决了模板渲染的问题。所以，文档绝大多数内容都是 HTML 代码，唯一的例外是代码片段。考虑到在 HTML 中书写 HTML 源代码要对大量的 <code>&lt;</code> 以及 <code>&gt;</code> 做转换，所以我增加了一个 <code>code</code> 的标签，用来快速的插入代码片段。</p>
+<p>插个广告，安利下 BrowserSync 这个神器，自动刷新、多设备同步、中间件支持、Proxy 支持，真是前端开发必备神器，谁用谁知道。我曾在一个项目中使用 Grunt 做双重 Watcher，第一重 Watcher 用于监听源码的改动并生成预部署的代码；第二重 Watcher 监听预部署的代码并部署代码到应用程序容器下。使用 BrowserSync 后只要一个 Watcher 加 Proxy 即可轻松解决这个场景的需求。自从用了 BrowserSync，感觉一下子年轻了好几岁，爬楼都有劲了（超过时的广告文案）。</p>
+<p>大体框架搞定后就是文档内容了。我花了点时间重新润色了下当前已有文档的内容，争取把每一个点都详细的写明，目前仍在继续撰写中（「撰写」这个词很有力度，直接表明了写文档的难度系数极高）。然后发现 NexT 包含了很多特性，有些我也没有在使用。所以如果你有看到有遗漏的不妨访问 NexT 文档发个 Issue，或者 Pull Request 更赞。</p>
+<p><style type="text/css">.next-documentations-reload-help-button{<br>      ;padding: 0 20px;<br>      ;border: 2px solid #555;<br>      ;text-decoration: none;<br>      ;display: inline-block;<br>      ;overflow: hidden;<br>      ;color: #555;<br>      ;font-size: 14px;<br>      ;background: #fff;<br>      ;border-radius: 2px;<br>      ;transition: all 0.3s ease;<br>    }<br>    {}.next-documentations-reload-help-button:hover {<br>      ;color: white;<br>      ;background-color: black;<br>      ;border-color: black;<br>    }<br>    {}.next-documentations-reload-help-button i {margin-right: 5px;}<br></style></p>
+<p class="text-center"><a href="http://theme-next.iissnan.com/" class="next-documentations-reload-help-button" target="_blank" rel="external"><i class="fa fa-globe"></i> 访问 NexT 文档</a><a href="https://github.com/iissnan/theme-next-docs" class="next-documentations-reload-help-button" style="margin-left: 10px;" target="_blank" rel="external"><i class="fa fa-github-alt"></i> NexT 文档源码</a></p>
+
+<p>最后的最后，请不要在文档仓库提交 NexT 主题相关的 Issue，只接受文档相关内容，蟹蟹。</p>
+<p>夜深了，洗洗睡，回头再念叨。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      IIssNan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://notes.iissnan.com/2016/next-documentations-reload/" title="NexT Documentations Reload">http://notes.iissnan.com/2016/next-documentations-reload/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/next/" rel="tag"># NexT</a>
+          
+            <a href="/tags/documentations/" rel="tag"># Documentations</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/upgrade-computer-components/" rel="next" title="记近期电脑设备升级一事">
+                <i class="fa fa-chevron-left"></i> 记近期电脑设备升级一事
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/publishing-github-pages-with-travis-ci/" rel="prev" title="使用 Travis CI 自动更新 GitHub Pages">
+                使用 Travis CI 自动更新 GitHub Pages <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/m3.jpg"
+               alt="IIssNan" />
+          <p class="site-author-name" itemprop="name">IIssNan</p>
+           
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">111</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前季剧情回顾"><span class="nav-number">1.</span> <span class="nav-text">前季剧情回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#短期计划乱入"><span class="nav-number">2.</span> <span class="nav-text">短期计划乱入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档的重装上阵"><span class="nav-number">3.</span> <span class="nav-text">文档的重装上阵</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://notes.iissnan.com/2016/next-documentations-reload/';
+          this.page.identifier = '2016/next-documentations-reload/';
+          this.page.title = 'NexT Documentations Reload';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://iissnan-notes.disqus.com/embed.js';
+        s.async = true;
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

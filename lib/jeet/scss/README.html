@@ -1,0 +1,59 @@
+<h1 id="Jeet-for-SCSS"><a href="#Jeet-for-SCSS" class="headerlink" title="Jeet for SCSS"></a>Jeet for SCSS</h1><h4 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h4><ul>
+<li>Install Ruby [<a href="http://rubyinstaller.org/">Windows</a>, <a href="https://github.com/sstephenson/rbenv">Mac/Linux</a>]</li>
+<li><code>gem install sass</code></li>
+<li><code>cd ~/Project</code></li>
+<li><code>svn checkout https://github.com/mojotech/jeet/trunk/scss/jeet</code></li>
+<li>Put <code>@import &#39;jeet/index&#39;;</code> at the top of <code>~/Project/foo.scss</code></li>
+</ul>
+<h4 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h4><pre><code>sass -w foo.scss
+</code></pre><h4 id="Usage-Example"><a href="#Usage-Example" class="headerlink" title="Usage Example"></a>Usage Example</h4><pre><code class="html"><span class="tag">&lt;<span class="name">html</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"foo.css"</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+  <span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">section</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">aside</span>&gt;</span>Sidebar<span class="tag">&lt;/<span class="name">aside</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">article</span>&gt;</span>Content<span class="tag">&lt;/<span class="name">article</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">section</span>&gt;</span>
+  <span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
+</code></pre>
+<pre><code class="scss">@<span class="keyword">import</span> <span class="string">'jeet/index'</span>;
+@<span class="keyword">include</span> edit;
+
+<span class="selector-tag">section</span> {
+ @<span class="keyword">include</span> center;
+}
+<span class="selector-tag">aside</span> {
+ @<span class="keyword">include</span> col(<span class="number">1</span>/<span class="number">3</span>);
+}
+<span class="selector-tag">article</span> {
+ @<span class="keyword">include</span> col(<span class="number">2</span>/<span class="number">3</span>);
+}
+</code></pre>
+<h4 id="Rails-Installation"><a href="#Rails-Installation" class="headerlink" title="Rails Installation"></a>Rails Installation</h4><ul>
+<li><code>cd ~/RailsApp</code></li>
+<li><code>svn checkout https://github.com/mojotech/jeet/trunk/scss/jeet vendor/assets/stylesheets/jeet</code></li>
+<li>Add <code>@import &#39;jeet/index&#39;;</code> to your <code>application.css.scss</code></li>
+</ul>
+<h4 id="API"><a href="#API" class="headerlink" title="API"></a>API</h4><ul>
+<li><strong><code>column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)</code></strong> - <code>column</code> (also aliased as <code>col</code>) is perhaps the strongest feature of any grid system on the market. You specify an initial ratio, either as fractions or decimals, then pass the parent container’s context ratio to maintain consistent gutters as you nest. Offsetting is made trivial as well. Just specify a ratio to make your offset have a margin-left. Make it negative to give it a margin-right instead. E.g. <code>column(1/4, $offset: 1/4)</code> would create a column the quarter of the size of it’s container and push it to the right a quarter. <code>cycle</code> and <code>uncycle</code> are pretty awesome in their own right as well. Want to make a gallery but don’t want to specify a row every 4 pictures? <code>column(1/4, $cycle: 4)</code> - done. Want to change it up when you get down to mobile? Maybe just show 2 images per row? <code>uncycle</code> your 4-item cycle then… <code>column(1/2, $uncycle: 4, $cycle: 2)</code> - done. Need to adjust column gutters for a specific container? <code>col(1/4, $gutter: .5)</code></li>
+<li><strong><code>span($ratio: 1, $offset: 0)</code></strong> - Need a grid without the gutters? For instance, for a horizontal navigation where you want buttons touching. Do so like: <code>span(1/5)</code>. No need to pass more than one ratio since we don’t need to worry about the math involved with gutters and all that.</li>
+<li><strong><code>shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)</code></strong> - Source ordering works in Jeet by assigning <code>position: relative</code> and then a <code>left</code> offset equal to the ratio passed. You can specify if this is a column or span shift to include gutters or not. This works similar to <code>offset</code> in that it can accept negative values to shift the other direction. Again, <code>shift</code> can accept multiple context ratios to maintain perfect sizing. <code>shift</code> also accepts custom gutter sizing, just make sure your gutter sizes match the gutter sizes of your original elements.</li>
+<li><strong><code>unshift()</code></strong> - Accepts no values but isn’t a block closer either. <code>unshift()</code> is a great helper function to quickly disable whatever source ordering you’ve done to an element.</li>
+<li><strong><code>edit()</code></strong> - Edit mode assigns a light gray, semi-transparent, background to every element on the page. It’s a little trick picked up over the years that makes visualizing the structure of your site trivial.</li>
+<li><strong><code>center($max_width: 1410px, $pad: 0)</code></strong> - This is a shortcut to easily center containers. The pad variable sets padding on the left and right.</li>
+<li><strong><code>stack($pad: 0, $align: false)</code></strong> - A helper mixin to “stack” elements on top of each other. Useful for mobile views. Accepts padding and/or text alignment.</li>
+<li><strong><code>unstack()</code></strong> - Cancel that <code>stack()</code>. This won’t revert back to your <code>column()</code> calls. For that, manually call your <code>column()</code> method again.</li>
+<li><strong><code>align($direction: both)</code></strong> - Aligning blocks relative to their container with <code>position: absolute</code> and fancy positioning and transform. Vertical alignment is now trivial in IE9+ browsers.</li>
+<li><strong><code>cf()</code></strong> - Nicholas Gallagher’s clearfix. Use this to wrap any set of <code>column()</code>s or <code>span</code>s.</li>
+</ul>
+<h4 id="Global-Settings"><a href="#Global-Settings" class="headerlink" title="Global Settings"></a>Global Settings</h4><ul>
+<li>Create a <code>_settings.scss</code> file in your Jeet directory. <code>@import &#39;jeet/_settings.scss&#39;;</code> at the top (right above <code>@import &#39;jeet/index.scss&#39;;</code>) of whichever file Sass is watching (e.g. <code>sass -w css/style.scss</code>).</li>
+<li>You can adjust the following variables:<ul>
+<li><strong><code>gutter: 3</code></strong> - The percentage of the page the root-level gutters take up.</li>
+<li><strong><code>parent-first: false</code></strong> - When assigning multiple ratio contexts to a <code>col()</code>, do you want to reference the outer most container first? Example: Let’s assume we have a column set to <code>col(1/4)</code> that is nested inside of another column that is <code>col(1/3)</code> which is nested inside of another column that is <code>col(1/2)</code>. By default, to maintain consistently sized gutters (even when nesting), our inner-most column would look like <code>col(1/4 1/3 1/2)</code>. If we adjust this global variable to be <code>true</code>, our inner-most column could be written from a top-down perspective like so: <code>col(1/2 1/3 1/4)</code>. This is entirely a preference thing. Do you like stepping up or down?</li>
+<li><strong><code>layout-direction: LTR</code></strong> - Support for left-to-right, or right-to-left (<code>RTL</code>) text/layouts.</li>
+</ul>
+</li>
+</ul>

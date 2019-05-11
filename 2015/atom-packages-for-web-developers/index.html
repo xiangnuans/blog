@@ -1,0 +1,1086 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Atom,编辑器," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="这个周末试用 GitHub 的 Atom 编辑器编写一个WEB项目，感觉非常好用。 Atom 的社区很繁荣，有着丰富的扩展/插件（packages）。安装 Atom 的 Package 非常简单，可以在编辑器的偏好设置里面安装，也可以在命令行中使用 apm 命令来安装。
+在介绍适用于 WEB 开发的 Package 之前，让我们快速过下如何安装 Atom Packages。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="适用于 WEB 开发者的 Atom 编辑器 Package">
+<meta property="og:url" content="http://notes.iissnan.com/2015/atom-packages-for-web-developers/index.html">
+<meta property="og:site_name" content="IIssNan's Notes">
+<meta property="og:description" content="这个周末试用 GitHub 的 Atom 编辑器编写一个WEB项目，感觉非常好用。 Atom 的社区很繁荣，有着丰富的扩展/插件（packages）。安装 Atom 的 Package 非常简单，可以在编辑器的偏好设置里面安装，也可以在命令行中使用 apm 命令来安装。
+在介绍适用于 WEB 开发的 Package 之前，让我们快速过下如何安装 Atom Packages。">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/install-atom-packages.png">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-autocomplete-plus.gif">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-javascript-snippets.gif">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-jshint.png">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-csslint.png">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-git-plus.gif">
+<meta property="og:image" content="http://notes.iissnan.com/uploads/atom-minimap.png">
+<meta property="og:updated_time" content="2015-10-20T05:33:42.417Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="适用于 WEB 开发者的 Atom 编辑器 Package">
+<meta name="twitter:description" content="这个周末试用 GitHub 的 Atom 编辑器编写一个WEB项目，感觉非常好用。 Atom 的社区很繁荣，有着丰富的扩展/插件（packages）。安装 Atom 的 Package 非常简单，可以在编辑器的偏好设置里面安装，也可以在命令行中使用 apm 命令来安装。
+在介绍适用于 WEB 开发的 Package 之前，让我们快速过下如何安装 Atom Packages。">
+<meta name="twitter:image" content="http://notes.iissnan.com/uploads/install-atom-packages.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'H27WMII02H',
+      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
+      indexName: 'notes',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://notes.iissnan.com/2015/atom-packages-for-web-developers/"/>
+
+
+
+
+
+  <title> 适用于 WEB 开发者的 Atom 编辑器 Package | IIssNan's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IIssNan's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2015/atom-packages-for-web-developers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/m3.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IIssNan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                适用于 WEB 开发者的 Atom 编辑器 Package
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-02-14T14:01:13+08:00">
+                2015-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/atom-packages-for-web-developers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/atom-packages-for-web-developers/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2015/atom-packages-for-web-developers/" class="leancloud_visitors" data-flag-title="适用于 WEB 开发者的 Atom 编辑器 Package">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这个周末试用 <a href="https://github.com" target="_blank" rel="external">GitHub</a> 的 <a href="https://atom.io/" target="_blank" rel="external">Atom</a> 编辑器编写一个WEB项目，感觉非常好用。 Atom 的社区很繁荣，有着丰富的扩展/插件（<a href="https://atom.io/packages" target="_blank" rel="external">packages</a>）。安装 Atom 的 Package 非常简单，可以在编辑器的偏好设置里面安装，也可以在命令行中使用 <code>apm</code> 命令来安装。</p>
+<p>在介绍适用于 WEB 开发的 Package 之前，让我们快速过下如何安装 Atom Packages。</p>
+<a id="more"></a>
+<h2 id="安装-Atom-Package"><a href="#安装-Atom-Package" class="headerlink" title="安装 Atom Package"></a>安装 Atom Package</h2><h3 id="通过偏好设置安装-Package"><a href="#通过偏好设置安装-Package" class="headerlink" title="通过偏好设置安装 Package"></a>通过偏好设置安装 Package</h3><p>使用快捷键 <code>command + ,</code>/<code>ctrl + ,</code> 打开偏好设置。点击左侧的 <code>Install</code> 即可浏览线上的 Package 。 顶部是一个搜索框，可以搜索已经发布在 <a href="http://atom.io/http://atom.io/packages" target="_blank" rel="external">atom.io</a> 上的 Package ；紧接着是 <code>Feature Packages</code>，即精选的 Package ，列出来的是一些比较优质的 Package 。</p>
+<p><img class="full-image" src="/uploads/install-atom-packages.png" alt="Install atom packages"></p>
+<h3 id="通过-apm-命令安装-Package"><a href="#通过-apm-命令安装-Package" class="headerlink" title="通过 apm 命令安装 Package"></a>通过 <code>apm</code> 命令安装 Package</h3><p>Atom 自带了一个 <code>apm</code> 的 Package 管理工具。我们可以在命令行下执行以下命令来确认 <code>apm</code> 是否已经安装：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apm <span class="keyword">help</span> <span class="keyword">install</span></div></pre></td></tr></table></figure>
+<p>命令之后应该输出 <code>apm install</code> 的详细信息。如果输出不是 <code>apm install</code> 的命令信息，打开 Atom 菜单，选择 <code>Install Shell Commands</code> 来安装 <code>atom</code> 和 <code>apm</code> 。</p>
+<p>确认 <code>apm</code> 正确安装后，便可以开始安装 Package 。正如上述执行 <code>apm help install</code> 所提示的，安装的命令是：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">apm <span class="keyword">install</span> [&lt;package_name&gt;...]</div><div class="line">apm <span class="keyword">install</span> &lt;package_name&gt;@&lt;package_version&gt;</div><div class="line">apm <span class="keyword">install</span> <span class="comment">--packages-file my-packages.txt</span></div></pre></td></tr></table></figure>
+<h2 id="Package-推荐"><a href="#Package-推荐" class="headerlink" title="Package 推荐"></a>Package 推荐</h2><h3 id="快捷输入类"><a href="#快捷输入类" class="headerlink" title="快捷输入类"></a>快捷输入类</h3><ul>
+<li><p><a href="https://atom.io/packages/autocomplete-plus" target="_blank" rel="external">autocomplete-plus</a>，当输入的时候，提供可能的候选项。</p>
+<p><img src="/uploads/atom-autocomplete-plus.gif" alt="autocomplete plus"></p>
+</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/atom-ctags" target="_blank" rel="external">atom-ctags</a>，使用 <code>ctags</code> 来强化自动完成功能，需借助于 <code>autocomplete-plus</code>。</li>
+</ul>
+<ul>
+<li><p><a href="https://atom.io/packages/javascript-snippets" target="_blank" rel="external">javascript-snippets</a>，顾名思义，输入特殊的字符后自动扩展成对应的代码片段。</p>
+<p><img src="/uploads/atom-javascript-snippets.gif" alt="javascript-snippets"></p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://atom.io/packages/vim-mode" target="_blank" rel="external">vim-mode</a></p>
+<p>VIM-Mode 支持在 Atom 中使用 <code>VIM</code> 编辑器的操作方式来编辑。这对我来说是个非常 Killer 的 Package ，在此之前我一直在 WebStorm 上通过一个插件模拟 VIM 操作，异常难用。而在 Atom 上的这个模拟VIM操作，使用起来感觉还是比较顺手的。你可以混合 VIM 操作和普通的编辑操作。</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://atom.io/packages/emmet" target="_blank" rel="external">emmet</a></p>
+<p>手写 <code>HTML</code> 多少显得专业，但是手写的问题在于得大量的代码。<a href="http://emmet.io/" target="_blank" rel="external">Emmet</a>大幅提升手写的效率。非常值得一装。</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/go-to-line" target="_blank" rel="external">go-to-line</a>，跳转到指定的行，只要 <code>ctrl + g</code> 后输入行号即可。</li>
+</ul>
+<h3 id="Linters"><a href="#Linters" class="headerlink" title="Linters"></a>Linters</h3><ul>
+<li><p><a href="https://atom.io/packages/jshint" target="_blank" rel="external">jshint</a>，验证你的 JavaScript ，写更专业的 JavaScript 代码。</p>
+<p><img src="/uploads/atom-jshint.png" alt="JSHint"></p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://atom.io/packages/csslint" target="_blank" rel="external">csslint</a>， CSSLint 会报告出不合规定的 CSS 规则。</p>
+<p><img src="/uploads/atom-csslint.png" alt="CSSLint"></p>
+</li>
+</ul>
+<h3 id="版本控制类"><a href="#版本控制类" class="headerlink" title="版本控制类"></a>版本控制类</h3><ul>
+<li><p><a href="https://atom.io/packages/git-plus" target="_blank" rel="external">git plus</a>，在 Atom 里面执行 Git 命令，不用来回切换终端和编辑器。</p>
+<p><img src="/uploads/atom-git-plus.gif" alt="git plug"></p>
+</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/git-log" target="_blank" rel="external">git-log</a>，在 Atom 里面显示图形化的提交记录。</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/merge-conflicts" target="_blank" rel="external">merge-conflicts</a>，在 Atom 里面处理合并产生冲突的文件。</li>
+</ul>
+<h3 id="辅助类"><a href="#辅助类" class="headerlink" title="辅助类"></a>辅助类</h3><ul>
+<li><p><a href="https://atom.io/packages/minimap" target="_blank" rel="external">minimap</a>，为 Atom 加上 Sublime Text 的源码预览图，提供丰富的自定义选项，值得一用。</p>
+<p><img src="/uploads/atom-minimap.png" alt="Mini Map"></p>
+</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/file-icons" target="_blank" rel="external">file-icons</a>，显示文件类型对应的图标。</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/atom-beautify" target="_blank" rel="external">atom-beautify</a>，格式化代码，更统一的代码风格。</li>
+</ul>
+<ul>
+<li><p><a href="https://atom.io/packages/color-picker" target="_blank" rel="external">Color Picker</a></p>
+<p>在编辑器里面挑选颜色。通过右键选择 <code>Color picker</code> ，或者 <code>cmd + shift + c</code>/<code>ctrl + alt + c</code> 快捷键调出颜色选择面板。支持 <code>HEX, HEXA, RGB, RGBA, HSL, HSLA</code> 形式指定的颜色值。</p>
+</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/csscomb" target="_blank" rel="external">csscomb</a>，<a href="http://csscomb.com/" target="_blank" rel="external">CSSComb</a> 的一个扩展工具， CSSComb 帮你写出更漂亮的 CSS ！</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/autoprefixer" target="_blank" rel="external">autoprefixer</a>，<a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">AutoPrefix</a>的一个扩展工具，自动为 CSS 属性添加特定的前缀。</li>
+</ul>
+<ul>
+<li><a href="https://atom.io/packages/localization" target="_blank" rel="external">localization</a>，国际化 Package ，支持简体中文。但是在我使用的版本 <code>0.179.0</code> 中无法使用。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      IIssNan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://notes.iissnan.com/2015/atom-packages-for-web-developers/" title="适用于 WEB 开发者的 Atom 编辑器 Package">http://notes.iissnan.com/2015/atom-packages-for-web-developers/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/atom/" rel="tag"># Atom</a>
+          
+            <a href="/tags/编辑器/" rel="tag"># 编辑器</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/why-to-blog-using-static-site-generator/" rel="next" title="为何使用Jekyll这样的静态编译博客？">
+                <i class="fa fa-chevron-left"></i> 为何使用Jekyll这样的静态编译博客？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/60-fps-on-the-mobile-web/" rel="prev" title="Flipboard - 60 FPS on the mobile web">
+                Flipboard - 60 FPS on the mobile web <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/m3.jpg"
+               alt="IIssNan" />
+          <p class="site-author-name" itemprop="name">IIssNan</p>
+           
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">111</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Atom-Package"><span class="nav-number">1.</span> <span class="nav-text">安装 Atom Package</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过偏好设置安装-Package"><span class="nav-number">1.1.</span> <span class="nav-text">通过偏好设置安装 Package</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过-apm-命令安装-Package"><span class="nav-number">1.2.</span> <span class="nav-text">通过 apm 命令安装 Package</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Package-推荐"><span class="nav-number">2.</span> <span class="nav-text">Package 推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快捷输入类"><span class="nav-number">2.1.</span> <span class="nav-text">快捷输入类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linters"><span class="nav-number">2.2.</span> <span class="nav-text">Linters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本控制类"><span class="nav-number">2.3.</span> <span class="nav-text">版本控制类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#辅助类"><span class="nav-number">2.4.</span> <span class="nav-text">辅助类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://notes.iissnan.com/2015/atom-packages-for-web-developers/';
+          this.page.identifier = '2015/atom-packages-for-web-developers/';
+          this.page.title = '适用于 WEB 开发者的 Atom 编辑器 Package';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://iissnan-notes.disqus.com/embed.js';
+        s.async = true;
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

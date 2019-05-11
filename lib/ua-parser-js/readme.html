@@ -1,0 +1,240 @@
+<h1 id="UAParser-js"><a href="#UAParser-js" class="headerlink" title="UAParser.js"></a>UAParser.js</h1><p><img align="right" src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png"> A not-so-lightweight-anymore JavaScript-based User-Agent string parser. Can be used either in browser (client-side) or in node.js (server-side) environment. Also available as jQuery/Zepto plugin, Bower/Meteor package, &amp; RequireJS/AMD module. This library aims to identify detailed type of web browser, layout engine, operating system, cpu architecture, and device type/model, entirely from user-agent string with a relatively small footprint (~11KB when minified / ~4KB gzipped). Written in vanilla JavaScript, which means it doesn’t require any other library and can be used independently.</p>
+<p><a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master" alt="Build Status"></a><br><a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg" alt="NPM"></a><br><a href="https://bower.io/"><img src="https://img.shields.io/bower/v/ua-parser-js.svg" alt="Bower"></a><br><a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg" alt="CDNJS"></a><br><a href="https://gratipay.com/UAParser.js"><img src="https://img.shields.io/gratipay/team/UAParser.js.svg" alt="Gratipay"></a><br><a href="http://flattr.com/thing/3867907/faisalmanua-parser-js-on-GitHub"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this"></a></p>
+<ul>
+<li>Author    : Faisal Salman <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x3c;&#102;&#x79;&#x7a;&#x6c;&#x6d;&#97;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x3c;&#102;&#x79;&#x7a;&#x6c;&#x6d;&#97;&#x6e;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>&gt;</li>
+<li>Demo      : <a href="http://faisalman.github.io/ua-parser-js">http://faisalman.github.io/ua-parser-js</a></li>
+<li>Source    : <a href="https://github.com/faisalman/ua-parser-js">https://github.com/faisalman/ua-parser-js</a></li>
+</ul>
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><ul>
+<li><code>getBrowser()</code><ul>
+<li>returns <code>{ name: &#39;&#39;, version: &#39;&#39; }</code></li>
+</ul>
+</li>
+</ul>
+<pre><code># Possible &apos;browser.name&apos;:
+Amaya, Android Browser, Arora, Avant, Baidu, Blazer, Bolt, Camino, Chimera, Chrome, 
+Chromium, Comodo Dragon, Conkeror, Dillo, Dolphin, Doris, Edge, Epiphany, Fennec,
+Firebird, Firefox, Flock, GoBrowser, iCab, ICE Browser, IceApe, IceCat, IceDragon, 
+Iceweasel, IE [Mobile], Iron, Jasmine, K-Meleon, Konqueror, Kindle, Links, 
+Lunascape, Lynx, Maemo, Maxthon, Midori, Minimo, MIUI Browser, [Mobile] Safari, 
+Mosaic, Mozilla, Netfront, Netscape, NetSurf, Nokia, OmniWeb, Opera [Mini/Mobi/Tablet], 
+PhantomJS, Phoenix, Polaris, QQBrowser, RockMelt, Silk, Skyfire, SeaMonkey, SlimBrowser,
+Swiftfox, Tizen, UCBrowser, Vivaldi, w3m, WeChat, Yandex
+
+# &apos;browser.version&apos; determined dynamically
+</code></pre><ul>
+<li><code>getDevice()</code><ul>
+<li>returns <code>{ model: &#39;&#39;, type: &#39;&#39;, vendor: &#39;&#39; }</code> </li>
+</ul>
+</li>
+</ul>
+<pre><code># Possible &apos;device.type&apos;:
+console, mobile, tablet, smarttv, wearable, embedded
+
+# Possible &apos;device.vendor&apos;:
+Acer, Alcatel, Amazon, Apple, Archos, Asus, BenQ, BlackBerry, Dell, GeeksPhone, 
+Google, HP, HTC, Huawei, Jolla, Lenovo, LG, Meizu, Microsoft, Motorola, Nexian, 
+Nintendo, Nokia, Nvidia, Ouya, Palm, Panasonic, Polytron, RIM, Samsung, Sharp, 
+Siemens, Sony-Ericsson, Sprint, Xbox, ZTE
+
+# &apos;device.model&apos; determined dynamically
+</code></pre><ul>
+<li><code>getEngine()</code><ul>
+<li>returns <code>{ name: &#39;&#39;, version: &#39;&#39; }</code></li>
+</ul>
+</li>
+</ul>
+<pre><code># Possible &apos;engine.name&apos;
+Amaya, EdgeHTML, Gecko, iCab, KHTML, Links, Lynx, NetFront, NetSurf, Presto, 
+Tasman, Trident, w3m, WebKit
+
+# &apos;engine.version&apos; determined dynamically
+</code></pre><ul>
+<li><code>getOS()</code><ul>
+<li>returns <code>{ name: &#39;&#39;, version: &#39;&#39; }</code></li>
+</ul>
+</li>
+</ul>
+<pre><code># Possible &apos;os.name&apos;
+AIX, Amiga OS, Android, Arch, Bada, BeOS, BlackBerry, CentOS, Chromium OS, Contiki,
+Fedora, Firefox OS, FreeBSD, Debian, DragonFly, Gentoo, GNU, Haiku, Hurd, iOS, 
+Joli, Linpus, Linux, Mac OS, Mageia, Mandriva, MeeGo, Minix, Mint, Morph OS, NetBSD, 
+Nintendo, OpenBSD, OpenVMS, OS/2, Palm, PCLinuxOS, Plan9, Playstation, QNX, RedHat, 
+RIM Tablet OS, RISC OS, Sailfish, Series40, Slackware, Solaris, SUSE, Symbian, Tizen, 
+Ubuntu, UNIX, VectorLinux, WebOS, Windows [Phone/Mobile], Zenwalk
+
+# &apos;os.version&apos; determined dynamically
+</code></pre><ul>
+<li><code>getCPU()</code><ul>
+<li>returns <code>{ architecture: &#39;&#39; }</code></li>
+</ul>
+</li>
+</ul>
+<pre><code># Possible &apos;cpu.architecture&apos;
+68k, amd64, arm, arm64, avr, ia32, ia64, irix, irix64, mips, mips64, pa-risc, 
+ppc, sparc, sparc64
+</code></pre><ul>
+<li><p><code>getResult()</code></p>
+<ul>
+<li>returns <code>{ ua: &#39;&#39;, browser: {}, cpu: {}, device: {}, engine: {}, os: {} }</code></li>
+</ul>
+</li>
+<li><p><code>getUA()</code></p>
+<ul>
+<li>returns UA string of current instance</li>
+</ul>
+</li>
+<li><p><code>setUA(uastring)</code></p>
+<ul>
+<li>set &amp; parse UA string</li>
+</ul>
+</li>
+</ul>
+<h1 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h1><pre><code class="html"><span class="meta">&lt;!doctype html&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+<span class="tag">&lt;<span class="name">head</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"ua-parser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript">
+
+    <span class="keyword">var</span> parser = <span class="keyword">new</span> UAParser();
+
+    <span class="comment">// by default it takes ua string from current browser's window.navigator.userAgent</span>
+    <span class="built_in">console</span>.log(parser.getResult());
+    <span class="comment">/*
+        /// this will print an object structured like this:
+        {
+            ua: "",
+            browser: {
+                name: "",
+                version: ""
+            },
+            engine: {
+                name: "",
+                version: ""
+            },
+            os: {
+                name: "",
+                version: ""
+            },
+            device: {
+                model: "",
+                type: "",
+                vendor: ""
+            },
+            cpu: {
+                architecture: ""
+            }
+        }
+    */</span>
+
+    <span class="comment">// let's test a custom user-agent string as an example</span>
+    <span class="keyword">var</span> uastring = <span class="string">"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.2 (KHTML, like Gecko) Ubuntu/11.10 Chromium/15.0.874.106 Chrome/15.0.874.106 Safari/535.2"</span>;
+    parser.setUA(uastring);
+
+    <span class="keyword">var</span> result = parser.getResult();
+    <span class="comment">// this will also produce the same result (without instantiation):</span>
+    <span class="comment">// var result = UAParser(uastring);</span>
+
+    <span class="built_in">console</span>.log(result.browser);        <span class="comment">// {name: "Chromium", version: "15.0.874.106"}</span>
+    <span class="built_in">console</span>.log(result.device);         <span class="comment">// {model: undefined, type: undefined, vendor: undefined}</span>
+    <span class="built_in">console</span>.log(result.os);             <span class="comment">// {name: "Ubuntu", version: "11.10"}</span>
+    <span class="built_in">console</span>.log(result.os.version);     <span class="comment">// "11.10"</span>
+    <span class="built_in">console</span>.log(result.engine.name);    <span class="comment">// "WebKit"</span>
+    <span class="built_in">console</span>.log(result.cpu.architecture);   <span class="comment">// "amd64"</span>
+
+    <span class="comment">// do some other tests</span>
+    <span class="keyword">var</span> uastring2 = <span class="string">"Mozilla/5.0 (compatible; Konqueror/4.1; OpenBSD) KHTML/4.1.4 (like Gecko)"</span>;
+    <span class="built_in">console</span>.log(parser.setUA(uastring2).getBrowser().name); <span class="comment">// "Konqueror"</span>
+    <span class="built_in">console</span>.log(parser.getOS());                            <span class="comment">// {name: "OpenBSD", version: undefined}</span>
+    <span class="built_in">console</span>.log(parser.getEngine());                        <span class="comment">// {name: "KHTML", version: "4.1.4"}</span>
+
+    <span class="keyword">var</span> uastring3 = <span class="string">'Mozilla/5.0 (PlayBook; U; RIM Tablet OS 1.0.0; en-US) AppleWebKit/534.11 (KHTML, like Gecko) Version/7.1.0.7 Safari/534.11'</span>;
+    <span class="built_in">console</span>.log(parser.setUA(uastring3).getDevice().model); <span class="comment">// "PlayBook"</span>
+    <span class="built_in">console</span>.log(parser.getOS())                             <span class="comment">// {name: "RIM Tablet OS", version: "1.0.0"}</span>
+    <span class="built_in">console</span>.log(parser.getBrowser().name);                  <span class="comment">// "Safari"</span>
+
+</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+<span class="tag">&lt;<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
+</code></pre>
+<h2 id="Using-node-js"><a href="#Using-node-js" class="headerlink" title="Using node.js"></a>Using node.js</h2><pre><code class="sh">$ npm install ua-parser-js
+</code></pre>
+<pre><code class="js"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);
+<span class="keyword">var</span> parser = <span class="built_in">require</span>(<span class="string">'ua-parser-js'</span>);
+
+http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>{
+    <span class="comment">// get user-agent header</span>
+    <span class="keyword">var</span> ua = parser(req.headers[<span class="string">'user-agent'</span>]);
+    <span class="comment">// write the result as response</span>
+    res.end(<span class="built_in">JSON</span>.stringify(ua, <span class="literal">null</span>, <span class="string">'  '</span>));
+})
+.listen(<span class="number">1337</span>, <span class="string">'127.0.0.1'</span>);
+
+<span class="built_in">console</span>.log(<span class="string">'Server running at http://127.0.0.1:1337/'</span>);
+</code></pre>
+<h2 id="Using-requirejs"><a href="#Using-requirejs" class="headerlink" title="Using requirejs"></a>Using requirejs</h2><pre><code class="js">requirejs.config({
+    <span class="attr">baseUrl</span> : <span class="string">'js/lib'</span>, <span class="comment">// path to your script directory</span>
+    paths   : {
+        <span class="string">'ua-parser-js'</span> : <span class="string">'ua-parser.min'</span>
+    }
+});
+
+requirejs([<span class="string">'ua-parser-js'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">UAParser</span>) </span>{
+    <span class="keyword">var</span> parser = <span class="keyword">new</span> UAParser();
+    <span class="built_in">console</span>.log(parser.getResult());
+});
+</code></pre>
+<h2 id="Using-bower"><a href="#Using-bower" class="headerlink" title="Using bower"></a>Using bower</h2><pre><code class="sh">$ bower install ua-parser-js
+</code></pre>
+<h2 id="Using-meteor"><a href="#Using-meteor" class="headerlink" title="Using meteor"></a>Using meteor</h2><pre><code class="sh">$ meteor add faisalman:ua-parser-js
+</code></pre>
+<h2 id="Using-jQuery-Zepto-ua"><a href="#Using-jQuery-Zepto-ua" class="headerlink" title="Using jQuery/Zepto ($.ua)"></a>Using jQuery/Zepto ($.ua)</h2><p>Although written in vanilla js (which means it doesn’t depends on jQuery), this library will automatically detect if jQuery/Zepto is present and create <code>$.ua</code> object based on browser’s user-agent (although in case you need, <code>window.UAParser</code> constructor is still present). To get/set user-agent you can use: <code>$.ua.get()</code> / <code>$.ua.set(uastring)</code>. </p>
+<pre><code class="js"><span class="comment">// In browser with default user-agent: 'Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0':</span>
+
+<span class="comment">// Do some tests</span>
+<span class="built_in">console</span>.log($.ua.device);           <span class="comment">// {vendor: "HTC", model: "Evo Shift 4G", type: "mobile"}</span>
+<span class="built_in">console</span>.log($.ua.os);               <span class="comment">// {name: "Android", version: "2.3.4"}</span>
+<span class="built_in">console</span>.log($.ua.os.name);          <span class="comment">// "Android"</span>
+<span class="built_in">console</span>.log($.ua.get());            <span class="comment">// "Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; Sprint APA7373KT Build/GRJ22) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0"</span>
+
+<span class="comment">// reset to custom user-agent</span>
+$.ua.set(<span class="string">'Mozilla/5.0 (Linux; U; Android 3.0.1; en-us; Xoom Build/HWI69) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13'</span>);
+
+<span class="comment">// Test again</span>
+<span class="built_in">console</span>.log($.ua.browser.name);     <span class="comment">// "Safari"</span>
+<span class="built_in">console</span>.log($.ua.engine.name);      <span class="comment">// "Webkit"</span>
+<span class="built_in">console</span>.log($.ua.device);           <span class="comment">// {vendor: "Motorola", model: "Xoom", type: "tablet"}</span>
+<span class="built_in">console</span>.log(<span class="built_in">parseInt</span>($.ua.browser.version.split(<span class="string">'.'</span>)[<span class="number">0</span>], <span class="number">10</span>));  <span class="comment">// 4</span>
+</code></pre>
+<h2 id="Extending-regex-patterns"><a href="#Extending-regex-patterns" class="headerlink" title="Extending regex patterns"></a>Extending regex patterns</h2><ul>
+<li><code>UAParser(uastring[, extensions])</code></li>
+</ul>
+<p>Pass your own regexes to extend the limited matching rules.</p>
+<pre><code class="js"><span class="comment">// Example:</span>
+<span class="keyword">var</span> uaString = <span class="string">'MyOwnBrowser/1.3'</span>;
+<span class="keyword">var</span> myOwnRegex = [[<span class="regexp">/(myownbrowser)\/([\w\.]+)/i</span>], [UAParser.BROWSER.NAME, UAParser.BROWSER.VERSION]];
+<span class="keyword">var</span> parser = <span class="keyword">new</span> UAParser(uaString, { <span class="attr">browser</span>: myOwnRegex });
+<span class="built_in">console</span>.log(parser.getBrowser());   <span class="comment">// {name: "MyOwnBrowser", version: "1.3"}</span>
+</code></pre>
+<h1 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h1><h2 id="Contribute"><a href="#Contribute" class="headerlink" title="Contribute"></a>Contribute</h2><ul>
+<li>Fork and clone this repository</li>
+<li>Make some changes as required</li>
+<li>Write a unit test to showcase your feature</li>
+<li>Run the test suites to make sure the changes you made didn’t break anything</li>
+</ul>
+<pre><code class="sh">$ npm run <span class="built_in">test</span>
+</code></pre>
+<ul>
+<li>Commit and push to your own repository</li>
+<li>Submit a pull request to this repository under <code>develop</code> branch</li>
+<li>Profit?</li>
+</ul>
+<h2 id="Build"><a href="#Build" class="headerlink" title="Build"></a>Build</h2><p>Build a minified &amp; packed script</p>
+<pre><code class="sh">$ npm run build
+</code></pre>
+<h1 id="License"><a href="#License" class="headerlink" title="License"></a>License</h1><p>Dual licensed under GPLv2 &amp; MIT</p>
+<p>Copyright © 2012-2016 Faisal Salman <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#60;&#x66;&#121;&#122;&#108;&#x6d;&#x61;&#110;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#60;&#x66;&#121;&#122;&#108;&#x6d;&#x61;&#110;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a>&gt;</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of<br>this software and associated documentation files (the “Software”), to deal in<br>the Software without restriction, including without limitation the rights to use,<br>copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the<br>Software, and to permit persons to whom the Software is furnished to do so,<br>subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all<br>copies or substantial portions of the Software.</p>

@@ -1,0 +1,224 @@
+<h3 id="6-1-2"><a href="#6-1-2" class="headerlink" title="6.1.2"></a>6.1.2</h3><ul>
+<li>Fixes<ul>
+<li>Critical bug in Scss port that caused nested columns to have incorrect gutters.</li>
+<li><code>column-width()</code> and <code>column-gutter()</code> no longer ignore column nesting.</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-1-1"><a href="#6-1-1" class="headerlink" title="6.1.1"></a>6.1.1</h3><ul>
+<li>Fixes<ul>
+<li>By adding <code>cycle</code>/<code>uncycle</code> to <code>span</code> we are now able to clear floated elements so unequal height columns display as expected.</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-1-0"><a href="#6-1-0" class="headerlink" title="6.1.0"></a>6.1.0</h3><ul>
+<li>Enhancements<ul>
+<li>Add <code>important</code> parameter to <code>edit()</code> mixin<ul>
+<li>Defaults to <code>false</code>. When set to <code>true</code> it adds the <code>!important</code> flag to the CSS to force elements with backgrounds already set to show the debug grid.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-0-0"><a href="#6-0-0" class="headerlink" title="6.0.0"></a>6.0.0</h3><ul>
+<li>Enhancements<ul>
+<li>Scss and Stylus version now output identical CSS</li>
+<li>Add fully comprehensive inline documentation</li>
+<li>All API functions namespaced with <code>jeet-</code></li>
+<li>All settings variables are now <code>!default</code> values so they can be overidden</li>
+<li>Move <code>$width</code> to <code>_settings</code> for easier modification</li>
+<li>Add uncenter mixin</li>
+<li>Add alias for ‘edit()’ mixin (<code>debug()</code>) and add color parameter</li>
+<li>Add <code>column-width()</code> and <code>column-gutter()</code> functions</li>
+<li>Add tests for all API methods</li>
+<li>Add a 3.3 enhanced version of the ‘jeet-reverse()’ function</li>
+<li>Remove padding from <code>span()</code> and <code>column()</code> mixins</li>
+</ul>
+</li>
+<li>Fixes<ul>
+<li>Algorithm for reversing list</li>
+<li>Spelling errors</li>
+<li>Remove the cycle and uncycle parameters from span</li>
+</ul>
+</li>
+<li>Breaking changes<ul>
+<li>Remove IE7 support for edit</li>
+<li>Remove prefixing from jeet. Please use something like <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> for adding vendor prefixes</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-3-0"><a href="#5-3-0" class="headerlink" title="5.3.0"></a>5.3.0</h3><ul>
+<li>Enhancements<ul>
+<li>Drop support for IE6 to clean some bloat</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-11"><a href="#5-2-11" class="headerlink" title="5.2.11"></a>5.2.11</h3><ul>
+<li>Fix<ul>
+<li>Repair <code>cycle</code>/<code>uncycle</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-10"><a href="#5-2-10" class="headerlink" title="5.2.10"></a>5.2.10</h3><ul>
+<li>Fix<ul>
+<li>Un-npmignore-ing .gitignore so the npm package can read the gitignore data</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-9"><a href="#5-2-9" class="headerlink" title="5.2.9"></a>5.2.9</h3><ul>
+<li>Fix<ul>
+<li>Remove site stuff from npm package</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-8"><a href="#5-2-8" class="headerlink" title="5.2.8"></a>5.2.8</h3><ul>
+<li>Bugfix<ul>
+<li>Fix <code>align</code> so it doesn’t make items blurry by adding <code>transform-style: preserve-3d</code> to it</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-7"><a href="#5-2-7" class="headerlink" title="5.2.7"></a>5.2.7</h3><ul>
+<li>Enhancements<ul>
+<li>Revert SCSS global variables to normal SCSS variables since maps have really poor support unless you’re on a recent version of SCSS (which most people aren’t).</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-6"><a href="#5-2-6" class="headerlink" title="5.2.6"></a>5.2.6</h3><ul>
+<li>Enhancements<ul>
+<li>Add Stylus as dependency of Jeet so it auto-installs</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-5"><a href="#5-2-5" class="headerlink" title="5.2.5"></a>5.2.5</h3><ul>
+<li>Bugfix<ul>
+<li>You can’t extend placeholders within media queries in any pre-processor so when people were trying to use <code>col()</code>, <code>span()</code>, or <code>center()</code> (all of which made use of a clearfix placeholder) they weren’t actually getting clearfixed. This fixes that bug by turning the placeholder into a mixin. This is a slightly breaking change but not big enough to warrant a major release.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-5"><a href="#5-1-5" class="headerlink" title="5.1.5"></a>5.1.5</h3><ul>
+<li>Bugfix<ul>
+<li>Stylus block level mixins break when <code>display: block</code> occurs within one. By using <code>unquote</code> we’re able to apply a temporary bugfix until Stylus and other libraries are repaired.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-4"><a href="#5-1-4" class="headerlink" title="5.1.4"></a>5.1.4</h3><ul>
+<li>Core<ul>
+<li>Convert namespace from <code>jeet-</code> to hash maps for Stylus and SCSS</li>
+</ul>
+</li>
+<li>Migration Strategy<ul>
+<li>Update Stylus and SCSS global variable references from <code>jeet-</code> to <code>jeet.</code>, and <code>$jeet-</code> to <code>jeet(...)</code> respectively.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-1-3"><a href="#5-1-3" class="headerlink" title="5.1.3"></a>5.1.3</h3><ul>
+<li>Core<ul>
+<li>Add SCSS port</li>
+<li>Migrate preprocessor ports to own folders</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-0-2"><a href="#5-0-2" class="headerlink" title="5.0.2"></a>5.0.2</h3><ul>
+<li>Core<ul>
+<li>Update Jeet to stop being implicitly loaded as this breaks the ability to override settings.</li>
+<li>Update README for a more thorough quick start guide.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-0-1"><a href="#5-0-1" class="headerlink" title="5.0.1"></a>5.0.1</h3><ul>
+<li>Core<ul>
+<li>Add custom gutter sizing relative to containing unit.</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-0-0"><a href="#5-0-0" class="headerlink" title="5.0.0"></a>5.0.0</h3><ul>
+<li>Core<ul>
+<li>Jeet 5 is the final step in making Jeet a perfectly modular Stylus component to be used anywhere libs such as <a href="https://github.com/visionmedia/nib">nib</a> and <a href="https://github.com/jenius/axis">Axis</a> are accepted. It pulls a lot of extra stuff out and turns Jeet exclusively into the finest Stylus grid system available.</li>
+<li>Drop typography</li>
+<li>Drop colors</li>
+<li>Drop <code>bp()</code></li>
+<li>Namespace things</li>
+<li>Add testing</li>
+<li>Add Travis CI</li>
+<li>Add David DM</li>
+<li>Package for Yeoman and Bower</li>
+<li>Add placeholders where appropriate</li>
+<li>2 space indents rather than 4</li>
+<li>Replace snake_case with dash-case for namespaced variables. We’re talking CSS here. What are we, animals?!</li>
+</ul>
+</li>
+<li>Breaking Changes<ul>
+<li>By dropping typography, sites that use Jeet’s typography system will no longer have typography</li>
+<li>By dropping colors, sites that were making use of these variables in <code>_settings.styl</code> will no longer have them defined</li>
+<li>By dropping <code>bp()</code>, sites that used <code>bp()</code> will now not be responsive</li>
+</ul>
+</li>
+<li>Migration strategy<ul>
+<li>Jeet’s typography will be exported to the <a href="https://github.com/corysimmons/typographic">Typographic</a> npm package, so just include that lib when compiling</li>
+<li>Copy/paste your color variables to anywhere they’ll be compiled before they’re used</li>
+<li>Include the <a href="https://github.com/jenius/rupture">Rupture</a> lib and replace occurrences of the <code>bp()</code> mixin with Rupture equivalents</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-0"><a href="#4-1-0" class="headerlink" title="4.1.0"></a>4.1.0</h3><ul>
+<li>Core<ul>
+<li>Remove Autoprefixer integration so Jeet is primarily a collection of .styl files. While trying to port Jeet to a plethora of applications, I noticed it most of these applications that claimed to have Stylus support were expecting pure Stylus libraries - not a script that performed any other actions. Most of these applications (Roots, Grunt, Ruby) were based around integrating libraries in the <a href="https://github.com/visionmedia/nib">nib</a>.</li>
+<li>Prefixed partials with underscore for consistency across ports. Doesn’t break the API.</li>
+</ul>
+</li>
+<li>Breaking Changes<ul>
+<li>By removing Autoprefixer integration 4.0.x projects that were relying on Autoprefixer for non-Jeet elements (e.g. <code>transform: rotate(90deg)</code>) will need to be prefixed.</li>
+</ul>
+</li>
+<li>Migration Strategy<ul>
+<li>The easiest migration would be to use Jeet in unison with some other prefixing library (like nib). This will heavy-handily do vendor prefixing (add vendor prefixing to everything as opposed to just the prefixes required) but should work fairly seamlessly via <code>stylus -u jeet nib -w</code></li>
+<li>For a cleaner, better, migration, try to get Autoprefixer in your project’s pipeline some other way. We’ll keep adding pipelines to do this for things like pure HTML (Grunt), Rails, Node, Roots, etc. but if you end up figuring out a nice way, feel free to contribute or drop us a link and we’ll add it to the README.</li>
+<li>Hand prefix partials with underscores in <code>jeet/</code> and <code>jeet/index.styl</code></li>
+</ul>
+</li>
+<li>Bug Fixes<ul>
+<li>Update index.styl quick reference to be accurate to API</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-0-2"><a href="#4-0-2" class="headerlink" title="4.0.2"></a>4.0.2</h3><ul>
+<li>Bug Fixes<ul>
+<li>Version lock autoprefixer-stylus</li>
+</ul>
+</li>
+<li>Enhancements<ul>
+<li>Version lock stylus</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-0-1"><a href="#4-0-1" class="headerlink" title="4.0.1"></a>4.0.1</h3><ul>
+<li>Bug Fixes<ul>
+<li>bp(w = 705px) to bp(w = breakpoint) to inherit settings.styl breakpoint setting</li>
+<li>Remove align() block duplication in utilities.styl</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-0-0"><a href="#4-0-0" class="headerlink" title="4.0.0"></a>4.0.0</h3><ul>
+<li>Core<ul>
+<li>Remove watcher (use <a href="http://roots.cx">Roots</a>)</li>
+<li>Remove template (use <a href="https://github.com/mojotech/jeet-roots">jeet-roots</a>) which included <a href="https://github.com/mojotech/jeet/commit/153560d04b7eac25f4afe71ca2e233a54988823b">these files</a></li>
+<li>Convert to Stylus library only</li>
+<li>Update package.json to reflect npm distribution of Jeet</li>
+</ul>
+</li>
+<li>Enhancements<ul>
+<li>Make center() padding default to 0</li>
+<li>Add colons to separate prop: val</li>
+<li>Prefix private functions with hyphens</li>
+</ul>
+</li>
+<li>Breaking Changes<ul>
+<li>Jeet 3’s npm package (<code>jeet create</code>, <code>jeet watch</code>) will no longer work with this version. For that kind of functionality, it’s recommended you use <a href="http://roots.cx">Roots</a> in combination with our polyfilled <a href="https://github.com/mojotech/jeet-roots">jeet-roots</a> template. Visit <a href="https://github.com/mojotech/jeet-roots">the repo</a> for installation/usage instructions.</li>
+</ul>
+</li>
+<li>Migration Strategy<ul>
+<li>Since most of the Stylus is identical to 3.5.0, functions won’t change (for instance <code>col(1/3)</code> won’t suddenly do something weird). After upgrading your npm package (<code>npm install -g jeet</code>) you can navigate to your Jeet 3 projects, <code>cd</code> to your <code>css/</code> dir, and run <code>stylus -u jeet -w</code> to use the same Jeet library and edit away. Effectively 4.0.0 drops support for <code>jeet create</code>/<code>jeet watch</code> in favor of making Jeet a more modular Stylus library you can plug into almost any project.</li>
+<li>If you really enjoyed the <code>watch</code> command, LiveReload, and all that nice stuff, you should really install <a href="http://roots.cx">Roots</a> (<code>npm install -g roots</code>), add our <a href="https://github.com/mojotech/jeet-roots">jeet-roots</a> repo as a <a href="roots.cx/docs/#templates">Roots template</a> (it’s easy), and run <code>roots watch</code>. Boom! All kinds of language support/compilation, LiveReload, and some amazing deployment methods to Heroku or Nodejitsu.</li>
+</ul>
+</li>
+</ul>

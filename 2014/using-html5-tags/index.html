@@ -1,0 +1,1070 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="VvyjvVXcJQa0QklHipu6pwm2PJGnnchIqX7s5JbbT_0" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HTML5," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="IIssNan's Notes" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="为了在主流浏览器上使用HTML 5语义化标签，需要做一些修正，本文便是对这些修正原理的解释。如果你正在寻找一个快速的解决方案，可以看以下HTML5 Shiv这个库。下载这个库的代码，然后在页面的head中使用以下代码即可：
+123&amp;lt;!--[if lt IE 9]&amp;gt;    &amp;lt;script type=&quot;text/javascript&quot; src=&quot;path/to/html5-shiv.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用HTML 5语义化标签">
+<meta property="og:url" content="http://notes.iissnan.com/2014/using-html5-tags/index.html">
+<meta property="og:site_name" content="IIssNan's Notes">
+<meta property="og:description" content="为了在主流浏览器上使用HTML 5语义化标签，需要做一些修正，本文便是对这些修正原理的解释。如果你正在寻找一个快速的解决方案，可以看以下HTML5 Shiv这个库。下载这个库的代码，然后在页面的head中使用以下代码即可：
+123&amp;lt;!--[if lt IE 9]&amp;gt;    &amp;lt;script type=&quot;text/javascript&quot; src=&quot;path/to/html5-shiv.">
+<meta property="og:updated_time" content="2015-03-18T05:13:56.962Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用HTML 5语义化标签">
+<meta name="twitter:description" content="为了在主流浏览器上使用HTML 5语义化标签，需要做一些修正，本文便是对这些修正原理的解释。如果你正在寻找一个快速的解决方案，可以看以下HTML5 Shiv这个库。下载这个库的代码，然后在页面的head中使用以下代码即可：
+123&amp;lt;!--[if lt IE 9]&amp;gt;    &amp;lt;script type=&quot;text/javascript&quot; src=&quot;path/to/html5-shiv.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'H27WMII02H',
+      apiKey: '2570cf9c5fc792763f0be10eb76ec72e',
+      indexName: 'notes',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，使用了 ${time} 毫秒"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://notes.iissnan.com/2014/using-html5-tags/"/>
+
+
+
+
+
+  <title> 使用HTML 5语义化标签 | IIssNan's Notes </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?50c15455e37f70aea674ff4a663eef27";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">IIssNan's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://notes.iissnan.com/2014/using-html5-tags/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="IIssNan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/m3.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="IIssNan's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用HTML 5语义化标签
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-02-25T14:52:41+08:00">
+                2014-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2014/using-html5-tags/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2014/using-html5-tags/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2014/using-html5-tags/" class="leancloud_visitors" data-flag-title="使用HTML 5语义化标签">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为了在主流浏览器上使用HTML 5语义化标签，需要做一些修正，本文便是对这些修正原理的解释。<br>如果你正在寻找一个快速的解决方案，可以看以下<a href="https://github.com/aFarkas/html5shiv/" target="_blank" rel="external">HTML5 Shiv</a>这个库。下载这个库的代码，然后在页面的<code>head</code>中使用以下代码即可：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line">    &lt;script type="text/javascript" src="path/to/html5-shiv.js&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>如果看看这个代码背后的原理，请继续往下。</p>
+<a id="more"></a>
+<h3 id="HTML-5语义化标签简述"><a href="#HTML-5语义化标签简述" class="headerlink" title="HTML 5语义化标签简述"></a>HTML 5语义化标签简述</h3><p>语义化标签，顾名思义，是具备一定语义的标签。比如，当使用<code>ol</code>标签，语义就是创建一个有序的列表。语义化可以增强页面的可访问性。</p>
+<p>一个页面通常会被划分成几个区域，比如头部，边栏，内容区域以及底部。在HTML 5之前，页面的结构代码看起来类似于：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"header"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"main"</span>&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"sidebar"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"article"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"footer"</span>&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+<p>由于这些结构划分的通用性，HTML 5引入了几个具有此类语义的标签：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">header</span>, main, <span class="selector-tag">aside</span>, <span class="selector-tag">article</span>, footer</div></pre></td></tr></table></figure>
+<p>使用这些标签重写上面的页面：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="section">&lt;header&gt;</span><span class="section">&lt;/header&gt;</span></div><div class="line"><span class="section">&lt;main&gt;</span></div><div class="line">    <span class="section">&lt;aside&gt;</span><span class="section">&lt;/aside&gt;</span></div><div class="line">    <span class="section">&lt;article&gt;</span><span class="section">&lt;/article&gt;</span></div><div class="line"><span class="section">&lt;/main&gt;</span></div><div class="line"><span class="section">&lt;footer&gt;</span><span class="section">&lt;/footer&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="新标签与旧浏览器的冲突"><a href="#新标签与旧浏览器的冲突" class="headerlink" title="新标签与旧浏览器的冲突"></a>新标签与旧浏览器的冲突</h3><p>有些浏览器早于HTML 5草案发布，所以这些浏览器可能不支持这些新的标签。这就存在着一个问题，那就是浏览器对于未知的标签（元素）是如何处理？这个问题可以再细分为两个子问题：</p>
+<ul>
+<li>如何处理未知元素的样式</li>
+<li>如何处理未知元素在DOM树中的位置</li>
+</ul>
+<p>不同的浏览器对于这两点的处理是不同的，特别在老版本的IE中存在特殊的行为。</p>
+<h3 id="第一个修正"><a href="#第一个修正" class="headerlink" title="第一个修正"></a>第一个修正</h3><p>针对第一条（即未知元素的样式），对于浏览器来说，最为简单的做法是不对未知元素的样式做任何处理。浏览器会给已知元素设置一些默认的样式，比如<code>i</code>标签，默认是斜体，<code>p</code>标签具有前后留白等。而对于未知元素，浏览器没有给定任何的默认样式，由页面作者自定义其样式。</p>
+<p>但需要注意的是，浏览器会将未知元素认为是<code>inline</code>级别。所以对于旧版本的浏览器做的修正是明确指定新标签的<code>display</code>规则：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">header</span>, main, <span class="selector-tag">aside</span>, <span class="selector-tag">article</span>, <span class="selector-tag">footer</span> &#123;</div><div class="line">    <span class="attribute">display</span>: block;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="针对IE的处理"><a href="#针对IE的处理" class="headerlink" title="针对IE的处理"></a>针对IE的处理</h3><p>事情还未结束，因为IE 9之前的版本对于未知元素的处理存在着两个问题：</p>
+<ul>
+<li>无法应用样式到未知元素上</li>
+<li>错误地解析未知元素为空节点</li>
+</ul>
+<p>第一个问题是，即使在样式表中指定了未知元素的样式规则，同样无法生效。</p>
+<p>第二个问题从解析后的DOM结构来看很明了。假定有如下的代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to Initech<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>This is your<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>正确的渲染之后是如下的结构：</p>
+<pre><code>article
+|
++--h1 (article子节点)
+|  |
+|  +--text node &quot;Welcome to Initech&quot;
+|
++--p (article子节点)
+   |
+   +--text node &quot;This is your &quot;
+</code></pre><p>在IE 9之前的版本中，article标签（未知元素）将被解析成一个空的标签，其子元素成为这个未知元素的相邻节点：</p>
+<pre><code>article (空节点)
+h1 (article相邻节点)
+|
++--text node &quot;Welcome to Initech&quot;
+p  (article相邻节点)
+|
++--text node &quot;This is your &quot;
+</code></pre><p>幸运的是，IE中这两个问题可以很简单的被修正。</p>
+<p>对于未知元素，在页面渲染前使用<code>document.createElement()</code>这个方法创建一次即可，不用注入到页面上。例如：</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.createElement(<span class="string">"article"</span>)<span class="comment">;</span></div></pre></td></tr></table></figure>
+<p>需要注意的是，必须在浏览器解析未知元素之前使用这个方法。所以建议是将这个hotfix放置在页面的<code>head</code>区域中。</p>
+<h3 id="小結"><a href="#小結" class="headerlink" title="小結"></a>小結</h3><p>为了在兼容当前主流浏览器的情况下使用HTML 5新的语义标签，需要做两个处理：</p>
+<ol>
+<li><p>明确指定新标签的<code>display</code>属性</p>
+<pre><code>header, main, aside, article, footer {
+    display: block;
+}
+</code></pre></li>
+<li><p>针对IE 9以下版本的浏览器做处理。在页面<code>head</code>区域，使用以下代码：</p>
+<pre><code>&lt;!--[if lt IE 9]&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var e = (&quot;abbr,article,aside,audio,canvas,datalist,details,&quot; +   
+             &quot;figure,footer,header,hgroup,mark,menu,meter,nav,output,&quot; +
+             &quot;progress,section,time,video&quot;).split(&apos;,&apos;);
+    for (var i = 0; i &lt; e.length; i++) {
+        document.createElement(e[i]);
+    }
+&lt;/script&gt;
+&lt;![endif]--&gt;
+</code></pre></li>
+</ol>
+<p>以上。    </p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://diveintohtml5.info/semantics.html#unknown-elements" target="_blank" rel="external">A LONG DIGRESSION INTO HOW BROWSERS HANDLE UNKNOWN ELEMENTS</a></li>
+<li><a href="http://www.paulirish.com/2011/the-history-of-the-html5-shiv/" target="_blank" rel="external">The Story of the HTML5 Shiv</a></li>
+<li><a href="https://github.com/aFarkas/html5shiv/" target="_blank" rel="external">html5shiv Repo</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      IIssNan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://notes.iissnan.com/2014/using-html5-tags/" title="使用HTML 5语义化标签">http://notes.iissnan.com/2014/using-html5-tags/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/html5/" rel="tag"># HTML5</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/damn-hard-to-take-the-right-way/" rel="next" title="Damn hard to take the right way">
+                <i class="fa fa-chevron-left"></i> Damn hard to take the right way
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/ask-or-not-to-ask/" rel="prev" title="唔，问乃一时之耻，不问乃一生之耻">
+                唔，问乃一时之耻，不问乃一生之耻 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/m3.jpg"
+               alt="IIssNan" />
+          <p class="site-author-name" itemprop="name">IIssNan</p>
+           
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">183</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">111</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/iissnan" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  豆瓣
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-5语义化标签简述"><span class="nav-number">1.</span> <span class="nav-text">HTML 5语义化标签简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新标签与旧浏览器的冲突"><span class="nav-number">2.</span> <span class="nav-text">新标签与旧浏览器的冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个修正"><span class="nav-number">3.</span> <span class="nav-text">第一个修正</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#针对IE的处理"><span class="nav-number">4.</span> <span class="nav-text">针对IE的处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小結"><span class="nav-number">5.</span> <span class="nav-text">小結</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考资料"><span class="nav-number">5.1.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2011 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">IIssNan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://notes.iissnan.com/2014/using-html5-tags/';
+          this.page.identifier = '2014/using-html5-tags/';
+          this.page.title = '使用HTML 5语义化标签';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://iissnan-notes.disqus.com/embed.js';
+        s.async = true;
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
