@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-
 <head>
   <!--Google adSense start-->
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -14,99 +13,33 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-
-
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
     rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
+  <meta name="keywords" content="Docker,EFK," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
-
-
-
-
-
-  <meta name="description" content="自我介绍编程能力Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载，精通 CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写，熟悉 Windows、Linux、OS X、Android、iOS、WP8 等系统的开关机。
-项目经验本人学识渊博">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="about">
-  <meta property="og:url" content="https://cocoyh.github.io/about/index.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Docker通过EFK（Elasticsearch + Fluentd + Kibana）查询日志">
+  <meta property="og:url"
+    content="https://cocoyh.github.io/2019/04/20/Docker通过EFK（Elasticsearch-Fluentd-Kibana）查询日志/index.html">
   <meta property="og:site_name" content="coco的博客">
-  <meta property="og:description" content="自我介绍编程能力Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载，精通 CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写，熟悉 Windows、Linux、OS X、Android、iOS、WP8 等系统的开关机。
-项目经验本人学识渊博">
-  <meta property="og:updated_time" content="2018-03-17T15:33:08.000Z">
+  <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g28xq6oyz5j31c00u0qly.jpg">
+  <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g25rfedkj4j31c00u07pg.jpg">
+  <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g28vhz1565j30ka07rq3m.jpg">
+  <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g28w82fugwj31c00u07gi.jpg">
+  <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1g28w95rg94j31ij0u0dma.jpg">
+  <meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1g28w9pb14cj31c00u0nk7.jpg">
+  <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1g28wo5q9s5j31c00u0wui.jpg">
+  <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g28xp9fmb1j30rs0pm0ux.jpg">
+  <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g28xq6oyz5j31c00u0qly.jpg">
+  <meta property="og:updated_time" content="2019-04-20T12:52:36.928Z">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="about">
-  <meta name="twitter:description" content="自我介绍编程能力Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载，精通 CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写，熟悉 Windows、Linux、OS X、Android、iOS、WP8 等系统的开关机。
-项目经验本人学识渊博">
-
-
+  <meta name="twitter:title" content="Docker通过EFK（Elasticsearch + Fluentd + Kibana）查询日志">
+  <meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1g28xq6oyz5j31c00u0qly.jpg">
 
   <script type="text/javascript" id="hexo.configurations">
     var NexT = window.NexT || {};
@@ -142,49 +75,11 @@
       }
     };
   </script>
-
-
-
-  <link rel="canonical" href="https://cocoyh.github.io/about/" />
-
-
-
-
-
-  <title>
-
-
-
-    about | coco的博客
-
-  </title>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/04/20/Docker通过EFK（Elasticsearch-Fluentd-Kibana）查询日志/" />
+  <title> 自检清单 | coco的博客 </title>
 </head>
-
-
-
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
     <a href="https://github.com/CoCoyh"><img style="position: absolute; top: 0; left: 0; border: 0;"
         src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
@@ -192,8 +87,6 @@
       <div class="header-inner">
         <div class="site-brand-wrapper">
           <div class="site-meta ">
-
-
             <div class="custom-logo-site-title">
               <a href="/" class="brand" rel="start">
                 <span class="logo-line-before"><i></i></span>
@@ -201,9 +94,7 @@
                 <span class="logo-line-after"><i></i></span>
               </a>
             </div>
-
             <p class="site-subtitle">Quick notes</p>
-
           </div>
 
           <div class="site-nav-toggle">
@@ -216,127 +107,174 @@
         </div>
 
         <nav class="site-nav">
-
-
-
           <ul id="menu" class="menu">
-
-
             <li class="menu-item menu-item-home">
               <a href="/" rel="section">
-
                 <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-
                 首页
               </a>
             </li>
-
-
             <li class="menu-item menu-item-categories">
               <a href="/categories" rel="section">
-
                 <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-
                 分类
               </a>
             </li>
-
-
             <li class="menu-item menu-item-about">
               <a href="/about" rel="section">
-
                 <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-
                 关于
               </a>
             </li>
-
-
             <li class="menu-item menu-item-archives">
               <a href="/archives" rel="section">
-
                 <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-
                 归档
               </a>
             </li>
-
-
             <li class="menu-item menu-item-tags">
               <a href="/tags" rel="section">
-
                 <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-
                 标签
               </a>
             </li>
-
-
-
           </ul>
-
-
-
         </nav>
-
-
-
       </div>
     </header>
-
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-
-
             <div id="posts" class="posts-expand">
-              <header class="post-header">
-
-                <h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-              </header>
-
-
-
-              <h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1>
-              <h3 id="编程能力"><a href="#编程能力" class="headerlink" title="编程能力"></a>编程能力</h3>
-              <p>Ai、Fw、Fl、Br、Ae、Pr、Id、Ps 等软件的安装与卸载，精通
-                CSS、JavaScript、PHP、ASP、C、C++、C#、Java、Ruby、Perl、Lisp、Python、Objective-C、ActionScript、Pascal 等单词的拼写，熟悉
-                Windows、Linux、OS X、Android、iOS、WP8 等系统的开关机。</p>
-              <h3 id="项目经验"><a href="#项目经验" class="headerlink" title="项目经验"></a>项目经验</h3>
-              <p>
-                本人学识渊博、经验丰富、代码风骚、效率恐怖、C/C++、JAVA、php无不精通、深山苦练20余年、一天只睡4个小时、电话通知出BUG后秒登VPN，千里之外定位问题、瞬息之间修复上线。<br>身体强壮、健步如飞、可连续编程100小时不休息、讨论技术方案5小时不喝水，上至带项目、出方案，下至盗账号、威胁PM，什么都能干。<br>泡面矿泉水已备好，学校不支持编程已辍学、家人不支持编程已断绝关系、老婆不支持编程已离婚、小孩不支持编程已送孤儿院，备用电源百兆光纤永不断电断网，门口已埋地雷无人打扰。
-              </p>
-              <h1 id="联系我吧"><a href="#联系我吧" class="headerlink" title="联系我吧"></a>联系我吧</h1>
-              <p>Email：zhangslob@gmail.com</p>
-              <p>Wechat：zhang7350</p>
-              <p>知乎：<a href="https://www.zhihu.com/people/coco-27-59/activities" target="_blank" rel="external">coco</a>
-              </p>
-              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86"
-                src="//music.163.com/outchain/player?type=2&id=5242672&auto=1&height=66"></iframe>
-
+              <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+                <link itemprop="mainEntityOfPage"
+                  href="https://cocoyh.github.io/2019/05/10/自检清单/">
+                <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <meta itemprop="name" content="coco">
+                  <meta itemprop="description" content="">
+                  <meta itemprop="image" content="/uploads/profile.png">
+                </span>
+                <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                  <meta itemprop="name" content="coco的博客">
+                </span>
+                <header class="post-header">
+                  <h1 class="post-title" itemprop="name headline">
+                      自检清单
+                  </h1>
+                  <div class="post-meta">
+                    <span class="post-time">
+                      <span class="post-meta-item-icon">
+                        <i class="fa fa-calendar-o"></i>
+                      </span>
+                      <span class="post-meta-item-text">发表于</span>
+                      <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-10T20:47:51+08:00">
+                        2019-05-10
+                      </time>
+                    </span>
+                    <span class="post-category">
+                      <span class="post-meta-divider">|</span>
+                      <span class="post-meta-item-icon">
+                        <i class="fa fa-folder-o"></i>
+                      </span>
+                      <span class="post-meta-item-text">分类于</span>
+                      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                        <a href="/categories/总结/" itemprop="url" rel="index">
+                          <span itemprop="name">总结</span>
+                        </a>
+                      </span>
+                    </span>
+                    <span id="/2019/05/10/自检清单 class="leancloud_visitors"
+                      data-flag-title="自检清单">
+                      <span class="post-meta-divider">|</span>
+                      <span class="post-meta-item-icon">
+                        <i class="fa fa-eye"></i>
+                      </span>
+                      <span class="post-meta-item-text">阅读次数 </span>
+                      <span class="leancloud-visitors-count"></span>
+                    </span>
+                  </div>
+                </header>
+                <div class="post-body" itemprop="articleBody">
+                  <p>
+                    <a href="https://juejin.im/post/5cc1da82f265da036023b628"
+                      target="_blank" rel="external">【转载自】
+                    </a>
+                  </p>
+                  <p><img src="/uploads/system.png" alt=""></p>
+                  <a id="more"></a>
+                  <h1 id="一、JavaScript基础"></h1>
+                  <h2 id="变量和类型"></h2>
+                  <ul>
+                    <li>1. <strong>JavaScript </strong>对定了几种语言类型</li>
+                    <li>
+                      2. <strong>JavaScript </strong>对象的底层数据结构是什么？
+                      <a href="https://lz5z.com/JavaScript-Object-Hash/" target="_blank" rel="external">资料</a>
+                    </li>
+                    <li>3. <strong>Symbol </strong>类型在实际开发中的应用</li>
+                    <li>4. <strong>JavaScript </strong>中的变量在内存中的具体存储形式</li>
+                    <li>5. 基本类型对应的内置对象，以及它们之间的装箱拆箱操作</li>
+                    <li>6. 理解值类型和应用类型</li>
+                    <li>7. <strong>null </strong>和<strong>undefined </strong>的区别</li>
+                    <li>
+                        8. 至少可以说出三种判断<strong>JavaScript</strong>数据类型的方式，以及它们的优缺点，如何准确的判断数据类型
+                        <a href="https://juejin.im/entry/5964a1c15188250d8b65ef5f/" target="_blank" rel="external">资料</a>
+                    </li>
+                    <li>9. 可能发生隐式了类型转换的场景以及转换原则，应如何避免或巧妙应用</li>
+                    <li>10. 出现小数精度丢失的原因，<strong>JavaScript </strong>可以存储的最大数字、最大安全数字，<strong>JavaScript</strong>处理大数字的方法、避免精度丢失的方法</li>
+                  </ul>
+                </div>
+                <div>
+                </div>
+                <div>
+                </div>
+                <footer class="post-footer">
+                  <div class="post-tags">
+                    <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                    <a href="/tags/刷题" rel="tag"># 刷题</a>
+                  </div>
+                  <div class="post-nav">
+                    <div class="post-nav-next post-nav-item">
+                      <a href="/2019/04/25/Javascript重要知识点/" rel="next" title="Javascript重要知识点整理">
+                        <i class="fa fa-chevron-left"></i> Javascript重要知识点整理
+                      </a>
+                    </div>
+                    <span class="post-nav-divider"></span>
+                    <div class="post-nav-prev post-nav-item">
+                    </div>
+                  </div>
+                </footer>
+              </article>
+              <div class="post-spread">
+              </div>
             </div>
 
-
+            <!-- 下一行是要添加的代码 start  -->
+            <!-- Link Gitalk 的支持文件  -->
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+            <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+            <script src="/js/src/md5.min.js"></script>
+            <div id="gitalk-container"></div>
+            <script type="text/javascript">
+              var gitalk = new Gitalk({
+                // gitalk的主要参数
+                clientID: '5ec2f8855d35458a8251',
+                clientSecret: 'bba153b77a0beb4c104a1eefc4132cf2b794f44f',
+                repo: 'zhangslob.github.io',
+                owner: 'zhangslob',
+                admin: ['zhangslob'],
+                id: md5(location.pathname),
+              });
+              gitalk.render('gitalk-container');
+            </script>
+            <!-- Gitalk end -->
+            <!-- 到一上行结束 end  -->
           </div>
-
-
-
-
           <div class="comments" id="comments">
-
             <div id="gitalk-container"></div>
             <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-
           </div>
-
         </div>
-
-
-
         <div class="sidebar-toggle">
           <div class="sidebar-toggle-line-wrap">
             <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -344,130 +282,111 @@
             <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
           </div>
         </div>
-
         <aside id="sidebar" class="sidebar">
           <div class="sidebar-inner">
-
-
-
-
-
-            <section class="site-overview sidebar-panel sidebar-panel-active">
+            <ul class="sidebar-nav motion-element">
+              <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                文章目录
+              </li>
+              <li class="sidebar-nav-overview" data-target="site-overview">
+                站点概览
+              </li>
+            </ul>
+            <section class="site-overview sidebar-panel">
               <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <img class="site-author-image" itemprop="image" src="/uploads/profile.png" alt="coco" />
+                <img class="site-author-image" itemprop="image"
+                  src="/uploads/profile.png"
+                  alt="coco" />
                 <p class="site-author-name" itemprop="name">coco</p>
-
                 <p class="site-description motion-element" itemprop="description">路漫漫其修远兮，吾将上下而求索</p>
-
               </div>
               <nav class="site-state motion-element">
-
-
                 <div class="site-state-item site-state-posts">
                   <a href="/archives">
                     <span class="site-state-item-count">94</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
-
-
-
                 <div class="site-state-item site-state-categories">
                   <a href="/categories">
                     <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
-
-
-
                 <div class="site-state-item site-state-tags">
                   <a href="/tags">
                     <span class="site-state-item-count">80</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
-
-
               </nav>
-
-
-
               <div class="links-of-author motion-element">
-
-
                 <span class="links-of-author-item">
                   <a href="https://github.com/CoCoyh" target="_blank" title="GitHub">
-
                     <i class="fa fa-fw fa-github"></i>
-
                     GitHub
                   </a>
                 </span>
-
                 <span class="links-of-author-item">
                   <a href="mailto:cocoguo7636@gmail.com" target="_blank" title="E-Mail">
-
                     <i class="fa fa-fw fa-globe"></i>
-
                     E-Mail
                   </a>
                 </span>
-
                 <span class="links-of-author-item">
                   <a href="https://www.zhihu.com/people/coco-27-59/activities" target="_blank" title="知乎">
-
                     <i class="fa fa-fw fa-globe"></i>
-
                     知乎
                   </a>
                 </span>
-
                 <span class="links-of-author-item">
                   <a href="https://www.quora.com/profile/Coco-Guo-20#" target="_blank" title="Quora">
-
                     <i class="fa fa-fw fa-globe"></i>
-
                     Quora
                   </a>
                 </span>
-
-
               </div>
-
-
-
-
-
-
-
-
-
-
             </section>
-
-
-
-
-
+            <!--noindex-->
+            <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+              <div class="post-toc">
+                <div class="post-toc-content">
+                  <ol class="nav">
+                    <li class="nav-item nav-level-1"><a class="nav-link"
+                        href="#Docker通过EFK（Elasticsearch-Fluentd-Kibana）查询日志"><span class="nav-number">1.</span> <span
+                          class="nav-text">Docker通过EFK（Elasticsearch + Fluentd + Kibana）查询日志</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#环境准备"><span class="nav-number">2.</span>
+                        <span class="nav-text">环境准备</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#编写docker-compose-yml"><span
+                          class="nav-number">3.</span> <span class="nav-text">编写docker-compose.yml</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#Fluentd的配置和插件"><span
+                          class="nav-number">4.</span> <span class="nav-text">Fluentd的配置和插件</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#启动容器"><span class="nav-number">5.</span>
+                        <span class="nav-text">启动容器</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#产生日志"><span class="nav-number">6.</span>
+                        <span class="nav-text">产生日志</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#查看日志"><span class="nav-number">7.</span>
+                        <span class="nav-text">查看日志</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#如何接入其他docker日志"><span
+                          class="nav-number">8.</span> <span class="nav-text">如何接入其他docker日志</span></a></li>
+                    <li class="nav-item nav-level-1"><a class="nav-link" href="#版本选择"><span class="nav-number">9.</span>
+                        <span class="nav-text">版本选择</span></a></li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <!--/noindex-->
           </div>
         </aside>
-
-
-
       </div>
     </main>
-
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
         </script>
-
         一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
         您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
-
         <div class="copyright">
-
           &copy; 2017 -
           <span itemprop="copyrightYear">2019</span>
           <span class="with-love">
@@ -475,148 +394,42 @@
           </span>
           <span class="author" itemprop="copyrightHolder">coco</span>
         </div>
-
-
         <div class="powered-by">
           由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
         </div>
-
         <div class="theme-info">
           主题 -
           <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
             NexT.Pisces
           </a>
         </div>
-
-
-
         <span id="busuanzi_container_site_pv">
           本站总访问量<span id="busuanzi_value_site_pv"></span>次
         </span>
-
-
-
-
-
       </div>
     </footer>
-
-
     <div class="back-to-top">
       <i class="fa fa-arrow-up"></i>
-
     </div>
-
-
   </div>
-
-
-
   <script type="text/javascript">
     if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
       window.Promise = null;
     }
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-
   <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-
   <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-
   <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-
   <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-
-
-
   <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-
-
-
-
   <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
   <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-
-
-
-
-
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>
     AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");
@@ -626,27 +439,22 @@
       var query = new AV.Query(Counter);
       var entries = [];
       var $visitors = $(".leancloud_visitors");
-
       $visitors.each(function () {
         entries.push($(this).attr("id").trim());
       });
-
       query.containedIn('url', entries);
       query.find()
         .done(function (results) {
           var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
           if (results.length === 0) {
             $visitors.find(COUNT_CONTAINER_REF).text(0);
             return;
           }
-
           for (var i = 0; i < results.length; i++) {
             var item = results[i];
             var url = item.get('url');
             var time = item.get('time');
             var element = document.getElementById(url);
-
             $(element).find(COUNT_CONTAINER_REF).text(time);
           }
           for (var i = 0; i < entries.length; i++) {
@@ -662,13 +470,11 @@
           console.log("Error: " + error.code + " " + error.message);
         });
     }
-
     function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
       var url = $visitors.attr('id').trim();
       var title = $visitors.attr('data-flag-title').trim();
       var query = new AV.Query(Counter);
-
       query.equalTo("url", url);
       query.find({
         success: function (results) {
@@ -722,16 +528,5 @@
       }
     });
   </script>
-
-
-
-
-
-
-
-
-
-
 </body>
-
 </html>
