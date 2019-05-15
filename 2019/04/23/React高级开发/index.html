@@ -1,0 +1,73 @@
+<div class="post-body" itemprop="articleBody">
+  <P>
+    <a href="http://javascript.info/" target="_blank">【推荐】</a>
+  </P>
+  <h2 id="闭包">
+    <a href="#闭包" class="headerlink" title="闭包">一、闭包</a>
+  </h2>
+  <p>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures"
+      target="_blank">资料(待完善)</a>
+  </p>
+  <h2 id="ES6面向对象">
+    <a href="#ES6面向对象" class="headerlink" title="ES6面向对象">二、ES6面向对象</a>
+  </h2>
+  <p>
+    <a href="https://www.html.cn/archives/7383" target="_blank">资料（待完善）</a>
+  </p>
+  <h2 id="箭头函数">
+    <a href="#箭头函数" class="headerlink" title="箭头函数">三、箭头函数</a>
+  </h2>
+  <p><strong>VS普通函数</strong></p>
+  <ul>
+    <li>箭头函数只有一个参数时，括号可以参略</li>
+    <li>只有一行return， <code>{}</code>可以参略</li>
+    <li>作用域不同，箭头函数在哪个对象调用，this就是哪个对象</li>
+  </ul>
+  <h2 id="class 静态属性和实例属性">
+    <a href="#class 静态属性和实例属性" class="headerlink" title="class 静态属性和实例属性">
+      四、class 静态属性和实例属性
+    </a>
+  </h2>
+  <h3>静态属性</h3>
+  <p>指的是class本身的属性，即Class.propname，而不是定义在实例对象（this）的属性。</p>
+  <p>// 定义静态属性</p>
+  <p>
+    <img src="/uploads/js-1.png" alt=""/>
+  </p>
+  <p>// 定义实例属性</p>
+  <p>// ES6实例属性只能在constructor构造函数中定义</p>
+  <p>
+    <img src="/uploads/js-2.png" alt=""/>
+  </p>
+  <p>为了可读性的目的，对于那些在constructor里面已经定义的实例属性，新写法允许直接列出，例如：width</p>
+  <p><strong>说明</strong>：目前ES6，只有这种写法可行，因为ES6明确规定，Class内部只有静态方法，没有静态属性</p>
+
+  <p><strong>ES7有一个静态属性的提案</strong>目前Babel转码器支持。安装babel-preset-stage-0包含了0-3的stage，可根据需要天假，不同的stage封装了不同的插件，官方推荐使用stage-1安装命令: </p>
+  <p>
+    <img src="/uploads/js-3.png" alt=""/>
+  </p>
+  <p>ES7使用京台属性和实例属性</p>
+  <p><img src="/uploads/js-4.png" alt=""/> </p>
+</div>
+
+
+<!--noindex-->
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+      <div class="post-toc-content">
+        <ol class="nav">
+          <li class="nav-item nav-level-1"><a class="nav-link"
+              href="#闭包"><span class="nav-number">一、</span> <span
+                class="nav-text">闭包</span></a></li>
+          <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
+              <span class="nav-text">ES6面向对象</span></a></li>
+          <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
+                class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
+          <li class="nav-item nav-level-1"><a class="nav-link" href="#class 静态属性和实例属性"><span
+                class="nav-number">四、</span> <span class="nav-text">class 静态属性和实例属性</span></a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!--/noindex-->
