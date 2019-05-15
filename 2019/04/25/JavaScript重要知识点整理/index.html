@@ -109,12 +109,7 @@
                 分类
               </a>
             </li>
-            <li class="menu-item menu-item-about">
-              <a href="/about" rel="section">
-                <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-                关于
-              </a>
-            </li>
+             
             <li class="menu-item menu-item-archives">
               <a href="/archives" rel="section">
                 <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
@@ -188,19 +183,20 @@
                     <a href="http://javascript.info/" target="_blank">【推荐】</a>
                   </P>
                   <h2 id="闭包">
-                    <a href="#闭包" class="headerlink" title="闭包">闭包</a>
+                    <a href="#闭包" class="headerlink" title="闭包">一、闭包</a>
                   </h2>
                   <p>
-                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures" target="_blank">资料(待完善)</a>
+                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures"
+                      target="_blank">资料(待完善)</a>
                   </p>
                   <h2 id="ES6面向对象">
-                    <a href="#ES6面向对象" class="headerlink" title="ES6面向对象">闭包</a>
+                    <a href="#ES6面向对象" class="headerlink" title="ES6面向对象">二、ES6面向对象</a>
                   </h2>
                   <p>
                     <a href="https://www.html.cn/archives/7383" target="_blank">资料（待完善）</a>
                   </p>
                   <h2 id="箭头函数">
-                    <a href="#箭头函数" class="headerlink" title="箭头函数">箭头函数</a>
+                    <a href="#箭头函数" class="headerlink" title="箭头函数">三、箭头函数</a>
                   </h2>
                   <p><strong>VS普通函数</strong></p>
                   <ul>
@@ -208,474 +204,229 @@
                     <li>只有一行return， <code>{}</code>可以参略</li>
                     <li>作用域不同，箭头函数在哪个对象调用，this就是哪个对象</li>
                   </ul>
-                  <!-- <figure class="highlight js">
-                    <table>
-                      <tr>
-                        <td class="gutter">
-                          <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre>
-                        </td>
-                        <td class="code">
-                          <pre><div class="line">describe(<span class="string">'type: name'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> $scope, myService, $location;</div><div class="line"></div><div class="line">  <span class="comment">// 在每个测试用例执行之前，引用 app 模块</span></div><div class="line">  beforeEach(<span class="built_in">module</span>(<span class="string">'app'</span>));</div><div class="line"></div><div class="line">  <span class="comment">// 在每个测试用例执行之前，注入依赖</span></div><div class="line">  beforeEach(inject(<span class="function"><span class="keyword">function</span>(<span class="params">$rootScope, _myService_, _$location_</span>) </span>&#123;</div><div class="line">    $scope = $rootScope.$<span class="keyword">new</span>();</div><div class="line">    myService = _myService_;</div><div class="line">    $location = _$location_;</div><div class="line">  &#125;));</div><div class="line"></div><div class="line"></div><div class="line">  it(<span class="string">'should work'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// Do something</span></div><div class="line">    <span class="comment">// Expect something</span></div><div class="line">  &#125;);</div><div class="line">&#125;);</div></pre>
-                        </td>
-                      </tr>
-                    </table>
-                  </figure> -->
                   <h2 id="class 静态属性和实例属性">
                     <a href="#class 静态属性和实例属性" class="headerlink" title="class 静态属性和实例属性">
-                        class 静态属性和实例属性
+                      四、class 静态属性和实例属性
                     </a>
                   </h2>
                   <h3>静态属性</h3>
-                  <p><strong>静态属性: </strong>指的是class本身的属性，即Class.propname，而不是定义在实例对象（this）的属性。</p>
-                  <figure class="highlight js">
-                    <table>
-                      <tr>
-                        <td class="gutter">
-                          <pre><div class="line">1</div><div class="line">2</div></pre>
-                        </td>
-                        <td class="code">
-                          <pre><div class="line"><span class="comment">// 定义静态属性</span></div><div class="line">StaticMethod.firstName = 'pcsa';</div><div class="line"><span class="comment">// 定义实例属性,ES6实例属性只能在constructor构造函数中定义</span></div><div class="line">constructor() {</div><div class="line"><span class="keyword">super();</span></div><div class="line"><span class="keyword">this.width='40cm'</span></div><div class="line">}</div></pre>
-                        </td>
-                      </tr>
-                    </table>
-                  </figure>
+                  <p>指的是class本身的属性，即Class.propname，而不是定义在实例对象（this）的属性。</p>
+                  <p>// 定义静态属性</p>
+                  <p>
+                    <img src="/uploads/js-1.png" alt=""/>
+                  </p>
+                  <p>// 定义实例属性</p>
+                  <p>// ES6实例属性只能在constructor构造函数中定义</p>
+                  <p>
+                    <img src="/uploads/js-2.png" alt=""/>
+                  </p>
+                  <p>为了可读性的目的，对于那些在constructor里面已经定义的实例属性，新写法允许直接列出，例如：width</p>
+                  <p><strong>说明</strong>：目前ES6，只有这种写法可行，因为ES6明确规定，Class内部只有静态方法，没有静态属性</p>
+
+                  <p><strong>ES7有一个静态属性的提案</strong>目前Babel转码器支持。安装babel-preset-stage-0包含了0-3的stage，可根据需要天假，不同的stage封装了不同的插件，官方推荐使用stage-1安装命令: </p>
+                  <p>
+                    <img src="/uploads/js-3.png" alt=""/>
+                  </p>
+                  <p>ES7使用京台属性和实例属性</p>
+                  <p><img src="/uploads/js-4.png" alt=""/> </p>
                 </div>
-
-                <div>
-
-
-
-
-                </div>
-
-                <div>
-
-
-
-
-                </div>
-
-                <div>
-
-
-                  <ul class="post-copyright">
-                    <li class="post-copyright-author">
-                      <strong>本文作者：</strong>
-                      IIssNan
-                    </li>
-                    <li class="post-copyright-link">
-                      <strong>本文链接：</strong>
-                      <a href="http://notes.iissnan.com/2015/angularjs-application-unit-testing-getting-stated/"
-                        title="AngularJS 应用单元测试起步">http://notes.iissnan.com/2015/angularjs-application-unit-testing-getting-stated/</a>
-                    </li>
-                    <li class="post-copyright-license">
-                      <strong>版权声明： </strong>
-                      本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/"
-                        rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
-                    </li>
-                  </ul>
-
-
-
-                </div>
-
-                <footer class="post-footer">
-
-                  <div class="post-tags">
-
-                    <a href="/tags/angularjs/" rel="tag"># AngularJS</a>
-
-                    <a href="/tags/单元测试/" rel="tag"># 单元测试</a>
-
-                  </div>
-
-
-
-
-
-
-
-                  <div class="post-nav">
-                    <div class="post-nav-next post-nav-item">
-
-                      <a href="/2015/interview/" rel="next" title="希桅的第一次面试">
-                        <i class="fa fa-chevron-left"></i> 希桅的第一次面试
-                      </a>
-
-                    </div>
-
-                    <span class="post-nav-divider"></span>
-
-                    <div class="post-nav-prev post-nav-item">
-
-                      <a href="/2015/group-picture-test/" rel="prev" title="group-picture-test">
-                        group-picture-test <i class="fa fa-chevron-right"></i>
-                      </a>
-
-                    </div>
-                  </div>
-
-
-
-
-                </footer>
               </article>
-
-
-
-              <div class="post-spread">
-
-              </div>
             </div>
-
-
-          </div>
-
-
-
-
-          <div class="comments" id="comments">
-
-            <div id="disqus_thread">
-              <noscript>
-                Please enable JavaScript to view the
-                <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              </noscript>
+            <div>
             </div>
-
-          </div>
-
-
-        </div>
-
-
-
-        <div class="sidebar-toggle">
-          <div class="sidebar-toggle-line-wrap">
-            <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-            <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-            <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-          </div>
-        </div>
-
-        <aside id="sidebar" class="sidebar">
-          <div class="sidebar-inner">
-
-
-
-
-
-            <section class="site-overview sidebar-panel sidebar-panel-active">
-              <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <img class="site-author-image" itemprop="image" src="/uploads/m3.jpg" alt="IIssNan" />
-                <p class="site-author-name" itemprop="name">IIssNan</p>
-
-                <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
-
+            <div>
+            </div>
+            <footer class="post-footer">
+              <div class="post-tags">
+                <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
               </div>
-              <nav class="site-state motion-element">
-
-
-                <div class="site-state-item site-state-posts">
-                  <a href="/archives">
-                    <span class="site-state-item-count">183</span>
-                    <span class="site-state-item-name">日志</span>
+              <div class="post-nav">
+                <div class="post-nav-next post-nav-item">
+                  <a href="/2019/04/23/React高级开发/" rel="next" title="React高级开发">
+                    <i class="fa fa-chevron-left"></i> React高级开发
                   </a>
                 </div>
-
-
-
-
-
-                <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
+                <span class="post-nav-divider"></span>
+                <div class="post-nav-prev post-nav-item">
                 </div>
-
-
-
-
-
-                <div class="site-state-item site-state-tags">
-                  <a href="/tags/index.html">
-                    <span class="site-state-item-count">111</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-
-
-              </nav>
-
-
-              <div class="feed-link motion-element">
-                <a href="/atom.xml" rel="alternate">
-                  <i class="fa fa-rss"></i>
-                  RSS
+              </div>
+            </footer>
+            </article>
+            <div class="post-spread">
+            </div>
+          </div>
+          <!-- 下一行是要添加的代码 start  -->
+          <!-- Link Gitalk 的支持文件  -->
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+          <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+          <script src="/js/src/md5.min.js"></script>
+          <div id="gitalk-container"></div>
+          <script type="text/javascript">
+            var gitalk = new Gitalk({
+              // gitalk的主要参数
+              clientID: 'eabdaedb86b472760a2c',
+              clientSecret: '6b50b60a18b8817e25bf6470d06997013de140c4',
+              repo: 'CoCoyh.github.io',
+              owner: 'CoCoyh',
+              admin: ['CoCoyh'],
+              id: md5(location.pathname),
+            });
+            gitalk.render('gitalk-container');
+          </script>
+          <!-- Gitalk end -->
+          <!-- 到一上行结束 end  -->
+        </div>
+        <div class="comments" id="comments">
+          <div id="gitalk-container"></div>
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        </div>
+      </div>
+      <div class="sidebar-toggle">
+        <div class="sidebar-toggle-line-wrap">
+          <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+          <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+          <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+        </div>
+      </div>
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-inner">
+          <ul class="sidebar-nav motion-element">
+            <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+              文章目录
+            </li>
+            <li class="sidebar-nav-overview" data-target="site-overview">
+              站点概览
+            </li>
+          </ul>
+          <section class="site-overview sidebar-panel">
+            <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <img class="site-author-image" itemprop="image" src="/uploads/profile.png" alt="coco" />
+              <p class="site-author-name" itemprop="name">coco</p>
+              <p class="site-description motion-element" itemprop="description">路漫漫其修远兮，吾将上下而求索</p>
+            </div>
+            <nav class="site-state motion-element">
+              <div class="site-state-item site-state-posts">
+                <a href="/archives">
+                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
-
-
-              <div class="links-of-author motion-element">
-
-
-                <span class="links-of-author-item">
-                  <a href="https://github.com/iissnan" target="_blank" title="GitHub">
-
-                    <i class="fa fa-fw fa-github"></i>
-
-                    GitHub
-                  </a>
-                </span>
-
-                <span class="links-of-author-item">
-                  <a href="https://twitter.com/iissnan" target="_blank" title="Twitter">
-
-                    <i class="fa fa-fw fa-twitter"></i>
-
-                    Twitter
-                  </a>
-                </span>
-
-                <span class="links-of-author-item">
-                  <a href="http://douban.com/people/iissnan" target="_blank" title="豆瓣">
-
-                    <i class="fa fa-fw fa-globe"></i>
-
-                    豆瓣
-                  </a>
-                </span>
-
-                <span class="links-of-author-item">
-                  <a href="http://www.zhihu.com/people/iissnan" target="_blank" title="知乎">
-
-                    <i class="fa fa-fw fa-globe"></i>
-
-                    知乎
-                  </a>
-                </span>
-
-
+              <div class="site-state-item site-state-categories">
+                <a href="/categories">
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
               </div>
-
-
-
-
-
-
-
-
-
-
-            </section>
-
-
-
-
-
-          </div>
-        </aside>
-
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
-
-          &copy; 2011 -
-          <span itemprop="copyrightYear">2017</span>
-          <span class="with-love">
-            <i class="fa fa-heart"></i>
-          </span>
-          <span class="author" itemprop="copyrightHolder">IIssNan</span>
+              <div class="site-state-item site-state-tags">
+                <a href="/tags">
+                  <span class="site-state-item-count">80</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            </nav>
+            <div class="links-of-author motion-element">
+              <span class="links-of-author-item">
+                <a href="https://github.com/CoCoyh" target="_blank" title="GitHub">
+                  <i class="fa fa-fw fa-github"></i>
+                  GitHub
+                </a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="mailto:cocoguo7636@gmail.com" target="_blank" title="E-Mail">
+                  <i class="fa fa-fw fa-globe"></i>
+                  E-Mail
+                </a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/coco-27-59/activities" target="_blank" title="知乎">
+                  <i class="fa fa-fw fa-globe"></i>
+                  知乎
+                </a>
+              </span>
+              <span class="links-of-author-item">
+                <a href="https://www.quora.com/profile/Coco-Guo-20#" target="_blank" title="Quora">
+                  <i class="fa fa-fw fa-globe"></i>
+                  Quora
+                </a>
+              </span>
+            </div>
+          </section>
+          <!--noindex-->
+          <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+            <div class="post-toc">
+              <div class="post-toc-content">
+                <ol class="nav">
+                  <li class="nav-item nav-level-1"><a class="nav-link"
+                      href="#闭包"><span class="nav-number">一、</span> <span
+                        class="nav-text">闭包</span></a></li>
+                  <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
+                      <span class="nav-text">ES6面向对象</span></a></li>
+                  <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
+                        class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
+                  <li class="nav-item nav-level-1"><a class="nav-link" href="#class 静态属性和实例属性"><span
+                        class="nav-number">四、</span> <span class="nav-text">class 静态属性和实例属性</span></a></li>
+                </ol>
+              </div>
+            </div>
+          </section>
+          <!--/noindex-->
         </div>
-
-
-        <div class="powered-by">
-          由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-        </div>
-
-        <div class="theme-info">
-          主题 -
-          <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-            NexT.Pisces
-          </a>
-        </div>
-
-
-
-
-
-      </div>
-    </footer>
-
-
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-
-      <span id="scrollpercent"><span>0</span>%</span>
-
-    </div>
-
-
+      </aside>
   </div>
-
-
-
+  </main>
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+      </script>
+      一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
+      您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
+      <div class="copyright">
+        &copy; 2017 -
+        <span itemprop="copyrightYear">2019</span>
+        <span class="with-love">
+          <i class="fa fa-heart"></i>
+        </span>
+        <span class="author" itemprop="copyrightHolder">coco</span>
+      </div>
+      <div class="powered-by">
+        由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+      </div>
+      <div class="theme-info">
+        主题 -
+        <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+          NexT.Pisces
+        </a>
+      </div>
+      <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+      </span>
+    </div>
+  </footer>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+  </div>
+  </div>
   <script type="text/javascript">
     if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
       window.Promise = null;
     }
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
-
-
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-
-
-
-
-
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
   <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-
-
-
-
   <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
   <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
   <script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-
-
-
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-
-
-
-
-
-
-  <script id="dsq-count-scr" src="https://iissnan-notes.disqus.com/count.js" async></script>
-
-
-
-  <script type="text/javascript">
-    var disqus_config = function () {
-      this.page.url = 'http://notes.iissnan.com/2015/angularjs-application-unit-testing-getting-stated/';
-      this.page.identifier = '2015/angularjs-application-unit-testing-getting-stated/';
-      this.page.title = 'AngularJS 应用单元测试起步';
-    };
-    var d = document,
-      s = d.createElement('script');
-    s.src = 'https://iissnan-notes.disqus.com/embed.js';
-    s.async = true;
-    s.setAttribute('data-timestamp', '' + +new Date());
-    (d.head || d.body).appendChild(s);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-
-
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
-
-
-
-
-
-
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>
-    AV.initialize("5RCUx4wQHUtRcaJ2AFtuaIvH", "LJCI859P5lIMaJ05qwzSdfNt");
+    AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");
   </script>
   <script>
     function showTime(Counter) {
@@ -762,6 +513,7 @@
         }
       });
     }
+
     $(function () {
       var Counter = AV.Object.extend("Counter");
       if ($('.leancloud_visitors').length == 1) {
@@ -771,321 +523,6 @@
       }
     });
   </script>
-
-
-
-
-
-
-
-
-
-</body>
-
-</html>
-
-</div>
-<div>
-</div>
-<div>
-</div>
-<footer class="post-footer">
-  <div class="post-tags">
-    <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-  </div>
-  <div class="post-nav">
-    <div class="post-nav-next post-nav-item">
-      <a href="/2019/04/23/React高级开发/" rel="next" title="React高级开发">
-        <i class="fa fa-chevron-left"></i> React高级开发
-      </a>
-    </div>
-    <span class="post-nav-divider"></span>
-    <div class="post-nav-prev post-nav-item">
-    </div>
-  </div>
-</footer>
-</article>
-<div class="post-spread">
-</div>
-</div>
-<!-- 下一行是要添加的代码 start  -->
-<!-- Link Gitalk 的支持文件  -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-<script src="/js/src/md5.min.js"></script>
-<div id="gitalk-container"></div>
-<script type="text/javascript">
-  var gitalk = new Gitalk({
-    // gitalk的主要参数
-    clientID: 'eabdaedb86b472760a2c',
-    clientSecret: '6b50b60a18b8817e25bf6470d06997013de140c4',
-    repo: 'CoCoyh.github.io',
-    owner: 'CoCoyh',
-    admin: ['CoCoyh'],
-    id: md5(location.pathname),
-  });
-  gitalk.render('gitalk-container');
-</script>
-<!-- Gitalk end -->
-<!-- 到一上行结束 end  -->
-</div>
-<div class="comments" id="comments">
-  <div id="gitalk-container"></div>
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-</div>
-</div>
-<div class="sidebar-toggle">
-  <div class="sidebar-toggle-line-wrap">
-    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-  </div>
-</div>
-<aside id="sidebar" class="sidebar">
-  <div class="sidebar-inner">
-    <ul class="sidebar-nav motion-element">
-      <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-        文章目录
-      </li>
-      <li class="sidebar-nav-overview" data-target="site-overview">
-        站点概览
-      </li>
-    </ul>
-    <section class="site-overview sidebar-panel">
-      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <img class="site-author-image" itemprop="image" src="/uploads/profile.png" alt="coco" />
-        <p class="site-author-name" itemprop="name">coco</p>
-        <p class="site-description motion-element" itemprop="description">路漫漫其修远兮，吾将上下而求索</p>
-      </div>
-      <nav class="site-state motion-element">
-        <div class="site-state-item site-state-posts">
-          <a href="/archives">
-            <span class="site-state-item-count">94</span>
-            <span class="site-state-item-name">日志</span>
-          </a>
-        </div>
-        <div class="site-state-item site-state-categories">
-          <a href="/categories">
-            <span class="site-state-item-count">32</span>
-            <span class="site-state-item-name">分类</span>
-          </a>
-        </div>
-        <div class="site-state-item site-state-tags">
-          <a href="/tags">
-            <span class="site-state-item-count">80</span>
-            <span class="site-state-item-name">标签</span>
-          </a>
-        </div>
-      </nav>
-      <div class="links-of-author motion-element">
-        <span class="links-of-author-item">
-          <a href="https://github.com/CoCoyh" target="_blank" title="GitHub">
-            <i class="fa fa-fw fa-github"></i>
-            GitHub
-          </a>
-        </span>
-        <span class="links-of-author-item">
-          <a href="mailto:cocoguo7636@gmail.com" target="_blank" title="E-Mail">
-            <i class="fa fa-fw fa-globe"></i>
-            E-Mail
-          </a>
-        </span>
-        <span class="links-of-author-item">
-          <a href="https://www.zhihu.com/people/coco-27-59/activities" target="_blank" title="知乎">
-            <i class="fa fa-fw fa-globe"></i>
-            知乎
-          </a>
-        </span>
-        <span class="links-of-author-item">
-          <a href="https://www.quora.com/profile/Coco-Guo-20#" target="_blank" title="Quora">
-            <i class="fa fa-fw fa-globe"></i>
-            Quora
-          </a>
-        </span>
-      </div>
-    </section>
-    <!--noindex-->
-    <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-      <div class="post-toc">
-        <div class="post-toc-content">
-          <ol class="nav">
-            <li class="nav-item nav-level-1"><a class="nav-link"
-                href="#Docker通过EFK（Elasticsearch-Fluentd-Kibana）查询日志"><span class="nav-number">1.</span> <span
-                  class="nav-text">Docker通过EFK（Elasticsearch + Fluentd + Kibana）查询日志</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#环境准备"><span class="nav-number">2.</span>
-                <span class="nav-text">环境准备</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#编写docker-compose-yml"><span
-                  class="nav-number">3.</span> <span class="nav-text">编写docker-compose.yml</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#Fluentd的配置和插件"><span
-                  class="nav-number">4.</span> <span class="nav-text">Fluentd的配置和插件</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#启动容器"><span class="nav-number">5.</span>
-                <span class="nav-text">启动容器</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#产生日志"><span class="nav-number">6.</span>
-                <span class="nav-text">产生日志</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#查看日志"><span class="nav-number">7.</span>
-                <span class="nav-text">查看日志</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#如何接入其他docker日志"><span
-                  class="nav-number">8.</span> <span class="nav-text">如何接入其他docker日志</span></a></li>
-            <li class="nav-item nav-level-1"><a class="nav-link" href="#版本选择"><span class="nav-number">9.</span>
-                <span class="nav-text">版本选择</span></a></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <!--/noindex-->
-  </div>
-</aside>
-</div>
-</main>
-<footer id="footer" class="footer">
-  <div class="footer-inner">
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    </script>
-    一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
-    您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
-    <div class="copyright">
-      &copy; 2017 -
-      <span itemprop="copyrightYear">2019</span>
-      <span class="with-love">
-        <i class="fa fa-heart"></i>
-      </span>
-      <span class="author" itemprop="copyrightHolder">coco</span>
-    </div>
-    <div class="powered-by">
-      由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-    </div>
-    <div class="theme-info">
-      主题 -
-      <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-        NexT.Pisces
-      </a>
-    </div>
-    <span id="busuanzi_container_site_pv">
-      本站总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-  </div>
-</footer>
-<div class="back-to-top">
-  <i class="fa fa-arrow-up"></i>
-</div>
-</div>
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-<script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-<script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-<script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-<script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>
-  AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");
-</script>
-<script>
-  function showTime(Counter) {
-    var query = new AV.Query(Counter);
-    var entries = [];
-    var $visitors = $(".leancloud_visitors");
-    $visitors.each(function () {
-      entries.push($(this).attr("id").trim());
-    });
-    query.containedIn('url', entries);
-    query.find()
-      .done(function (results) {
-        var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-        if (results.length === 0) {
-          $visitors.find(COUNT_CONTAINER_REF).text(0);
-          return;
-        }
-        for (var i = 0; i < results.length; i++) {
-          var item = results[i];
-          var url = item.get('url');
-          var time = item.get('time');
-          var element = document.getElementById(url);
-          $(element).find(COUNT_CONTAINER_REF).text(time);
-        }
-        for (var i = 0; i < entries.length; i++) {
-          var url = entries[i];
-          var element = document.getElementById(url);
-          var countSpan = $(element).find(COUNT_CONTAINER_REF);
-          if (countSpan.text() == '') {
-            countSpan.text(0);
-          }
-        }
-      })
-      .fail(function (object, error) {
-        console.log("Error: " + error.code + " " + error.message);
-      });
-  }
-
-  function addCount(Counter) {
-    var $visitors = $(".leancloud_visitors");
-    var url = $visitors.attr('id').trim();
-    var title = $visitors.attr('data-flag-title').trim();
-    var query = new AV.Query(Counter);
-    query.equalTo("url", url);
-    query.find({
-      success: function (results) {
-        if (results.length > 0) {
-          var counter = results[0];
-          counter.fetchWhenSave(true);
-          counter.increment("time");
-          counter.save(null, {
-            success: function (counter) {
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(counter.get('time'));
-            },
-            error: function (counter, error) {
-              console.log('Failed to save Visitor num, with error message: ' + error.message);
-            }
-          });
-        } else {
-          var newcounter = new Counter();
-          /* Set ACL */
-          var acl = new AV.ACL();
-          acl.setPublicReadAccess(true);
-          acl.setPublicWriteAccess(true);
-          newcounter.setACL(acl);
-          /* End Set ACL */
-          newcounter.set("title", title);
-          newcounter.set("url", url);
-          newcounter.set("time", 1);
-          newcounter.save(null, {
-            success: function (newcounter) {
-              var $element = $(document.getElementById(url));
-              $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-            },
-            error: function (newcounter, error) {
-              console.log('Failed to create');
-            }
-          });
-        }
-      },
-      error: function (error) {
-        console.log('Error:' + error.code + " " + error.message);
-      }
-    });
-  }
-
-  $(function () {
-    var Counter = AV.Object.extend("Counter");
-    if ($('.leancloud_visitors').length == 1) {
-      addCount(Counter);
-    } else if ($('.post-title-link').length > 1) {
-      showTime(Counter);
-    }
-  });
-</script>
 </body>
 
 </html>
