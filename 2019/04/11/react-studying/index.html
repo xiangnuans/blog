@@ -24,10 +24,10 @@
   <meta name="keywords" content="Docker,EFK," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="React-Rudex学习">
-  <meta property="og:url" content="https://cocoyh.github.io/2019/04/15/react-redux-studying/index.html">
+  <meta property="og:title" content="React学习">
+  <meta property="og:url" content="https://cocoyh.github.io/2019/04/11/react-studying/index.html">
   <meta property="og:site_name" content="CoCo's Blog">
-  <meta property="og:updated_time" content="2019-04-15T12:52:36.928Z">
+  <meta property="og:updated_time" content="2019-04-11T12:52:36.928Z">
 
   <script type="text/javascript" id="hexo.configurations">
     var NexT = window.NexT || {};
@@ -63,8 +63,8 @@
       }
     };
   </script>
-  <link rel="canonical" href="https://cocoyh.github.io/2019/04/15/react-reux-studying" />
-  <title> React-Rudex学习 | CoCo's Blog </title>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/04/11/react-studying/" />
+  <title> React学习 | CoCo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +132,7 @@
             <div id="content" class="content">
               <div id="posts" class="posts-expand">
                 <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/15/react-redux-studying/">
+                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/11/react-studying/">
                   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="coco">
                     <meta itemprop="description" content="">
@@ -143,7 +143,7 @@
                   </span>
                   <header class="post-header">
                     <h1 class="post-title" itemprop="name headline">
-                      React-Rudex学习
+                      React学习
                     </h1>
                     <div class="post-meta">
                       <span class="post-time">
@@ -151,8 +151,8 @@
                           <i class="fa fa-calendar-o"></i>
                         </span>
                         <span class="post-meta-item-text">发表于</span>
-                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-15T20:47:51+08:00">
-                          2019-04-15
+                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-11T20:47:51+08:00">
+                          2019-04-11
                         </time>
                       </span>
                       <span class="post-category">
@@ -167,7 +167,7 @@
                           </a>
                         </span>
                       </span>
-                      <span id="/2019/04/15/react-redux-studying" class=" leancloud_visitors" data-flag-title="react-redux-studying">
+                      <span id="/2019/04/11/react-studying" class=" leancloud_visitors" data-flag-title="react-studying">
                         <span class="post-meta-divider">|</span>
                         <span class="post-meta-item-icon">
                           <i class="fa fa-eye"></i>
@@ -178,265 +178,216 @@
                     </div>
                   </header>
                   <div class="post-body" itemprop="articleBody">
-                    <h2 id="redux核心概念和基础原理">
-                      <a href="#redux核心概念和基础原理" class="headerlink" title="redux核心概念和基础原理">一、redux核心概念和基础原理</a>
-                    </h2>
-                    <h3 id="redux VS react-redux">
-                      <a href="#redux VS react-redux" class="headerlink" title="redux VS react-redux">redux VS react-redux</a>
-                    </h3>
-                    <p>redux（一种系统架构)</p>
-                    <ul>
-                      <li>单向数据流</li>
-                      <li>单<code>store</code></li>
-                      <li>不修改、只返回状态</li>
-                    </ul>
-                    <p>react-reduc(结合了redux的react组件)</p>
-                    <ul>
-                      <li>将redux的state分发到props中</li>
-                      <li>提供整体容器Provider组件</li>
-                    </ul>
-                    <h3 id="为什么需要redux？">
-                      <a href="#为什么需要redux？" class="headerlink" title="为什么需要redux？">
-                          为什么需要redux？
-                      </a>
-                    </h3>
-                    <p>
-                      <a href="/uploads/redux-state.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-state.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux-action.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-action.png" alt=""/>
-                      </a>
-                    </p>
-                    <h3 id="实现一个简单的状态管理器">
-                      <a href="#实现一个简单的状态管理器" class="headerlink" title="实现一个简单的状态管理器">
-                          实现一个简单的状态管理器
-                      </a> 
-                    </h3>
-                    <h3 id="深入理解store的dispatch、getState、subscribe和reducer">
-                      <a href="#深入理解store的dispatch、getState、subscribe和reducer" class="headerlink" title="深入理解store的dispatch、getState、subscribe和reducer">
-                          深入理解store的dispatch、getState、subscribe和reducer
-                      </a>
-                    </h3>
-                    <p>create-store主要功能</p>
-                    <ul>
-                      <li>返回默认state</li>
-                      <li>返回修改后的state</li>
-                    </ul>
-                    <p>
-                      <a href="/uploads/redux-core.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-core.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux-store.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-store.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux-word.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-word.png" alt=""/>
-                      </a>
-                    </p>
-                    <h2 id="react-redux">
-                      <a  href="#react-redux" class="headerlink" title="react-redux">
-                          二、react-redux
+                    <h2 id="事件监听和this作用域">
+                      <a href="#事件监听和this作用域" class="headerlink" title="事件监听和this作用域">
+                        一、事件监听和this作用域
                       </a>
                     </h2>
-                    <h3 id="尝试在react中使用redux">
-                      <a href="#尝试在react中使用redux" class="headerlink" title="尝试在react中使用redux">
-                          尝试在react中使用redux
+                    <h3 id="this作用域">
+                      <a href="#this作用域" class="headerlink" title="this作用域">
+                          this作用域
                       </a>
                     </h3>
-                    <p>redux中的createStore</p>
+                    <p>箭头函数 VS 普通函数</p>>
+                    <ul>
+                      <li>只有一个参数，括号可以参略，</li>
+                      <li>只有一行return，<code>{}</code>可以参略，</li>
+                      <li>与传统函数相比，作用域不同，箭头函数在哪个对象中调用，this就是哪个对象</li>
+                    </ul>
                     <figure class="highlight js">
                       <table>
                         <tbody>
                           <tr>
                             <td>
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="lune">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre>
                             </td>
                             <td>
-                              <pre><div class="line">import { createStore } from 'redux'</div><div class="line">const store = createStore()</div><div class="line">getState()  // 获取状态</div><div class="lune">dispatch()  // 状态分发</div><div class="line">subscribe()  // 订阅setState正确更新组件</div><div class="line">constructor() {</div><div class="line">  super()</div><div class="line">  store.subscribe(() => {</div><div class="line">    this.setState(store.getState())</div><div class="line">  })</div><div class="line">}</div></pre>
+                              <pre><div class="line">var obj = {</div><div class="line">  name = "1",</div><div class="line">  f: funcition() {</div><div class="line">    var me = this; //需要重新获取</div><div class="line">    window.setTimeout(function(){</div><div class="line">      console.log(me.name, ‘in timeout’)</div><div class="line">   }, 1000)</div><div class="line">  }</div><div class="line">  fn: function() {</div><div class="line">    setTimeout(</div><div class="line">     () => {</div><div class="line">        conosle.log(this, ‘箭头函数的this’)</div><div class="line">      }, 1000</div><div class="line">    )</div><div class="line">  }</div><div class="line">}</div></pre>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </figure>
-                    <p>
-                      <a href="/uploads/redux-react.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-react.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>redux简单结合</p>
-                    <ul>
-                      <li>store是一个局部变量，那么其他组件怎么办？</li>
-                      <li>react组件和redux高度的耦合，写起来真的方便了吗？</li>
-                    </ul>
-                    <h3 id="redux和react的context">
-                      <a href="#redux和react的context" class="headerlink" title="redux和react的context">
-                          redux和react的context
+                    <h3 id="事件监听（获取原生标签）">
+                      <a href="#事件监听（获取原生标签）" class="headerlink" title="事件监听（获取原生标签）">
+                          事件监听（获取原生标签）
                       </a>
                     </h3>
-                    <p>
-                      <a href="/uploads/redux-context.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-context.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>在context里传递store</p>
-                    <p>
-                      <a href="/uploads/redux-context1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux-context1.png" alt=""/>
-                      </a>
-                    </p>
-                    <h3 id="高阶组件封装及状态分发函数connect">
-                      <a href="#高阶组件封装及状态分发函数connect" class="headerlink" title="高阶组件封装及状态分发函数connect">
-                          高阶组件封装及状态分发函数connect
-                      </a>
-                    </h3>
-                    <p>connect需求原理</p>
-                    <p>问题一：</p>
-                    <p>
-                      <a href="/uploads/react_redux_connect.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_connect.png" alt=""/>
-                      </a>
-                    </p>
-                    <p>每次获取父组件都要定，重复定义</p>
+                    
+                    <p>比如获取input标签输入，常用到的两个</p>
                     <figure class="highlight js">
                       <table>
                         <tbody>
                           <tr>
-                            <td class="gutter">
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div></pre>
+                            </td>
+                            <td>
+                                <pre><div class="line">console.log(e.target.value) // target：html标签</div><div class="line">console.log(e.nativeEvent)  // 原生事件</div></pre>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>受控组件</p>
+                    <p>输入的内容不会中介出现在HTML，看到的并不是输入的value，是赋值给setState，由state渲染后的显示</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre>
+                            </td>
+                            <td>
+                              <pre><div class="line">import React, { Component } from 'react'</div><div class="line">export default class Input extends Component {</div><div class="line">  constructor() {</div><div class="line">    super()</div><div class="line">    this.state={</div><div class="line">      value: ""</div><div class="line">    }</div><div class="line">  }</div><div class="line">  handleInput(e) {</div><div class="line">    console.log(e.target.value) // target：html标签</div><div class="line">    console.log(e.nativeEvent)  // 原生事件</div><div class="line">    if (e.target.value.length > 10) {</div><div class="line">      return</div><div class="line">    this.setState({</div><div class="line">      value: e.target.value</div><div class="line">    })</div><div class="line">  }</div><div class="line">  render() {</div><div class="line">    return(div input type="text" onInput={(e) => this.handleInput(e)} value={this.value} /div)</div><div class="line">  }</div><div class="line">}</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h2 id="核心：state、props、context">
+                      <a href="#核心：state、props、context" class="headerlink" title="核心：state、props、context">
+                          二、核心：state、props、context
+                      </a>
+                    </h2>
+                    <p>
+                      <a href="/uploads/react-property.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/react-property.png" alt="组件的三个属性"/>
+                      </a>
+                    </p>
+                    <h3 id="state应用状态">
+                      <a href="#state应用状态" class="headerlink" title="state应用状态">
+                          state应用状态
+                      </a>
+                    </h3>
+                    <p>React通过限制state，使程序状态更加可控</p>
+                    <p>RULES</p>
+                    <ul>
+                      <li>state只能在组件的constructor中初始化</li>
+                      <li>state只能使用setState方法更新</li>
+                      <li>setState会导致render重新执行，渲染组件和子组件</li>
+                    </ul>
+                    <h4 id="父组件更新会带动自组建同时更新，子组件更新，父组件不会更新">
+                      <a href="#父组件更新会带动自组建同时更新，子组件更新，父组件不会更新" class="headerlink" title="父组件更新会带动自组建同时更新，子组件更新，父组件不会更新">
+                          父组件更新会带动自组建同时更新，子组件更新，父组件不会更新
+                      </a>
+                    </h4>
+                    <h4 id="state用在render中渲染jsx">
+                      <a href="#state用在render中渲染jsx" class="headerlink" title="state用在render中渲染jsx">
+                          state用在render中渲染jsx
+                      </a>
+                    </h4>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
+                            </td>
+                            <td>
+                              <pre><div class="line">render() {</div><div class="line">  return(</div><div class="line">    p hello! I'm {this.state.happy} /p</div><div class="line">  )</div><div class="line">}</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h3 id="props组件间参数">
+                      <a href="#props组件间参数" class="headerlink" title="props组件间参数">
+                          props组件间参数
+                      </a>
+                    </h3>
+                    <p>（子组件难免使用父组件指定的参数）</p>
+                    <p>
+                      <a href="/uploads/props.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/props.png" alt=""/>
+                      </a>
+                    </p>
+                    <h4 id="函数组件（没有构造器）">
+                      <a href="#函数组件（没有构造器）" class="headerlink" title="函数组件（没有构造器）"></a>
+                    </h4>
+                    <p>
+                      <a href="/uploads/react-js-1.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/react-js-1.png" alt=""/>
+                      </a>
+                    </p>
+                    <h4 id="class的使用方式">
+                      <a href="#class的使用方式" class="headerlink" title="class的使用方式"></a>
+                    </h4>
+                    <p>
+                      <a href="/uploads/react-js-2.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/react-js-2.png" alt=""/>
+                      </a>
+                    </p>
+                    <h3 id="context上下文参数传递">
+                      <a href="#context上下文参数传递" class="headerlink" title="context上下文参数传递">
+                          context上下文参数传递
+                      </a>
+                    </h3>
+                    <p>（在主组件设置context，参数会自动传递）</p>
+                    <p>在静态类型判断中补充</p>
+                    <h2 id="状态提升">
+                      <a href="#状态提升" class="headerlink" title="状态提升">
+                          三、状态提升
+                      </a>
+                    </h2>
+                    <p>
+                      <a href="/uploads/context.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads//context.png" alt="场景">
+                      </a>
+                    </p>
+                    <p>
+                      <a href="/uploads/context1.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/context1.png" alt="说明">
+                      </a>
+                    </p>
+                    <p>
+                      <a href="/uploads/context2.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/context2.png" alt="方案">
+                      </a>
+                    </p>
+                    <h2 id="生命周期函数">
+                      <a href="#生命周期函数" class="headerlink" title="生命周期函数">
+                          四、生命周期函数
+                      </a>
+                    </h2>
+                    <p>
+                      <a href="/uploads/life.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/life.png" alt="">
+                      </a>
+                    </p>
+                    <p>装配</p>
+                    <p>
+                      <a href="/uploads/life1.png" class="fancybox fancybox.image" rel="group">
+                        <img src="/uploads/life1.png" alt="">
+                      </a>
+                    </p>
+                    <p>更新（三种方式）</p>
+                    <ul>
+                      <li>setState()</li>
+                      <li>父组件更新时，子组件同时更新</li>
+                      <li>forceSetState</li>
+                    </ul>
+                    <h2 id="组件类属性">
+                      <a href="#组件类属性" class="headerlink" title="组件类属性">
+                          组件类属性
+                      </a>
+                    </h2>
+                    <p>defaultProps</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre>
                             </td>
-                            <td class="code">
-                              <pre><div class="line">static contextTypes = {</div><div class="line">  store: PropTypes</div><div class="line">}</div></pre>
+                            <td>
+                              <pre><div class="line">static defaultProps = {</div><div class="line">  title: "ffff"</div><div class="line">}</div></pre>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </figure>
-                    <p>connect实现：</p>
-                    <figure class="highlight js">
-                        <table>
-                        <tbody>
-                          <tr>
-                            <td class="gutter">
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre>
-                            </td>
-                            <td class="code">
-                              <pre><div class="line">class Connect extends Component {</div><div class="line">  static contextTypes = {</div><div class="line">   store: PropTypes.object</div><div class="line">  }</div><div class="line">  render() {</div><div class="line">   return (<类名 store={this.context.store}> )</div><div class="line"> }</div><div class="line">}</div></pre>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </figure>
-                    <p>问题二：</p>
-                    <p>
-                      <a href="/uploads/react_redux_connect1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_connect1.png" alt="">
-                      </a>
-                    </p>
-                    <p>connect</p>
-                    <p>
-                      <a href="/uploads/react-redux-js-1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react-redux-js-1.png" alt="">
-                      </a>
-                    </p>
-                    <p>问题三：</p>
-                    <p>
-                      <a href="/uploads/react_redux_connect2.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_connect2.png" alt="">
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/react_redux_connect3.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_connect3.png" alt="">
-                      </a>
-                    </p>
-                    <p>改进代码：</p>
-                    <p>
-                      <a href="/uploads/react-redux-js-2.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react-redux-js-2.png" alt="">
-                      </a>
-                    </p>
-                    <h3 id="什么是Provider">
-                      <a href="#什么是Provider" class="headerlink" title="什么是Provider">
-                          什么是Provider
-                      </a>
-                    </h3>
-                    <p>
-                      <a href="/uploads/react_redux_provider.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_provider.png" alt="">
-                      </a>
-                    </p>
-                    <p>Provider 传递</p>
-                    <p>
-                      <a href="/uploads/react-redux-js-3.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react-redux-js-3.png" alt="">
-                      </a>
-                    </p>
-                    <h3 id="总结">
-                      <a href="#总结" class="headerlink" title="总结">
-                          总结
-                      </a>
-                    </h3>
-                    <p>
-                      <a href="/uploads/react_redux_provider1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_provider1.png" alt="">
-                      </a>
-                    </p>
-                    <h2 id="实战">
-                      <a href="#实战" class="headerlink" title="实战">
-                          三、实战
-                      </a>
-                    </h2>
-                    <h3 id="安装、使用react-redux组件" class="headerlink" title="安装、使用react-redux组件">
-                        安装、使用react-redux组件
-                    </h3>
-                    <p>
-                      <a href="/uploads/redux.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux.png" alt="">
-                      </a>
-                    </p>
-                    <h3 id="redux高级：组合reducer以及action封装">
-                      <a href="#redux高级：组合reducer以及action封装" class="headerlink" title="redux高级：组合reducer以及action封装">
-                          redux高级：组合reducer以及action封装
-                      </a>
-                    </h3>
-                    <p>
-                      <a href="/uploads/redux_high1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux_high1.png" alt="">
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux_high2.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux_high2.png" alt="">
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux_high3.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux_high3.png" alt="">
-                      </a>
-                    </p>
-                    <p>
-                      <a href="/uploads/redux_high4.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/redux_high4.png" alt="">
-                      </a>
-                    </p>
-                    <h3 id="实战：改造井字棋游戏">
-                      <a href="#实战：改造井字棋游戏" class="headerlink" title="实战：改造井字棋游戏">
-                          实战：改造井字棋游戏
-                      </a>
-                    </h3>
-                    <h3 id="实战：结合react-redux制作todo-list">
-                      <a href="#实战：结合react-redux制作todo-list" class="headerlink" title="实战：结合react-redux制作todo-list">
-                          实战：结合react-redux制作todo-list
-                      </a>
-                    </h3>
-                    <p>应用组件/函数</p>
+                    <p>defaultProps（类型检查）</p>
                     <figure class="highlight js">
                       <table>
                         <tbody>
@@ -445,110 +396,47 @@
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
                             </td>
                             <td>
-                              <pre><div class="line">import {connect, Provider} from 'react-redux'   // 引入结合redux的react组件</div><div class="line">import {createStore} from 'redux' // 引入redux创建的store函数</div><div class="line">import reducer from './reducer'</div><div class="line">const store = createStore(reducer)  // 创建store</div></pre>
+                              <pre><div class="line">import PropTypes from 'prop-types'</div><div class="line">static propTypes = {</div><div class="line">  title: PropTypes.string</div><div class="line">}</div></pre>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </figure>
-                    <h2 id="redux中间件">
-                      <a href="#redux中间件" class="headerlink" title="redux中间件">
-                        四、redux中间件
+                    <h2 id="context实战-状态提升">
+                      <a href="#context实战-状态提升" class="headerlink" title="context实战-状态提升">
+                          五、Context实战-状态提升
                       </a>
                     </h2>
-                    <h3 id="redux-middleware是什么？" >
-                      <a href="#redux-middleware是什么？" class="headerlink" title="redux-middleware是什么？">
-                          redux-middleware是什么？
-                      </a>
-                    </h3>
-                    <h3 id="由patch到middleware（补丁）">
-                      <a href="#由patch到middleware（补丁）" class="headerlink" title="由patch到middleware（补丁）">
-                          由patch到middleware（补丁）
-                      </a>
-                    </h3>
-                    <p>
-                      <a href="/uploads/react_redux_m1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_m1.png" alt="">
-                      </a>
-                    </p>
-                    <p>示例</p>
-                    <p>
-                      <a href="/uploads/react_redux_eg1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_eg1.png" alt="">
-                      </a>
-                    </p>
-                    <p>再次定义，第一个会被覆盖掉，如何解决？</p>
-                    <p>
-                      <a href="/uploads/react_redux_m2.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_m2.png" alt="">
-                      </a>
-                    </p>
-                    <p>示例</p>
-                    <p>
-                      <a href="/uploads/react_redux_eg2.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_eg2.png" alt="">
-                      </a>
-                    </p>
-                    <p>官方实现：</p>
-                    <p>
-                      <a href="/uploads/react_redux_m3.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_m3.png" alt="">
-                      </a>
-                    </p>
-                    <p>示例</p>
-                    <p>
-                      <a href="/uploads/react_redux_eg3.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_eg3.png" alt="">
-                      </a>
-                    </p>
+                    <p>父组件</p>
                     <figure class="highlight js">
                       <table>
                         <tbody>
                           <tr>
                             <td>
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre>
                             </td>
                             <td>
-                              <pre><div class="line">const logger = store => next => action => {</div><div class="line">}</div><div class="line">const store = createStore(reducer, applyMiddleware(logger))</div></pre>
+                              <pre><div class="line">// 静态属性的类型检查</div><div class="line">static childContextTypes = {</div><div class="line">  themeColor: PropTypes.string</div><div class="line">}</div><div class="line">// 在getChildContext返回子组件需要的context</div><div class="line">getChildContext() {}</div></pre>
                             </td>
                           </tr>
                         </tbody>
                       </table>
                     </figure>
-                    <h3 id="redux同步action死局">
-                      <a href="#redux同步action死局" class="headerlink" title="redux同步action死局">
-                          redux同步action死局
-                      </a>
-                    </h3>
-                    <p>action死局?</p>
-                    <p>发起dispatch，传递action，需要立马返回一个新的state，如果是ajax调用（异步）呢？</p>
-                    <p>解决办法一</p>
-                    <p>
-                      <a href="/uploads/react_redux_sync.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_sync.png" alt="">
-                      </a>
-                    </p>
-                    <h3 id="react-thunk中间件实现异步网络请求">
-                      <a href="#react-thunk中间件实现异步网络请求" class="headerlink" title="react-thunk中间件实现异步网络请求">
-                          react-thunk中间件实现异步网络请求
-                      </a>
-                    </h3>
-                    <p>解决办法二</p>
-                    <p>
-                      <a href="/uploads/react_redux_thunnk.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_thunnk.png" alt="">
-                      </a>
-                    </p>
-                    <ul>
-                      <li>引入thunk</li>
-                      <li>把thunk作为redux的中间件</li>
-                      <li>使用dispatch传入函数类型action</li>
-                    </ul>
-                    <p>
-                      <a href="/uploads/react_redux_thunk.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/react_redux_thunk.png" alt="">
-                      </a>
-                    </p>
+                    <p>子组件</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
+                            </td>
+                            <td>
+                              <pre><div class="line">// 自组件用contextTypes静态属性的类型检查</div><div class="line">static contextTypes = {</div><div class="line">  themeColor: PropTypes.string</div><div class="line">}</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
                   </div>
                   <div>
                   </div>
@@ -560,8 +448,8 @@
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/04/15/react-redux-studying/" rel="next" title="react-redux-studying">
-                          <i class="fa fa-chevron-left"></i> React-Rudex学习
+                        <a href="/2019/04/11/react-studying/" rel="next" title="React学习">
+                          <i class="fa fa-chevron-left"></i> React学习
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
@@ -675,30 +563,15 @@
                 <div class="post-toc">
                   <div class="post-toc-content">
                     <ol class="nav">
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#redux核心概念和基础原理">
-                          <span class="nav-number">一、</span>
-                          <span class="nav-text">redux核心概念和基础原理</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#react-redux">
-                          <span class="nav-number">二、</span>
-                          <span class="nav-text">react-redux</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#实战">
-                          <span class="nav-number">三、实战</span>
-                          <span class="nav-text">实战</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#redux中间件">
-                          <span class="nav-number">四、redux中间件</span>
-                          <span class="nav-text">redux中间件</span>
-                        </a>
-                      </li>
+                      <li class="nav-item nav-level-1"><a class="nav-link"
+                          href="#闭包"><span class="nav-number">一、</span> <span
+                            class="nav-text">闭包</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
+                          <span class="nav-text">ES6面向对象</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
+                            class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#class静态属性和实例属性"><span
+                            class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
                     </ol>
                   </div>
                 </div>
