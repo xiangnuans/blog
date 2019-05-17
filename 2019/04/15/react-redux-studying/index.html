@@ -21,7 +21,7 @@
     rel="stylesheet" type="text/css">
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-  <meta name="keywords" content="Docker,EFK," />
+  <meta name="keywords" content="React," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
   <meta property="og:title" content="React-Rudex学习">
@@ -255,10 +255,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="lune">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">import { createStore } from 'redux'</div><div class="line">const store = createStore()</div><div class="line">getState()  // 获取状态</div><div class="lune">dispatch()  // 状态分发</div><div class="line">subscribe()  // 订阅setState正确更新组件</div><div class="line">constructor() {</div><div class="line">  super()</div><div class="line">  store.subscribe(() => {</div><div class="line">    this.setState(store.getState())</div><div class="line">  })</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -324,7 +324,7 @@
                         <tbody>
                           <tr>
                             <td class="gutter">
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre>
                             </td>
                             <td class="code">
                               <pre><div class="line">class Connect extends Component {</div><div class="line">  static contextTypes = {</div><div class="line">   store: PropTypes.object</div><div class="line">  }</div><div class="line">  render() {</div><div class="line">   return (<类名 store={this.context.store}> )</div><div class="line"> }</div><div class="line">}</div></pre>
@@ -441,10 +441,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">import {connect, Provider} from 'react-redux'   // 引入结合redux的react组件</div><div class="line">import {createStore} from 'redux' // 引入redux创建的store函数</div><div class="line">import reducer from './reducer'</div><div class="line">const store = createStore(reducer)  // 创建store</div></pre>
                             </td>
                           </tr>
@@ -505,10 +505,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">const logger = store => next => action => {</div><div class="line">}</div><div class="line">const store = createStore(reducer, applyMiddleware(logger))</div></pre>
                             </td>
                           </tr>
@@ -556,16 +556,20 @@
                   </div>
                   <footer class="post-footer">
                     <div class="post-tags">
-                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                      <a href="/tags/React/" rel="tag"># React</a>
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/04/15/react-redux-studying/" rel="next" title="react-redux-studying">
-                          <i class="fa fa-chevron-left"></i> React-Rudex学习
+                        <a href="/2019/04/14/Roadhog介绍/" rel="next" title="Roadhog介绍">
+                          <i class="fa fa-chevron-left"></i> Roadhog介绍
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
                       <div class="post-nav-prev post-nav-item">
+                        <a href="/2019/04/20/react-router-studying/" rel="prev" title="react-router-studying">
+                          React-Router学习
+                          <i class="fa fa-chevron-right"></i>
+                        </a>
                       </div>
                     </div>
                   </footer>

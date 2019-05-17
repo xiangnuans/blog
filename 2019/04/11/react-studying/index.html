@@ -21,7 +21,7 @@
     rel="stylesheet" type="text/css">
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-  <meta name="keywords" content="Docker,EFK," />
+  <meta name="keywords" content="React," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
   <meta property="og:title" content="React学习">
@@ -198,10 +198,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">var obj = {</div><div class="line">  name = "1",</div><div class="line">  f: funcition() {</div><div class="line">    var me = this; //需要重新获取</div><div class="line">    window.setTimeout(function(){</div><div class="line">      console.log(me.name, ‘in timeout’)</div><div class="line">   }, 1000)</div><div class="line">  }</div><div class="line">  fn: function() {</div><div class="line">    setTimeout(</div><div class="line">     () => {</div><div class="line">        conosle.log(this, ‘箭头函数的this’)</div><div class="line">      }, 1000</div><div class="line">    )</div><div class="line">  }</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -219,10 +219,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                                 <pre><div class="line">console.log(e.target.value) // target：html标签</div><div class="line">console.log(e.nativeEvent)  // 原生事件</div></pre>
                               </td>
                           </tr>
@@ -235,10 +235,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">import React, { Component } from 'react'</div><div class="line">export default class Input extends Component {</div><div class="line">  constructor() {</div><div class="line">    super()</div><div class="line">    this.state={</div><div class="line">      value: ""</div><div class="line">    }</div><div class="line">  }</div><div class="line">  handleInput(e) {</div><div class="line">    console.log(e.target.value) // target：html标签</div><div class="line">    console.log(e.nativeEvent)  // 原生事件</div><div class="line">    if (e.target.value.length > 10) {</div><div class="line">      return</div><div class="line">    this.setState({</div><div class="line">      value: e.target.value</div><div class="line">    })</div><div class="line">  }</div><div class="line">  render() {</div><div class="line">    return(div input type="text" onInput={(e) => this.handleInput(e)} value={this.value} /div)</div><div class="line">  }</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -281,10 +281,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">render() {</div><div class="line">  return(</div><div class="line">    p hello! I'm {this.state.happy} /p</div><div class="line">  )</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -377,10 +377,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">static defaultProps = {</div><div class="line">  title: "ffff"</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -392,10 +392,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">import PropTypes from 'prop-types'</div><div class="line">static propTypes = {</div><div class="line">  title: PropTypes.string</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -412,10 +412,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">// 静态属性的类型检查</div><div class="line">static childContextTypes = {</div><div class="line">  themeColor: PropTypes.string</div><div class="line">}</div><div class="line">// 在getChildContext返回子组件需要的context</div><div class="line">getChildContext() {}</div></pre>
                             </td>
                           </tr>
@@ -427,10 +427,10 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td>
+                            <td class="gutter">
                               <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
                             </td>
-                            <td>
+                            <td class="code">
                               <pre><div class="line">// 自组件用contextTypes静态属性的类型检查</div><div class="line">static contextTypes = {</div><div class="line">  themeColor: PropTypes.string</div><div class="line">}</div></pre>
                             </td>
                           </tr>
@@ -444,16 +444,20 @@
                   </div>
                   <footer class="post-footer">
                     <div class="post-tags">
-                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                      <a href="/tags/React/" rel="tag"># React</a>
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/04/11/react-studying/" rel="next" title="React学习">
-                          <i class="fa fa-chevron-left"></i> React学习
+                        <a href="/2019/04/06/React入门/" rel="next" title="React入门">
+                          <i class="fa fa-chevron-left"></i> React入门
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
                       <div class="post-nav-prev post-nav-item">
+                        <a href="/2019/04/14/Roadhog介绍/" rel="prev" title="Roadhog介绍">
+                          Roadhog介绍
+                          <i class="fa fa-chevron-right"></i>
+                        </a>
                       </div>
                     </div>
                   </footer>
@@ -563,15 +567,27 @@
                 <div class="post-toc">
                   <div class="post-toc-content">
                     <ol class="nav">
-                      <li class="nav-item nav-level-1"><a class="nav-link"
-                          href="#闭包"><span class="nav-number">一、</span> <span
-                            class="nav-text">闭包</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
-                          <span class="nav-text">ES6面向对象</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
-                            class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#class静态属性和实例属性"><span
-                            class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#事件监听和this作用域">
+                          <span class="nav-number">一、</span>
+                          <span class="nav-text">事件监听和this作用域</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#ES6面向对象">
+                          <span class="nav-number">二、</span>
+                          <span class="nav-text">ES6面向对象</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#箭头函数">
+                          <span class="nav-number">三、</span>
+                          <span class="nav-text">箭头函数</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#class静态属性和实例属性">
+                          <span class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
                     </ol>
                   </div>
                 </div>

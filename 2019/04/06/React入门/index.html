@@ -21,13 +21,13 @@
     rel="stylesheet" type="text/css">
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="React," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="JavaScript重要知识点整理">
-  <meta property="og:url" content="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/index.html">
+  <meta property="og:title" content="React入门">
+  <meta property="og:url" content="https://cocoyh.github.io/2019/04/06/React入门/index.html">
   <meta property="og:site_name" content="CoCo's Blog">
-  <meta property="og:updated_time" content="2019-04-25T12:52:36.928Z">
+  <meta property="og:updated_time" content="2019-04-06T12:52:36.928Z">
 
   <script type="text/javascript" id="hexo.configurations">
     var NexT = window.NexT || {};
@@ -63,8 +63,8 @@
       }
     };
   </script>
-  <link rel="canonical" href="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/" />
-  <title> JavaScript重要知识点整理 | CoCo's Blog </title>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/04/06/React入门/" />
+  <title> React入门 | CoCo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +132,7 @@
             <div id="content" class="content">
               <div id="posts" class="posts-expand">
                 <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/">
+                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/06/React入门/">
                   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="coco">
                     <meta itemprop="description" content="">
@@ -143,7 +143,7 @@
                   </span>
                   <header class="post-header">
                     <h1 class="post-title" itemprop="name headline">
-                      JavaScript重要知识点整理
+                      React入门
                     </h1>
                     <div class="post-meta">
                       <span class="post-time">
@@ -151,8 +151,8 @@
                           <i class="fa fa-calendar-o"></i>
                         </span>
                         <span class="post-meta-item-text">发表于</span>
-                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T20:47:51+08:00">
-                          2019-04-25
+                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T20:47:51+08:00">
+                          2019-04-06
                         </time>
                       </span>
                       <span class="post-category">
@@ -162,12 +162,12 @@
                         </span>
                         <span class="post-meta-item-text">分类于</span>
                         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                          <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                            <span itemprop="name">JavaScript</span>
+                          <a href="/categories/前端/" itemprop="url" rel="index">
+                            <span itemprop="name">前端</span>
                           </a>
                         </span>
                       </span>
-                      <span id="/2019/04/25/JavaScript重要知识点整理 class=" leancloud_visitors" data-flag-title="JavaScript重要知识点整理">
+                      <span id="/2019/04/06/React入门" class=" leancloud_visitors" data-flag-title="React入门">
                         <span class="post-meta-divider">|</span>
                         <span class="post-meta-item-icon">
                           <i class="fa fa-eye"></i>
@@ -178,66 +178,99 @@
                     </div>
                   </header>
                   <div class="post-body" itemprop="articleBody">
-                    <P>
-                      <a href="http://javascript.info/" target="_blank">【推荐】</a>
-                    </P>
-                    <h2 id="闭包">
-                      <a href="#闭包" class="headerlink" title="闭包">一、闭包</a>
+                    <h2 id="roadhog是啥？">
+                      <a href="#roadhog是啥？" class="headerlink" title="roadhog是啥？">
+                          roadhog是啥？
+                      </a>
+                    </h2>
+                    <p>简单来说，roadhog是可配置的[create-react-app](https://github.com/facebook/create-react-app)</p>
+                    <p></p>
+                    <p>roadhog是一个cli工具，提供server和build两个命令，分别用于本地调试和构建。命令行体验和create-react-app一直，配置略有不同，比如默认开启[css modules](https://github.com/css-modules/css-modules)，然后还提供了JSON格式的配置方式。</p>
+                    <h2 id="命名来源？">
+                      <a href="#命名来源？" class="headerlink" title="命名来源？">
+                          命名来源？
+                      </a>
                     </h2>
                     <p>
-                      <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures"
-                        target="_blank">资料(待完善)</a>
+                      <a href="http://ow.blizzard.cn/heroes/roadhog" target="_blank">[http://ow.blizzard.cn/heroes/roadhog]</a>
                     </p>
-                    <h2 id="ES6面向对象">
-                      <a href="#ES6面向对象" class="headerlink" title="ES6面向对象">二、ES6面向对象</a>
+                    <h2 id="为啥要有roadhog？">
+                      <a href="#为啥要有roadhog？" class="headerlink" title="为啥要有roadhog？">
+                          为啥要有roadhog？
+                      </a>
                     </h2>
-                    <p>
-                      <a href="https://www.html.cn/archives/7383" target="_blank">资料（待完善）</a>
-                    </p>
-                    <h2 id="箭头函数">
-                      <a href="#箭头函数" class="headerlink" title="箭头函数">三、箭头函数</a>
-                    </h2>
-                    <p><strong>VS普通函数</strong></p>
+                    <p>做roadhog有多方面原因：</p>
                     <ul>
-                      <li>箭头函数只有一个参数时，括号可以参略</li>
-                      <li>只有一行return， <code>{}</code>可以参略</li>
-                      <li>作用域不同，箭头函数在哪个对象调用，this就是哪个对象</li>
+                      <li>首先，create-react-app 体验是在太好了，细节做的很到位，比如启动成功后会自动打开浏览器窗口这个操作，会检查当前是否已经有打开当前URL的Tab。**但可惜它并不支持配置**， 比如我们要用less和css-modules，就不能使用了。</li>
+                      <li>
+                          另外，我们目前是基于
+                          <a href="github.com/ant-tool/atool-build" target="_blank">【atool-build】</a>
+                          和
+                          <a href="github.com/dora-js/dora" target="_blank">【dora】</a>
+                          的工具套件。dora有插件机制，atool-build的配置和webpack一样，基于编程。这两种扩展方式太灵活，灵活是有点，单导致我们做功能升级时需要考虑太多的事情，并且无法保证兼容
+                        </li>
                     </ul>
-                    <h2 id="class静态属性和实例属性">
-                      <a href="#class静态属性和实例属性" class="headerlink" title="class静态属性和实例属性">
-                        四、class 静态属性和实例属性
+                    <p>那么roadhog的配置方式和之前的有何不同呢？</p>
+                    <h2 id="配置方式的选择">
+                      <a href="#配置方式的选择" class="headerlink" title="配置方式的选择">
+                          配置方式的选择
                       </a>
                     </h2>
-                    <h3>静态属性</h3>
-                    <p>指的是class本身的属性，即Class.propname，而不是定义在实例对象（this）的属性。</p>
-                    <p>定义静态属性</p>
-                    <p>
-                      <a href="/uploads/js-1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/js-1.png" alt=""/>
+                    <p>我们做<code>>cli</code>工具有一段时间了，从<code>spm2</code>，<code>spm3</code>，<code>atool-build</code>加<code>dora</code>到现在的<code>roadhog</code>。（目前<code>roadhog</code>并非<code>atool</code>的升级版，两者场景不同，<code>atool</code>扩展性更好）配置方式从<code>JSON</code>到编程，最终又回归到<code>JSON</code></p>
+                    <p><code>roadhog </code>为啥用<code>JSON</code>格式的配置?</p>
+                    <p>做atool的时候我们是用编程的配置方式，优点是灵活，可随意改变工具内置的<code>webpack</code>配置。</p>
+                    <p>但缺点也很明显：</p>
+                    <h3 id="配置麻烦">
+                      <a href="#配置麻烦" class="headerlink" title="配置麻烦">
+                          1. 配置麻烦
+                      </a>
+                    </h3>
+                    <p>比如要删除内置的<code>CommonChunkPlugin</code>，不加注释基本没人能看懂了。</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
+                            </td>
+                            <td>
+                              <pre><div class="line">// Don't extract common.js and common.css</div><div class="line">webpackConfig.plugins = webpackConfig.plugins.filter(function(plugin) {</div><div class="line">  return !(plugin instanceof webpack.optimize.CommonsChunkPlugin);</div><div class="line">});</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h3 id="工具升级困难">
+                      <a href="#工具升级困难" class="headerlink" title="工具升级困难">
+                          工具升级困难
+                      </a>
+                    </h3>
+                    <h2 id="roadhog配置">
+                      <a href="#roadhog配置" class="headerlink" title="roadhog配置">
+                          roadhog配置
+                      </a>
+                    </h2>
+                    <p>基于上面的原因，roadhog的配置以JSON格式呈现。</p>
+                    <p>下面是好似目前支持的全部配置项，它们在
+                      <a href="https://github.com/sorrycc/roadhog#%E9%85%8D%E7%BD%AE" target="_blank">
+                          【roadhog#配置】
                       </a>
                     </p>
-                    <p>定义实例属性</p>
-                    <p>ES6实例属性只能在constructor构造函数中定义</p>
-                    <p>
-                        <a href="/uploads/js-2.png" class="fancybox fancybox.image" rel="group">
-                          <img src="/uploads/js-2.png" alt=""/>
-                        </a>
-                    </p>
-                    <p>为了可读性的目的，对于那些在constructor里面已经定义的实例属性，新写法允许直接列出，例如：width</p>
-                    <p><strong>说明</strong>：目前ES6，只有这种写法可行，因为ES6明确规定，Class内部只有静态方法，没有静态属性</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre>
+                            </td>
+                            <td>
+                              <pre><div class="line">{</div><div class="line">  "entry": "src/index.js",</div><div class="line">  "disableCSSModules": false,</div><div class="line">  "less": false,</div><div class="line">  "publicPath": "/",</div><div class="line">  "extraBabelPlugins": [],</div><div class="line">  "autoprefixer": null,</div><div class="line">  "proxy": null,</div><div class="line">  "env": null,</div><div class="line">}</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
                   
-                    <p><strong>ES7有一个静态属性的提案</strong>目前Babel转码器支持。安装babel-preset-stage-0包含了0-3的stage，可根据需要天假，不同的stage封装了不同的插件，官方推荐使用stage-1安装命令: </p>
-                    <p>
-                        <a href="/uploads/js-3.png" class="fancybox fancybox.image" rel="group">
-                          <img src="/uploads/js-3.png" alt=""/>
-                        </a>
-                    </p>
-                    <p>ES7使用京台属性和实例属性</p>
-                    <p>
-                      <a href="/uploads/js-4.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/js-4.png" alt=""/>
-                      </a>
-                    </p>
                   </div>
                   <div>
                   </div>
@@ -245,19 +278,19 @@
                   </div>
                   <footer class="post-footer">
                     <div class="post-tags">
-                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                      <a href="/tags/React/" rel="tag"># React</a>
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/04/23/React高级开发/" rel="next" title="React高级开发">
-                          React高级开发
-                          <i class="fa fa-chevron-left"></i>
+                        <a href="/2019/04/11/react-studying/" rel="next" title="React入门">
+                          <i class="fa fa-chevron-left"></i> React入门
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
                       <div class="post-nav-prev post-nav-item">
-                        <a href="/2019/05/10/自检清单/" rel="prev" title="自检清单">
-                          <i class="fa fa-chevron-right"></i>自检清单
+                        <a href="/2019/04/11/react-studying/" rel="prev" title="react-studying">
+                          React学习
+                          <i class="fa fa-chevron-right"></i>
                         </a>
                       </div>
                     </div>
@@ -368,15 +401,66 @@
                 <div class="post-toc">
                   <div class="post-toc-content">
                     <ol class="nav">
-                      <li class="nav-item nav-level-1"><a class="nav-link"
-                          href="#闭包"><span class="nav-number">一、</span> <span
-                            class="nav-text">闭包</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
-                          <span class="nav-text">ES6面向对象</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
-                            class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#class静态属性和实例属性"><span
-                            class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#React">
+                          <span class="nav-number">一、React</span>
+                          <span class="nav-text">React</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#Redux">
+                          <span class="nav-number">二、</span>
+                          <span class="nav-text">Redux</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#React-redux">
+                          <span class="nav-number">三、React-redux</span>
+                          <span class="nav-text">React-redux</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#React-router（react的路由组件）">
+                          <span class="nav-number">四、</span>
+                          <span class="nav-text">React-router（react的路由组件）</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#React-router-dom">
+                          <span class="nav-number">五、React-router-dom</span>
+                          <span class="nav-text">React-router-dom</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#Webpack">
+                          <span class="nav-number">六、</span>
+                          <span class="nav-text">Webpack</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#Next.js/Nuxt.js">
+                          <span class="nav-number">七、</span>
+                          <span class="nav-text">Next.js/Nuxt.js</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#Roadhog">
+                          <span class="nav-number">八、</span>
+                          <span class="nav-text">Roadhog</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#DvaJS（react > redux > redux-saga(异步流程控制) > DvaJS）">
+                          <span class="nav-number">九、</span>
+                          <span class="nav-text">DvaJS（react > redux > redux-saga(异步流程控制) > DvaJS）</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#Ant">
+                          <span class="nav-number">十、</span>
+                          <span class="nav-text">Ant</span>
+                        </a>
+                      </li>
                     </ol>
                   </div>
                 </div>
