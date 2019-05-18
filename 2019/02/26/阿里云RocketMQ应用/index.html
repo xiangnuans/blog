@@ -21,13 +21,13 @@
     rel="stylesheet" type="text/css">
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-  <meta name="keywords" content="React," />
+  <meta name="keywords" content="RocketMQ," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
-  <meta property="og:title" content="React入门">
-  <meta property="og:url" content="https://cocoyh.github.io/2019/04/06/React入门/index.html">
+  <meta property="og:title" content="阿里云RocketMQ应用">
+  <meta property="og:url" content="https://cocoyh.github.io/2019/03/26/阿里云RocketMQ应用/index.html">
   <meta property="og:site_name" content="CoCo's Blog">
-  <meta property="og:updated_time" content="2019-04-06T12:52:36.928Z">
+  <meta property="og:updated_time" content="2019-03-26T12:52:36.928Z">
 
   <script type="text/javascript" id="hexo.configurations">
     var NexT = window.NexT || {};
@@ -63,8 +63,8 @@
       }
     };
   </script>
-  <link rel="canonical" href="https://cocoyh.github.io/2019/04/06/React入门/" />
-  <title> React入门 | CoCo's Blog </title>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/03/26/阿里云RocketMQ应用/" />
+  <title> 阿里云RocketMQ应用 | CoCo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +132,7 @@
             <div id="content" class="content">
               <div id="posts" class="posts-expand">
                 <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/06/React入门/">
+                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/03/26/阿里云RocketMQ应用/">
                   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="coco">
                     <meta itemprop="description" content="">
@@ -143,7 +143,7 @@
                   </span>
                   <header class="post-header">
                     <h1 class="post-title" itemprop="name headline">
-                      React入门
+                      阿里云RocketMQ应用
                     </h1>
                     <div class="post-meta">
                       <span class="post-time">
@@ -151,8 +151,8 @@
                           <i class="fa fa-calendar-o"></i>
                         </span>
                         <span class="post-meta-item-text">发表于</span>
-                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-06T20:47:51+08:00">
-                          2019-04-06
+                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-26T20:47:51+08:00">
+                          2019-03-26
                         </time>
                       </span>
                       <span class="post-category">
@@ -162,12 +162,12 @@
                         </span>
                         <span class="post-meta-item-text">分类于</span>
                         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                          <a href="/categories/前端/" itemprop="url" rel="index">
-                            <span itemprop="name">前端</span>
+                          <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                            <span itemprop="name">JavaScript</span>
                           </a>
                         </span>
                       </span>
-                      <span id="/2019/04/06/React入门" class=" leancloud_visitors" data-flag-title="React入门">
+                      <span id="/2019/03/26/阿里云RocketMQ应用" class=" leancloud_visitors" data-flag-title="阿里云RocketMQ应用">
                         <span class="post-meta-divider">|</span>
                         <span class="post-meta-item-icon">
                           <i class="fa fa-eye"></i>
@@ -178,99 +178,78 @@
                     </div>
                   </header>
                   <div class="post-body" itemprop="articleBody">
-                    <h2 id="roadhog是啥？">
-                      <a href="#roadhog是啥？" class="headerlink" title="roadhog是啥？">
-                          roadhog是啥？
-                      </a>
+                    
+                    <h2 id="npm包使用">
+                      <a href="#npm包使用" class="headerlink" title="npm包使用">一、npm包使用</a>
                     </h2>
-                    <p>简单来说，roadhog是可配置的[create-react-app](https://github.com/facebook/create-react-app)</p>
-                    <p></p>
-                    <p>roadhog是一个cli工具，提供server和build两个命令，分别用于本地调试和构建。命令行体验和create-react-app一直，配置略有不同，比如默认开启[css modules](https://github.com/css-modules/css-modules)，然后还提供了JSON格式的配置方式。</p>
-                    <h2 id="命名来源？">
-                      <a href="#命名来源？" class="headerlink" title="命名来源？">
-                          命名来源？
-                      </a>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">or</div><div class="line">npm i egg-ons</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">npm i ali-ons</div><div class="line">2</div><div class="line">3</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h2 id="发布订阅demo测试（使用的阿里云消息队列）">
+                      <a href="#发布订阅demo测试（使用的阿里云消息队列）" class="headerlink" title="发布订阅demo测试（使用的阿里云消息队列）">二、发布订阅demo测试（使用的阿里云消息队列）</a>
                     </h2>
                     <p>
-                      <a href="http://ow.blizzard.cn/heroes/roadhog" target="_blank">[http://ow.blizzard.cn/heroes/roadhog]</a>
+                      <a hrfef="https://github.com/CoCoyh/egg-ons-test" target="_blank">https://github.com/CoCoyh/egg-ons-test</a>
                     </p>
-                    <h2 id="为啥要有roadhog？">
-                      <a href="#为啥要有roadhog？" class="headerlink" title="为啥要有roadhog？">
-                          为啥要有roadhog？
-                      </a>
+                    <h2 id="流控问题">
+                      <a href="#流控问题" class="headerlink" title="流控问题">三、流控问题</a>
                     </h2>
-                    <p>做roadhog有多方面原因：</p>
+                    <p>
+                      <a href="https://github.com/CoCoyh/ali-ons-test/tree/master" target="_blank">demo测试</a>
+                    </p>
                     <ul>
-                      <li>首先，create-react-app 体验是在太好了，细节做的很到位，比如启动成功后会自动打开浏览器窗口这个操作，会检查当前是否已经有打开当前URL的Tab。**但可惜它并不支持配置**， 比如我们要用less和css-modules，就不能使用了。</li>
-                      <li>
-                          另外，我们目前是基于
-                          <a href="github.com/ant-tool/atool-build" target="_blank">【atool-build】</a>
-                          和
-                          <a href="github.com/dora-js/dora" target="_blank">【dora】</a>
-                          的工具套件。dora有插件机制，atool-build的配置和webpack一样，基于编程。这两种扩展方式太灵活，灵活是有点，单导致我们做功能升级时需要考虑太多的事情，并且无法保证兼容
-                        </li>
+                      <li>方案一：通过暴露参数，接入acm动态配置</li>
+                      <li>方案二：https://help.aliyun.com/document_detail/66174.html?spm=5176.10695662.1996646101.searchclickresult.27e671b9O7KfCm
+                        // 消息队列 RocketMQ 客户端流控设计</li>
                     </ul>
-                    <p>那么roadhog的配置方式和之前的有何不同呢？</p>
-                    <h2 id="配置方式的选择">
-                      <a href="#配置方式的选择" class="headerlink" title="配置方式的选择">
-                          配置方式的选择
-                      </a>
+                    <p><strong>注意：</strong>使用egg-ons包，当前缺少参数配置接口</p>
+                    <h2 id="资料汇总">
+                      <a href="#资料汇总" class="headerlinl" title="资料汇总">四、资料汇总</a>
                     </h2>
-                    <p>我们做<code>>cli</code>工具有一段时间了，从<code>spm2</code>，<code>spm3</code>，<code>atool-build</code>加<code>dora</code>到现在的<code>roadhog</code>。（目前<code>roadhog</code>并非<code>atool</code>的升级版，两者场景不同，<code>atool</code>扩展性更好）配置方式从<code>JSON</code>到编程，最终又回归到<code>JSON</code></p>
-                    <p><code>roadhog </code>为啥用<code>JSON</code>格式的配置?</p>
-                    <p>做atool的时候我们是用编程的配置方式，优点是灵活，可随意改变工具内置的<code>webpack</code>配置。</p>
-                    <p>但缺点也很明显：</p>
-                    <h3 id="配置麻烦">
-                      <a href="#配置麻烦" class="headerlink" title="配置麻烦">
-                          1. 配置麻烦
-                      </a>
-                    </h3>
-                    <p>比如要删除内置的<code>CommonChunkPlugin</code>，不加注释基本没人能看懂了。</p>
-                    <figure class="highlight js">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
-                            </td>
-                            <td>
-                              <pre><div class="line">// Don't extract common.js and common.css</div><div class="line">webpackConfig.plugins = webpackConfig.plugins.filter(function(plugin) {</div><div class="line">  return !(plugin instanceof webpack.optimize.CommonsChunkPlugin);</div><div class="line">});</div></pre>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </figure>
-                    <h3 id="工具升级困难">
-                      <a href="#工具升级困难" class="headerlink" title="工具升级困难">
-                          工具升级困难
-                      </a>
-                    </h3>
-                    <h2 id="roadhog配置">
-                      <a href="#roadhog配置" class="headerlink" title="roadhog配置">
-                          roadhog配置
-                      </a>
-                    </h2>
-                    <p>基于上面的原因，roadhog的配置以JSON格式呈现。</p>
-                    <p>下面是好似目前支持的全部配置项，它们在
-                      <a href="https://github.com/sorrycc/roadhog#%E9%85%8D%E7%BD%AE" target="_blank">
-                          【roadhog#配置】
-                      </a>
+                    <p>
+                      <a href="http://youzhixueyuan.com/search/rocketmq/page/2" target="_blank">http://youzhixueyuan.com/search/rocketmq/page/2</a>
                     </p>
-                    <figure class="highlight js">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre>
-                            </td>
-                            <td>
-                              <pre><div class="line">{</div><div class="line">  "entry": "src/index.js",</div><div class="line">  "disableCSSModules": false,</div><div class="line">  "less": false,</div><div class="line">  "publicPath": "/",</div><div class="line">  "extraBabelPlugins": [],</div><div class="line">  "autoprefixer": null,</div><div class="line">  "proxy": null,</div><div class="line">  "env": null,</div><div class="line">}</div></pre>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </figure>
-                  
+                    <p>
+                      <a href="http://rocketmq.apache.org/docs/quick-start/" target="_blank">http://rocketmq.apache.org/docs/quick-start/</a>
+                    </p>
+                    <p>
+                      <a href="https://blog.csdn.net/a19881029/article/details/34446629" target="_blank">https://blog.csdn.net/a19881029/article/details/34446629</a>
+                    </p>
+                    <p>
+                      <a href="https://blog.csdn.net/u010634288/article/details/56049305" target="_blank">https://blog.csdn.net/u010634288/article/details/56049305</a>
+                    </p>
+                    <p>
+                      <a href="https://blog.csdn.net/haleyliu123/article/details/81709023" target="_blank">https://blog.csdn.net/haleyliu123/article/details/81709023</a>
+                    </p>
+                    <p>
+                      <a href="https://segmentfault.com/a/1190000012726254" target="_blank">https://segmentfault.com/a/1190000012726254</a>
+                    </p>
+                    <p>
+                      <a href="http://jm.taobao.org/2017/01/12/rocketmq-quick-start-in-10-minutes/" target="_blank">http://jm.taobao.org/2017/01/12/rocketmq-quick-start-in-10-minutes/</a>
+                    </p>
+                    <p>
+                      <a href="https://segmentfault.com/a/1190000016986784" target="_blank">https://segmentfault.com/a/1190000016986784</a>
+                    </p>
+                    <p>
+                      <a href="https://segmentfault.com/a/1190000004363689" target="_blank">https://segmentfault.com/a/1190000004363689</a>
+                    </p>
+                    <p>
+                      <a href="https://jameswxx.iteye.com/blog/2091971" target="_blank">https://jameswxx.iteye.com/blog/2091971</a>
+                    </p>
+                    <p>
+                      <a href="http://www.cnblogs.com/linjiqin/p/7511062.html" target="_blank">http://www.cnblogs.com/linjiqin/p/7511062.html</a>
+                    </p>
                   </div>
                   <div>
                   </div>
@@ -278,19 +257,19 @@
                   </div>
                   <footer class="post-footer">
                     <div class="post-tags">
-                      <a href="/tags/React/" rel="tag"># React</a>
+                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/03/25/MQTT持久会话和排队消息/" rel="next" title="MQTT持久会话和排队消息">
-                          <i class="fa fa-chevron-left"></i> MQTT持久会话和排队消息
+                        <a href="/2019/03/23/React高级开发/" rel="next" title="React高级开发">
+                          React高级开发
+                          <i class="fa fa-chevron-left"></i>
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
                       <div class="post-nav-prev post-nav-item">
-                        <a href="/2019/04/11/react-studying/" rel="prev" title="react-studying">
-                          React学习
-                          <i class="fa fa-chevron-right"></i>
+                        <a href="/2019/05/10/自检清单/" rel="prev" title="自检清单">
+                          <i class="fa fa-chevron-right"></i>自检清单
                         </a>
                       </div>
                     </div>
@@ -401,66 +380,15 @@
                 <div class="post-toc">
                   <div class="post-toc-content">
                     <ol class="nav">
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#React">
-                          <span class="nav-number">一、React</span>
-                          <span class="nav-text">React</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#Redux">
-                          <span class="nav-number">二、</span>
-                          <span class="nav-text">Redux</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#React-redux">
-                          <span class="nav-number">三、React-redux</span>
-                          <span class="nav-text">React-redux</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#React-router（react的路由组件）">
-                          <span class="nav-number">四、</span>
-                          <span class="nav-text">React-router（react的路由组件）</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#React-router-dom">
-                          <span class="nav-number">五、React-router-dom</span>
-                          <span class="nav-text">React-router-dom</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#Webpack">
-                          <span class="nav-number">六、</span>
-                          <span class="nav-text">Webpack</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#Next.js/Nuxt.js">
-                          <span class="nav-number">七、</span>
-                          <span class="nav-text">Next.js/Nuxt.js</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#Roadhog">
-                          <span class="nav-number">八、</span>
-                          <span class="nav-text">Roadhog</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#DvaJS（react > redux > redux-saga(异步流程控制) > DvaJS）">
-                          <span class="nav-number">九、</span>
-                          <span class="nav-text">DvaJS（react > redux > redux-saga(异步流程控制) > DvaJS）</span>
-                        </a>
-                      </li>
-                      <li class="nav-item nav-level-1">
-                        <a class="nav-link" href="#Ant">
-                          <span class="nav-number">十、</span>
-                          <span class="nav-text">Ant</span>
-                        </a>
-                      </li>
+                      <li class="nav-item nav-level-1"><a class="nav-link"
+                          href="#npm包使用"><span class="nav-number">一、</span> <span
+                            class="nav-text">npm包使用</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#发布订阅demo测试（使用的阿里云消息队列）"><span class="nav-number">二、</span>
+                          <span class="nav-text">发布订阅demo测试（使用的阿里云消息队列）</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#流控问题"><span
+                            class="nav-number">三、</span> <span class="nav-text">流控问题</span></a></li>
+                      <li class="nav-item nav-level-1"><a class="nav-link" href="#class静态属性和实例属性"><span
+                            class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
                     </ol>
                   </div>
                 </div>

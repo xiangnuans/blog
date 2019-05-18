@@ -21,13 +21,13 @@
     rel="stylesheet" type="text/css">
   <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
   <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-  <meta name="keywords" content="JavaScript," />
+  <meta name="keywords" content="MQTT," />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
   <meta property="og:type" content="article">
   <meta property="og:title" content="MQTT主题设计">
-  <meta property="og:url" content="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/index.html">
+  <meta property="og:url" content="https://cocoyh.github.io/2019/03/22/MQTT主题设计/index.html">
   <meta property="og:site_name" content="CoCo's Blog">
-  <meta property="og:updated_time" content="2019-04-25T12:52:36.928Z">
+  <meta property="og:updated_time" content="2019-03-22T12:52:36.928Z">
 
   <script type="text/javascript" id="hexo.configurations">
     var NexT = window.NexT || {};
@@ -63,8 +63,8 @@
       }
     };
   </script>
-  <link rel="canonical" href="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/" />
-  <title> JavaScript重要知识点整理 | CoCo's Blog </title>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/03/22/MQTT主题设计/" />
+  <title> MQTT主题设计 | CoCo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -132,7 +132,7 @@
             <div id="content" class="content">
               <div id="posts" class="posts-expand">
                 <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/04/25/JavaScript重要知识点整理/">
+                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/03/22/MQTT主题设计/">
                   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <meta itemprop="name" content="coco">
                     <meta itemprop="description" content="">
@@ -143,7 +143,7 @@
                   </span>
                   <header class="post-header">
                     <h1 class="post-title" itemprop="name headline">
-                      JavaScript重要知识点整理
+                      MQTT主题设计
                     </h1>
                     <div class="post-meta">
                       <span class="post-time">
@@ -151,8 +151,8 @@
                           <i class="fa fa-calendar-o"></i>
                         </span>
                         <span class="post-meta-item-text">发表于</span>
-                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T20:47:51+08:00">
-                          2019-04-25
+                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T20:47:51+08:00">
+                          2019-03-22
                         </time>
                       </span>
                       <span class="post-category">
@@ -162,12 +162,12 @@
                         </span>
                         <span class="post-meta-item-text">分类于</span>
                         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                          <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                            <span itemprop="name">JavaScript</span>
+                          <a href="/categories/消息队列/" itemprop="url" rel="index">
+                            <span itemprop="name">消息队列</span>
                           </a>
                         </span>
                       </span>
-                      <span id="/2019/04/25/JavaScript重要知识点整理 class=" leancloud_visitors" data-flag-title="JavaScript重要知识点整理">
+                      <span id="/2019/03/22/MQTT主题设计" class=" leancloud_visitors" data-flag-title="MQTT主题设计">
                         <span class="post-meta-divider">|</span>
                         <span class="post-meta-item-icon">
                           <i class="fa fa-eye"></i>
@@ -178,66 +178,147 @@
                     </div>
                   </header>
                   <div class="post-body" itemprop="articleBody">
-                    <P>
-                      <a href="http://javascript.info/" target="_blank">【推荐】</a>
-                    </P>
-                    <h2 id="闭包">
-                      <a href="#闭包" class="headerlink" title="闭包">一、闭包</a>
+                    <p>Essentials的第五部分。关于MQTT协议的核心功能和概念的十部分博客系列。在这篇文章中，我们关注MQTT主题和最佳实践。正如我们已经提到的，MQTT代理使用消息主题来决定哪个客户端接收哪个消息。我们还会查看SYS主题，这些主题是揭示有关代理本身的信息的特殊主题。让我们开始吧。</p>
+                    <h2 id="话题">
+                      <a href="#话题" class="headerlink" title="话题">一、话题</a>
                     </h2>
-                    <p>
-                      <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures"
-                        target="_blank">资料(待完善)</a>
-                    </p>
-                    <h2 id="ES6面向对象">
-                      <a href="#ES6面向对象" class="headerlink" title="ES6面向对象">二、ES6面向对象</a>
-                    </h2>
-                    <p>
-                      <a href="https://www.html.cn/archives/7383" target="_blank">资料（待完善）</a>
-                    </p>
-                    <h2 id="箭头函数">
-                      <a href="#箭头函数" class="headerlink" title="箭头函数">三、箭头函数</a>
-                    </h2>
-                    <p><strong>VS普通函数</strong></p>
-                    <ul>
-                      <li>箭头函数只有一个参数时，括号可以参略</li>
-                      <li>只有一行return， <code>{}</code>可以参略</li>
-                      <li>作用域不同，箭头函数在哪个对象调用，this就是哪个对象</li>
-                    </ul>
-                    <h2 id="class静态属性和实例属性">
-                      <a href="#class静态属性和实例属性" class="headerlink" title="class静态属性和实例属性">
-                        四、class 静态属性和实例属性
+                    <p>在MQTT中，主题一词是指代理用来过滤每个连接客户端的消息的UTF-8字符串。该主题包含一个或多个主题级别。每个主题级别由正斜杠（主题级别分隔符）分隔。</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">myhome/groundfloor/livingroom/temperate</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>与消息队列相比，MQTT主题非常轻量级。客户端在发布或订阅它之前不需要创建所需的主题。代理接受每个有效主题而无需事先初始化。</p>
+                    <p>以下是一些主题示例：</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">myhome / groundfloor / livingroom /温度</div><div class="line">美国/加利福尼亚/旧金山/硅谷</div><div class="line">5ff4a2ce-e485-40f4-826c-b1a5d81be9b6 / status </div><div class="line">德国/巴伐利亚/汽车/ 2382340923453 /纬度</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>请注意，每个主题必须至少包含1个字符，并且主题字符串允许空格。主题区分大小写。例如，<code>_myhome / temperature</code>和<code>_MyHome / Temperature</code>是两个不同的主题。此外，单独的正斜杠是一个有效的主题。</p>
+                    <h2 id="通配符">
+                      <a href="#通配符" class="headerlink" title="通配符">
+                          二、通配符
                       </a>
                     </h2>
-                    <h3>静态属性</h3>
-                    <p>指的是class本身的属性，即Class.propname，而不是定义在实例对象（this）的属性。</p>
-                    <p>定义静态属性</p>
-                    <p>
-                      <a href="/uploads/js-1.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/js-1.png" alt=""/>
+                    <p>当客户端订阅主题时，它可以订阅已发布消息的确切主题，也可以使用通配符同时订阅多个主题。通配符只能用于订阅主题，而不能用于发布消息。有两种不同的通配符：<code>_single-level</code><code>_multi-level</code></p>
+                    <p>单级：+</p>
+                    <p>顾名思义，单级通配符取代了一个主题级别。加号表示主题中的单级通配符。</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="gutter">
+                              <pre><div class="line">myhome/groundfloor/+/temperate</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>如果主题包含任意字符串而不是通配符，则任何主题都会将主题与单级通配符匹配。例如，订阅<code>_myhome / groundfloor / + / temperature</code>可以产生以下结果：</p>
+                    <h2 id="多级：#">
+                      <a href="#多级：#" class="headerlink" title="多级：#">
+                          三、多级：#
                       </a>
-                    </p>
-                    <p>定义实例属性</p>
-                    <p>ES6实例属性只能在constructor构造函数中定义</p>
-                    <p>
-                        <a href="/uploads/js-2.png" class="fancybox fancybox.image" rel="group">
-                          <img src="/uploads/js-2.png" alt=""/>
-                        </a>
-                    </p>
-                    <p>为了可读性的目的，对于那些在constructor里面已经定义的实例属性，新写法允许直接列出，例如：width</p>
-                    <p><strong>说明</strong>：目前ES6，只有这种写法可行，因为ES6明确规定，Class内部只有静态方法，没有静态属性</p>
-                  
-                    <p><strong>ES7有一个静态属性的提案</strong>目前Babel转码器支持。安装babel-preset-stage-0包含了0-3的stage，可根据需要天假，不同的stage封装了不同的插件，官方推荐使用stage-1安装命令: </p>
-                    <p>
-                        <a href="/uploads/js-3.png" class="fancybox fancybox.image" rel="group">
-                          <img src="/uploads/js-3.png" alt=""/>
-                        </a>
-                    </p>
-                    <p>ES7使用京台属性和实例属性</p>
-                    <p>
-                      <a href="/uploads/js-4.png" class="fancybox fancybox.image" rel="group">
-                        <img src="/uploads/js-4.png" alt=""/>
+                    </h2>
+                    <p>多级通配符涵盖许多主题级别。哈希符号表示主题中的多级通配符。要使代理确定哪些主题匹配，必须将多级通配符放在主题中的最后一个字符，并以正斜杠开头。</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">myhome/groundfloor/#</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">myhome/groundfloor/living/temperate</div><div class="line">myhome/groundfloor/kitchen/temperate</div><div class="line">myhome/groundfloor/kitchen/brightness</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>当客户端使用多级通配符订阅主题时，无论主题有多长或多深，它都会接收以通配符之前的模式开头的主题的所有消息。如果仅指定多级通配符作为主题（_＃），则会收到发送到MQTT代理的所有消息。如果您期望高吞吐量，单独使用多级通配符进行订阅是一种反模式（请参阅下面的最佳做法）</p>
+
+                    <h2 id="以$开头的主题">
+                      <a href="#以$开头的主题" class="headerlink" title="以$开头的主题">
+                          四、以$开头的主题
                       </a>
-                    </p>
+                    </h2>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">$ SYS/broker/clients/connected</div><div class="line">$ SYS/broker/clients/disconnected</div><div class="line">$ SYS/broker/message/sent</div><div class="line">$ SYS/broker/uptime</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h2 id="摘要">
+                      <a href="#摘要" class="headerlink" title="摘要">
+                          五、摘要
+                      </a>
+                    </h2>
+                    <p>这些是MQTT消息主题的基础知识。如您所见，MQTT主题是动态的，并提供了极大的灵活性。在实际应用程序中使用通配符时，您应该注意一些挑战。我们收集了我们在各种项目中广泛使用MQTT所学到的最佳实践，并随时接受有关这些实践的建议或讨论。使用评论开始对话，让我们知道您的最佳实践，或者如果您不同意我们的最佳实践！</p>
+                    <h2 id="最佳做法">
+                      <a href="#最佳做法" class="headerlink" title="最佳做法">
+                          最佳做法
+                      </a>
+                    </h2>
+                    <p><strong>切勿使用前导斜线</strong></p>
+                    <p><code>MQTT</code>中允许使用前导斜杠。例如， <code>/ myhome / groundfloor / livingroom</code>。但是，前导斜杠会在前面引入一个零字符的不必要的主题级别。零不会带来任何好处，往往会导致混淆。</p>
+                    <p><strong>切勿在主题中使用空格</strong></p>
+                    <p>空间是每个程序员的天敌。当事情不按照他们应该的方式进行时，空间使得阅读和调试主题变得更加困难。与前导斜杠一样，仅仅因为允许某些东西，并不意味着它应该被使用。UTF-8有许多不同的空白类型，应避免使用这种不常见的字符。</p>
+                    <p><strong>保持主题简洁明了</strong></p>
+                    <p>每个主题都包含在使用它的每条消息中。让您的主题尽可能简洁明了。对于小型设备，每个字节数和主题长度都会产生很大影响。</p>
+                    <p><strong>仅使用ASCII字符，避免使用不可打印的字符</strong></p>
+                    <p>由于非ASCII UTF-8字符经常显示不正确，因此很难找到与字符集相关的拼写错误或问题。除非绝对必要，否则我们建议避免在主题中使用非ASCII字符。</p>
+                    <p><strong>在主题中嵌入唯一标识符或客户端ID</strong></p>
+                    <p>在主题中包含发布客户端的唯一标识符非常有用。主题中的唯一标识符可帮助您识别发送邮件的人员。嵌入式ID可用于强制执行授权。只允许与主题中具有相同客户端ID的客户端发布到该主题。例如，允许具有<code>_client1 ID</code>的客户端发布到<code>_client1 / status</code>，但不允许发布到<code>_client2 / status</code>。</p>
+                    <p><strong>不订阅＃</strong></p>
+                    <p>有时，有必要订阅通过代理传输的所有消息。例如，将所有消息保存到数据库中。不要使用MQTT客户端订阅代理上的所有消息并订阅多级通配符。通常，订阅客户端无法处理由此方法产生的消息负载（特别是如果您有大量吞吐量）。我们的建议是在MQTT代理中实现扩展。例如，使用HiveMQ的插件系统，您可以挂钩HiveMQ的行为并添加一个异步例程来处理每个传入的消息并将其持久保存到数据库。</p>
+                    <p>不要忘记可扩展性</p>
+                    <p>主题是一个灵活的概念，没有必要以任何方式预分配它们。但是，发布者和订阅者都需要了解该主题。重要的是要考虑如何扩展主题以允许新功能或产品。例如，如果您的智能家居解决方案添加了新传感器，则应该可以将这些传感器添加到主题树，而无需更改整个主题层次结构。</p>
+                    <p><strong>使用特定主题，而不是一般主题</strong></p>
+                    <p>命名主题时，请勿以与队列相同的方式使用它们。尽可能具体。例如，如果您的起居室有三个传感器，请为<code>_myhome / livingroom / temperature</code>，<code>_myhome / livingroom / brightness和_myhome / livingroom / humidity</code>创建主题。不要在<code>_myhome / livingroom</code>上发送所有值。对所有消息使用单个主题是反模式。特定命名还使您可以使用其他<code>MQTT</code>功能，例如保留的消息。</p>
                   </div>
                   <div>
                   </div>
@@ -245,19 +326,19 @@
                   </div>
                   <footer class="post-footer">
                     <div class="post-tags">
-                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                      <a href="/tags/MQTT/" rel="tag"># MQTT</a>
                     </div>
                     <div class="post-nav">
                       <div class="post-nav-next post-nav-item">
-                        <a href="/2019/04/23/React高级开发/" rel="next" title="React高级开发">
-                          React高级开发
+                        <a href="/2019/03/20/MQTT保持活跃和客户端接管/" rel="next" title="MQTT保持活跃和客户端接管">
+                          MQTT保持活跃和客户端接管
                           <i class="fa fa-chevron-left"></i>
                         </a>
                       </div>
                       <span class="post-nav-divider"></span>
                       <div class="post-nav-prev post-nav-item">
-                        <a href="/2019/05/10/自检清单/" rel="prev" title="自检清单">
-                          <i class="fa fa-chevron-right"></i>自检清单
+                        <a href="/2019/03/25/MQTT持久会话和排队消息/" rel="prev" title="MQTT持久会话和排队消息">
+                          <i class="fa fa-chevron-right"></i>MQTT持久会话和排队消息
                         </a>
                       </div>
                     </div>
@@ -368,15 +449,36 @@
                 <div class="post-toc">
                   <div class="post-toc-content">
                     <ol class="nav">
-                      <li class="nav-item nav-level-1"><a class="nav-link"
-                          href="#闭包"><span class="nav-number">一、</span> <span
-                            class="nav-text">闭包</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#ES6面向对象"><span class="nav-number">二、</span>
-                          <span class="nav-text">ES6面向对象</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#箭头函数"><span
-                            class="nav-number">三、</span> <span class="nav-text">箭头函数</span></a></li>
-                      <li class="nav-item nav-level-1"><a class="nav-link" href="#class静态属性和实例属性"><span
-                            class="nav-number">四、</span> <span class="nav-text">class静态属性和实例属性</span></a></li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#话题">
+                          <span class="nav-number">一、</span>
+                          <span class="nav-text">话题</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#通配符">
+                          <span class="nav-number">二、</span>
+                          <span class="nav-text">通配符</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#多级：#">
+                          <span class="nav-number">三、</span>
+                          <span class="nav-text">多级：#</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#以$开头的主题">
+                          <span class="nav-number">四、</span>
+                          <span class="nav-text">以$开头的主题</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#摘要">
+                          <span class="nav-number">五、</span>
+                          <span class="nav-text">摘要</span>
+                        </a>
+                      </li>
                     </ol>
                   </div>
                 </div>
