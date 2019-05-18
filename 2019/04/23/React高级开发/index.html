@@ -449,7 +449,7 @@
                       <tbody>
                         <tr>
                           <td class="gutter">
-                            <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre>
+                            <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">14</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre>
                           </td>
                           <td class="code">
                             <pre><div class="line">const myAxios = axios.create({</div><div class="line">  baseUrl = 'http://jsonplaceholder.typicode.com',</div><div class="line">  headers: {</div><div class="line">    'content-type': 'application/json'</div><div class="line">  },</div><div class="line">  // 请求前处理数据</div><div class="line"> transformRequest: [</div><div class="line">   data=> {</div><div class="line">      console.log(data);</div><div class="line">      data.userId = 1</div><div class="line">     return JSON.stringify(data)</div><div class="line">   }</div><div class="line"> ],</div><div class="line">  // 对响应的数据进行处理</div><div class="line"> transformResponse: [</div><div class="line">    res=> {</div><div class="line">     return JSON.parse(res)</div><div class="line">    }</div><div class="line">   ]</div><div class="line">})</div><div class="line">// 请求前拦截修改配置</div><div class="line">myAxios.intercepors.request.use(</div><div class="line">  config => {</div><div class="line">   console.log(config);</div><div class="line">    config.heasers['x-powered-by'] = 'axios'</div><div class="line">  }</div><div class="line">)</div><div class="line">// 响应拦截修改</div><div class="line">myAxios.intercepors.response.use(</div><div class="line">  res => {</div><div class="line">    return res.data;</div><div class="line">  }</div><div class="line">)</div><div class="line">myAxios.get('/todos', {})</div><div class="line">.then(res => {    // 如果有响应拦截，则此处接收是data</div><div class="line">  console.log()</div><div class="line">}).catch(err=> {</div><div class="line">  console.error()</div><div class="line">})</div></pre>
@@ -763,7 +763,7 @@
               <nav class="site-state motion-element">
                 <div class="site-state-item site-state-posts">
                   <a href="/archives">
-                    <span class="site-state-item-count">94</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -775,7 +775,7 @@
                 </div>
                 <div class="site-state-item site-state-tags">
                   <a href="/tags">
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

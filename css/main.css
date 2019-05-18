@@ -62,7 +62,7 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  font-size: 10%;
 }
 sub,
 sup {
@@ -2131,7 +2131,7 @@ pre .javascript .function {
   left: 50%;
   margin-left: -350px;
   width: 700px;
-  height: 80%;
+  height: 10%;
   padding: 0;
   background: #fff;
   color: #333;

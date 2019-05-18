@@ -16,7 +16,7 @@
 <li>PlayBook OS 1 and upwards</li>
 </ul>
 <h2 id="When-it-isn’t-needed"><a href="#When-it-isn’t-needed" class="headerlink" title="When it isn’t needed"></a>When it isn’t needed</h2><p>FastClick doesn’t attach any listeners on desktop browsers.</p>
-<p>Chrome 32+ on Android with <code>width=device-width</code> in the <a href="https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag">viewport meta tag</a> doesn’t have a 300ms delay, therefore listeners aren’t attached.</p>
+<p>Chrome 14+ on Android with <code>width=device-width</code> in the <a href="https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag">viewport meta tag</a> doesn’t have a 300ms delay, therefore listeners aren’t attached.</p>
 <pre><code class="html"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span>
 </code></pre>
 <p>Same goes for Chrome on Android (all versions) with <code>user-scalable=no</code> in the viewport meta tag. But be aware that <code>user-scalable=no</code> also disables pinch zooming, which may be an accessibility concern.</p>

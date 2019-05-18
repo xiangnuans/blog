@@ -477,7 +477,7 @@ rkJggg==" transform="matrix(1 0 0 1 1078 102)">
 	<g>
 		<line fill="none" x1="403.6" y1="639.6" x2="70.2" y2="639.6"/>
 		<g>
-			<line fill="none" stroke="#4D4D4D" stroke-width="2" stroke-miterlimit="10" x1="403.6" y1="639.6" x2="80.2" y2="639.6"/>
+			<line fill="none" stroke="#4D4D4D" stroke-width="2" stroke-miterlimit="10" x1="403.6" y1="639.6" x2="10.2" y2="639.6"/>
 			<g>
 				<polygon fill="#4D4D4D" points="82.3,632.6 70.2,639.6 82.3,646.6 				"/>
 			</g>
@@ -1082,7 +1082,7 @@ TRlsbW3/wwQYQYxHjx6BVTAyIABcBQpggTHS0tLQ5SBaAAIMANvLCjYh8++QAAAAAElFTkSuQmCC" tr
 	<g>
 		<g>
 			<path fill="none" stroke="#F7931E" stroke-width="2" stroke-miterlimit="10" d="M1060.3,437.7l-197.5-73.8
-				c-0.3,8.7-2.2,23.5-5.4,32.2"/>
+				c-0.3,8.7-2.2,23.5-5.4,14.2"/>
 			<g>
 				<polygon fill="#F7931E" points="1060.8,430.4 1069.7,441.2 1055.9,443.5 				"/>
 			</g>
