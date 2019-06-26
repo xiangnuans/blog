@@ -1,0 +1,773 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>博客 · crm文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../接口文档/" />
+    
+    
+    <link rel="prev" href="../接口文档/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../接口文档/">
+            
+                <a href="../接口文档/">
+            
+                    
+                    数据库表设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="博客.html">
+            
+                <a href="博客.html">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../接口文档/">
+            
+                <a href="../接口文档/">
+            
+                    
+                    接口文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../接口文档/博客.html">
+            
+                <a href="../接口文档/博客.html">
+            
+                    
+                    博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >博客</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-user"><b>1. </b>&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-User</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-article"><b>2. </b>&#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-Article</a></li><li><span class="title-icon "></span><a href="#&#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-project"><b>3. </b>&#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-Project</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-category"><b>4. </b>&#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-Category</a></li><li><span class="title-icon "></span><a href="#&#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-tag"><b>5. </b>&#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-Tag</a></li><li><span class="title-icon "></span><a href="#&#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-message"><b>6. </b>&#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-Message</a></li><li><span class="title-icon "></span><a href="#&#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-link"><b>7. </b>&#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-Link</a></li><li><span class="title-icon "></span><a href="#&#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-comment"><b>8. </b>&#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-Comment</a></li><li><span class="title-icon "></span><a href="#&#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-option"><b>9. </b>&#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-Option</a></li></ul></div><a href="#&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-user" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-user"><a name="&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-user" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-user"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7528;&#x6237;&#x8868;&#x6A21;&#x578B;-User</h1>
+<pre><code>const { mongoose } = require(&apos;../core/mongodb);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+new mongoose.Schema({
+  // &#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x767B;&#x5F55;&#x7684; oauth &#x8868;&#x7684; id &#x6216; github &#x7684;&#x7528;&#x6237; id
+  third_id: { type: String, default: &apos;&apos; },
+
+  // &#x540D;&#x5B57;
+  name: { type: String, required: true, default: &apos;&apos; },
+
+  //&#x7528;&#x6237;&#x7C7B;&#x578B; 0&#xFF1A;&#x535A;&#x4E3B;&#xFF0C;1&#xFF1A;&#x5176;&#x4ED6;&#x7528;&#x6237; &#xFF0C;2&#xFF1A;github&#xFF0C; 3&#xFF1A;weixin&#xFF0C; 4&#xFF1A;qq ( 0&#xFF0C;1 &#x662F;&#x6CE8;&#x518C;&#x7684;&#x7528;&#x6237;&#xFF1B; 2&#xFF0C;3&#xFF0C;4 &#x90FD;&#x662F;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;)
+  type: { type: Number, default: 1 },
+
+  // &#x624B;&#x673A;
+  phone: { type: String, default: &apos;&apos; },
+
+  //&#x5C01;&#x9762;
+  img_url: { type: String, default: &apos;&apos; },
+
+  // &#x90AE;&#x7BB1;
+  email: {
+    type: String,
+    default: &apos;&apos;,
+    // required: true,
+    // validate: /\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}/,
+  },
+
+  // &#x4E2A;&#x4EBA;&#x4ECB;&#x7ECD;
+  introduce: { type: String, default: &apos;&apos; },
+
+  // &#x5934;&#x50CF;
+  avatar: { type: String, default: &apos;user&apos; },
+
+  // &#x5730;&#x5740;
+  location: { type: String, default: &apos;user&apos; },
+
+  // &#x5BC6;&#x7801;
+  password: {
+    type: String,
+    required: true,
+    default: crypto
+      .createHash(&apos;md5&apos;)
+      .update(argv.auth_default_password || &apos;root&apos;)
+      .digest(&apos;hex&apos;),
+  },
+
+  // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+  create_time: { type: Date, default: Date.now },
+
+  // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+  update_time: { type: Date, default: Date.now },
+})
+.plugin(autoIncrement.plugin, {
+  model: &apos;User&apos;,
+  field: &apos;id&apos;,
+  startAt: 1,
+  incrementBy: 1,
+})
+</code></pre><h1 id="&#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-article"><a name="&#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-article" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-article"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x6587;&#x7AE0;&#x8868;&#x6A21;&#x578B;-Article</h1>
+<pre><code>&#x6587;&#x7AE0;&#x7C7B;&#x578B; =&gt; 1: &#x666E;&#x901A;&#x6587;&#x7AE0;&#xFF0C;2: &#x7B80;&#x5386;&#xFF0C;3: &#x7BA1;&#x7406;&#x5458;&#x4ECB;&#x7ECD;
+
+new mongoose.Schema({
+    // &#x6587;&#x7AE0;&#x6807;&#x9898;
+    title: { type: String, required: true, validate: /\S+/ },
+
+    // &#x6587;&#x7AE0;&#x5173;&#x952E;&#x5B57;&#xFF08;SEO&#xFF09;
+    keyword: [{ type: String, default: &apos;&apos; }],
+
+    // &#x4F5C;&#x8005;
+    author: { type: String, required: true, validate: /\S+/ },
+
+    // &#x6587;&#x7AE0;&#x63CF;&#x8FF0;
+    desc: { type: String, default: &apos;&apos; },
+
+    // &#x6587;&#x7AE0;&#x5185;&#x5BB9;
+    content: { type: String, required: true, validate: /\S+/ },
+
+    // &#x5B57;&#x6570;
+    numbers: { type: String, default: 0 },
+
+    // &#x5C01;&#x9762;&#x56FE;
+    img_url: { type: String, default: &apos;https://upload-images.jianshu.io/upload_images/12890819-80fa7517ab3f2783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&apos; },
+
+    // &#x6587;&#x7AE0;&#x7C7B;&#x578B; =&gt; 1: &#x666E;&#x901A;&#x6587;&#x7AE0;&#xFF0C;2: &#x7B80;&#x5386;&#xFF0C;3: &#x7BA1;&#x7406;&#x5458;&#x4ECB;&#x7ECD;
+    type: { type: Number, default: 1 },
+
+    // &#x6587;&#x7AE0;&#x53D1;&#x5E03;&#x72B6;&#x6001; =&gt; 0 &#x8349;&#x7A3F;&#xFF0C;1 &#x5DF2;&#x53D1;&#x5E03;
+    state: { type: Number, default: 1 },
+
+    // &#x6587;&#x7AE0;&#x8F6C;&#x8F7D;&#x72B6;&#x6001; =&gt; 0 &#x539F;&#x521B;&#xFF0C;1 &#x8F6C;&#x8F7D;&#xFF0C;2 &#x6DF7;&#x5408;
+    origin: { type: Number, default: 0 },
+
+    // &#x6587;&#x7AE0;&#x6807;&#x7B7E;
+    tags: [{ type: mongoose.Schema.Types.ObjectId, ref: &apos;Tag&apos;, required: true }],
+
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: &apos;Comment&apos;, required: true }],
+
+    // &#x6587;&#x7AE0;&#x5206;&#x7C7B;
+    category: [{ type: mongoose.Schema.Types.ObjectId, ref: &apos;Category&apos;, required: true }],
+
+    // &#x70B9;&#x8D5E;&#x7684;&#x7528;&#x6237;
+    like_users: [
+        {
+            // &#x7528;&#x6237;id
+            id: { type: mongoose.Schema.Types.ObjectId },
+
+            // &#x540D;&#x5B57;
+            name: { type: String, required: true, default: &apos;&apos; },
+
+            // &#x7528;&#x6237;&#x7C7B;&#x578B; 0&#xFF1A;&#x535A;&#x4E3B; 1&#xFF1A;&#x5176;&#x4ED6;&#x7528;&#x6237;
+            type: { type: Number, default: 1 },
+
+            // &#x4E2A;&#x4EBA;&#x4ECB;&#x7ECD;
+            introduce: { type: String, default: &apos;&apos; },
+
+            // &#x5934;&#x50CF;
+            avatar: { type: String, default: &apos;user&apos; },
+
+            // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+            create_time: { type: Date, default: Date.now },
+        },
+    ],
+
+    // &#x5176;&#x4ED6;&#x5143;&#x4FE1;&#x606F;
+    meta: {
+        views: { type: Number, default: 0 },
+        likes: { type: Number, default: 0 },
+        comments: { type: Number, default: 0 },
+    },
+
+    // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+})
+.plugin(autoIncrement.plugin, {
+    model: &apos;Article&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-project"><a name="&#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-project" class="anchor-navigation-ex-anchor" href="#&#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-project"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x9879;&#x76EE;&#x8868;&#x6A21;&#x578B;-Project</h1>
+<pre><code>const { mongoose } = require(&apos;../core/mongodb.js&apos;);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+const projectSchema = new mongoose.Schema({
+    // &#x6807;&#x9898;
+    title: { type: String, required: true },
+
+    // &#x9879;&#x76EE;&#x5185;&#x5BB9;
+    content: { type: String, required: true },
+
+    // &#x9879;&#x76EE;&#x5C01;&#x9762;
+    img: { type: String, required: true },
+
+    // &#x9879;&#x76EE;&#x94FE;&#x63A5;
+    url: { type: String, required: true },
+
+    // &#x72B6;&#x6001; 1 &#x5DF2;&#x7ECF;&#x5B8C;&#x6210; &#xFF0C;2 &#x6B63;&#x5728;&#x8FDB;&#x884C;&#xFF0C;3 &#x672A;&#x5B8C;&#x6210;
+    state: { type: Number, default: 1 },
+
+    // &#x5F00;&#x59CB;&#x65E5;&#x671F;
+    start_time: { type: Date, default: Date.now },
+
+    // &#x7ED3;&#x675F;&#x65E5;&#x671F;
+    end_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+// &#x81EA;&#x589E;ID&#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+projectSchema.plugin(autoIncrement.plugin, {
+    model: &apos;Project&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-category"><a name="&#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-category" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-category"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5206;&#x7C7B;&#x8868;&#x6A21;&#x578B;-Category</h1>
+<pre><code>const { mongoose } = require(&apos;../core/mongodb.js&apos;);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+// &#x5206;&#x7C7B;&#x96C6;&#x5408;&#x6A21;&#x578B;
+const categorySchema = new mongoose.Schema({
+    // &#x5206;&#x7C7B;&#x540D;&#x79F0;
+    name: { type: String, required: true, validate: /\S+/ },
+
+    // &#x5206;&#x7C7B;&#x63CF;&#x8FF0;
+    desc: { type: String, default: &apos;&apos; },
+
+    // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+
+//&#x81EA;&#x589E; ID &#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+categorySchema.plugin(autoIncrement.plugin, {
+    model: &apos;Category&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-tag"><a name="&#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-tag" class="anchor-navigation-ex-anchor" href="#&#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-tag"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6807;&#x7B7E;&#x8868;&#x6A21;&#x578B;-Tag</h1>
+<pre><code>const { mongoose } = require(&apos;../core/mongodb.js&apos;);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+// &#x6807;&#x7B7E;&#x6A21;&#x578B;
+const tagSchema = new mongoose.Schema({
+    // &#x6807;&#x7B7E;&#x540D;&#x79F0;
+    name: { type: String, required: true, validate: /\S+/ },
+
+    // &#x6807;&#x7B7E;&#x63CF;&#x8FF0;
+    desc: String,
+
+    // &#x56FE;&#x6807;
+    icon: String,
+
+    // &#x53D1;&#x5E03;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+// &#x81EA;&#x589E;ID&#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+tagSchema.plugin(autoIncrement.plugin, {
+    model: &apos;Tag&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-message"><a name="&#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-message" class="anchor-navigation-ex-anchor" href="#&#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-message"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x7559;&#x8A00;&#x8868;&#x6A21;&#x578B;-Message</h1>
+<pre><code>
+const { mongoose } = require(&apos;../core/mongodb.js&apos;);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+// &#x7559;&#x8A00;&#x6A21;&#x578B;
+const messageSchema = new mongoose.Schema({
+    // &#x7528;&#x6237; id
+    user_id: { type: String, default: &apos;&apos; },
+
+    // &#x59D3;&#x540D;
+    name: { type: String, default: &apos;&apos; },
+
+    // &#x5934;&#x50CF;
+    avatar: { type: String, default: &apos;user&apos; },
+
+    // &#x7535;&#x8BDD;
+    phone: { type: String, default: &apos;&apos; },
+
+    // &#x4ECB;&#x7ECD;
+    introduce: { type: String, default: &apos;&apos; },
+
+    // &#x7559;&#x8A00;&#x5185;&#x5BB9;
+    content: { type: String, required: true },
+
+    // &#x56DE;&#x590D;&#x7559;&#x8A00;&#x5185;&#x5BB9;
+    reply_list: [
+        {
+            content: { type: String, required: true },
+        },
+    ],
+
+    // &#x90AE;&#x7BB1;
+    email: { type: String, default: &apos;&apos; },
+
+    // &#x72B6;&#x6001; 0 &#x662F;&#x672A;&#x5904;&#x7406;&#xFF0C;1 &#x662F;&#x5DF2;&#x5904;&#x7406;
+    state: { type: Number, default: 0 },
+
+    // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+// &#x81EA;&#x589E;ID&#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+messageSchema.plugin(autoIncrement.plugin, {
+    model: &apos;Message&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-link"><a name="&#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-link" class="anchor-navigation-ex-anchor" href="#&#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-link"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x94FE;&#x63A5;&#x8868;&#x6A21;&#x578B;-Link</h1>
+<pre><code>const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+// &#x94FE;&#x63A5;&#x6A21;&#x578B;
+const linkSchema = new mongoose.Schema({
+    // &#x94FE;&#x63A5;&#x540D;&#x79F0;
+    name: { type: String, required: true, validate: /\S+/ },
+
+    // &#x94FE;&#x63A5;&#x63CF;&#x8FF0;
+    desc: { type: String, default: &apos;&apos; },
+
+    // &#x94FE;&#x63A5; url
+    url: { type: String, required: true, validate: /\S+/, default: &apos;&apos; },
+
+    // &#x56FE;&#x6807;
+    icon: { type: String, default: &apos;&apos; },
+
+    // &#x7C7B;&#x578B; =&gt;  // 1 :&#x5176;&#x4ED6;&#x53CB;&#x60C5;&#x94FE;&#x63A5; 2: &#x662F;&#x535A;&#x4E3B;&#x7684;&#x4E2A;&#x4EBA;&#x94FE;&#x63A5;
+    type: { type: Number, default: 1 },
+
+    // &#x72B6;&#x6001; =&gt; 0 &#x4E0D;&#x5411;&#x5916;&#x5C55;&#x793A;&#xFF0C;1 &#x5411;&#x5916;&#x5C55;&#x793A;&#xFF0C;
+    state: { type: Number, default: 1 },
+
+    // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+// &#x81EA;&#x589E;ID&#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+linkSchema.plugin(autoIncrement.plugin, {
+    model: &apos;Link&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-comment"><a name="&#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-comment" class="anchor-navigation-ex-anchor" href="#&#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-comment"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x8BC4;&#x8BBA;&#x8868;&#x6A21;&#x578B;-Comment</h1>
+<pre><code>const { mongoose } = require(&apos;../core/mongodb.js&apos;);
+const autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+// &#x8BC4;&#x8BBA;&#x6A21;&#x578B;
+const commentSchema = new mongoose.Schema({
+    // &#x8BC4;&#x8BBA;&#x6240;&#x5728;&#x7684;&#x6587;&#x7AE0; id
+    article_id: { type: mongoose.Schema.Types.ObjectId, required: true },
+
+    // content
+    content: { type: String, required: true, validate: /\S+/ },
+
+    // &#x662F;&#x5426;&#x7F6E;&#x9876;
+    is_top: { type: Boolean, default: false },
+
+    // &#x88AB;&#x8D5E;&#x6570;
+    likes: { type: Number, default: 0 },
+
+    // &#x7528;&#x6237; id
+    user_id: { type: mongoose.Schema.Types.ObjectId, ref: &apos;User&apos;, required: true },
+
+    // &#x7236;&#x8BC4;&#x8BBA;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+    user: {
+        // &#x7528;&#x6237;id
+        user_id: { type: mongoose.Schema.Types.ObjectId },
+
+        // &#x540D;&#x5B57;
+        name: { type: String, required: true, default: &apos;&apos; },
+
+        // &#x7528;&#x6237;&#x7C7B;&#x578B; 0&#xFF1A;&#x535A;&#x4E3B; 1&#xFF1A;&#x5176;&#x4ED6;&#x7528;&#x6237;
+        type: { type: Number, default: 1 },
+
+        // &#x5934;&#x50CF;
+        avatar: { type: String, default: &apos;user&apos; },
+    },
+
+    // &#x7B2C;&#x4E09;&#x8005;&#x8BC4;&#x8BBA;
+    other_comments: [
+        {
+            // &#x8C01;&#x5728;&#x8BC4;&#x8BBA;
+            user: {
+                user_id: { type: mongoose.Schema.Types.ObjectId },
+
+                // &#x540D;&#x5B57;
+                name: { type: String, required: true, default: &apos;&apos; },
+
+                // &#x7528;&#x6237;&#x7C7B;&#x578B; 0&#xFF1A;&#x535A;&#x4E3B; 1&#xFF1A;&#x5176;&#x4ED6;&#x7528;&#x6237;
+                type: { type: Number, default: 1 },
+
+                // &#x5934;&#x50CF;
+                avatar:{type: String,  default: &apos;user&apos; }
+            },
+
+            // &#x5BF9;&#x8C01;&#x8BC4;&#x8BBA;
+            to_user: { 
+                user_id: { type: mongoose.Schema.Types.ObjectId },
+
+                // &#x540D;&#x5B57;
+                name: { type: String, required: true, default: &apos;&apos; },
+
+                // &#x7528;&#x6237;&#x7C7B;&#x578B; 0&#xFF1A;&#x535A;&#x4E3B; 1&#xFF1A;&#x5176;&#x4ED6;&#x7528;&#x6237;
+                type: { type: Number, default: 1 },
+
+                // &#x5934;&#x50CF;
+                avatar:{type: String,  default: &apos;user&apos; }
+            },
+
+            // &#x88AB;&#x8D5E;&#x6570;
+            likes: { type: Number, default: 0 },
+
+            // content
+            content: { type: String, required: true, validate: /\S+/ },
+
+            // &#x72B6;&#x6001; =&gt; 0 &#x5F85;&#x5BA1;&#x6838; / 1 &#x901A;&#x8FC7;&#x6B63;&#x5E38; / -1 &#x5DF2;&#x5220;&#x9664; / -2 &#x5783;&#x573E;&#x8BC4;&#x8BBA;
+            state: { type: Number, default: 1 },
+
+            // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+            create_time: { type: Date, default: Date.now },
+        },
+    ],
+
+    // &#x72B6;&#x6001; =&gt; 0 &#x5F85;&#x5BA1;&#x6838; / 1 &#x901A;&#x8FC7;&#x6B63;&#x5E38; / -1 &#x5DF2;&#x5220;&#x9664; / -2 &#x5783;&#x573E;&#x8BC4;&#x8BBA;
+    state: { type: Number, default: 1 },
+
+    // &#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5904;&#x7406;&#x8FC7; =&gt; 1 &#x662F; / 2 &#x5426; &#xFF1B;&#x65B0;&#x52A0;&#x7684;&#x8BC4;&#x8BBA;&#x9700;&#x8981;&#x5BA1;&#x6838;&#xFF0C;&#x9632;&#x6B62;&#x7528;&#x6237;&#x6DFB;&#x52A0; &#x5783;&#x573E;&#x8BC4;&#x8BBA;
+    is_handle: { type: Number, default: 2 },
+
+    // &#x521B;&#x5EFA;&#x65E5;&#x671F;
+    create_time: { type: Date, default: Date.now },
+
+    // &#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;
+    update_time: { type: Date, default: Date.now },
+});
+
+// &#x81EA;&#x589E; ID &#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+commentSchema.plugin(autoIncrement.plugin, {
+    model: &apos;Comment&apos;,
+    field: &apos;id&apos;,
+    startAt: 1,
+    incrementBy: 1,
+});
+</code></pre><h1 id="&#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-option"><a name="&#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-option" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-option"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x7F51;&#x7AD9;&#x8BBE;&#x7F6E;&#x8868;&#x6A21;&#x578B;-Option</h1>
+<pre><code>
+const { mongoose } = require(&apos;../core/mongodb.js);
+
+const optionSchema = new mongoose.Schema({
+  // &#x7F51;&#x7AD9;&#x6807;&#x9898;
+    title: { type: String, required: true },
+
+    // logo &#x56FE;&#x7247;
+    logo: { type: String, required: true },
+
+    // &#x7F51;&#x7AD9;&#x526F;&#x6807;&#x9898;
+    sub_title: { type: String, required: true },
+
+    // &#x5173;&#x952E;&#x5B57;
+    keywords: [{ type: String }],
+
+    // &#x7F51;&#x7AD9;&#x63CF;&#x8FF0;
+    description: String,
+
+    // &#x7AD9;&#x70B9;&#x5730;&#x5740;
+    site_url: { type: String, required: true },
+
+    // &#x7F51;&#x7AD9;&#x5B98;&#x90AE;
+    site_email: String,
+
+    // &#x5907;&#x6848;&#x53F7;
+    site_icp: String,
+
+    // &#x641C;&#x7D22;&#x5F15;&#x64CE; ping
+    ping_sites: [{ type: String, validate: /\S+/ }],
+
+    // &#x5176;&#x4ED6;&#x5143;&#x4FE1;&#x606F;
+    meta: {
+        // &#x88AB;&#x559C;&#x6B22;&#x6B21;&#x6570;
+        likes: { type: Number, default: 0 },
+    },
+})
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../接口文档/" class="navigation navigation-prev " aria-label="Previous page: 数据库表设计">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../接口文档/" class="navigation navigation-next " aria-label="Next page: 接口文档">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"博客","level":"1.2.1","depth":2,"next":{"title":"接口文档","level":"1.3","depth":1,"path":"接口文档/README.md","ref":"接口文档/README.md","articles":[{"title":"博客","level":"1.3.1","depth":2,"path":"接口文档/博客.md","ref":"接口文档/博客.md","articles":[]}]},"previous":{"title":"数据库表设计","level":"1.2","depth":1,"path":"接口文档/README.md","ref":"接口文档/README.md","articles":[{"title":"博客","level":"1.2.1","depth":2,"path":"数据库表设计/博客.md","ref":"数据库表设计/博客.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["fontsettings","search","highlight","-sharing","anchors","toggle-chapters","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"crm文档","language":"zh-hans","gitbook":"*"},"file":{"path":"数据库表设计/博客.md","mtime":"2019-06-26T06:58:24.316Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-26T06:54:06.911Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
