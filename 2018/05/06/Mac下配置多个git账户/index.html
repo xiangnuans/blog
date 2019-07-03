@@ -1,0 +1,660 @@
+<!doctype html>
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+
+<head>
+  <!--Google adSense start-->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-9635448289270412",
+      enable_page_level_ads: true
+    });
+  </script>
+  <!--Google Adsense end-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+    rel="stylesheet" type="text/css">
+  <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+  <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+  <meta name="keywords" content="RocketMQ," />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Mac下配置多个git账户">
+  <meta property="og:url" content="https://cocoyh.github.io/2019/02/18/Mac下配置多个git账户/index.html">
+  <meta property="og:site_name" content="CoCo's Blog">
+  <meta property="og:updated_time" content="2019-02-18T12:52:36.928Z">
+
+  <script type="text/javascript" id="hexo.configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {
+      root: '/',
+      scheme: 'Pisces',
+      sidebar: {
+        "position": "left",
+        "display": "post",
+        "offset": 12,
+        "offset_float": 0,
+        "b2t": false,
+        "scrollpercent": false
+      },
+      fancybox: true,
+      motion: true,
+      duoshuo: {
+        userId: 'undefined',
+        author: '博主'
+      },
+      algolia: {
+        applicationID: '',
+        apiKey: '',
+        indexName: '',
+        hits: {
+          "per_page": 10
+        },
+        labels: {
+          "input_placeholder": "Search for Posts",
+          "hits_empty": "We didn't find any results for the search: ${query}",
+          "hits_stats": "${hits} results found in ${time} ms"
+        }
+      }
+    };
+  </script>
+  <link rel="canonical" href="https://cocoyh.github.io/2019/02/18/Mac下配置多个git账户/" />
+  <title> Mac下配置多个git账户 | CoCo's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+      <div class="headband"></div>
+      <a href="https://github.com/CoCoyh"><img style="position: absolute; top: 0; left: 0; border: 0;"
+          src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+      <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner">
+          <div class="site-brand-wrapper">
+            <div class="site-meta ">
+              <div class="custom-logo-site-title">
+                <a href="/" class="brand" rel="start">
+                  <span class="logo-line-before"><i></i></span>
+                  <span class="site-title">CoCo's Blog</span>
+                  <span class="logo-line-after"><i></i></span>
+                </a>
+              </div>
+              <p class="site-subtitle">Quick notes</p>
+            </div>
+  
+            <div class="site-nav-toggle">
+              <button>
+                <span class="btn-bar"></span>
+                <span class="btn-bar"></span>
+                <span class="btn-bar"></span>
+              </button>
+            </div>
+          </div>
+  
+          <nav class="site-nav">
+            <ul id="menu" class="menu">
+              <li class="menu-item menu-item-home">
+                <a href="/" rel="section">
+                  <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+                  首页
+                </a>
+              </li>
+              <li class="menu-item menu-item-categories">
+                <a href="/categories" rel="section">
+                  <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+                  分类
+                </a>
+              </li>
+               
+              <li class="menu-item menu-item-archives">
+                <a href="/archives" rel="section">
+                  <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+                  归档
+                </a>
+              </li>
+              <li class="menu-item menu-item-tags">
+                <a href="/tags" rel="section">
+                  <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+                  标签
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main id="main" class="main">
+        <div class="main-inner">
+          <div class="content-wrap">
+            <div id="content" class="content">
+              <div id="posts" class="posts-expand">
+                <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+                  <link itemprop="mainEntityOfPage" href="https://cocoyh.github.io/2019/02/18/Mac下配置多个git账户/">
+                  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <meta itemprop="name" content="coco">
+                    <meta itemprop="description" content="">
+                    <meta itemprop="image" content="http://prn8lcgbf.bkt.clouddn.com">
+                  </span>
+                  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="CoCo's Blog">
+                  </span>
+                  <header class="post-header">
+                    <h1 class="post-title" itemprop="name headline">
+                      Mac下配置多个git账户
+                    </h1>
+                    <div class="post-meta">
+                      <span class="post-time">
+                        <span class="post-meta-item-icon">
+                          <i class="fa fa-calendar-o"></i>
+                        </span>
+                        <span class="post-meta-item-text">发表于</span>
+                        <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-18T20:47:51+08:00">
+                          2019-02-18
+                        </time>
+                      </span>
+                      <span class="post-category">
+                        <span class="post-meta-divider">|</span>
+                        <span class="post-meta-item-icon">
+                          <i class="fa fa-folder-o"></i>
+                        </span>
+                        <span class="post-meta-item-text">分类于</span>
+                        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                          <a href="/categories/Git/" itemprop="url" rel="index">
+                            <span itemprop="name">Git</span>
+                          </a>
+                        </span>
+                      </span>
+                      <span id="/2019/02/18/Mac下配置多个git账户" class=" leancloud_visitors" data-flag-title="Mac下配置多个git账户">
+                        <span class="post-meta-divider">|</span>
+                        <span class="post-meta-item-icon">
+                          <i class="fa fa-eye"></i>
+                        </span>
+                        <span class="post-meta-item-text">阅读次数 </span>
+                        <span class="leancloud-visitors-count"></span>
+                      </span>
+                    </div>
+                  </header>
+                  <div class="post-body" itemprop="articleBody">
+                    
+                    <h2 id="应用场景">
+                      <a href="#应用场景" class="headerlink" title="应用场景">一、应用场景</a>
+                    </h2>
+                    <p>我们经常将代码托管到github、gitlab这样的网站上。为了避免每次push代码时都要输入用户名和密码，通常会选择使用ssh协议，将公钥保存到托管网站上。在实际开发中，往往要将代码托管到多个不同的网站上。比如，公司的代码需要托管到coding上，自己的开源代码托管到GitHub上，私有代码托管到gitlab上等等，每个托管网站都对应一个git账户。默认情况下，一台电脑的Git只对应一个账户，只能往一个网站push代码，非常不便。这篇博客将介绍如何在一个Git终端中配置多个账户，同时管理多个托管网站的代码。</p>
+                  
+                    <h2 id="准备工作">
+                      <a href="#准备工作" class="headerlink" title="准备工作">二、准备工作</a>
+                    </h2>
+                    <p>首先，需要准备好对Git的全局用户进行配置。在初次安装Git时，往往会使用如下的命令配置全局用户名和邮箱：</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">git config --global user.name "xxx" // 配置全局用户名，如Github上注册的用户名</div><div class="line">git config --global user.email "yyy@mail.com" // 配置全局邮箱，如Github上配置的邮箱</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>这个--global选项，是指这里配置的user.name和user.email是相对于全局进行配置的，即不同的Git仓库默认的用户名和邮箱都是这个值。由于需要管理多个账户，所以仅仅使用这个全局值是不够的，需要在每个仓库中单独配置。对此，有两种处理方法：</p>
+                    <p>如果之前已经使用该命令进行配置，则先使用如下命令清除</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">git config --global --unset user.name</div><div class="line">git config --global --unset user.email</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>如果不确定是否已经配置过，可以使用下面的命令查看</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">>
+                              <pre><div class="line">1</div><div class="line">2</div></pre>
+                            </td>
+                            <td class="code">>
+                              <pre><div class="line">git config --global user.name</div><div class="line">git config --global user.email</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+
+                    <h2 id="配置步骤">
+                      <a href="#配置步骤" class="headerlink" title="配置步骤">三、配置步骤</a>
+                    </h2>
+                    <h3 id="对每个账户生成一对密钥">
+                      <a href="#对每个账户生成一对密钥" class="headerlink" title="对每个账户生成一对密钥">
+                        1. 对每个账户生成一对密钥
+                      </a>
+                    </h3>
+                    <p>首先进入保存秘钥的目录：</p>
+                    <p><code>cd ~/.ssh </code>// 进入目录，该目录下保存生成的秘钥
+                      然后，根据账户邮箱生成秘钥。例如我在GitHub上的邮箱是1352118502@qq.com，则命令为：</p>
+                    <p>
+                      <a href="https://github.com/CoCoyh/ali-ons-test/tree/master" target="_blank">demo测试</a>
+                    </p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">ssh-keygen -t rsa -C "1352118502@qq.com"</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>输入完成后，会有如下提示：</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">Generating public/private rsa key pair.
+                                Enter file in which to save the key (/Users/liugui/.ssh/id_rsa):</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>这里要求对秘钥进行命名，默认的文件名是<code>id_rsa</code>。为了方便区分，我这里命名为<code>id_rsa_github</code>。接下来的提示都直接进行回车，直到秘钥生成。通过<code>ls</code>命令，可以看到刚刚生成的密钥对<code>id_rsa_github</code>和<code>id_rsa_github.pub</code>。其中<code>id_rsa_github.pub</code>是公钥。</p>
+                    <p>同样，对于GitLab上的账户，我是用另一个邮箱注册的，按照同样的步骤生成<code>id_rsa_gitlab</code>的秘钥对。接下来的步骤，除额外说明外，两个账户的操作完全相同。</p>
+                    <h3 id="私钥添加到本地">
+                      <a href="#私钥添加到本地" class="headerlink" title="私钥添加到本地">
+                        2. 私钥添加到本地
+                      </a>
+                    </h3>
+                    <p>SSH协议的原理，就是在托管网站上使用公钥，在本地使用私钥，这样本地仓库就可以和远程仓库进行通信。在上一步已经生成了秘钥文件，接下来需要使用秘钥文件，首先是在本地使用秘钥文件：</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">ssh-add ~/.ssh/id_rsa_github // 将GitHub私钥添加到本地</div><div class="line">ssh-add ~/.ssh/id_rsa_gitlab // 将GitLab私钥添加到本地</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <p>为了检验本地是否添加成功，可以使用<code>ssh-add -l</code>命令进行查看</p>
+                    <h3 id="对本地秘钥进行配置">
+                      <a href="#对本地秘钥进行配置" class="headerlink" title="对本地秘钥进行配置">
+                        3. 对本地秘钥进行配置
+                      </a>
+                    </h3>
+                    <p>由于添加了多个密钥文件，所以需要对这多个密钥进行管理。在<code>.ssh</code>目录下新建一个<code>config</code>文件：</p>
+                    <p>touch config</p>
+                    <p>文件中的内容如下：</p>
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">Host github // 网站的别名，随意取</div><div class="line">HostName github.com // 托管网站的域名</div><div class="line">User liugui</div><div class="line">IdentityFile ~/.ssh/id_rsa_gitlab</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    <h3 id="公钥添加到托管网站">
+                      <a href="#公钥添加到托管网站" class="headerlink" title="公钥添加到托管网站">
+                        公钥添加到托管网站
+                      </a>
+                    </h3>
+                    <p>以GitHub为例，先在本地复制公钥。进入<code>.ssh</code>目录，使用<code>vim id_rsa_github.pub</code>查看生成的GitHub公钥，全选进行复制。</p>
+                    <p>登录GitHub，点击右上角头像选择<code>settings</code>，在打开的页面中选择<code>SSH and GPG keys</code>，</p>
+                    <p>在打开的页面的Key输入框中粘贴刚刚复制的公钥，title的名字自己随便去，然后点击下方的Add SSH key按钮：</p>
+                    <p>至此，托管网站的公钥添加完成。总结来说，就是针对每个托管网站分别生成一对密钥，然后分别添加到本地和托管网站。</p>
+                    <p>这时候，可以测试一下配置是否成功，测试命令使用别名。例如，对于GitHub，本来应该使用的测试命令是：</p>
+
+                    <figure class="highlight js">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td class="gutter">
+                              <pre><div class="line">1</div></pre>
+                            </td>
+                            <td class="code">
+                              <pre><div class="line">ssh -T git@github.com</div></pre>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </figure>
+                    
+                  </div>
+                  <div>
+                  </div>
+                  <div>
+                  </div>
+                  <footer class="post-footer">
+                    <div class="post-tags">
+                      <a href="/tags/JavaScript/" rel="tag"># Javascript</a>
+                    </div>
+                    <div class="post-nav">
+                      <div class="post-nav-next post-nav-item">
+                        <a href="/2019/02/23/React高级开发/" rel="next" title="React高级开发">
+                          React高级开发
+                          <i class="fa fa-chevron-left"></i>
+                        </a>
+                      </div>
+                      <span class="post-nav-divider"></span>
+                      <div class="post-nav-prev post-nav-item">
+                        <a href="/2019/05/10/自检清单/" rel="prev" title="自检清单">
+                          <i class="fa fa-chevron-right"></i>自检清单
+                        </a>
+                      </div>
+                    </div>
+                  </footer>
+                </article>
+                <div class="post-spread">
+                </div>
+              </div>
+  
+              <!-- 下一行是要添加的代码 start  -->
+              <!-- Link Gitalk 的支持文件  -->
+              <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+              <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+              <script src="/js/src/md5.min.js"></script>
+              <div id="gitalk-container"></div>
+              <script type="text/javascript">
+                var gitalk = new Gitalk({
+                  // gitalk的主要参数
+                  clientID: 'eabdaedb86b472760a2c',
+                  clientSecret: '6b50b60a18b8817e25bf6470d06997013de140c4',
+                  repo: 'CoCoyh.github.io',
+                  owner: 'CoCoyh',
+                  admin: ['CoCoyh'],
+                  id: md5(location.pathname),
+                });
+                gitalk.render('gitalk-container');
+              </script>
+              <!-- Gitalk end -->
+              <!-- 到一上行结束 end  -->
+            </div>
+            <div class="comments" id="comments">
+              <div id="gitalk-container"></div>
+              <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+            </div>
+          </div>
+          <div class="sidebar-toggle">
+            <div class="sidebar-toggle-line-wrap">
+              <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+              <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+              <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+            </div>
+          </div>
+          <aside id="sidebar" class="sidebar">
+            <div class="sidebar-inner">
+              <ul class="sidebar-nav motion-element">
+                <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                  文章目录
+                </li>
+                <li class="sidebar-nav-overview" data-target="site-overview">
+                  站点概览
+                </li>
+              </ul>
+              <section class="site-overview sidebar-panel">
+                <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <img class="site-author-image" itemprop="image" src="http://prn8lcgbf.bkt.clouddn.com/uploads/profile.png" alt="coco" />
+                  <p class="site-author-name" itemprop="name">coco</p>
+                  <p class="site-description motion-element" itemprop="description">路漫漫其修远兮，吾将上下而求索</p>
+                </div>
+                <nav class="site-state motion-element">
+                  <div class="site-state-item site-state-posts">
+                    <a href="/archives">
+                      <span class="site-state-item-count">17</span>
+                      <span class="site-state-item-name">日志</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-categories">
+                    <a href="/categories">
+                      <span class="site-state-item-count">14</span>
+                      <span class="site-state-item-name">分类</span>
+                    </a>
+                  </div>
+                  <div class="site-state-item site-state-tags">
+                    <a href="/tags">
+                      <span class="site-state-item-count">11</span>
+                      <span class="site-state-item-name">标签</span>
+                    </a>
+                  </div>
+                </nav>
+                <div class="links-of-author motion-element">
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/CoCoyh" target="_blank" title="GitHub">
+                      <i class="fa fa-fw fa-github"></i>
+                      GitHub
+                    </a>
+                  </span>
+                  <span class="links-of-author-item">
+                    <a href="mailto:cocoguo7636@gmail.com" target="_blank" title="E-Mail">
+                      <i class="fa fa-fw fa-globe"></i>
+                      E-Mail
+                    </a>
+                  </span>
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/coco-27-59/activities" target="_blank" title="知乎">
+                      <i class="fa fa-fw fa-globe"></i>
+                      知乎
+                    </a>
+                  </span>
+                  <span class="links-of-author-item">
+                    <a href="https://www.quora.com/profile/Coco-Guo-20#" target="_blank" title="Quora">
+                      <i class="fa fa-fw fa-globe"></i>
+                      Quora
+                    </a>
+                  </span>
+                </div>
+              </section>
+              <!--noindex-->
+              <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                <div class="post-toc">
+                  <div class="post-toc-content">
+                    <ol class="nav">
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#应用场景">
+                          <span class="nav-number">一、</span>
+                          <span class="nav-text">应用场景</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#准备工作">
+                          <span class="nav-number">二、</span>
+                          <span class="nav-text">准备工作</span>
+                        </a>
+                      </li>
+                      <li class="nav-item nav-level-1">
+                        <a class="nav-link" href="#配置步骤">
+                          <span class="nav-number">三、</span>
+                          <span class="nav-text">配置步骤</span>
+                        </a>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </section>
+              <!--/noindex-->
+            </div>
+          </aside>
+        </div>
+      </main>
+      <footer id="footer" class="footer">
+        <div class="footer-inner">
+          <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+          </script>
+          一共来了 <span id="busuanzi_value_site_pv"></span> 位朋友啦~
+          您是coco的第<span id="busuanzi_value_site_uv"></span>个小伙伴(๑• . •๑)
+          <div class="copyright">
+            &copy; 2017 -
+            <span itemprop="copyrightYear">2019</span>
+            <span class="with-love">
+              <i class="fa fa-heart"></i>
+            </span>
+            <span class="author" itemprop="copyrightHolder">coco</span>
+          </div>
+          <div class="powered-by">
+            由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+          </div>
+          <div class="theme-info">
+            主题 -
+            <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+              NexT.Pisces
+            </a>
+          </div>
+          <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+          </span>
+        </div>
+      </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+    </div>
+  <script type="text/javascript">
+    if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+      window.Promise = null;
+    }
+  </script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>
+    AV.initialize("4NSyP8Gmw5KcjNYN4Yp4Fz3p-gzGzoHsz", "O9yE8heY4kQKGt6iwmRMfJnm");
+  </script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+      $visitors.each(function () {
+        entries.push($(this).attr("id").trim());
+      });
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for (var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if (countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+      query.equalTo("url", url);
+      query.find({
+        success: function (results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function (counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function (counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function (newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function (newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function (error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function () {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+</body>
+
+</html>
