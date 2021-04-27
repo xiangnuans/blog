@@ -44,6 +44,14 @@
       "lang": {
         "flow": "typescript"
       }
+    },
+    "donate": {
+      "wechat": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
+      "alipay": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
+      "title": "",
+      "button": "Donate",
+      "alipayText": "支付宝捐赠",
+      "wechatText": "微信捐赠"
     }
   },
   "ignores": [
