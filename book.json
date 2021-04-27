@@ -27,7 +27,9 @@
     "advanced-emoji"
   ],
   "pluginsConfig": {
-    "shortName": "coco723",
+    "disqus": {
+      "shortName": "coco723"
+    },
     "editlink": {
       "base": "https://github.com/coco723/blog/tree/master",
       "label": "Edit This Page"
