@@ -18,7 +18,7 @@
   ],
   "pluginsConfig": {
     "editlink": {
-      "base": "https://github.com/wangzhebufangqi/ActionTest/tree/main",
+      "base": "https://github.com/coco723/blog/tree/master",
       "label": "Edit This Page"
     },
     "github-buttons": {
@@ -32,7 +32,7 @@
       ]
     },
     "page-footer-ex": {
-      "copyright": "By [guoyanhong](https://github.com/wangzhebufangqi)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+      "copyright": "By [guoyanhong](https://github.com/coco723)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
       "markdown": true,
       "update_label": "<i>updated</i>",
       "update_format": "YYYY-MM-DD HH:mm:ss"
@@ -44,14 +44,6 @@
       "lang": {
         "flow": "typescript"
       }
-    },
-    "donate": {
-      "wechat": "https://gitee.com/wangzhebufangqi/PictureBed/raw/master/20201122131942.png",
-      "alipay": "https://gitee.com/wangzhebufangqi/PictureBed/raw/master/20201122131820.png",
-      "title": "",
-      "button": "Donate",
-      "alipayText": "支付宝捐赠",
-      "wechatText": "微信捐赠"
     }
   },
   "ignores": [
