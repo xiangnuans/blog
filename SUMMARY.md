@@ -1,4 +1,2 @@
 # Summary
 
-* [Introduction](README.md)
-
