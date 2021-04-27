@@ -1,6 +1,7 @@
 language: node_js   #运行环境为nodejs
 node_js:            #设置版本号
   - "10"
+  
 cache: npm
  
 notifications:      #通知
