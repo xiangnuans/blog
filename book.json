@@ -1,5 +1,11 @@
 {
-  "title": "Summary",
+  "title": "郭雁宏的博客",
+  "links": {
+    "sidebar": {
+      "Home": "https://coco723.github.io"
+    }
+  },
+  "author": "guoyanhong",
   "plugins": [
     "expandable-chapters",
     "github-buttons",
@@ -14,7 +20,12 @@
     "-search",
     "search-pro",
     "donate",
-    "splitter"
+    "splitter",
+    "disqus",
+    "baidu-tongji-with-multiple-channel",
+    "katex-ng",
+    "advanced-emoji",
+    "mathjax"
   ],
   "pluginsConfig": {
     "editlink": {
@@ -25,7 +36,7 @@
       "buttons": [
         {
           "user": "guoyanhong",
-          "repo": "ActionTest",
+          "repo": "blog",
           "type": "star",
           "size": "small"
         }
