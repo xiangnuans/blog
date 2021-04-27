@@ -24,8 +24,7 @@
     "disqus",
     "baidu-tongji-with-multiple-channel",
     "katex-ng",
-    "advanced-emoji",
-    "mathjax"
+    "advanced-emoji"
   ],
   "pluginsConfig": {
     "editlink": {
