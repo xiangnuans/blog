@@ -280,7 +280,7 @@ ebook-convert 可以用来生成电子书（epub, mobi, pdf）
 ```
 sudo ln -s ~/Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
 ```
-你可以使用$PATH中的任何目录替换 **/usr/bin**
+你可以使用`$PATH`中的任何目录替换 **/usr/bin**
 
 
 ## 封面

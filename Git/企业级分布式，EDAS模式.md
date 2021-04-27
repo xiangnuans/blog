@@ -78,7 +78,7 @@ Dockerfile 中使用配置文件启动 NodeBB：
  EXPOSE 4567
 ```
 
-通过发布标签触发镜像构建：release-v$version
+通过发布标签触发镜像构建：`release-v$version`
 
 ![](https://gcc68.oss-cn-hangzhou.aliyuncs.com/2019-11-04-v2-f8f392c39943cbe68e990db36cf1d81e_r.jpg?Expires=1572864410&OSSAccessKeyId=TMP.hfD3jMgd52o8kaW7k3hBvYKhYy7wnfVAFR54kFetBM5gPZY225moJBi7nquY14ejM8xRbktY6ESQknk7aN4TdV5WwXCpRufNnYgM2uJxUbPvTGpT1HfM5n1E6GdaYJ.tmp&Signature=yKCoAJ%2BkXODs%2BCulvho27miwCvg%3D)
 

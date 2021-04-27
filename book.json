@@ -14,7 +14,6 @@
     "page-footer-ex",
     "anchor-navigation-ex",
     "expandable-chapters-small",
-    "prism",
     "-highlight",
     "-lunr",
     "-search",
@@ -49,14 +48,6 @@
       "markdown": true,
       "update_label": "<i>updated</i>",
       "update_format": "YYYY-MM-DD HH:mm:ss"
-    },
-    "prism": {
-      "css": [
-        "prismjs/themes/prism-solarizedlight.css"
-      ],
-      "lang": {
-        "flow": "typescript"
-      }
     },
     "donate": {
       "wechat": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
