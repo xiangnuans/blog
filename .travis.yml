@@ -32,7 +32,8 @@ after_script:                        #script阶段之后执行
  
 branches:
   only:
-    - master
+    - gh-pages
+    - /.*/
  
 env:
   global:

@@ -1,0 +1,3019 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ffmpeg音视频处理需求升级版 · 郭雁宏的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="guoyanhong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-ng/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="七牛云存储中没有外链域名，无法下载的问题.html" />
+    
+    
+    <link rel="prev" href="ffmpeg音视频处理.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://coco723.github.io" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    笔记总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="GitBook.html">
+            
+                <a href="GitBook.html">
+            
+                    
+                    Gitbook 安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Markdown中使用HTML标签.html">
+            
+                <a href="Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Mac下chrome快捷键.html">
+            
+                <a href="Mac下chrome快捷键.html">
+            
+                    
+                    Mac下chrome快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Mac安装mongodb.html">
+            
+                <a href="Mac安装mongodb.html">
+            
+                    
+                    Mac安装mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="mac上redis环境搭建.html">
+            
+                <a href="mac上redis环境搭建.html">
+            
+                    
+                    mac上redis环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                <a href="Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                    
+                    Docker与Kubernetes在Mac本地环境搭建与应用部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="Docker使用.html">
+            
+                <a href="Docker使用.html">
+            
+                    
+                    Docker使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="centos7下yum安装和配置Nginx.html">
+            
+                <a href="centos7下yum安装和配置Nginx.html">
+            
+                    
+                    centos7下yum安装和配置Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="使用kubectl连接远程k8s集群.html">
+            
+                <a href="使用kubectl连接远程k8s集群.html">
+            
+                    
+                    使用kubectl连接远程k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                <a href="MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                    
+                    MacOS上安装DockerDesktop和Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="alinode.html">
+            
+                <a href="alinode.html">
+            
+                    
+                    alinode使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="iPic-Markdown图床、文件上传工具.html">
+            
+                <a href="iPic-Markdown图床、文件上传工具.html">
+            
+                    
+                    iPic-Markdown图床、文件上传工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="图片搬家神奇：iPicMover.html">
+            
+                <a href="图片搬家神奇：iPicMover.html">
+            
+                    
+                    图片搬家神奇：iPic Mover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="ffmpeg音视频处理.html">
+            
+                <a href="ffmpeg音视频处理.html">
+            
+                    
+                    ffmpeg音视频处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.15" data-path="ffmpeg音视频处理需求升级版.html">
+            
+                <a href="ffmpeg音视频处理需求升级版.html">
+            
+                    
+                    ffmpeg音视频处理需求升级版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                <a href="七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                    
+                    七牛云存储中没有外链域名，无法下载的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="基于WebAssembly的H265播放.html">
+            
+                <a href="基于WebAssembly的H265播放.html">
+            
+                    
+                    基于WebAssembly的H265播放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="ffprobe与ffplay与ffmpeg常用的命令.md">
+            
+                <span>
+            
+                    
+                    ffprobe与ffplay与ffmpeg常用的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="使用TravisCI构建Gitbook.html">
+            
+                <a href="使用TravisCI构建Gitbook.html">
+            
+                    
+                    使用TravisCI构建Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="持续集成和travisCI.html">
+            
+                <a href="持续集成和travisCI.html">
+            
+                    
+                    持续集成和travisCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="Nginx基础.html">
+            
+                <a href="Nginx基础.html">
+            
+                    
+                    Nginx基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="Mac下安装nginx.html">
+            
+                <a href="Mac下安装nginx.html">
+            
+                    
+                    Mac下安装nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="Mac上安装Elasticsearch，基本操作.html">
+            
+                <a href="Mac上安装Elasticsearch，基本操作.html">
+            
+                    
+                    Mac上安装Elasticsearch，基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="学习笔记一.html">
+            
+                <a href="学习笔记一.html">
+            
+                    
+                    学习笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../React/">
+            
+                <a href="../React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../React/summery.html">
+            
+                <a href="../React/summery.html">
+            
+                    
+                    React 总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../React/React高级开发.html">
+            
+                <a href="../React/React高级开发.html">
+            
+                    
+                    React 高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../React/umi-request返回拦截处理.html">
+            
+                <a href="../React/umi-request返回拦截处理.html">
+            
+                    
+                    umi-request 返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../React/在隔离中开发组件.html">
+            
+                <a href="../React/在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../React/React滚动加载实现.html">
+            
+                <a href="../React/React滚动加载实现.html">
+            
+                    
+                    React 滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup 实现 react-router 过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../React/文本转换为markdown实现.html">
+            
+                <a href="../React/文本转换为markdown实现.html">
+            
+                    
+                    文本转换为 markdown 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../React/react项目中import文件路径优化.html">
+            
+                <a href="../React/react项目中import文件路径优化.html">
+            
+                    
+                    react 项目中 import 文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../React/React组件开发指南.html">
+            
+                <a href="../React/React组件开发指南.html">
+            
+                    
+                    React 组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../React/react通过脚手架创建项目.html">
+            
+                <a href="../React/react通过脚手架创建项目.html">
+            
+                    
+                    react 通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../React/componentWillReceiveProps的使用.html">
+            
+                <a href="../React/componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout 底部 Footer 更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../React/React生命周期.html">
+            
+                <a href="../React/React生命周期.html">
+            
+                    
+                    React 生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../React/React-routerv4路由配置方法.html">
+            
+                <a href="../React/React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4 路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../React/服务端渲染SSR.html">
+            
+                <a href="../React/服务端渲染SSR.html">
+            
+                    
+                    服务端渲染 SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../React/href属性使用js代码段在React下warning问题.html">
+            
+                <a href="../React/href属性使用js代码段在React下warning问题.html">
+            
+                    
+                    href属性使用js代码段在React下warning 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts 和 G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js 在 React 中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个 TCP 连接可以发送多少个 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                <a href="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用 http-proxy-middleware 代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Browser/跨域方式实现原理.html">
+            
+                <a href="../Browser/跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                <a href="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见 HTTP 请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Browser/CORS跨域详解.html">
+            
+                <a href="../Browser/CORS跨域详解.html">
+            
+                    
+                    CORS 跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Browser/SEO小技巧.html">
+            
+                <a href="../Browser/SEO小技巧.html">
+            
+                    
+                    SEO小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Browser/URL的最大长度是多少？.html">
+            
+                <a href="../Browser/URL的最大长度是多少？.html">
+            
+                    
+                    URL的最大长度是多少？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Browser/深入理解Session和Cookie.html">
+            
+                <a href="../Browser/深入理解Session和Cookie.html">
+            
+                    
+                    深入理解Session和Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Browser/HTTP切面流程.html">
+            
+                <a href="../Browser/HTTP切面流程.html">
+            
+                    
+                    HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Browser/Node与浏览器之间的区别.html">
+            
+                <a href="../Browser/Node与浏览器之间的区别.html">
+            
+                    
+                    Node与浏览器之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Browser/JavaScript如何在浏览器和Node中工作.html">
+            
+                <a href="../Browser/JavaScript如何在浏览器和Node中工作.html">
+            
+                    
+                    JavaScript如何在浏览器和Node中工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Webpack/">
+            
+                <a href="../Webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Webpack/webpack5更新日志.html">
+            
+                <a href="../Webpack/webpack5更新日志.html">
+            
+                    
+                    Webpack5 更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Webpack/Webpack中实现静态资源内联.html">
+            
+                <a href="../Webpack/Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack 中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../CSS/">
+            
+                <a href="../CSS/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../CSS/flex布局.html">
+            
+                <a href="../CSS/flex布局.html">
+            
+                    
+                    flex 布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../CSS/移动端适配1px的问题.html">
+            
+                <a href="../CSS/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配 1px 的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Node/">
+            
+                <a href="../Node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Node/npm依赖管理之peerDependencies.html">
+            
+                <a href="../Node/npm依赖管理之peerDependencies.html">
+            
+                    
+                    npm 依赖管理之 peerDependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                <a href="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                    
+                    如何解决 npm unmet peer dependency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Node/如何发布一个npm包.html">
+            
+                <a href="../Node/如何发布一个npm包.html">
+            
+                    
+                    如何发布一个npm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Node/node版本管理工具.html">
+            
+                <a href="../Node/node版本管理工具.html">
+            
+                    
+                    Node版本管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Node/clinic快速定位性能问题.html">
+            
+                <a href="../Node/clinic快速定位性能问题.html">
+            
+                    
+                    使用node-clinic快速定位性能问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Node/cluster：扩展你的node应用.html">
+            
+                <a href="../Node/cluster：扩展你的node应用.html">
+            
+                    
+                    cluster：扩展你的node应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Node/如何保存价值上千万的Node源代码.html">
+            
+                <a href="../Node/如何保存价值上千万的Node源代码.html">
+            
+                    
+                    如何保存价值上千万的Node源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Node/6个Async、Await优于Promise的方面.html">
+            
+                <a href="../Node/6个Async、Await优于Promise的方面.html">
+            
+                    
+                    6个Async、Await优于Promise的方面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Node/npm安装包时的几个命令区别.html">
+            
+                <a href="../Node/npm安装包时的几个命令区别.html">
+            
+                    
+                    npm安装包时的几个命令区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Node/Moment进入维护状态.html">
+            
+                <a href="../Node/Moment进入维护状态.html">
+            
+                    
+                    Moment进入维护状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Node/package.json中的workspaces.html">
+            
+                <a href="../Node/package.json中的workspaces.html">
+            
+                    
+                    package.json中的workspaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../Node/项目开发中的规范.html">
+            
+                <a href="../Node/项目开发中的规范.html">
+            
+                    
+                    项目开发中的规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Node/npm库：AJV，JSON模式验证.html">
+            
+                <a href="../Node/npm库：AJV，JSON模式验证.html">
+            
+                    
+                    npm库：AJV，JSON模式验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Node/pm2深入学习.html">
+            
+                <a href="../Node/pm2深入学习.html">
+            
+                    
+                    pm2深入学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                <a href="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                    
+                    pm2的cluster模式与fork模式的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../Node/Node原生模块整理.html">
+            
+                <a href="../Node/Node原生模块整理.html">
+            
+                    
+                    Node原生模块整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../Node/koa-bodyparser中间件.html">
+            
+                <a href="../Node/koa-bodyparser中间件.html">
+            
+                    
+                    koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                <a href="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                    
+                    koa-multer实现文件上传并自定义文件名和目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.19" data-path="../Node/egg体系.html">
+            
+                <a href="../Node/egg体系.html">
+            
+                    
+                    egg体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.20" data-path="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                <a href="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                    
+                    egg应用自定义4xx和5xx的方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.21" data-path="../Node/egg的Http请求.html">
+            
+                <a href="../Node/egg的Http请求.html">
+            
+                    
+                    egg的Http请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.22" data-path="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                <a href="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                    
+                    怎么开发一个像egg-init的脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.23" data-path="../Node/结合源码揭秘egg运行原理.html">
+            
+                <a href="../Node/结合源码揭秘egg运行原理.html">
+            
+                    
+                    结合源码揭秘egg运行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.24" data-path="../Node/脚手架之egg-init.html">
+            
+                <a href="../Node/脚手架之egg-init.html">
+            
+                    
+                    脚手架之egg-init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.25" data-path="../Node/egg框架中的参数校验.html">
+            
+                <a href="../Node/egg框架中的参数校验.html">
+            
+                    
+                    egg框架中的参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.26" data-path="../Node/egg的Controller最佳实践.html">
+            
+                <a href="../Node/egg的Controller最佳实践.html">
+            
+                    
+                    egg的Controller最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.27" data-path="../Node/egg基于egg-validate的定制化升级.html">
+            
+                <a href="../Node/egg基于egg-validate的定制化升级.html">
+            
+                    
+                    egg基于egg-validate的定制化升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.28" data-path="../Node/egg中cookie与Session的使用笔记.html">
+            
+                <a href="../Node/egg中cookie与Session的使用笔记.html">
+            
+                    
+                    egg中cookie与Session的使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.29" data-path="../Node/egg-bin源码解析笔记.html">
+            
+                <a href="../Node/egg-bin源码解析笔记.html">
+            
+                    
+                    egg-bin源码解析笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.30" data-path="../Node/egg框架与nest框架的对比.html">
+            
+                <a href="../Node/egg框架与nest框架的对比.html">
+            
+                    
+                    egg框架与nest框架的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.31" data-path="../Node/egg常见问题笔.html">
+            
+                <a href="../Node/egg常见问题笔.html">
+            
+                    
+                    egg常见问题笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.32" data-path="../Node/VScode调试Egg.html">
+            
+                <a href="../Node/VScode调试Egg.html">
+            
+                    
+                    VScode调试Egg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.33" data-path="../Node/Make命令教程.html">
+            
+                <a href="../Node/Make命令教程.html">
+            
+                    
+                    Make命令教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Frame/BFF.html">
+            
+                <a href="../Frame/BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Frame/前端应用层框架.html">
+            
+                <a href="../Frame/前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Frame/前端UI组件库.html">
+            
+                <a href="../Frame/前端UI组件库.html">
+            
+                    
+                    前端 UI 组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Frame/跨平台.html">
+            
+                <a href="../Frame/跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Frame/工程智能化.html">
+            
+                <a href="../Frame/工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Frame/WebAssembly完全入门了解wasm的前世今生.md">
+            
+                <span>
+            
+                    
+                    WebAssembly完全入门了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                <a href="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app 应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Frame/基于NodeWeb框架Chair.html">
+            
+                <a href="../Frame/基于NodeWeb框架Chair.html">
+            
+                    
+                    基于NodeWeb框架Chair
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Frame/淘宝网的后台架构发展.html">
+            
+                <a href="../Frame/淘宝网的后台架构发展.html">
+            
+                    
+                    淘宝网的后台架构发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Frame/应用场景数据库选型.html">
+            
+                <a href="../Frame/应用场景数据库选型.html">
+            
+                    
+                    应用场景数据库选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git发布部署相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Git/Mac下配置多个Git账户.html">
+            
+                <a href="../Git/Mac下配置多个Git账户.html">
+            
+                    
+                    Mac下配置多个Git账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Git/删除远程仓库的某次错误提交.html">
+            
+                <a href="../Git/删除远程仓库的某次错误提交.html">
+            
+                    
+                    删除远程仓库的某次错误提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Git/使用GithubActions进行版本发布.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布.html">
+            
+                    
+                    使用Github Actions进行版本发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                    
+                    使用Github Actions进行版本发布(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Git/gitsubtree教程.html">
+            
+                <a href="../Git/gitsubtree教程.html">
+            
+                    
+                    Git subtree教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Git/git分支开发规范.html">
+            
+                <a href="../Git/git分支开发规范.html">
+            
+                    
+                    git分支开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../Git/Git规范和Changelog生成.html">
+            
+                <a href="../Git/Git规范和Changelog生成.html">
+            
+                    
+                    Git规范和Changelog生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../Git/语义化Semantic规范格式.md">
+            
+                <span>
+            
+                    
+                    语义化Semantic规范格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                <a href="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                    
+                    使用AppVeyor和Travis，自动构建和发布Electron应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../Git/跨平台桌面应用Electron.html">
+            
+                <a href="../Git/跨平台桌面应用Electron.html">
+            
+                    
+                    跨平台桌面应用Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../Git/企业级分布式，EDAS模式.html">
+            
+                <a href="../Git/企业级分布式，EDAS模式.html">
+            
+                    
+                    企业级分布式，EDAS模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../Git/Gitlab使用CICD管道配置参考.md">
+            
+                <span>
+            
+                    
+                    Gitlab使用CICD管道配置参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                <a href="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                    
+                    Linux上部署Node服务-外网无法访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                <a href="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                    
+                    服务器中启动服务的时候的IP选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                <a href="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                    
+                    怎样修改CentOS 7 SSH端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Design/">
+            
+                <a href="../Design/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Design/javaScript设计模式笔记一.html">
+            
+                <a href="../Design/javaScript设计模式笔记一.html">
+            
+                    
+                    javaScript设计模式笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Design/javaScript设计模式笔记二.html">
+            
+                <a href="../Design/javaScript设计模式笔记二.html">
+            
+                    
+                    javaScript设计模式笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Design/javaScript设计模式笔记三.html">
+            
+                <a href="../Design/javaScript设计模式笔记三.html">
+            
+                    
+                    javaScript设计模式笔记三
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Design/javaScript设计模式笔记四.html">
+            
+                <a href="../Design/javaScript设计模式笔记四.html">
+            
+                    
+                    javaScript设计模式笔记四
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Design/javascript设计模式笔记五.html">
+            
+                <a href="../Design/javascript设计模式笔记五.html">
+            
+                    
+                    javascript设计模式笔记五
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../Design/javaScript设计模式笔记六.html">
+            
+                <a href="../Design/javaScript设计模式笔记六.html">
+            
+                    
+                    javaScript设计模式笔记六
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../Design/javaScript设计模式笔记七.html">
+            
+                <a href="../Design/javaScript设计模式笔记七.html">
+            
+                    
+                    javaScript设计模式笔记七
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../Design/javaScript设计模式笔记八.html">
+            
+                <a href="../Design/javaScript设计模式笔记八.html">
+            
+                    
+                    javaScript设计模式笔记八
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../Design/javaScript设计模式笔记九.html">
+            
+                <a href="../Design/javaScript设计模式笔记九.html">
+            
+                    
+                    javaScript设计模式笔记九
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../ORM/ORM框架选型.html">
+            
+                <a href="../ORM/ORM框架选型.html">
+            
+                    
+                    ORM框架选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../ORM/Knexjs笔记.html">
+            
+                <a href="../ORM/Knexjs笔记.html">
+            
+                    
+                    Knexjs笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../ORM/bookshelf笔记.html">
+            
+                <a href="../ORM/bookshelf笔记.html">
+            
+                    
+                    bookshelf笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Database/MySQL一：delete和truncate的区别和联系.md">
+            
+                <span>
+            
+                    
+                    MySQL一：delete和truncate的区别和联系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Database/MySQL二：having与where.md">
+            
+                <span>
+            
+                    
+                    MySQL二：having与where
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Database/MySQL三：pluck.md">
+            
+                <span>
+            
+                    
+                    MySQL三：pluck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Database/MySQL四：first.md">
+            
+                <span>
+            
+                    
+                    MySQL四：first
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../Database/MySQL五：references.md">
+            
+                <span>
+            
+                    
+                    MySQL五：references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../Database/MySQL七：in和exists二者之间的区别和性能影响.md">
+            
+                <span>
+            
+                    
+                    MySQL七：in和exists二者之间的区别和性能影响
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../TypeScript/">
+            
+                <a href="../TypeScript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../TypeScript/基础笔记一.html">
+            
+                <a href="../TypeScript/基础笔记一.html">
+            
+                    
+                    基础笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../TypeScript/基础笔记二.html">
+            
+                <a href="../TypeScript/基础笔记二.html">
+            
+                    
+                    基础笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../TypeScript/函数笔记.html">
+            
+                <a href="../TypeScript/函数笔记.html">
+            
+                    
+                    函数笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../TypeScript/泛型笔记.html">
+            
+                <a href="../TypeScript/泛型笔记.html">
+            
+                    
+                    泛型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../TypeScript/枚举笔记.html">
+            
+                <a href="../TypeScript/枚举笔记.html">
+            
+                    
+                    枚举笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../TypeScript/类型兼容性笔记.html">
+            
+                <a href="../TypeScript/类型兼容性笔记.html">
+            
+                    
+                    类型兼容性笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../TypeScript/高级类型笔记.html">
+            
+                <a href="../TypeScript/高级类型笔记.html">
+            
+                    
+                    高级类型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                <a href="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                    
+                    .d.ts和源文件.ts有什么区别?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                <a href="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                    
+                    使用TypeScript装饰器装饰你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ffmpeg音视频处理需求升级版</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;"><b>1. </b>ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9700;&#x6C42;"><b>1.1. </b>&#x9700;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;"><b>1.2. </b>&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;</a></li><li><span class="title-icon "></span><a href="#&#x89C6;&#x9891;&#x62FC;&#x63A5;"><b>1.3. </b>&#x89C6;&#x9891;&#x62FC;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;"><b>1.4. </b>&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;</a></li><li><span class="title-icon "></span><a href="#&#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;"><b>1.5. </b>&#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;</a></li></ul><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;"><b>2. </b>&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;</a></li><ul><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;"><b>2.1. </b>&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;</a></li><li><span class="title-icon "></span><a href="#&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;"><b>2.2. </b>&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;</a></li><li><span class="title-icon "></span><a href="#&#x63A8;&#x6D41;"><b>2.3. </b>&#x63A8;&#x6D41;</a></li><li><span class="title-icon "></span><a href="#&#x672C;&#x5730;&#x62C9;&#x6D41;"><b>2.4. </b>&#x672C;&#x5730;&#x62C9;&#x6D41;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x6C34;&#x5370;"><b>2.5. </b>&#x6DFB;&#x52A0;&#x6C34;&#x5370;</a></li><ul><li><span class="title-icon "></span><a href="#&#x56FE;&#x7247;&#x6C34;&#x5370;"><b>2.5.1. </b>&#x56FE;&#x7247;&#x6C34;&#x5370;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;"><b>2.5.2. </b>&#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;"><b>2.5.3. </b>&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;</a></li><li><span class="title-icon "></span><a href="#&#x5FAA;&#x73AF;&#x63A8;&#x6D41;"><b>2.5.4. </b>&#x5FAA;&#x73AF;&#x63A8;&#x6D41;</a></li></ul></ul></ul></div><a href="#ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;"><a name="ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;" class="anchor-navigation-ex-anchor" href="#ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;"><i class="fa fa-link" aria-hidden="true"></i></a>1. ffmpeg&#x97F3;&#x89C6;&#x9891;&#x5904;&#x7406;&#x9700;&#x6C42;&#x5347;&#x7EA7;&#x7248;</h1>
+<h2 id="&#x9700;&#x6C42;"><a name="&#x9700;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x9700;&#x6C42;</h2>
+<p>&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x3001;&#x89C6;&#x5C4F;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x5E76;&#x3001;&#x97F3;&#x89C6;&#x9891;&#x5408;&#x6210;&#xFF0C;&#x52A0;&#x89C6;&#x9891;&#x5C01;&#x9762;&#xFF08;&#x76EE;&#x524D;&#x8FD9;&#x6761;&#x8FD8;&#x6CA1;&#x5408;&#x5E76;&#x5728;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#xFF09;
+&#x521A;&#x5F00;&#x59CB;&#x5355;&#x547D;&#x4EE4;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x4F1A;&#x4EA7;&#x751F;&#x591A;&#x4E2A;&#x4E2D;&#x95F4;&#x6587;&#x4EF6;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x6587;&#x7AE0;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x8FC7;&#x4E86;&#x3002;&#x4F18;&#x5316;&#xFF0C;&#x5E0C;&#x671B;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x641E;&#x5B9A;
+&#x5728;&#x6B21;&#x7814;&#x7A76;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E2D;&#x8E29;&#x4E86;&#x51E0;&#x4E2A;&#x5751;&#xFF0C;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#xFF1A;&#x5408;&#x6210;&#x8FC7;&#x7A0B;&#x91C7;&#x7528;&#x6E10;&#x8FDB;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x52A0;&#x5165;&#x6BCF;&#x4E2A;&#x5C0F;&#x529F;&#x80FD;&#x70B9;</p>
+<h2 id="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;"><a name="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;</h2>
+<pre><code class="lang-shell">ffmpeg -f image2 \
+       -loop 1 \
+       -i img.jpg \
+       -f s16le \
+       -ac 1 \
+       -ar 16k \
+       -i wd.pcm \
+       -t 5 \
+       -vcodec mpeg4 output.mp4
+</code></pre>
+<h2 id="&#x89C6;&#x9891;&#x62FC;&#x63A5;"><a name="&#x89C6;&#x9891;&#x62FC;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x9891;&#x62FC;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x89C6;&#x9891;&#x62FC;&#x63A5;</h2>
+<pre><code class="lang-shell">ffmpeg -i v4.mp4 -i v2.mp4 \
+   -filter_complex &apos;[0:v]scale=720:1280[in1];
+                    [1:v]scale=720:1280[in2];
+                    [in1][0:a][in2][1:a] concat=n=2:v=1:a=1 [v] [a]&apos; \
+   -map [v] -map [a] -c:v libx264 d1.mp4
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>scale=720:1280&#x6307;&#x5B9A;&#x7EDF;&#x4E00;&#x62FC;&#x63A5;&#x89C6;&#x5C4F;&#x7684;&#x5C3A;&#x5BF8;&#xFF0C;&#x5426;&#x5219; &#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x7684;&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x9519;&#x8BEF;</li>
+</ul>
+<h2 id="&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;"><a name="&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x89C6;&#x9891;&#x62FC;&#x63A5;&#x5E76;&#x53BB;&#x9664;&#x58F0;&#x97F3;</h2>
+<pre><code class="lang-shell">ffmpeg -i v4.mp4 -i v2.mp4 \
+   -filter_complex &apos;[0:v]scale=720:1280[in1];
+                    [1:v]scale=720:1280[in2];
+                    [in1][in2] concat=n=2:v=1:a=0 [v]&apos; \
+   -map [v] -c:v libx264 dc1.mp4
+</code></pre>
+<h2 id="&#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;"><a name="&#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x89C6;&#x9891;&#xFF08;&#x53BB;&#x9664;&#x58F0;&#x97F3;&#xFF09;&#x62FC;&#x63A5;&#x3001;&#x97F3;&#x9891;&#x5408;&#x6210;</h2>
+<pre><code class="lang-shell">ffmpeg -i v4.mp4 -i v2.mp4 -i audio.wav \
+   -filter_complex &apos;[0:v]scale=720:1280[in1];
+                    [1:v]scale=720:1280[in2];
+                    [in1][in2] concat=n=2:v=1:a=0 [v]; [1:a][2:a] concat=n=2:v=0:a=1 [a]&apos; \
+   -map [v] -map [a] -c:v libx264 dca1.mp4
+</code></pre>
+<h1 id="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;"><a name="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x5C01;&#x9762;&#x3001;&#x52A0;&#x80CC;&#x666F;&#x97F3;&#x4E50;&#x3001;&#x62FC;&#x63A5;&#x89C6;&#x9891;&#x3001;&#x52A0;&#x97F3;&#x9891;&#x5408;&#x6210;</h1>
+<pre><code class="lang-shell">ffmpeg -i WechatIMG612.png \
+       -i v4.mp4 \
+       -i v2.mp4 \
+       -i audio1.wav \
+       -i t.wav \
+       -filter_complex &apos;[0]scale=720:1280[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [4:a][3:a] amix=inputs=2:duration=longest [a]&apos; \
+       -map [v] -map [a] -c:v libx264 -pix_fmt yuv420p -c:a aac cc1.mp4
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>-pix_fmt yuv420p&#x6307;&#x5B9A;&#x53EF;&#x4EE5;&#x652F;&#x6301; &#x4E0D;&#x540C;&#x683C;&#x5F0F;&#x7684;&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x53EA;&#x652F;&#x6301;png&#x7684;&#x683C;&#x5F0F;</li>
+<li>amix&#x9ED8;&#x8BA4;&#x662F;2&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x53EA;&#x5199;amix,</li>
+<li>duration=longest,&#x6309;&#x6700;&#x957F;&#x97F3;&#x9891;&#x8F93;&#x51FA;</li>
+</ul>
+<p>&#x4F46;&#x8FD9;&#x6837;&#x5199;&#xFF0C;&#x5B58;&#x5728;&#x95EE;&#x9898;&#xFF0C;&#x97F3;&#x9891;&#x6BD4;&#x89C6;&#x9891;&#x957F;&#xFF0C;&#x5219;&#x89C6;&#x9891;&#x64AD;&#x653E;&#x5B8C;&#x6210;&#xFF0C;&#x97F3;&#x9891;&#x4F1A;&#x4E00;&#x76F4;&#x64AD;&#x653E;&#x4E0B;&#x53BB;&#xFF0C;&#x9700;&#x6C42;&#x4E2D;&#x662F;&#x6309;&#x89C6;&#x9891;&#x64AD;&#x653E;&#x603B;&#x65F6;&#x957F;</p>
+<p>&#x5C1D;&#x8BD5;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
+<p><strong>&#x65B9;&#x6848;&#x4E00;&#xFF1A;amerge&#xFF1A;&#x4F46;&#x97F3;&#x9891;&#x4F1A;&#x6309;&#x6700;&#x77ED;&#x97F3;&#x9891;&#x8F93;&#x51FA;</strong></p>
+<pre><code class="lang-shell">ffmpeg -i t.wav \
+       -i audio.mp3 \
+       -filter_complex &apos;[0:a][1:a] amerge [a]&apos; \
+       -map [a] -c:a aac -b:a 256k vv.mp3
+</code></pre>
+<p><strong>&#x65B9;&#x6848;&#x4E8C;&#xFF1A;join,&#x548C;merge&#x540C;&#x6837;&#x7684;</strong></p>
+<pre><code class="lang-shell">
+ffmpeg -i t.wav \
+       -i audio.mp3 \
+       -filter_complex &apos;[0:a][1:a] join [a]&apos; \
+       -map [a] -c:a aac -b:a 256k vv.mp3
+</code></pre>
+<p><strong>&#x65B9;&#x6848;&#x4E09;&#xFF1A;-shortest&#xFF1A;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x53EA;&#x652F;&#x6301; &#x5355;&#x97F3;&#x9891;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9E;&#x73B0;</strong></p>
+<pre><code class="lang-shell">ffmpeg -i v1.mp4 \
+       -i audio.mp3 \
+       -filter_complex &quot;[0:a][1:a]amerge=inputs=2[a]&quot; \
+       -map 0:v -map &quot;[a]&quot; -c:v copy -c:a libvorbis -ac 2 -shortest out.mp4
+</code></pre>
+<p><strong>&#x65B9;&#x6848;&#x56DB;&#xFF1A;-t&#x5728;&#x6700;&#x540E;&#x6307;&#x5B9A;&#x64AD;&#x653E;&#x603B;&#x65F6;&#x957F;(&#x76EE;&#x524D;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;)</strong></p>
+<pre><code class="lang-shell">ffmpeg -i WechatIMG612.png \
+       -i v4.mp4 \
+       -i v2.mp4 \
+       -i audio1.wav \
+       -i t.wav \
+       -filter_complex &apos;[0]scale=720:1280[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [4:a][3:a] amix=inputs=2:duration=longest [a]&apos; \
+       -map [v] -map [a] -c:v libx264 -pix_fmt yuv420p -c:a aac -t 23 cc1.mp4
+</code></pre>
+<h2 id="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;"><a name="&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x56FE;&#x7247;&#x8F6C;&#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x53EA;&#x6709;&#x4E00;&#x5E27;&#xFF0C;&#x8BBE;&#x5B9A;&#x6301;&#x7EED;&#x65F6;&#x957F;</h2>
+<pre><code class="lang-shell">ffmpeg -i f.png \
+       -i 1.mp4 \
+       -i 2.mp4 \
+       -i audio.mp3 \
+        -i t.wav \
+       -filter_complex &apos;[0]scale=720:1280,setpts=PTS+7/TB[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [3:a][4:a] amix [a]&apos; \
+       -map [v] -map [a] -c:v libx264 -pix_fmt yuv420p -c:a aac -t 23 cc1.mp4
+</code></pre>
+<ul>
+<li>setpts=PTS+5/TB  &#x4E3A;&#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x8BBE;&#x7F6E;PTS&#x3002;</li>
+<li>TB: &#x8F93;&#x5165;&#x65F6;&#x95F4;&#x6233;&#x7684;&#x65F6;&#x57FA;&#x3002;</li>
+<li>PTS: &#x8F93;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x6233;</li>
+</ul>
+<h2 id="&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;"><a name="&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;" class="anchor-navigation-ex-anchor" href="#&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;</h2>
+<pre><code class="lang-shell">ffmpeg -i f.png \
+       -i 1.mp4 \
+       -i 2.mp4 \
+       -i audio.mp3 \
+        -i t.wav \
+       -filter_complex &apos;[0]scale=720:1280,setpts=PTS+6/TB[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [3:a][4:a] amix,adelay=1000|1000 [a]&apos; \
+       -map [v] -map [a] -c:v libx264 -pix_fmt yuv420p -c:a aac -t 23 cc1.mp4
+</code></pre>
+<ul>
+<li>setpts&#x504F;&#x79FB;&#x65F6;&#x95F4;-adelay&#x65F6;&#x95F4;=&#x56FE;&#x7247;&#x89C6;&#x9891;&#x6301;&#x7EED;&#x65F6;&#x95F4;</li>
+<li>adelay=1000|1000&#xFF1A;&#x4E24;&#x4E2A;&#x97F3;&#x9891;&#x5EF6;&#x8FDF;&#x64AD;&#x653E;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;ms</li>
+</ul>
+<h2 id="&#x63A8;&#x6D41;"><a name="&#x63A8;&#x6D41;" class="anchor-navigation-ex-anchor" href="#&#x63A8;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x63A8;&#x6D41;</h2>
+<pre><code class="lang-shell">ffmpeg -i f.jpg \
+       -i 1.mp4 \
+       -i long.mp4 \
+       -i audio.mp3 \
+       -i t.wav \
+       -filter_complex &apos;[0]scale=720:1280,setpts=PTS+6/TB[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [3:a]adelay=30s|30s[a3];
+                        [4:a]adelay=60s|60s[a4];
+                        [a3][a4]amix[a]&apos; \
+       -map [v] \
+       -map [a] \
+       -pix_fmt yuv420p \
+       -c:v libx264 \
+       -c:a aac \
+       -t 300 \
+       -f flv &quot;rtmp://...&quot;
+</code></pre>
+<h2 id="&#x672C;&#x5730;&#x62C9;&#x6D41;"><a name="&#x672C;&#x5730;&#x62C9;&#x6D41;" class="anchor-navigation-ex-anchor" href="#&#x672C;&#x5730;&#x62C9;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. &#x672C;&#x5730;&#x62C9;&#x6D41;</h2>
+<pre><code class="lang-shell">ffmpeg -i &quot;https://&quot;
+       -codec copy \
+       -f mp4 rr.mp4
+</code></pre>
+<h2 id="&#x6DFB;&#x52A0;&#x6C34;&#x5370;"><a name="&#x6DFB;&#x52A0;&#x6C34;&#x5370;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x6C34;&#x5370;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. &#x6DFB;&#x52A0;&#x6C34;&#x5370;</h2>
+<h3 id="&#x56FE;&#x7247;&#x6C34;&#x5370;"><a name="&#x56FE;&#x7247;&#x6C34;&#x5370;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x6C34;&#x5370;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.1. &#x56FE;&#x7247;&#x6C34;&#x5370;</h3>
+<pre><code class="lang-shell">ffmpeg -i 4.mp4 \
+       -i sy.png \
+       -filter_complex &quot;overlay=10:10&quot; birds2.mp4
+</code></pre>
+<h3 id="&#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;"><a name="&#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.2. &#x6DFB;&#x52A0;&#x6587;&#x5B57;&#x6C34;&#x5370;</h3>
+<pre><code class="lang-shell">ffmpeg -i 4.mp4 \
+   -vf &quot;drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text=&apos;watermark&#x6D4B;&#x8BD5;&apos;:x=30:y=h-30:enable=&apos;if(gte(t,3),0,1)&apos;:fontsize=24:fontcolor=white@0.7&quot; output.mp4
+</code></pre>
+<h3 id="&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;"><a name="&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.3. &#x6DFB;&#x52A0;&#x6C34;&#x5370;&#x540E;&#x63A8;&#x6D41;</h3>
+<pre><code class="lang-shell">
+ffmpeg -i f.jpg \
+       -i 1.mp4 \
+       -i long.mp4 \
+       -i audio.mp3 \
+       -i t.wav \
+       -i sy.png \
+       -filter_complex &apos;[0]scale=720:1280,setpts=PTS+6/TB[in0];
+                        [1:v]scale=720:1280[in1];
+                        [2:v]scale=720:1280[in2];
+                        [in0][in1][in2] concat=n=3:v=1:a=0 [v];
+                        [3:a]adelay=30s|30s[a3];
+                        [4:a]adelay=60s|60s[a4];
+                        [a3][a4]amix[a];
+                        [v][5:v]overlay[out]&apos; \
+       -map [out] \
+       -map [a] \
+       -pix_fmt yuv420p \
+       -c:v libx264 \
+       -c:a aac \
+       -t 300 \
+       -f flv &quot;rtmp://....&quot;
+</code></pre>
+<h3 id="&#x5FAA;&#x73AF;&#x63A8;&#x6D41;"><a name="&#x5FAA;&#x73AF;&#x63A8;&#x6D41;" class="anchor-navigation-ex-anchor" href="#&#x5FAA;&#x73AF;&#x63A8;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5.4. &#x5FAA;&#x73AF;&#x63A8;&#x6D41;</h3>
+<pre><code class="lang-shell">## &#x5FAA;&#x73AF;&#x63A8;&#x6D41;
+
+ffmpeg -re \
+       -stream_loop 4 \
+       -i 1.mp4 \
+       -c:v libx264 \
+       -f flv &quot;rtmp://&quot;
+</code></pre>
+<ul>
+<li>overlay &#x6DFB;&#x52A0;&#x6C34;&#x5370;</li>
+<li>amix &#x6DF7;&#x5408;&#x97F3;&#x9891; &#x9ED8;&#x8BA4;&#x503C;&#x4E3A;2</li>
+<li>adelay &#x5EF6;&#x8FDF;&#x64AD;&#x653E;&#x65F6;&#x95F4;</li>
+<li>scale &#x5206;&#x8FA8;&#x7387;&#x5927;&#x5C0F; 720:1280 &#x624B;&#x673A;&#x5C4F;&#x7684;</li>
+<li>setpts &#x56FE;&#x7247;&#x6301;&#x7EED;&#x65F6;&#x957F;</li>
+<li>pix_fmt: yuv420p &#x50CF;&#x7D20;&#x683C;&#x5F0F; &#x89C6;&#x9891;&#x9ED8;&#x8BA4;&#x50CF;&#x7D20;&#x683C;&#x5F0F;&#x6240;&#x6709;&#x56FE;&#x7247;&#x4E0E;&#x89C6;&#x9891;&#x62FC;&#x63A5;&#x4E5F;&#x9700;&#x8981;&#x8F6C;&#x6362;</li>
+<li>-c:v libx264&#x89C6;&#x9891;&#x7F16;&#x7801;</li>
+<li>-c:a aac&#x97F3;&#x9891;&#x7F16;&#x7801;</li>
+<li>-f flv &#x6D41;&#x5A92;&#x4F53;&#x5C01;&#x88C5;</li>
+</ul>
+<p>&#x5408;&#x5E76;&#x4E2D;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x547D;&#x4EE4;-filter_complex&#x652F;&#x6301;&#x7684;&#x53C2;&#x6570;</p>
+<pre><code>Filters:
+  T.. = Timeline support // &#x65F6;&#x95F4;&#x7EBF;&#x652F;&#x6301;
+  .S. = Slice threading  // &#x5207;&#x7247;&#x7EBF;&#x7A0B;
+  ..C = Command support
+  A = Audio input/output
+  V = Video input/output
+  N = Dynamic number and/or type of input/output // &#x52A8;&#x6001;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x6570;&#x548C;/&#x6216;&#x7C7B;&#x578B;
+  | = Source or sink filter  // &#x6E90;&#x6216;&#x6C47;&#x6EE4;&#x6CE2;&#x5668;
+ ... abench            A-&gt;A       Benchmark part of a filtergraph.  // filtergraph&#x7684;&#x57FA;&#x51C6;&#x90E8;&#x5206;&#x3002;
+ ... acompressor       A-&gt;A       Audio compressor.  // &#x97F3;&#x9891;&#x538B;&#x7F29;&#x5668;
+ ... acontrast         A-&gt;A       Simple audio dynamic range compression/expansion filter.  // &#x7B80;&#x5355;&#x7684;&#x97F3;&#x9891;&#x52A8;&#x6001;&#x8303;&#x56F4;&#x538B;&#x7F29;/&#x6269;&#x5C55;&#x8FC7;&#x6EE4;&#x5668;&#x3002;
+ ... acopy             A-&gt;A       Copy the input audio unchanged to the output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x539F;&#x5C01;&#x4E0D;&#x52A8;&#x5730;&#x590D;&#x5236;&#x5230;&#x8F93;&#x51FA;&#x3002;
+ ... acue              A-&gt;A       Delay filtering to match a cue. // &#x5EF6;&#x8FDF;&#x8FC7;&#x6EE4;&#x4EE5;&#x5339;&#x914D;&#x63D0;&#x793A;&#x3002;
+ ... acrossfade        AA-&gt;A      Cross fade two input audio streams.  // &#x4EA4;&#x53C9;&#x6DE1;&#x5165;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x6D41;&#x3002;
+ ... acrossover        A-&gt;N       Split audio into per-bands streams.  // &#x5C06;&#x97F3;&#x9891;&#x5206;&#x5272;&#x4E3A;&#x6BCF;&#x4E2A;&#x9891;&#x5E26;&#x7684;&#x6D41;&#x3002;
+ ... acrusher          A-&gt;A       Reduce audio bit resolution. // &#x964D;&#x4F4E;&#x97F3;&#x9891;&#x4F4D;&#x5206;&#x8FA8;&#x7387;&#x3002;
+ .S. adeclick          A-&gt;A       Remove impulsive noise from input audio.  // &#x53BB;&#x9664;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x4E2D;&#x7684;&#x8109;&#x51B2;&#x566A;&#x58F0;&#x3002;
+ .S. adeclip           A-&gt;A       Remove clipping from input audio. // &#x4ECE;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x4E2D;&#x5220;&#x9664;&#x526A;&#x8F91;&#x3002;
+ T.. adelay            A-&gt;A       Delay one or more audio channels. // &#x5EF6;&#x8FDF;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x97F3;&#x9891;&#x901A;&#x9053;&#x3002;
+ ... aderivative       A-&gt;A       Compute derivative of input audio.  // &#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x7684;&#x5BFC;&#x6570;&#x3002;
+ ... aecho             A-&gt;A       Add echoing to the audio. // &#x5728;&#x97F3;&#x9891;&#x4E2D;&#x6DFB;&#x52A0;&#x56DE;&#x58F0;&#x3002;
+ ... aemphasis         A-&gt;A       Audio emphasis. // &#x97F3;&#x9891;&#x5F3A;&#x8C03;
+ ... aeval             A-&gt;A       Filter audio signal according to a specified expression. // &#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x8FC7;&#x6EE4;&#x97F3;&#x9891;&#x4FE1;&#x53F7;&#x3002;
+ T.. afade             A-&gt;A       Fade in/out input audio.   // &#x6DE1;&#x5165;/&#x6DE1;&#x51FA;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x3002;
+ TSC afftdn            A-&gt;A       Denoise audio samples using FFT. // &#x4F7F;&#x7528;FFT&#x5BF9;&#x97F3;&#x9891;&#x6837;&#x672C;&#x8FDB;&#x884C;&#x53BB;&#x566A;&#x3002;
+ ... afftfilt          A-&gt;A       Apply arbitrary expressions to samples in frequency domain. // &#x5BF9;&#x9891;&#x57DF;&#x4E2D;&#x7684;&#x6837;&#x672C;&#x5E94;&#x7528;&#x4EFB;&#x610F;&#x8868;&#x8FBE;&#x5F0F;&#x3002;
+ .S. afir              AA-&gt;N      Apply Finite Impulse Response filter with supplied coefficients in 2nd stream. // &#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x6D41;&#x4E2D;&#x5E94;&#x7528;&#x5177;&#x6709;&#x63D0;&#x4F9B;&#x7CFB;&#x6570;&#x7684;&#x6709;&#x9650;&#x8109;&#x51B2;&#x54CD;&#x5E94;&#x6EE4;&#x6CE2;&#x5668;
+ ... aformat           A-&gt;A       Convert the input audio to one of the specified formats.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x6307;&#x5B9A;&#x683C;&#x5F0F;&#x4E4B;&#x4E00;&#x3002;
+ ... agate             A-&gt;A       Audio gate. // &#x97F3;&#x9891;&#x95E8;
+ .S. aiir              A-&gt;N       Apply Infinite Impulse Response filter with supplied coefficients.  // &#x5E94;&#x7528;&#x5177;&#x6709;&#x63D0;&#x4F9B;&#x7CFB;&#x6570;&#x7684;&#x65E0;&#x9650;&#x51B2;&#x6FC0;&#x54CD;&#x5E94;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ ... aintegral         A-&gt;A       Compute integral of input audio.  // &#x8BA1;&#x7B97;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x7684;&#x79EF;&#x5206;&#x3002;
+ ... ainterleave       N-&gt;A       Temporally interleave audio inputs.  // &#x6682;&#x65F6;&#x4EA4;&#x9519;&#x97F3;&#x9891;&#x8F93;&#x5165;&#x3002;
+ ... alimiter          A-&gt;A       Audio lookahead limiter.  // &#x97F3;&#x9891;&#x524D;&#x89C6;&#x9650;&#x5236;&#x5668;&#x3002;
+ TSC allpass           A-&gt;A       Apply a two-pole all-pass filter.  // &#x4F7F;&#x7528;&#x4E24;&#x6781;&#x5168;&#x901A;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ ... aloop             A-&gt;A       Loop audio samples.  // &#x5FAA;&#x73AF;&#x97F3;&#x9891;&#x793A;&#x4F8B;
+ ... amerge            N-&gt;A       Merge two or more audio streams into a single multi-channel stream. // &#x5C06;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x97F3;&#x9891;&#x6D41;&#x5408;&#x5E76;&#x4E3A;&#x5355;&#x4E2A;&#x591A;&#x901A;&#x9053;&#x6D41;&#x3002;
+ T.. ametadata         A-&gt;A       Manipulate audio frame metadata. //&#x64CD;&#x7EB5;&#x97F3;&#x9891;&#x5E27;&#x5143;&#x6570;&#x636E;&#x3002;
+ ... amix              N-&gt;A       Audio mixing.  // &#x97F3;&#x9891;&#x6DF7;&#x5408;
+ ... amultiply         AA-&gt;A      Multiply two audio streams.  // &#x5C06;&#x4E24;&#x4E2A;&#x97F3;&#x9891;&#x6D41;&#x76F8;&#x4E58;&#x3002;
+ ..C anequalizer       A-&gt;N       Apply high-order audio parametric multi band equalizer. // &#x91C7;&#x7528;&#x9AD8;&#x9636;&#x97F3;&#x9891;&#x53C2;&#x6570;&#x591A;&#x6CE2;&#x6BB5;&#x5747;&#x8861;&#x5668;&#x3002;
+ TSC anlmdn            A-&gt;A       Reduce broadband noise from stream using Non-Local Means. // &#x4F7F;&#x7528;&#x975E;&#x672C;&#x5730;&#x624B;&#x6BB5;&#x51CF;&#x5C11;&#x6D41;&#x7684;&#x5BBD;&#x5E26;&#x566A;&#x58F0;&#x3002;
+ ... anull             A-&gt;A       Pass the source unchanged to the output.  // &#x5C06;&#x6E90;&#x4E0D;&#x53D8;&#x5730;&#x4F20;&#x9012;&#x7ED9;&#x8F93;&#x51FA;&#x3002;
+ T.. apad              A-&gt;A       Pad audio with silence. // &#x7528;&#x9759;&#x97F3;&#x952E;&#x64AD;&#x653E;&#x97F3;&#x9891;&#x3002;
+ ... aperms            A-&gt;A       Set permissions for the output audio frame.  // &#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x97F3;&#x9891;&#x5E27;&#x7684;&#x6743;&#x9650;
+ ... aphaser           A-&gt;A       Add a phasing effect to the audio.  // &#x4E3A;&#x97F3;&#x9891;&#x6DFB;&#x52A0;&#x76F8;&#x4F4D;&#x6548;&#x679C;&#x3002;
+ ... apulsator         A-&gt;A       Audio pulsator.  // &#x97F3;&#x9891;&#x8109;&#x51B2;&#x53D1;&#x751F;&#x5668;&#x3002;
+ ... arealtime         A-&gt;A       Slow down filtering to match realtime.  // &#x964D;&#x4F4E;&#x8FC7;&#x6EE4;&#x901F;&#x5EA6;&#x4EE5;&#x5339;&#x914D;&#x5B9E;&#x65F6;&#x6027;&#x3002;
+ ... aresample         A-&gt;A       Resample audio data.  // &#x91CD;&#x65B0;&#x91C7;&#x6837;&#x97F3;&#x9891;&#x6570;&#x636E;&#x3002;
+ ... areverse          A-&gt;A       Reverse an audio clip.   // &#x53CD;&#x8F6C;&#x97F3;&#x9891;&#x526A;&#x8F91;&#x3002;
+ ... aselect           A-&gt;N       Select audio frames to pass in output.  // &#x9009;&#x62E9;&#x8981;&#x4F20;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x97F3;&#x9891;&#x5E27;&#x3002;
+ ... asendcmd          A-&gt;A       Send commands to filters.  // &#x5411;&#x7B5B;&#x9009;&#x5668;&#x53D1;&#x9001;&#x547D;&#x4EE4;&#x3002;
+ ... asetnsamples      A-&gt;A       Set the number of samples for each output audio frames.  // &#x8BBE;&#x7F6E;&#x6BCF;&#x4E2A;&#x8F93;&#x51FA;&#x97F3;&#x9891;&#x5E27;&#x7684;&#x91C7;&#x6837;&#x6570;&#x3002;
+ ... asetpts           A-&gt;A       Set PTS for the output audio frame. // &#x4E3A;&#x8F93;&#x51FA;&#x97F3;&#x9891;&#x5E27;&#x8BBE;&#x7F6E;PTS&#x3002;
+ ... asetrate          A-&gt;A       Change the sample rate without altering the data.  // &#x66F4;&#x6539;&#x91C7;&#x6837;&#x7387;&#x800C;&#x4E0D;&#x66F4;&#x6539;&#x6570;&#x636E;&#x3002;
+ ... asettb            A-&gt;A       Set timebase for the audio output link.  // &#x8BBE;&#x7F6E;&#x97F3;&#x9891;&#x8F93;&#x51FA;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x57FA;&#x3002;
+ ... ashowinfo         A-&gt;A       Show textual information for each audio frame.  // &#x663E;&#x793A;&#x6BCF;&#x4E2A;&#x97F3;&#x9891;&#x5E27;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x3002;
+ T.. asidedata         A-&gt;A       Manipulate audio frame side data. // &#x64CD;&#x4F5C;&#x97F3;&#x9891;&#x5E27;&#x4FA7;&#x6570;&#x636E;
+ T.. asoftclip         A-&gt;A       Audio Soft Clipper.  // &#x97F3;&#x9891;&#x8F6F;&#x526A;&#x8F91;&#x3002;
+ ... asplit            A-&gt;N       Pass on the audio input to N audio outputs.  // &#x628A;&#x97F3;&#x9891;&#x8F93;&#x5165;&#x4F20;&#x7ED9;N&#x4E2A;&#x97F3;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... astats            A-&gt;A       Show time domain statistics about audio frames.  // &#x663E;&#x793A;&#x6709;&#x5173;&#x97F3;&#x9891;&#x5E27;&#x7684;&#x65F6;&#x57DF;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;
+ ..C astreamselect     N-&gt;N       Select audio streams // &#x9009;&#x62E9;&#x97F3;&#x9891;&#x6D41;
+ ..C atempo            A-&gt;A       Adjust audio tempo.  // &#x8C03;&#x6574;&#x97F3;&#x9891;&#x8282;&#x594F;&#x3002;
+ ... atrim             A-&gt;A       Pick one continuous section from the input, drop the rest.  // &#x4ECE;&#x8F93;&#x5165;&#x4E2D;&#x9009;&#x53D6;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5220;&#x9664;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x3002;
+ TSC bandpass          A-&gt;A       Apply a two-pole Butterworth band-pass filter.  // &#x5E94;&#x7528;&#x4E24;&#x6781;&#x5DF4;&#x7279;&#x6C83;&#x65AF;&#x5E26;&#x901A;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ TSC bandreject        A-&gt;A       Apply a two-pole Butterworth band-reject filter.  // &#x5E94;&#x7528;&#x4E24;&#x6781;&#x5DF4;&#x7279;&#x6C83;&#x65AF;&#x5E26;&#x963B;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ TSC bass              A-&gt;A       Boost or cut lower frequencies.  // &#x63D0;&#x9AD8;&#x6216;&#x964D;&#x4F4E;&#x4F4E;&#x9891;&#x7387;&#x3002;
+ TSC biquad            A-&gt;A       Apply a biquad IIR filter with the given coefficients.  // &#x5E94;&#x7528;&#x5177;&#x6709;&#x7ED9;&#x5B9A;&#x7CFB;&#x6570;&#x7684;&#x53CC;&#x56DB;IIR&#x6EE4;&#x6CE2;&#x5668;
+ ... channelmap        A-&gt;A       Remap audio channels. // &#x91CD;&#x65B0;&#x6620;&#x5C04;&#x97F3;&#x9891;&#x901A;&#x9053;
+ ... channelsplit      A-&gt;N       Split audio into per-channel streams.  // &#x5C06;&#x97F3;&#x9891;&#x5206;&#x5272;&#x4E3A;&#x6BCF;&#x4E2A;&#x9891;&#x9053;&#x6D41;&#x3002;
+ ... chorus            A-&gt;A       Add a chorus effect to the audio.  // &#x4E3A;&#x97F3;&#x9891;&#x6DFB;&#x52A0;&#x5408;&#x5531;&#x6548;&#x679C;&#x3002;
+ ... compand           A-&gt;A       Compress or expand audio dynamic range.  // &#x538B;&#x7F29;&#x6216;&#x6269;&#x5C55;&#x97F3;&#x9891;&#x52A8;&#x6001;&#x8303;&#x56F4;
+ ... compensationdelay A-&gt;A       Audio Compensation Delay Line.  // &#x97F3;&#x9891;&#x8865;&#x507F;&#x5EF6;&#x8FDF;&#x7EBF;&#x3002;
+ T.. crossfeed         A-&gt;A       Apply headphone crossfeed filter.  // &#x5E94;&#x7528;&#x8033;&#x673A;&#x4EA4;&#x53C9;&#x9988;&#x5165;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ ... crystalizer       A-&gt;A       Simple expand audio dynamic range filter.  // &#x7B80;&#x5355;&#x7684;&#x6269;&#x5C55;&#x97F3;&#x9891;&#x52A8;&#x6001;&#x8303;&#x56F4;&#x8FC7;&#x6EE4;&#x5668;&#x3002;
+ T.. dcshift           A-&gt;A       Apply a DC shift to the audio. // &#x5BF9;&#x97F3;&#x9891;&#x5E94;&#x7528;DC&#x79FB;&#x4F4D;&#x3002;
+ T.. deesser           A-&gt;A       Apply de-essing to the audio.  //&#x5BF9;&#x97F3;&#x9891;&#x5E94;&#x7528;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x3002;
+ ... drmeter           A-&gt;A       Measure audio dynamic range.  // &#x6D4B;&#x91CF;&#x97F3;&#x9891;&#x52A8;&#x6001;&#x8303;&#x56F4;&#x3002;
+ T.. dynaudnorm        A-&gt;A       Dynamic Audio Normalizer.  // &#x52A8;&#x6001;&#x97F3;&#x9891;&#x6807;&#x51C6;&#x5316;&#x5668;&#x3002;
+ ... earwax            A-&gt;A       Widen the stereo image.  // &#x653E;&#x5927;&#x7ACB;&#x4F53;&#x56FE;&#x50CF;&#x3002;
+ ... ebur128           A-&gt;N       EBU R128 scanner.  // EBU R128&#x626B;&#x63CF;&#x4EEA;
+ TSC equalizer         A-&gt;A       Apply two-pole peaking equalization (EQ) filter.  // &#x91C7;&#x7528;&#x53CC;&#x6781;&#x5CF0;&#x503C;&#x5747;&#x8861;&#xFF08;EQ&#xFF09;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ T.. extrastereo       A-&gt;A       Increase difference between stereo audio channels.  // &#x589E;&#x52A0;&#x7ACB;&#x4F53;&#x58F0;&#x97F3;&#x9891;&#x901A;&#x9053;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x3002;
+ ..C firequalizer      A-&gt;A       Finite Impulse Response Equalizer.  // &#x6709;&#x9650;&#x8109;&#x51B2;&#x54CD;&#x5E94;&#x5747;&#x8861;&#x5668;&#x3002;
+ ... flanger           A-&gt;A       Apply a flanging effect to the audio.  // &#x5BF9;&#x97F3;&#x9891;&#x5E94;&#x7528;&#x7FFB;&#x8FB9;&#x6548;&#x679C;&#x3002;
+ ... haas              A-&gt;A       Apply Haas Stereo Enhancer.  // &#x5E94;&#x7528;Haas&#x7ACB;&#x4F53;&#x58F0;&#x589E;&#x5F3A;&#x5242;&#x3002;
+ ... hdcd              A-&gt;A       Apply High Definition Compatible Digital (HDCD) decoding.  // &#x5E94;&#x7528;&#x9AD8;&#x6E05;&#x6670;&#x5EA6;&#x517C;&#x5BB9;&#x6570;&#x5B57;&#xFF08;HDCD&#xFF09;&#x89E3;&#x7801;&#x3002;
+ .S. headphone         N-&gt;A       Apply headphone binaural spatialization with HRTFs in additional streams.  // &#x5728;&#x9644;&#x52A0;&#x6D41;&#x4E2D;&#x5E94;&#x7528;&#x8033;&#x673A;&#x53CC;&#x8033;&#x7A7A;&#x95F4;&#x5316;&#x548C;HRTFs&#x3002;
+ TSC highpass          A-&gt;A       Apply a high-pass filter with 3dB point frequency. // &#x4F7F;&#x7528;&#x70B9;&#x9891;&#x7387;&#x4E3A;3dB&#x7684;&#x9AD8;&#x901A;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ TSC highshelf         A-&gt;A       Apply a high shelf filter. // &#x4F7F;&#x7528;&#x9AD8;&#x67B6;&#x8FC7;&#x6EE4;&#x5668;&#x3002;
+ ... join              N-&gt;A       Join multiple audio streams into multi-channel output. // &#x5C06;&#x591A;&#x4E2A;&#x97F3;&#x9891;&#x6D41;&#x8FDE;&#x63A5;&#x5230;&#x591A;&#x901A;&#x9053;&#x8F93;&#x51FA;&#x3002;
+ ... loudnorm          A-&gt;A       EBU R128 loudness normalization  // EBU R128&#x54CD;&#x5EA6;&#x6807;&#x51C6;&#x5316;
+ TSC lowpass           A-&gt;A       Apply a low-pass filter with 3dB point frequency. // &#x4F7F;&#x7528;&#x70B9;&#x9891;&#x7387;&#x4E3A;3dB&#x7684;&#x4F4E;&#x901A;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ TSC lowshelf          A-&gt;A       Apply a low shelf filter.  // &#x4F7F;&#x7528;&#x4F4E;&#x67B6;&#x8FC7;&#x6EE4;&#x5668;&#x3002;
+ ... mcompand          A-&gt;A       Multiband Compress or expand audio dynamic range.  // &#x591A;&#x6CE2;&#x6BB5;&#x538B;&#x7F29;&#x6216;&#x6269;&#x5C55;&#x97F3;&#x9891;&#x52A8;&#x6001;&#x8303;&#x56F4;&#x3002;
+ ... pan               A-&gt;A       Remix channels with coefficients (panning).  // &#x5E26;&#x7CFB;&#x6570;&#x7684;&#x6DF7;&#x97F3;&#x9891;&#x9053;&#xFF08;&#x5E73;&#x79FB;&#xFF09;
+ ... replaygain        A-&gt;A       ReplayGain scanner. // &#x91CD;&#x65B0;&#x626B;&#x63CF;&#x3002;
+ ... resample          A-&gt;A       Audio resampling and conversion.  // &#x97F3;&#x9891;&#x91CD;&#x91C7;&#x6837;&#x548C;&#x8F6C;&#x6362;&#x3002;
+ ..C rubberband        A-&gt;A       Apply time-stretching and pitch-shifting.  //&#x5E94;&#x7528;&#x65F6;&#x95F4;&#x62C9;&#x4F38;&#x548C;&#x4FEF;&#x4EF0;&#x79FB;&#x4F4D;&#x3002;
+ ... sidechaincompress AA-&gt;A      Sidechain compressor. // &#x4FA7;&#x94FE;&#x538B;&#x7F29;&#x673A;&#x3002;
+ ... sidechaingate     AA-&gt;A      Audio sidechain gate.  // &#x97F3;&#x9891;&#x4FA7;&#x94FE;&#x95E8;
+ ... silencedetect     A-&gt;A       Detect silence.  // &#x6CE8;&#x610F;&#x5B89;&#x9759;&#x3002;
+ ... silenceremove     A-&gt;A       Remove silence.  // &#x6D88;&#x9664;&#x6C89;&#x9ED8;&#x3002;
+ ... stereotools       A-&gt;A       Apply various stereo tools. // &#x4F7F;&#x7528;&#x5404;&#x79CD;&#x7ACB;&#x4F53;&#x58F0;&#x5DE5;&#x5177;&#x3002;
+ T.. stereowiden       A-&gt;A       Apply stereo widening effect. // &#x5E94;&#x7528;&#x7ACB;&#x4F53;&#x52A0;&#x5BBD;&#x6548;&#x679C;&#x3002;
+ ... superequalizer    A-&gt;A       Apply 18 band equalization filter. // &#x5E94;&#x7528;18&#x6CE2;&#x6BB5;&#x5747;&#x8861;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ .S. surround          A-&gt;A       Apply audio surround upmix filter. //&#x5E94;&#x7528;&#x97F3;&#x9891;&#x73AF;&#x7ED5;&#x4E0A;&#x6DF7;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ TSC treble            A-&gt;A       Boost or cut upper frequencies.  // &#x63D0;&#x9AD8;&#x6216;&#x964D;&#x4F4E;&#x9AD8;&#x9891;&#x3002;
+ ... tremolo           A-&gt;A       Apply tremolo effect. // &#x5E94;&#x7528;&#x98A4;&#x97F3;&#x6548;&#x679C;&#x3002;
+ ... vibrato           A-&gt;A       Apply vibrato effect.  // &#x5E94;&#x7528;&#x632F;&#x52A8;&#x6548;&#x679C;&#x3002;
+ T.C volume            A-&gt;A       Change input volume. // &#x66F4;&#x6539;&#x8F93;&#x5165;&#x97F3;&#x91CF;&#x3002;
+ ... volumedetect      A-&gt;A       Detect audio volume. // &#x6211;&#x68C0;&#x6D4B;&#x5230;&#x97F3;&#x9891;&#x97F3;&#x91CF;&#x3002;
+ ... aevalsrc          |-&gt;A       Generate an audio signal generated by an expression. // &#x751F;&#x6210;&#x7531;&#x8868;&#x8FBE;&#x5F0F;&#x751F;&#x6210;&#x7684;&#x97F3;&#x9891;&#x4FE1;&#x53F7;&#x3002;
+ ... anoisesrc         |-&gt;A       Generate a noise audio signal.  // &#x4EA7;&#x751F;&#x566A;&#x58F0;&#x97F3;&#x9891;&#x4FE1;&#x53F7;&#x3002;
+ ... anullsrc          |-&gt;A       Null audio source, return empty audio frames. // &#x7A7A;&#x97F3;&#x9891;&#x6E90;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x97F3;&#x9891;&#x5E27;&#x3002;
+ ... hilbert           |-&gt;A       Generate a Hilbert transform FIR coefficients. // &#x751F;&#x6210;Hilbert&#x53D8;&#x6362;FIR&#x7CFB;&#x6570;&#x3002;
+ ... sinc              |-&gt;A       Generate a sinc kaiser-windowed low-pass, high-pass, band-pass, or band-reject FIR coefficients. // &#x751F;&#x6210;sinc-kaiser&#x52A0;&#x7A97;&#x4F4E;&#x901A;&#x3001;&#x9AD8;&#x901A;&#x3001;&#x5E26;&#x901A;&#x6216;&#x5E26;&#x963B;FIR&#x7CFB;&#x6570;&#x3002;
+ ... sine              |-&gt;A       Generate sine wave audio signal. // &#x4EA7;&#x751F;&#x6B63;&#x5F26;&#x6CE2;&#x97F3;&#x9891;&#x4FE1;&#x53F7;&#x3002;
+ ... anullsink         A-&gt;|       Do absolutely nothing with the input audio. // &#x5BF9;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x7EDD;&#x5BF9;&#x4E0D;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x3002;
+ ... alphaextract      V-&gt;N       Extract an alpha channel as a grayscale image component. // &#x5C06;alpha&#x901A;&#x9053;&#x63D0;&#x53D6;&#x4E3A;&#x7070;&#x5EA6;&#x56FE;&#x50CF;&#x7EC4;&#x4EF6;&#x3002;
+ ... alphamerge        VV-&gt;V      Copy the luma value of the second input into the alpha channel of the first input. // &#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x5165;&#x7684;luma&#x503C;&#x590D;&#x5236;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7684;alpha&#x901A;&#x9053;&#x4E2D;&#x3002;
+ .S. amplify           V-&gt;V       Amplify changes between successive video frames. // &#x653E;&#x5927;&#x8FDE;&#x7EED;&#x89C6;&#x9891;&#x5E27;&#x4E4B;&#x95F4;&#x7684;&#x53D8;&#x5316;&#x3002;
+ ... ass               V-&gt;V       Render ASS subtitles onto input video using the libass library. // &#x4F7F;&#x7528;libass&#x5E93;&#x5C06;ASS&#x5B57;&#x5E55;&#x5448;&#x73B0;&#x5230;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x4E0A;&#x3002;
+ TS. atadenoise        V-&gt;V       Apply an Adaptive Temporal Averaging Denoiser. // &#x5E94;&#x7528;&#x81EA;&#x9002;&#x5E94;&#x65F6;&#x95F4;&#x5E73;&#x5747;&#x53BB;&#x566A;&#x3002;
+ TS. avgblur           V-&gt;V       Apply Average Blur filter.  // &#x5E94;&#x7528;&#x5E73;&#x5747;&#x6A21;&#x7CCA;&#x8FC7;&#x6EE4;&#x5668;&#x3002;
+ T.. bbox              V-&gt;V       Compute bounding box for each frame. // &#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5E27;&#x7684;&#x8FB9;&#x754C;&#x6846;&#x3002;
+ ... bench             V-&gt;V       Benchmark part of a filtergraph. // filtergraph&#x7684;&#x57FA;&#x51C6;&#x90E8;&#x5206;&#x3002;
+ T.. bitplanenoise     V-&gt;V       Measure bit plane noise.  // &#x6D4B;&#x91CF;&#x4F4D;&#x5E73;&#x9762;&#x566A;&#x58F0;&#x3002;
+ ... blackdetect       V-&gt;V       Detect video intervals that are (almost) black. // &#x68C0;&#x6D4B;&#xFF08;&#x51E0;&#x4E4E;&#xFF09;&#x9ED1;&#x8272;&#x7684;&#x89C6;&#x9891;&#x95F4;&#x9694;&#x3002;
+ ... blackframe        V-&gt;V       Detect frames that are (almost) black. &#x68C0;&#x6D4B;&#xFF08;&#x51E0;&#x4E4E;&#xFF09;&#x9ED1;&#x8272;&#x7684;&#x5E27;&#x3002;
+ TS. blend             VV-&gt;V      Blend two video frames into each other. // &#x5C06;&#x4E24;&#x4E2A;&#x89C6;&#x9891;&#x5E27;&#x6DF7;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;
+ TS. bm3d              N-&gt;V       Block-Matching 3D denoiser. // &#x5757;&#x5339;&#x914D;&#x4E09;&#x7EF4;&#x53BB;&#x566A;&#x3002;
+ T.. boxblur           V-&gt;V       Blur the input.  // &#x865A;&#x8F93;&#x5165;
+ TS. bwdif             V-&gt;V       Deinterlace the input image.  // &#x53D6;&#x6D88;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x7684;&#x9694;&#x884C;&#x626B;&#x63CF;
+ TS. chromahold        V-&gt;V       Turns a certain color range into gray.  // &#x5C06;&#x67D0;&#x4E2A;&#x989C;&#x8272;&#x8303;&#x56F4;&#x8F6C;&#x6362;&#x4E3A;&#x7070;&#x8272;&#x3002;
+ TS. chromakey         V-&gt;V       Turns a certain color into transparency. Operates on YUV colors. // &#x5C06;&#x67D0;&#x4E2A;&#x989C;&#x8272;&#x8F6C;&#x6362;&#x4E3A;&#x900F;&#x660E;&#x3002;&#x5BF9;YUV&#x989C;&#x8272;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;
+ TS. chromashift       V-&gt;V       Shift chroma. // &#x53D8;&#x8272;
+ ... ciescope          V-&gt;V       Video CIE scope.  // &#x89C6;&#x9891;CIE&#x793A;&#x6CE2;&#x5668;&#x3002;
+ T.. codecview         V-&gt;V       Visualize information about some codecs. // &#x53EF;&#x89C6;&#x5316;&#x4E00;&#x4E9B;&#x7F16;&#x89E3;&#x7801;&#x5668;&#x7684;&#x4FE1;&#x606F;&#x3002;
+ TS. colorbalance      V-&gt;V       Adjust the color balance.  // &#x8C03;&#x6574;&#x989C;&#x8272;&#x5E73;&#x8861;&#x3002;
+ TS. colorchannelmixer V-&gt;V       Adjust colors by mixing color channels.  // &#x901A;&#x8FC7;&#x6DF7;&#x5408;&#x989C;&#x8272;&#x901A;&#x9053;&#x8C03;&#x8282;&#x989C;&#x8272;&#x3002;
+ TS. colorkey          V-&gt;V       Turns a certain color into transparency. Operates on RGB colors. // &#x5C06;&#x67D0;&#x4E2A;&#x989C;&#x8272;&#x8F6C;&#x6362;&#x4E3A;&#x900F;&#x660E;&#x3002;&#x5BF9;RGB&#x989C;&#x8272;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;
+ TS. colorhold         V-&gt;V       Turns a certain color range into gray. Operates on RGB colors. // &#x5C06;&#x67D0;&#x4E2A;&#x989C;&#x8272;&#x8303;&#x56F4;&#x8F6C;&#x6362;&#x4E3A;&#x7070;&#x8272;&#x3002;&#x5BF9;RGB&#x989C;&#x8272;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;
+ TS. colorlevels       V-&gt;V       Adjust the color levels. // &#x8C03;&#x6574;&#x989C;&#x8272;&#x7EA7;&#x522B;&#x3002;
+ TS. colormatrix       V-&gt;V       Convert color matrix. // &#x8F6C;&#x6362;&#x989C;&#x8272;&#x77E9;&#x9635;&#x3002;
+ TS. colorspace        V-&gt;V       Convert between color spaces. // &#x5728;&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x4E4B;&#x95F4;&#x8F6C;&#x6362;&#x3002;
+ TS. convolution       V-&gt;V       Apply convolution filter. // &#x5E94;&#x7528;&#x5377;&#x79EF;&#x6EE4;&#x6CE2;&#x5668;
+ TS. convolve          VV-&gt;V      Convolve first video stream with second video stream.  // &#x5C06;&#x7B2C;&#x4E00;&#x89C6;&#x9891;&#x6D41;&#x4E0E;&#x7B2C;&#x4E8C;&#x89C6;&#x9891;&#x6D41;&#x5377;&#x79EF;&#x3002;
+ ... copy              V-&gt;V       Copy the input video unchanged to the output.  // &#x5C06;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x539F;&#x5C01;&#x4E0D;&#x52A8;&#x5730;&#x590D;&#x5236;&#x5230;&#x8F93;&#x51FA;&#x3002;
+ ... coreimage         V-&gt;V       Video filtering using CoreImage API.  // &#x4F7F;&#x7528;CoreImage API&#x8FDB;&#x884C;&#x89C6;&#x9891;&#x8FC7;&#x6EE4;&#x3002;
+ ... cover_rect        V-&gt;V       Find and cover a user specified object. // &#x67E5;&#x627E;&#x5E76;&#x8986;&#x76D6;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x3002;
+ ..C crop              V-&gt;V       Crop the input video.  // &#x88C1;&#x526A;&#x8F93;&#x5165;&#x89C6;&#x9891;
+ T.. cropdetect        V-&gt;V       Auto-detect crop size. // &#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x4F5C;&#x7269;&#x5927;&#x5C0F;&#x3002;
+ ... cue               V-&gt;V       Delay filtering to match a cue. // &#x5EF6;&#x8FDF;&#x8FC7;&#x6EE4;&#x4EE5;&#x5339;&#x914D;&#x63D0;&#x793A;&#x3002;
+ TS. curves            V-&gt;V       Adjust components curves. // &#x8C03;&#x6574;&#x7EC4;&#x4EF6;&#x66F2;&#x7EBF;
+ .S. datascope         V-&gt;V       Video data analysis. // &#x89C6;&#x9891;&#x6570;&#x636E;&#x5206;&#x6790;&#x3002;
+ TS. dctdnoiz          V-&gt;V       Denoise frames using 2D DCT.  // &#x4F7F;&#x7528;2D-DCT&#x5BF9;&#x5E27;&#x8FDB;&#x884C;&#x53BB;&#x566A;&#x3002;
+ TS. deband            V-&gt;V       Debands video. // &#x8FA9;&#x8BBA;&#x5F55;&#x50CF;&#x3002;
+ T.. deblock           V-&gt;V       Deblock video. // &#x89E3;&#x9664;&#x9501;&#x5B9A;&#x89C6;&#x9891;&#x3002;
+ ... decimate          N-&gt;V       Decimate frames (post field matching filter).  // &#x62BD;&#x53D6;&#x5E27;&#xFF08;&#x540E;&#x671F;&#x5B57;&#x6BB5;&#x5339;&#x914D;&#x8FC7;&#x6EE4;&#x5668;&#xFF09;&#x3002;
+ TS. deconvolve        VV-&gt;V      Deconvolve first video stream with second video stream. // &#x7528;&#x7B2C;&#x4E8C;&#x89C6;&#x9891;&#x6D41;&#x89E3;&#x5377;&#x7B2C;&#x4E00;&#x89C6;&#x9891;&#x6D41;&#x3002;
+ TS. dedot             V-&gt;V       Reduce cross-luminance and cross-color.  // &#x964D;&#x4F4E;&#x4EA4;&#x53C9;&#x4EAE;&#x5EA6;&#x548C;&#x4EA4;&#x53C9;&#x989C;&#x8272;&#x3002;
+ TS. deflate           V-&gt;V       Apply deflate effect.  // &#x5E94;&#x7528;&#x653E;&#x6C14;&#x6548;&#x679C;&#x3002;
+ ... deflicker         V-&gt;V       Remove temporal frame luminance variations.  // &#x79FB;&#x9664;&#x65F6;&#x95F4;&#x5E27;&#x4EAE;&#x5EA6;&#x53D8;&#x5316;&#x3002;
+ ... dejudder          V-&gt;V       Remove judder produced by pullup.  // &#x53BB;&#x9664;&#x62C9;&#x8D77;&#x4EA7;&#x751F;&#x7684;&#x6296;&#x52A8;&#x3002;
+ T.. delogo            V-&gt;V       Remove logo from input video.  // &#x4ECE;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x4E2D;&#x5220;&#x9664;&#x5FBD;&#x6807;&#x3002;
+ T.. derain            V-&gt;V       Apply derain filter to the input. &#x5728;&#x8F93;&#x5165;&#x7AEF;&#x52A0;&#x4E0A;&#x51CF;&#x989D;&#x6EE4;&#x6CE2;&#x5668;&#x3002;
+ ... deshake           V-&gt;V       Stabilize shaky video. // &#x7A33;&#x5B9A;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x89C6;&#x9891;&#x3002;
+ TS. despill           V-&gt;V       Despill video. // &#x89C6;&#x9891;&#x7CFB;&#x7EDF;&#x3002;
+ ... detelecine        V-&gt;V       Apply an inverse telecine pattern. // &#x5E94;&#x7528;&#x76F8;&#x53CD;&#x7684;&#x7535;&#x89C6;&#x7535;&#x5F71;&#x6A21;&#x5F0F;&#x3002;
+ TS. dilation          V-&gt;V       Apply dilation effect. // &#x5E94;&#x7528;&#x6269;&#x5F20;&#x6548;&#x679C;&#x3002;
+ T.. displace          VVV-&gt;V     Displace pixels.
+ ... doubleweave       V-&gt;V       Weave input video fields into double number of frames.
+ T.. drawbox           V-&gt;V       Draw a colored box on the input video.
+ ... drawgraph         V-&gt;V       Draw a graph using input video metadata.
+ T.. drawgrid          V-&gt;V       Draw a colored grid on the input video.
+ T.C drawtext          V-&gt;V       Draw text on top of video frames using libfreetype library.
+ T.. edgedetect        V-&gt;V       Detect and draw edge.
+ ... elbg              V-&gt;V       Apply posterize effect, using the ELBG algorithm.
+ T.. entropy           V-&gt;V       Measure video frames entropy.
+ T.C eq                V-&gt;V       Adjust brightness, contrast, gamma, and saturation.
+ TS. erosion           V-&gt;V       Apply erosion effect.
+ ... extractplanes     V-&gt;N       Extract planes as grayscale frames.
+ .S. fade              V-&gt;V       Fade in/out input video.
+ T.. fftdnoiz          V-&gt;V       Denoise frames using 3D FFT.
+ T.. fftfilt           V-&gt;V       Apply arbitrary expressions to pixels in frequency domain.
+ ... field             V-&gt;V       Extract a field from the input video.
+ ... fieldhint         V-&gt;V       Field matching using hints.
+ ... fieldmatch        N-&gt;V       Field matching for inverse telecine.
+ T.. fieldorder        V-&gt;V       Set the field order.
+ T.. fillborders       V-&gt;V       Fill borders of the input video.
+ ... find_rect         V-&gt;V       Find a user specified object.
+ T.. floodfill         V-&gt;V       Fill area with same color with another color.
+ ... format            V-&gt;V       Convert the input video to one of the specified pixel formats.
+ ... fps               V-&gt;V       Force constant framerate.
+ ... framepack         VV-&gt;V      Generate a frame packed stereoscopic video.
+ .S. framerate         V-&gt;V       Upsamples or downsamples progressive source between specified frame rates.
+ T.. framestep         V-&gt;V       Select one frame every N frames.
+ ... freezedetect      V-&gt;V       Detects frozen video input.
+ ... frei0r            V-&gt;V       Apply a frei0r effect.
+ T.. fspp              V-&gt;V       Apply Fast Simple Post-processing filter.
+ TS. gblur             V-&gt;V       Apply Gaussian Blur filter.
+ TS. geq               V-&gt;V       Apply generic equation to each pixel.
+ T.. gradfun           V-&gt;V       Debands video quickly using gradients.
+ ... graphmonitor      V-&gt;V       Show various filtergraph stats.
+ TS. greyedge          V-&gt;V       Estimates scene illumination by grey edge assumption.
+ TS. haldclut          VV-&gt;V      Adjust colors using a Hald CLUT.
+ TS. hflip             V-&gt;V       Horizontally flip the input video.
+ T.. histeq            V-&gt;V       Apply global color histogram equalization.
+ ... histogram         V-&gt;V       Compute and draw a histogram.
+ T.. hqdn3d            V-&gt;V       Apply a High Quality 3D Denoiser.
+ .S. hqx               V-&gt;V       Scale the input by 2, 3 or 4 using the hq*x magnification algorithm.
+ ... hstack            N-&gt;V       Stack video inputs horizontally.
+ T.C hue               V-&gt;V       Adjust the hue and saturation of the input video.
+ ... hwdownload        V-&gt;V       Download a hardware frame to a normal frame
+ ... hwmap             V-&gt;V       Map hardware frames
+ ... hwupload          V-&gt;V       Upload a normal frame to a hardware frame
+ T.. hysteresis        VV-&gt;V      Grow first stream into second stream by connecting components.
+ ... idet              V-&gt;V       Interlace detect Filter.
+ T.. il                V-&gt;V       Deinterleave or interleave fields.
+ TS. inflate           V-&gt;V       Apply inflate effect.
+ ... interlace         V-&gt;V       Convert progressive video into interlaced.
+ ... interleave        N-&gt;V       Temporally interleave video inputs.
+ ... kerndeint         V-&gt;V       Apply kernel deinterlacing to the input.
+ .S. lagfun            V-&gt;V       Slowly update darker pixels.
+ .S. lenscorrection    V-&gt;V       Rectify the image by correcting for lens distortion. // &#x901A;&#x8FC7;&#x6821;&#x6B63;&#x955C;&#x5934;&#x5931;&#x771F;&#x6765;&#x6821;&#x6B63;&#x56FE;&#x50CF;&#x3002;
+ TS. limiter           V-&gt;V       Limit pixels components to the specified range.
+ ... loop              V-&gt;V       Loop video frames. // &#x5FAA;&#x73AF;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ TS. lumakey           V-&gt;V       Turns a certain luma into transparency.
+ TS. lut               V-&gt;V       Compute and apply a lookup table to the RGB/YUV input video.
+ TS. lut1d             V-&gt;V       Adjust colors using a 1D LUT.
+ TS. lut2              VV-&gt;V      Compute and apply a lookup table from two video inputs. // &#x4ECE;&#x4E24;&#x4E2A;&#x89C6;&#x9891;&#x8F93;&#x5165;&#x8BA1;&#x7B97;&#x5E76;&#x5E94;&#x7528;&#x67E5;&#x627E;&#x8868;&#x3002;
+ TS. lut3d             V-&gt;V       Adjust colors using a 3D LUT.
+ TS. lutrgb            V-&gt;V       Compute and apply a lookup table to the RGB input video.
+ TS. lutyuv            V-&gt;V       Compute and apply a lookup table to the YUV input video.
+ TS. maskedclamp       VVV-&gt;V     Clamp first stream with second stream and third stream. // &#x7528;&#x7B2C;&#x4E8C;&#x6D41;&#x548C;&#x7B2C;&#x4E09;&#x6D41;&#x5939;&#x4F4F;&#x7B2C;&#x4E00;&#x6D41;&#x3002;
+ TS. maskedmerge       VVV-&gt;V     Merge first stream with second stream using third stream as mask. // &#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x6D41;&#x4F5C;&#x4E3A;&#x63A9;&#x7801;&#x5C06;&#x7B2C;&#x4E00;&#x6D41;&#x4E0E;&#x7B2C;&#x4E8C;&#x6D41;&#x5408;&#x5E76;
+ TS. maskfun           V-&gt;V       Create Mask.
+ ... mcdeint           V-&gt;V       Apply motion compensating deinterlacing.
+ ... mergeplanes       N-&gt;V       Merge planes.
+ ... mestimate         V-&gt;V       Generate motion vectors.
+ T.. metadata          V-&gt;V       Manipulate video frame metadata.
+ T.. midequalizer      VV-&gt;V      Apply Midway Equalization.
+ ... minterpolate      V-&gt;V       Frame rate conversion using Motion Interpolation.
+ .S. mix               N-&gt;V       Mix video inputs.
+ ... mpdecimate        V-&gt;V       Remove near-duplicate frames.
+ TS. negate            V-&gt;V       Negate input video.  // &#x5426;&#x5B9A;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x3002;
+ TS. nlmeans           V-&gt;V       Non-local means denoiser.
+ T.. nnedi             V-&gt;V       Apply neural network edge directed interpolation intra-only deinterlacer.
+ ... noformat          V-&gt;V       Force libavfilter not to use any of the specified pixel formats for the input to the next filter.
+ TS. noise             V-&gt;V       Add noise.
+ T.. normalize         V-&gt;V       Normalize RGB video.  // &#x6807;&#x51C6;&#x5316;RGB&#x89C6;&#x9891;
+ ... null              V-&gt;V       Pass the source unchanged to the output.
+ ... ocr               V-&gt;V       Optical Character Recognition.
+ T.. oscilloscope      V-&gt;V       2D Video Oscilloscope.
+ TSC overlay           VV-&gt;V      Overlay a video source on top of the input.  // &#x5728;&#x8F93;&#x5165;&#x7AEF;&#x8986;&#x76D6;&#x89C6;&#x9891;&#x6E90;
+ T.. owdenoise         V-&gt;V       Denoise using wavelets.
+ ... pad               V-&gt;V       Pad the input video.  // &#x628A;&#x8F93;&#x5165;&#x7684;&#x89C6;&#x9891;&#x57AB;&#x4E0A;
+ ... palettegen        V-&gt;V       Find the optimal palette for a given stream.
+ ... paletteuse        VV-&gt;V      Use a palette to downsample an input video stream.  // &#x4F7F;&#x7528;&#x8C03;&#x8272;&#x677F;&#x7F29;&#x5C0F;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x6D41;&#x7684;&#x91C7;&#x6837;&#x3002;
+ ... perms             V-&gt;V       Set permissions for the output video frame.  // &#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x7684;&#x6743;&#x9650;&#x3002;
+ TS. perspective       V-&gt;V       Correct the perspective of video.  // &#x7EA0;&#x6B63;&#x89C6;&#x9891;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x3002;
+ T.. phase             V-&gt;V       Phase shift fields.
+ ... pixdesctest       V-&gt;V       Test pixel format definitions.
+ T.. pixscope          V-&gt;V       Pixel data analysis.
+ T.C pp                V-&gt;V       Filter video using libpostproc.  // &#x4F7F;&#x7528;libpostproc&#x8FC7;&#x6EE4;&#x89C6;&#x9891;&#x3002;
+ T.. pp7               V-&gt;V       Apply Postprocessing 7 filter.
+ TS. premultiply       N-&gt;V       PreMultiply first stream with first plane of second stream.
+ TS. prewitt           V-&gt;V       Apply prewitt operator.
+ T.. pseudocolor       V-&gt;V       Make pseudocolored video frames.  // &#x5236;&#x4F5C;&#x5047;&#x5F69;&#x8272;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ ... psnr              VV-&gt;V      Calculate the PSNR between two video streams. // &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x89C6;&#x9891;&#x6D41;&#x4E4B;&#x95F4;&#x7684;PSNR&#x3002;
+ ... pullup            V-&gt;V       Pullup from field sequence to frames.
+ T.. qp                V-&gt;V       Change video quantization parameters.  // &#x66F4;&#x6539;&#x89C6;&#x9891;&#x91CF;&#x5316;&#x53C2;&#x6570;&#x3002;
+ ... random            V-&gt;V       Return random frames.
+ T.. readeia608        V-&gt;V       Read EIA-608 Closed Caption codes from input video and write them to frame metadata.  // &#x4ECE;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x4E2D;&#x8BFB;&#x53D6;EIA-608&#x95ED;&#x8DEF;&#x5B57;&#x5E55;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5199;&#x5165;&#x5E27;&#x5143;&#x6570;&#x636E;&#x3002;
+ ... readvitc          V-&gt;V       Read vertical interval timecode and write it to frame metadata.
+ ... realtime          V-&gt;V       Slow down filtering to match realtime.
+ TS. remap             VVV-&gt;V     Remap pixels.  // &#x5927;&#x62EC;&#x53F7;&#x50CF;&#x7D20;&#x3002;
+ TS. removegrain       V-&gt;V       Remove grain.
+ T.. removelogo        V-&gt;V       Remove a TV logo based on a mask image. // &#x79FB;&#x9664;&#x57FA;&#x4E8E;&#x906E;&#x7F69;&#x56FE;&#x50CF;&#x7684;&#x7535;&#x89C6;&#x5FBD;&#x6807;
+ ... repeatfields      V-&gt;V       Hard repeat fields based on MPEG repeat field flag.
+ ... reverse           V-&gt;V       Reverse a clip.
+ TS. rgbashift         V-&gt;V       Shift RGBA.
+ TS. roberts           V-&gt;V       Apply roberts cross operator.
+ TSC rotate            V-&gt;V       Rotate the input image.  // &#x65CB;&#x8F6C;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x3002;
+ T.. sab               V-&gt;V       Apply shape adaptive blur.
+ ..C scale             V-&gt;V       Scale the input video size and/or convert the image format. // &#x7F29;&#x653E;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x5927;&#x5C0F;&#x548C;/&#x6216;&#x8F6C;&#x6362;&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x3002;
+ ..C scale2ref         VV-&gt;VV     Scale the input video size and/or convert the image format to the given reference. // &#x7F29;&#x653E;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x5927;&#x5C0F;&#x548C;/&#x6216;&#x5C06;&#x56FE;&#x50CF;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x8003;&#x3002;
+ ... select            V-&gt;N       Select video frames to pass in output.  // &#x9009;&#x62E9;&#x8981;&#x4F20;&#x5165;&#x8F93;&#x51FA;&#x7684;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ TS. selectivecolor    V-&gt;V       Apply CMYK adjustments to specific color ranges.
+ ... sendcmd           V-&gt;V       Send commands to filters.
+ ... separatefields    V-&gt;V       Split input video frames into fields.  // &#x5C06;&#x8F93;&#x5165;&#x7684;&#x89C6;&#x9891;&#x5E27;&#x5206;&#x5272;&#x4E3A;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;
+ ... setdar            V-&gt;V       Set the frame display aspect ratio.
+ ... setfield          V-&gt;V       Force field for the output video frame.  // &#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x7684;&#x529B;&#x573A;&#x3002;
+ ... setparams         V-&gt;V       Force field, or color property for the output video frame.  // &#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x7684;&#x529B;&#x573A;&#x6216;&#x989C;&#x8272;&#x5C5E;&#x6027;&#x3002;
+ ... setpts            V-&gt;V       Set PTS for the output video frame.   // &#x4E3A;&#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x8BBE;&#x7F6E;PTS&#x3002;
+ ... setrange          V-&gt;V       Force color range for the output video frame.  // &#x5F3A;&#x5236;&#x8F93;&#x51FA;&#x89C6;&#x9891;&#x5E27;&#x7684;&#x989C;&#x8272;&#x8303;&#x56F4;&#x3002;
+ ... setsar            V-&gt;V       Set the pixel sample aspect ratio.
+ ... settb             V-&gt;V       Set timebase for the video output link.  // &#x8BBE;&#x7F6E;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x57FA;&#x3002;
+ ... showinfo          V-&gt;V       Show textual information for each video frame.  // &#x663E;&#x793A;&#x6BCF;&#x4E2A;&#x89C6;&#x9891;&#x5E27;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x3002;
+ T.. showpalette       V-&gt;V       Display frame palette.
+ T.. shuffleframes     V-&gt;V       Shuffle video frames.   // &#x968F;&#x673A;&#x64AD;&#x653E;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ T.. shuffleplanes     V-&gt;V       Shuffle video planes.
+ T.. sidedata          V-&gt;V       Manipulate video frame side data.
+ .S. signalstats       V-&gt;V       Generate statistics from video analysis.  // &#x4ECE;&#x89C6;&#x9891;&#x5206;&#x6790;&#x751F;&#x6210;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x3002;
+ ... signature         N-&gt;V       Calculate the MPEG-7 video signature  // &#x8BA1;&#x7B97;MPEG-7&#x89C6;&#x9891;&#x7B7E;&#x540D;
+ T.. smartblur         V-&gt;V       Blur the input video without impacting the outlines.  // &#x5728;&#x4E0D;&#x5F71;&#x54CD;&#x8F6E;&#x5ED3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6A21;&#x7CCA;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x3002;
+ TS. sobel             V-&gt;V       Apply sobel operator.
+ ... split             V-&gt;N       Pass on the input to N video outputs.  // &#x5C06;&#x8F93;&#x5165;&#x4F20;&#x7ED9;N&#x4E2A;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ T.C spp               V-&gt;V       Apply a simple post processing filter.
+ T.. sr                V-&gt;V       Apply DNN-based image super resolution to the input. // &#x5BF9;&#x8F93;&#x5165;&#x5E94;&#x7528;&#x57FA;&#x4E8E;DNN&#x7684;&#x56FE;&#x50CF;&#x8D85;&#x5206;&#x8FA8;&#x7387;&#x3002;
+ ... ssim              VV-&gt;V      Calculate the SSIM between two video streams.  // &#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x89C6;&#x9891;&#x6D41;&#x4E4B;&#x95F4;&#x7684;SSIM&#x3002;
+ .S. stereo3d          V-&gt;V       Convert video stereoscopic 3D view.  // &#x8F6C;&#x6362;&#x89C6;&#x9891;&#x7ACB;&#x4F53;&#x4E09;&#x7EF4;&#x89C6;&#x56FE;&#x3002;
+ ..C streamselect      N-&gt;N       Select video streams  // &#x9009;&#x62E9;&#x89C6;&#x9891;&#x6D41;
+ ... subtitles         V-&gt;V       Render text subtitles onto input video using the libass library.
+ ... super2xsai        V-&gt;V       Scale the input by 2x using the Super2xSaI pixel art algorithm.
+ T.. swaprect          V-&gt;V       Swap 2 rectangular objects in video.  // &#x6362;&#x89C6;&#x9891;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x77E9;&#x5F62;&#x5BF9;&#x8C61;&#x3002;
+ T.. swapuv            V-&gt;V       Swap U and V components.
+ TS. tblend            V-&gt;V       Blend successive frames.
+ ... telecine          V-&gt;V       Apply a telecine pattern.
+ TS. threshold         VVVV-&gt;V    Threshold first video stream using other video streams.  // &#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x89C6;&#x9891;&#x6D41;&#x7684;&#x9608;&#x503C;&#x7B2C;&#x4E00;&#x89C6;&#x9891;&#x6D41;&#x3002;
+ ... thumbnail         V-&gt;V       Select the most representative frame in a given sequence of consecutive frames.
+ ... tile              V-&gt;V       Tile several successive frames together.
+ ... tinterlace        V-&gt;V       Perform temporal field interlacing.
+ TS. tlut2             V-&gt;V       Compute and apply a lookup table from two successive frames.
+ TS. tmix              V-&gt;V       Mix successive video frames.  // &#x6DF7;&#x5408;&#x8FDE;&#x7EED;&#x7684;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ .S. tonemap           V-&gt;V       Conversion to/from different dynamic ranges.
+ ... tpad              V-&gt;V       Temporarily pad video frames.  // &#x4E34;&#x65F6;&#x586B;&#x5145;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ .S. transpose         V-&gt;V       Transpose input video.  // &#x8F6C;&#x7F6E;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x3002;
+ ... trim              V-&gt;V       Pick one continuous section from the input, drop the rest.
+ TS. unpremultiply     N-&gt;V       UnPreMultiply first stream with first plane of second stream.
+ TS. unsharp           V-&gt;V       Sharpen or blur the input video.  // &#x9510;&#x5316;&#x6216;&#x6A21;&#x7CCA;&#x8F93;&#x5165;&#x89C6;&#x9891;
+ T.. uspp              V-&gt;V       Apply Ultra Simple / Slow Post-processing filter.
+ T.. vaguedenoiser     V-&gt;V       Apply a Wavelet based Denoiser.
+ ... vectorscope       V-&gt;V       Video vectorscope.
+ T.. vflip             V-&gt;V       Flip the input video vertically.  // &#x5782;&#x76F4;&#x7FFB;&#x8F6C;&#x8F93;&#x5165;&#x89C6;&#x9891;&#x3002;
+ ... vfrdet            V-&gt;V       Variable frame rate detect filter.
+ TS. vibrance          V-&gt;V       Boost or alter saturation.
+ ... vidstabdetect     V-&gt;V       Extract relative transformations, pass 1 of 2 for stabilization (see vidstabtransform for pass 2).
+ ... vidstabtransform  V-&gt;V       Transform the frames, pass 2 of 2 for stabilization (see vidstabdetect for pass 1).
+ T.. vignette          V-&gt;V       Make or reverse a vignette effect.
+ ... vmafmotion        V-&gt;V       Calculate the VMAF Motion score.
+ ... vstack            N-&gt;V       Stack video inputs vertically.  // &#x5782;&#x76F4;&#x5806;&#x53E0;&#x89C6;&#x9891;&#x8F93;&#x5165;&#x3002;
+ TS. w3fdif            V-&gt;V       Apply Martin Weston three field deinterlace.
+ .S. waveform          V-&gt;V       Video waveform monitor.
+ ... weave             V-&gt;V       Weave input video fields into frames.  // &#x5C06;&#x8F93;&#x5165;&#x7684;&#x89C6;&#x9891;&#x5B57;&#x6BB5;&#x7F16;&#x7EC7;&#x6210;&#x5E27;&#x3002;
+ .S. xbr               V-&gt;V       Scale the input using xBR algorithm.
+ .S. xmedian           N-&gt;V       Pick median pixels from several video inputs. // &#x4ECE;&#x591A;&#x4E2A;&#x89C6;&#x9891;&#x8F93;&#x5165;&#x4E2D;&#x9009;&#x53D6;&#x4E2D;&#x503C;&#x50CF;&#x7D20;&#x3002;
+ ... xstack            N-&gt;V       Stack video inputs into custom layout.  // &#x5C06;&#x89C6;&#x9891;&#x8F93;&#x5165;&#x5806;&#x53E0;&#x5230;&#x81EA;&#x5B9A;&#x4E49;&#x5E03;&#x5C40;&#x4E2D;&#x3002;
+ TS. yadif             V-&gt;V       Deinterlace the input image. // &#x53D6;&#x6D88;&#x8F93;&#x5165;&#x56FE;&#x50CF;&#x7684;&#x9694;&#x884C;&#x626B;&#x63CF;&#x3002;
+ ... zoompan           V-&gt;V       Apply Zoom &amp; Pan effect.
+ ... allrgb            |-&gt;V       Generate all RGB colors.
+ ... allyuv            |-&gt;V       Generate all yuv colors.
+ ... cellauto          |-&gt;V       Create pattern generated by an elementary cellular automaton.
+ ..C color             |-&gt;V       Provide an uniformly colored input.
+ ... coreimagesrc      |-&gt;V       Video source using image generators of CoreImage API. // &#x4F7F;&#x7528;CoreImage API&#x7684;&#x56FE;&#x50CF;&#x751F;&#x6210;&#x5668;&#x7684;&#x89C6;&#x9891;&#x6E90;&#x3002;
+ ... frei0r_src        |-&gt;V       Generate a frei0r source.
+ ... haldclutsrc       |-&gt;V       Provide an identity Hald CLUT.
+ ... life              |-&gt;V       Create life.
+ ... mandelbrot        |-&gt;V       Render a Mandelbrot fractal.
+ ... mptestsrc         |-&gt;V       Generate various test pattern.
+ ... nullsrc           |-&gt;V       Null video source, return unprocessed video frames.  // &#x7A7A;&#x89C6;&#x9891;&#x6E90;&#xFF0C;&#x8FD4;&#x56DE;&#x672A;&#x5904;&#x7406;&#x7684;&#x89C6;&#x9891;&#x5E27;&#x3002;
+ ... pal75bars         |-&gt;V       Generate PAL 75% color bars.
+ ... pal100bars        |-&gt;V       Generate PAL 100% color bars.
+ ... rgbtestsrc        |-&gt;V       Generate RGB test pattern.
+ ... smptebars         |-&gt;V       Generate SMPTE color bars.
+ ... smptehdbars       |-&gt;V       Generate SMPTE HD color bars.
+ ... testsrc           |-&gt;V       Generate test pattern.
+ ... testsrc2          |-&gt;V       Generate another test pattern.
+ ... yuvtestsrc        |-&gt;V       Generate YUV test pattern.
+ ... nullsink          V-&gt;|       Do absolutely nothing with the input video.  // &#x5BF9;&#x8F93;&#x5165;&#x7684;&#x89C6;&#x9891;&#x7EDD;&#x5BF9;&#x4E0D;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x4E8B;&#x60C5;&#x3002;
+ ... abitscope         A-&gt;V       Convert input audio to audio bit scope video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x97F3;&#x9891;&#x4F4D;&#x8303;&#x56F4;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... adrawgraph        A-&gt;V       Draw a graph using input audio metadata.
+ ... agraphmonitor     A-&gt;V       Show various filtergraph stats.
+ ... ahistogram        A-&gt;V       Convert input audio to histogram video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x76F4;&#x65B9;&#x56FE;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... aphasemeter       A-&gt;N       Convert input audio to phase meter video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x76F8;&#x4F4D;&#x8BA1;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... avectorscope      A-&gt;V       Convert input audio to vectorscope video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x77E2;&#x91CF;&#x793A;&#x6CE2;&#x5668;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ..C concat            N-&gt;N       Concatenate audio and video streams.  // &#x8FDE;&#x63A5;&#x97F3;&#x9891;&#x548C;&#x89C6;&#x9891;&#x6D41;&#x3002;
+ ... showcqt           A-&gt;V       Convert input audio to a CQT (Constant/Clamped Q Transform) spectrum video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;CQT&#xFF08;&#x6052;&#x5B9A;/&#x94B3;&#x5236;Q&#x53D8;&#x6362;&#xFF09;&#x9891;&#x8C31;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... showfreqs         A-&gt;V       Convert input audio to a frequencies video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x9891;&#x7387;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ .S. showspatial       A-&gt;V       Convert input audio to a spatial video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x7A7A;&#x95F4;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ .S. showspectrum      A-&gt;V       Convert input audio to a spectrum video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x9891;&#x8C31;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ .S. showspectrumpic   A-&gt;V       Convert input audio to a spectrum video output single picture.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x9891;&#x8C31;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x5355;&#x4E2A;&#x56FE;&#x7247;&#x3002;
+ ... showvolume        A-&gt;V       Convert input audio volume to video output.  // &#x8F93;&#x5165;&#x97F3;&#x9891;&#x97F3;&#x91CF;&#x8F6C;&#x6362;&#x4E3A;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... showwaves         A-&gt;V       Convert input audio to a video output.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ... showwavespic      A-&gt;V       Convert input audio to a video output single picture.  // &#x5C06;&#x8F93;&#x5165;&#x97F3;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x89C6;&#x9891;&#x8F93;&#x51FA;&#x5355;&#x4E2A;&#x56FE;&#x7247;&#x3002;
+ ... spectrumsynth     VV-&gt;A      Convert input spectrum videos to audio output. // &#x5C06;&#x8F93;&#x5165;&#x9891;&#x8C31;&#x89C6;&#x9891;&#x8F6C;&#x6362;&#x4E3A;&#x97F3;&#x9891;&#x8F93;&#x51FA;&#x3002;
+ ..C amovie            |-&gt;N       Read audio from a movie source.
+ ..C movie             |-&gt;N       Read from a movie source.
+ ... afifo             A-&gt;A       Buffer input frames and send them when they are requested.
+ ... fifo              V-&gt;V       Buffer input images and send them when they are requested.
+ ... abuffer           |-&gt;A       Buffer audio frames, and make them accessible to the filterchain.
+ ... buffer            |-&gt;V       Buffer video frames, and make them accessible to the filterchain.  // &#x7F13;&#x51B2;&#x89C6;&#x9891;&#x5E27;&#xFF0C;&#x5E76;&#x4F7F;&#x5176;&#x53EF;&#x88AB;&#x8FC7;&#x6EE4;&#x5668;&#x94FE;&#x8BBF;&#x95EE;&#x3002;
+ ... abuffersink       A-&gt;|       Buffer audio frames, and make them available to the end of the filter graph.  // &#x7F13;&#x51B2;&#x97F3;&#x9891;&#x5E27;&#xFF0C;&#x5E76;&#x4F7F;&#x5B83;&#x4EEC;&#x5728;&#x8FC7;&#x6EE4;&#x56FE;&#x7684;&#x672B;&#x5C3E;&#x53EF;&#x7528;&#x3002;
+ ... buffersink        V-&gt;|       Buffer video frames, and make them available to the end of the filter graph. // &#x7F13;&#x51B2;&#x89C6;&#x9891;&#x5E27;&#xFF0C;&#x5E76;&#x4F7F;&#x5B83;&#x4EEC;&#x5728;&#x8FC7;&#x6EE4;&#x56FE;&#x7684;&#x672B;&#x5C3E;&#x53EF;&#x7528;&#x3002;
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/coco723" target="_blank">guoyanhong</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-05-06 16:26:57 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ffmpeg音视频处理.html" class="navigation navigation-prev " aria-label="Previous page: ffmpeg音视频处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="七牛云存储中没有外链域名，无法下载的问题.html" class="navigation navigation-next " aria-label="Next page: 七牛云存储中没有外链域名，无法下载的问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ffmpeg音视频处理需求升级版","level":"1.2.15","depth":2,"next":{"title":"七牛云存储中没有外链域名，无法下载的问题","level":"1.2.16","depth":2,"path":"Tools/七牛云存储中没有外链域名，无法下载的问题.md","ref":"Tools/七牛云存储中没有外链域名，无法下载的问题.md","articles":[]},"previous":{"title":"ffmpeg音视频处理","level":"1.2.14","depth":2,"path":"Tools/ffmpeg音视频处理.md","ref":"Tools/ffmpeg音视频处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","-lunr","-search","search-pro","donate","splitter","disqus","baidu-tongji-with-multiple-channel","katex-ng","advanced-emoji","livereload"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"coco723"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/coco723/blog/tree/master"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"page-footer-ex":{"copyright":"By [guoyanhong](https://github.com/coco723)，使用[知识共享署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","alipayText":"支付宝捐赠","button":"Donate","title":"","wechat":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"katex-ng":{},"github-buttons":{"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"guoyanhong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"郭雁宏的博客","links":{"sidebar":{"Home":"https://coco723.github.io"}},"gitbook":"*"},"file":{"path":"Tools/ffmpeg音视频处理需求升级版.md","mtime":"2021-05-06T08:26:57.015Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-06T08:41:35.730Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

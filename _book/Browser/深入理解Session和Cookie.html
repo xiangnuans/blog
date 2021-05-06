@@ -1,0 +1,2511 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>深入理解Session和Cookie · 郭雁宏的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="guoyanhong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-ng/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="HTTP切面流程.html" />
+    
+    
+    <link rel="prev" href="URL的最大长度是多少？.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://coco723.github.io" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    笔记总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/GitBook.html">
+            
+                <a href="../Tools/GitBook.html">
+            
+                    
+                    Gitbook 安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tools/Markdown中使用HTML标签.html">
+            
+                <a href="../Tools/Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Tools/Mac下chrome快捷键.html">
+            
+                <a href="../Tools/Mac下chrome快捷键.html">
+            
+                    
+                    Mac下chrome快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Tools/Mac安装mongodb.html">
+            
+                <a href="../Tools/Mac安装mongodb.html">
+            
+                    
+                    Mac安装mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Tools/mac上redis环境搭建.html">
+            
+                <a href="../Tools/mac上redis环境搭建.html">
+            
+                    
+                    mac上redis环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Tools/Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                <a href="../Tools/Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                    
+                    Docker与Kubernetes在Mac本地环境搭建与应用部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Tools/Docker使用.html">
+            
+                <a href="../Tools/Docker使用.html">
+            
+                    
+                    Docker使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Tools/centos7下yum安装和配置Nginx.html">
+            
+                <a href="../Tools/centos7下yum安装和配置Nginx.html">
+            
+                    
+                    centos7下yum安装和配置Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Tools/使用kubectl连接远程k8s集群.html">
+            
+                <a href="../Tools/使用kubectl连接远程k8s集群.html">
+            
+                    
+                    使用kubectl连接远程k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Tools/MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                <a href="../Tools/MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                    
+                    MacOS上安装DockerDesktop和Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Tools/alinode.html">
+            
+                <a href="../Tools/alinode.html">
+            
+                    
+                    alinode使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Tools/iPic-Markdown图床、文件上传工具.html">
+            
+                <a href="../Tools/iPic-Markdown图床、文件上传工具.html">
+            
+                    
+                    iPic-Markdown图床、文件上传工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Tools/图片搬家神奇：iPicMover.html">
+            
+                <a href="../Tools/图片搬家神奇：iPicMover.html">
+            
+                    
+                    图片搬家神奇：iPic Mover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../Tools/ffmpeg音视频处理.html">
+            
+                <a href="../Tools/ffmpeg音视频处理.html">
+            
+                    
+                    ffmpeg音视频处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../Tools/ffmpeg音视频处理需求升级版.html">
+            
+                <a href="../Tools/ffmpeg音视频处理需求升级版.html">
+            
+                    
+                    ffmpeg音视频处理需求升级版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../Tools/七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                <a href="../Tools/七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                    
+                    七牛云存储中没有外链域名，无法下载的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../Tools/基于WebAssembly的H265播放.html">
+            
+                <a href="../Tools/基于WebAssembly的H265播放.html">
+            
+                    
+                    基于WebAssembly的H265播放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../Tools/ffprobe与ffplay与ffmpeg常用的命令.md">
+            
+                <span>
+            
+                    
+                    ffprobe与ffplay与ffmpeg常用的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../Tools/使用TravisCI构建Gitbook.html">
+            
+                <a href="../Tools/使用TravisCI构建Gitbook.html">
+            
+                    
+                    使用TravisCI构建Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../Tools/持续集成和travisCI.html">
+            
+                <a href="../Tools/持续集成和travisCI.html">
+            
+                    
+                    持续集成和travisCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../Tools/Nginx基础.html">
+            
+                <a href="../Tools/Nginx基础.html">
+            
+                    
+                    Nginx基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../Tools/Mac下安装nginx.html">
+            
+                <a href="../Tools/Mac下安装nginx.html">
+            
+                    
+                    Mac下安装nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../Tools/Mac上安装Elasticsearch，基本操作.html">
+            
+                <a href="../Tools/Mac上安装Elasticsearch，基本操作.html">
+            
+                    
+                    Mac上安装Elasticsearch，基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../Tools/学习笔记一.html">
+            
+                <a href="../Tools/学习笔记一.html">
+            
+                    
+                    学习笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../React/">
+            
+                <a href="../React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../React/summery.html">
+            
+                <a href="../React/summery.html">
+            
+                    
+                    React 总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../React/React高级开发.html">
+            
+                <a href="../React/React高级开发.html">
+            
+                    
+                    React 高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../React/umi-request返回拦截处理.html">
+            
+                <a href="../React/umi-request返回拦截处理.html">
+            
+                    
+                    umi-request 返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../React/在隔离中开发组件.html">
+            
+                <a href="../React/在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../React/React滚动加载实现.html">
+            
+                <a href="../React/React滚动加载实现.html">
+            
+                    
+                    React 滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="../React/基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup 实现 react-router 过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../React/文本转换为markdown实现.html">
+            
+                <a href="../React/文本转换为markdown实现.html">
+            
+                    
+                    文本转换为 markdown 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../React/react项目中import文件路径优化.html">
+            
+                <a href="../React/react项目中import文件路径优化.html">
+            
+                    
+                    react 项目中 import 文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../React/React组件开发指南.html">
+            
+                <a href="../React/React组件开发指南.html">
+            
+                    
+                    React 组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../React/react通过脚手架创建项目.html">
+            
+                <a href="../React/react通过脚手架创建项目.html">
+            
+                    
+                    react 通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../React/componentWillReceiveProps的使用.html">
+            
+                <a href="../React/componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="../React/ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout 底部 Footer 更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../React/React生命周期.html">
+            
+                <a href="../React/React生命周期.html">
+            
+                    
+                    React 生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../React/React-routerv4路由配置方法.html">
+            
+                <a href="../React/React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4 路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../React/服务端渲染SSR.html">
+            
+                <a href="../React/服务端渲染SSR.html">
+            
+                    
+                    服务端渲染 SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../React/href属性使用js代码段在React下warning问题.html">
+            
+                <a href="../React/href属性使用js代码段在React下warning问题.html">
+            
+                    
+                    href属性使用js代码段在React下warning 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts 和 G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js 在 React 中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个 TCP 连接可以发送多少个 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="使用http-proxy-middleware代理跨域.html">
+            
+                <a href="使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用 http-proxy-middleware 代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="跨域方式实现原理.html">
+            
+                <a href="跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="常见HTTP请求头，响应头，实体.html">
+            
+                <a href="常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见 HTTP 请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="CORS跨域详解.html">
+            
+                <a href="CORS跨域详解.html">
+            
+                    
+                    CORS 跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="SEO小技巧.html">
+            
+                <a href="SEO小技巧.html">
+            
+                    
+                    SEO小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="URL的最大长度是多少？.html">
+            
+                <a href="URL的最大长度是多少？.html">
+            
+                    
+                    URL的最大长度是多少？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.8" data-path="深入理解Session和Cookie.html">
+            
+                <a href="深入理解Session和Cookie.html">
+            
+                    
+                    深入理解Session和Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="HTTP切面流程.html">
+            
+                <a href="HTTP切面流程.html">
+            
+                    
+                    HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="Node与浏览器之间的区别.html">
+            
+                <a href="Node与浏览器之间的区别.html">
+            
+                    
+                    Node与浏览器之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="JavaScript如何在浏览器和Node中工作.html">
+            
+                <a href="JavaScript如何在浏览器和Node中工作.html">
+            
+                    
+                    JavaScript如何在浏览器和Node中工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Webpack/">
+            
+                <a href="../Webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Webpack/webpack5更新日志.html">
+            
+                <a href="../Webpack/webpack5更新日志.html">
+            
+                    
+                    Webpack5 更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Webpack/Webpack中实现静态资源内联.html">
+            
+                <a href="../Webpack/Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack 中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../CSS/">
+            
+                <a href="../CSS/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../CSS/flex布局.html">
+            
+                <a href="../CSS/flex布局.html">
+            
+                    
+                    flex 布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../CSS/移动端适配1px的问题.html">
+            
+                <a href="../CSS/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配 1px 的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Node/">
+            
+                <a href="../Node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Node/npm依赖管理之peerDependencies.html">
+            
+                <a href="../Node/npm依赖管理之peerDependencies.html">
+            
+                    
+                    npm 依赖管理之 peerDependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                <a href="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                    
+                    如何解决 npm unmet peer dependency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Node/如何发布一个npm包.html">
+            
+                <a href="../Node/如何发布一个npm包.html">
+            
+                    
+                    如何发布一个npm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Node/node版本管理工具.html">
+            
+                <a href="../Node/node版本管理工具.html">
+            
+                    
+                    Node版本管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Node/clinic快速定位性能问题.html">
+            
+                <a href="../Node/clinic快速定位性能问题.html">
+            
+                    
+                    使用node-clinic快速定位性能问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Node/cluster：扩展你的node应用.html">
+            
+                <a href="../Node/cluster：扩展你的node应用.html">
+            
+                    
+                    cluster：扩展你的node应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Node/如何保存价值上千万的Node源代码.html">
+            
+                <a href="../Node/如何保存价值上千万的Node源代码.html">
+            
+                    
+                    如何保存价值上千万的Node源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Node/6个Async、Await优于Promise的方面.html">
+            
+                <a href="../Node/6个Async、Await优于Promise的方面.html">
+            
+                    
+                    6个Async、Await优于Promise的方面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Node/npm安装包时的几个命令区别.html">
+            
+                <a href="../Node/npm安装包时的几个命令区别.html">
+            
+                    
+                    npm安装包时的几个命令区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Node/Moment进入维护状态.html">
+            
+                <a href="../Node/Moment进入维护状态.html">
+            
+                    
+                    Moment进入维护状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Node/package.json中的workspaces.html">
+            
+                <a href="../Node/package.json中的workspaces.html">
+            
+                    
+                    package.json中的workspaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../Node/项目开发中的规范.html">
+            
+                <a href="../Node/项目开发中的规范.html">
+            
+                    
+                    项目开发中的规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Node/npm库：AJV，JSON模式验证.html">
+            
+                <a href="../Node/npm库：AJV，JSON模式验证.html">
+            
+                    
+                    npm库：AJV，JSON模式验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Node/pm2深入学习.html">
+            
+                <a href="../Node/pm2深入学习.html">
+            
+                    
+                    pm2深入学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                <a href="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                    
+                    pm2的cluster模式与fork模式的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../Node/Node原生模块整理.html">
+            
+                <a href="../Node/Node原生模块整理.html">
+            
+                    
+                    Node原生模块整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../Node/koa-bodyparser中间件.html">
+            
+                <a href="../Node/koa-bodyparser中间件.html">
+            
+                    
+                    koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                <a href="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                    
+                    koa-multer实现文件上传并自定义文件名和目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.19" data-path="../Node/egg体系.html">
+            
+                <a href="../Node/egg体系.html">
+            
+                    
+                    egg体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.20" data-path="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                <a href="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                    
+                    egg应用自定义4xx和5xx的方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.21" data-path="../Node/egg的Http请求.html">
+            
+                <a href="../Node/egg的Http请求.html">
+            
+                    
+                    egg的Http请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.22" data-path="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                <a href="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                    
+                    怎么开发一个像egg-init的脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.23" data-path="../Node/结合源码揭秘egg运行原理.html">
+            
+                <a href="../Node/结合源码揭秘egg运行原理.html">
+            
+                    
+                    结合源码揭秘egg运行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.24" data-path="../Node/脚手架之egg-init.html">
+            
+                <a href="../Node/脚手架之egg-init.html">
+            
+                    
+                    脚手架之egg-init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.25" data-path="../Node/egg框架中的参数校验.html">
+            
+                <a href="../Node/egg框架中的参数校验.html">
+            
+                    
+                    egg框架中的参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.26" data-path="../Node/egg的Controller最佳实践.html">
+            
+                <a href="../Node/egg的Controller最佳实践.html">
+            
+                    
+                    egg的Controller最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.27" data-path="../Node/egg基于egg-validate的定制化升级.html">
+            
+                <a href="../Node/egg基于egg-validate的定制化升级.html">
+            
+                    
+                    egg基于egg-validate的定制化升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.28" data-path="../Node/egg中cookie与Session的使用笔记.html">
+            
+                <a href="../Node/egg中cookie与Session的使用笔记.html">
+            
+                    
+                    egg中cookie与Session的使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.29" data-path="../Node/egg-bin源码解析笔记.html">
+            
+                <a href="../Node/egg-bin源码解析笔记.html">
+            
+                    
+                    egg-bin源码解析笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.30" data-path="../Node/egg框架与nest框架的对比.html">
+            
+                <a href="../Node/egg框架与nest框架的对比.html">
+            
+                    
+                    egg框架与nest框架的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.31" data-path="../Node/egg常见问题笔.html">
+            
+                <a href="../Node/egg常见问题笔.html">
+            
+                    
+                    egg常见问题笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.32" data-path="../Node/VScode调试Egg.html">
+            
+                <a href="../Node/VScode调试Egg.html">
+            
+                    
+                    VScode调试Egg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.33" data-path="../Node/Make命令教程.html">
+            
+                <a href="../Node/Make命令教程.html">
+            
+                    
+                    Make命令教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Frame/BFF.html">
+            
+                <a href="../Frame/BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Frame/前端应用层框架.html">
+            
+                <a href="../Frame/前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Frame/前端UI组件库.html">
+            
+                <a href="../Frame/前端UI组件库.html">
+            
+                    
+                    前端 UI 组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Frame/跨平台.html">
+            
+                <a href="../Frame/跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Frame/工程智能化.html">
+            
+                <a href="../Frame/工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Frame/WebAssembly完全入门了解wasm的前世今生.md">
+            
+                <span>
+            
+                    
+                    WebAssembly完全入门了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                <a href="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app 应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Frame/基于NodeWeb框架Chair.html">
+            
+                <a href="../Frame/基于NodeWeb框架Chair.html">
+            
+                    
+                    基于NodeWeb框架Chair
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Frame/淘宝网的后台架构发展.html">
+            
+                <a href="../Frame/淘宝网的后台架构发展.html">
+            
+                    
+                    淘宝网的后台架构发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Frame/应用场景数据库选型.html">
+            
+                <a href="../Frame/应用场景数据库选型.html">
+            
+                    
+                    应用场景数据库选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git发布部署相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Git/Mac下配置多个Git账户.html">
+            
+                <a href="../Git/Mac下配置多个Git账户.html">
+            
+                    
+                    Mac下配置多个Git账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Git/删除远程仓库的某次错误提交.html">
+            
+                <a href="../Git/删除远程仓库的某次错误提交.html">
+            
+                    
+                    删除远程仓库的某次错误提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Git/使用GithubActions进行版本发布.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布.html">
+            
+                    
+                    使用Github Actions进行版本发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                    
+                    使用Github Actions进行版本发布(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Git/gitsubtree教程.html">
+            
+                <a href="../Git/gitsubtree教程.html">
+            
+                    
+                    Git subtree教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Git/git分支开发规范.html">
+            
+                <a href="../Git/git分支开发规范.html">
+            
+                    
+                    git分支开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../Git/Git规范和Changelog生成.html">
+            
+                <a href="../Git/Git规范和Changelog生成.html">
+            
+                    
+                    Git规范和Changelog生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../Git/语义化Semantic规范格式.md">
+            
+                <span>
+            
+                    
+                    语义化Semantic规范格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                <a href="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                    
+                    使用AppVeyor和Travis，自动构建和发布Electron应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../Git/跨平台桌面应用Electron.html">
+            
+                <a href="../Git/跨平台桌面应用Electron.html">
+            
+                    
+                    跨平台桌面应用Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../Git/企业级分布式，EDAS模式.html">
+            
+                <a href="../Git/企业级分布式，EDAS模式.html">
+            
+                    
+                    企业级分布式，EDAS模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../Git/Gitlab使用CICD管道配置参考.md">
+            
+                <span>
+            
+                    
+                    Gitlab使用CICD管道配置参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                <a href="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                    
+                    Linux上部署Node服务-外网无法访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                <a href="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                    
+                    服务器中启动服务的时候的IP选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                <a href="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                    
+                    怎样修改CentOS 7 SSH端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Design/">
+            
+                <a href="../Design/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Design/javaScript设计模式笔记一.html">
+            
+                <a href="../Design/javaScript设计模式笔记一.html">
+            
+                    
+                    javaScript设计模式笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Design/javaScript设计模式笔记二.html">
+            
+                <a href="../Design/javaScript设计模式笔记二.html">
+            
+                    
+                    javaScript设计模式笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Design/javaScript设计模式笔记三.html">
+            
+                <a href="../Design/javaScript设计模式笔记三.html">
+            
+                    
+                    javaScript设计模式笔记三
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Design/javaScript设计模式笔记四.html">
+            
+                <a href="../Design/javaScript设计模式笔记四.html">
+            
+                    
+                    javaScript设计模式笔记四
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Design/javascript设计模式笔记五.html">
+            
+                <a href="../Design/javascript设计模式笔记五.html">
+            
+                    
+                    javascript设计模式笔记五
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../Design/javaScript设计模式笔记六.html">
+            
+                <a href="../Design/javaScript设计模式笔记六.html">
+            
+                    
+                    javaScript设计模式笔记六
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../Design/javaScript设计模式笔记七.html">
+            
+                <a href="../Design/javaScript设计模式笔记七.html">
+            
+                    
+                    javaScript设计模式笔记七
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../Design/javaScript设计模式笔记八.html">
+            
+                <a href="../Design/javaScript设计模式笔记八.html">
+            
+                    
+                    javaScript设计模式笔记八
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../Design/javaScript设计模式笔记九.html">
+            
+                <a href="../Design/javaScript设计模式笔记九.html">
+            
+                    
+                    javaScript设计模式笔记九
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../ORM/ORM框架选型.html">
+            
+                <a href="../ORM/ORM框架选型.html">
+            
+                    
+                    ORM框架选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../ORM/Knexjs笔记.html">
+            
+                <a href="../ORM/Knexjs笔记.html">
+            
+                    
+                    Knexjs笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../ORM/bookshelf笔记.html">
+            
+                <a href="../ORM/bookshelf笔记.html">
+            
+                    
+                    bookshelf笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Database/MySQL一：delete和truncate的区别和联系.md">
+            
+                <span>
+            
+                    
+                    MySQL一：delete和truncate的区别和联系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Database/MySQL二：having与where.md">
+            
+                <span>
+            
+                    
+                    MySQL二：having与where
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Database/MySQL三：pluck.md">
+            
+                <span>
+            
+                    
+                    MySQL三：pluck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Database/MySQL四：first.md">
+            
+                <span>
+            
+                    
+                    MySQL四：first
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../Database/MySQL五：references.md">
+            
+                <span>
+            
+                    
+                    MySQL五：references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../Database/MySQL七：in和exists二者之间的区别和性能影响.md">
+            
+                <span>
+            
+                    
+                    MySQL七：in和exists二者之间的区别和性能影响
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../TypeScript/">
+            
+                <a href="../TypeScript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../TypeScript/基础笔记一.html">
+            
+                <a href="../TypeScript/基础笔记一.html">
+            
+                    
+                    基础笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../TypeScript/基础笔记二.html">
+            
+                <a href="../TypeScript/基础笔记二.html">
+            
+                    
+                    基础笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../TypeScript/函数笔记.html">
+            
+                <a href="../TypeScript/函数笔记.html">
+            
+                    
+                    函数笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../TypeScript/泛型笔记.html">
+            
+                <a href="../TypeScript/泛型笔记.html">
+            
+                    
+                    泛型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../TypeScript/枚举笔记.html">
+            
+                <a href="../TypeScript/枚举笔记.html">
+            
+                    
+                    枚举笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../TypeScript/类型兼容性笔记.html">
+            
+                <a href="../TypeScript/类型兼容性笔记.html">
+            
+                    
+                    类型兼容性笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../TypeScript/高级类型笔记.html">
+            
+                <a href="../TypeScript/高级类型笔记.html">
+            
+                    
+                    高级类型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                <a href="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                    
+                    .d.ts和源文件.ts有什么区别?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                <a href="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                    
+                    使用TypeScript装饰器装饰你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >深入理解Session和Cookie</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6DF1;&#x5165;&#x7406;&#x89E3;session&#x548C;cookie"><b>1. </b>&#x6DF1;&#x5165;&#x7406;&#x89E3;Session&#x548C;Cookie</a></li><ul><li><span class="title-icon "></span><a href="#cookie&#x7B80;&#x4ECB;"><b>1.1. </b>Cookie&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#cookie&#x673A;&#x5236;"><b>1.2. </b>Cookie&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#http&#x7684;cookie&#x673A;&#x5236;"><b>1.3. </b>HTTP&#x7684;Cookie&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#set-cookie&#x548C;cookie"><b>1.4. </b>Set-Cookie&#x548C;Cookie</a></li><li><span class="title-icon "></span><a href="#cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;"><b>1.5. </b>Cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;</a></li><li><span class="title-icon "></span><a href="#session&#x7B80;&#x4ECB;"><b>1.6. </b>Session&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#session&#x673A;&#x5236;"><b>1.7. </b>Session&#x673A;&#x5236;</a></li><li><span class="title-icon "></span><a href="#session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;"><b>1.8. </b>Session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</a></li><li><span class="title-icon "></span><a href="#session&#x7684;&#x6709;&#x6548;&#x671F;"><b>1.9. </b>Session&#x7684;&#x6709;&#x6548;&#x671F;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;"><b>1.10. </b>&#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;</a></li><ul><li><span class="title-icon "></span><a href="#1-cookie"><b>1.10.1. </b>1. Cookie</a></li><li><span class="title-icon "></span><a href="#2-url&#x91CD;&#x5199;"><b>1.10.2. </b>2. URL&#x91CD;&#x5199;</a></li><li><span class="title-icon "></span><a href="#3-&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;"><b>1.10.3. </b>3. &#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;</a></li><li><span class="title-icon "></span><a href="#4-session"><b>1.10.4. </b>4. Session</a></li></ul><li><span class="title-icon "></span><a href="#cookie&#x548C;session&#x7684;&#x7684;&#x533A;&#x522B;"><b>1.11. </b>Cookie&#x548C;Session&#x7684;&#x7684;&#x533A;&#x522B;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;&#xFF1A;"><b>1.12. </b>&#x603B;&#x7ED3;&#xFF1A;</a></li></ul></ul></div><a href="#&#x6DF1;&#x5165;&#x7406;&#x89E3;session&#x548C;cookie" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6DF1;&#x5165;&#x7406;&#x89E3;session&#x548C;cookie"><a name="&#x6DF1;&#x5165;&#x7406;&#x89E3;session&#x548C;cookie" class="anchor-navigation-ex-anchor" href="#&#x6DF1;&#x5165;&#x7406;&#x89E3;session&#x548C;cookie"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6DF1;&#x5165;&#x7406;&#x89E3;Session&#x548C;Cookie</h1>
+<p>&#x6700;&#x8FD1;&#x5728;&#x5199;Web&#x670D;&#x52A1;&#xFF0C;&#x987A;&#x4FBF;&#x68B3;&#x7406;&#x4E86;&#x4E00;&#x4E0B;Cookie&#x548C;Session&#x7684;&#x77E5;&#x8BC6;</p>
+<h2 id="cookie&#x7B80;&#x4ECB;"><a name="cookie&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#cookie&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Cookie&#x7B80;&#x4ECB;</h2>
+<p>&#x7531;&#x4E8E;HTTP&#x662F;&#x4E00;&#x79CD;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5355;&#x4ECE;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x4E0A;&#x65E0;&#x4ECE;&#x77E5;&#x9053;&#x5BA2;&#x6237;&#x8EAB;&#x4EFD;&#x3002; &#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x5C31;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4EEC;&#x9881;&#x53D1;&#x4E00;&#x4E2A;&#x901A;&#x884C;&#x8BC1;&#x5427;&#xFF0C;&#x6BCF;&#x4EBA;&#x4E00;&#x4E2A;&#xFF0C;&#x65E0;&#x8BBA;&#x8C01;&#x8BBF;&#x95EE;&#x90FD;&#x5FC5;&#x987B;&#x643A;&#x5E26;&#x81EA;&#x5DF1;&#x901A;&#x884C;&#x8BC1;&#x3002; &#x8FD9;&#x6837;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x80FD;&#x4ECE;&#x901A;&#x884C;&#x8BC1;&#x4E0A;&#x786E;&#x8BA4;&#x5BA2;&#x6237;&#x8EAB;&#x4EFD;&#x4E86;&#x3002;&#x8FD9;&#x5C31;&#x662F;Cookie&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x3002;</p>
+<p>Cookie&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x5C0F;&#x6BB5;&#x7684;&#x6587;&#x672C;&#x4FE1;&#x606F;&#x3002; &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x8BE5;&#x7528;&#x6237;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;response&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x9881;&#x53D1;&#x4E00;&#x4E2A;Cookie&#x3002; &#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x628A;Cookie&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#x3002; &#x5F53;&#x6D4F;&#x89C8;&#x5668;&#x518D;&#x8BF7;&#x6C42;&#x8BE5;&#x7F51;&#x7AD9;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x628A;&#x8BF7;&#x6C42;&#x7684;&#x7F51;&#x5740;&#x8FDE;&#x540C;&#x8BE5;Cookie&#x4E00;&#x540C;&#x63D0;&#x4EA4;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002; &#x670D;&#x52A1;&#x5668;&#x68C0;&#x67E5;&#x8BE5;Cookie&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x8FA8;&#x8BA4;&#x7528;&#x6237;&#x72B6;&#x6001;&#x3002; &#x670D;&#x52A1;&#x5668;&#x8FD8;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x4FEE;&#x6539;Cookie&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<h2 id="cookie&#x673A;&#x5236;"><a name="cookie&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#cookie&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Cookie&#x673A;&#x5236;</h2>
+<p>Cookie&#x6280;&#x672F;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;Cookie&#x5C31;&#x662F;&#x7531;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7279;&#x6B8A;&#x4FE1;&#x606F;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4EE5;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x653E;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C; &#x7136;&#x540E;&#x5BA2;&#x6237;&#x7AEF;&#x6BCF;&#x6B21;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x4F1A;&#x5E26;&#x4E0A;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x7528;&#x6237;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x652F;&#x6301;Cookie&#x7684;&#x7F51;&#x7AD9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7528;&#x6237;&#x4F1A;&#x63D0;&#x4F9B;&#x5305;&#x62EC;&#x7528;&#x6237;&#x540D;&#x5728;&#x5185;&#x7684;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#x5E76;&#x4E14;&#x63D0;&#x4EA4;&#x81F3;&#x670D;&#x52A1;&#x5668;&#xFF1B;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5728;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x56DE;&#x4F20;&#x76F8;&#x5E94;&#x7684;&#x8D85;&#x6587;&#x672C;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x4F1A;&#x53D1;&#x56DE;&#x8FD9;&#x4E9B;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5E76;&#x4E0D;&#x662F;&#x5B58;&#x653E;&#x5728;HTTP&#x54CD;&#x5E94;&#x4F53; &#xFF08;Response Body)&#x4E2D;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x5B58;&#x653E;&#x4E8E;HTTP&#x54CD;&#x5E94;&#x5934;(Response Header)</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;&#x6765;&#x81EA;&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x4E4B;&#x540E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5B58;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x4F4D;&#x7F6E;&#x3002; &#x5BF9;&#x4E8E;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4ECE;&#xFF1A; [&#x7CFB;&#x7EDF;&#x76D8;]:\Documents and Settings[&#x7528;&#x6237;&#x540D;]\Cookies&#x76EE;&#x5F55;&#x4E2D;&#x627E;&#x5230;&#x5B58;&#x50A8;&#x7684;Cookie&#xFF1B;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x6B21;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x628A;&#x76F8;&#x5E94;&#x7684;Cookie&#x518D;&#x6B21;&#x53D1;&#x56DE;&#x81F3;&#x670D;&#x52A1;&#x5668;&#x3002; &#x800C;&#x8FD9;&#x6B21;&#xFF0C;Cookie&#x4FE1;&#x606F;&#x5219;&#x5B58;&#x653E;&#x5728;HTTP&#x8BF7;&#x6C42;&#x5934;(equest Header)&#x4E86;&#x3002;</li>
+</ol>
+<h2 id="http&#x7684;cookie&#x673A;&#x5236;"><a name="http&#x7684;cookie&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#http&#x7684;cookie&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. HTTP&#x7684;Cookie&#x673A;&#x5236;</h2>
+<p>Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x4F7F;&#x7528;HTTP&#x534F;&#x8BAE;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x7684;&#x3002;HTTP&#x534F;&#x8BAE;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#x3002; &#x4E00;&#x65E6;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x5B8C;&#x6BD5;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;&#x8FDE;&#x63A5;&#x5C31;&#x4F1A;&#x5173;&#x95ED;&#xFF0C;&#x518D;&#x6B21;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x65B0;&#x7684;&#x8FDE;&#x63A5;&#x3002; &#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x670D;&#x52A1;&#x5668;&#x65E0;&#x6CD5;&#x4ECE;&#x8FDE;&#x63A5;&#x4E0A;&#x8DDF;&#x8E2A;&#x4F1A;&#x8BDD;&#x3002; &#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x7528;&#x6237;A&#x8D2D;&#x4E70;&#x4E86;&#x4E00;&#x4EF6;&#x5546;&#x54C1;&#x653E;&#x5165;&#x8D2D;&#x7269;&#x8F66;&#x5185;&#xFF0C; &#x5F53;&#x518D;&#x6B21;&#x8D2D;&#x4E70;&#x5546;&#x54C1;&#x65F6;&#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x8BE5;&#x8D2D;&#x4E70;&#x884C;&#x4E3A;&#x662F;&#x5C5E;&#x4E8E;&#x7528;&#x6237;A&#x7684;&#x4F1A;&#x8BDD;&#x8FD8;&#x662F;&#x7528;&#x6237;B&#x7684;&#x4F1A;&#x8BDD;&#x4E86;&#x3002; &#x8981;&#x8DDF;&#x8E2A;&#x8BE5;&#x4F1A;&#x8BDD;&#xFF0C;&#x5FC5;&#x987B;&#x5F15;&#x5165;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x3002;</p>
+<p>Cookie&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x5F25;&#x8865;HTTP&#x534F;&#x8BAE;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x4E0D;&#x8DB3;&#x3002; &#x5728;Session&#x51FA;&#x73B0;&#x4E4B;&#x524D;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x7F51;&#x7AD9;&#x90FD;&#x91C7;&#x7528;Cookie&#x6765;&#x8DDF;&#x8E2A;&#x4F1A;&#x8BDD;&#x3002;</p>
+<h2 id="set-cookie&#x548C;cookie"><a name="set-cookie&#x548C;cookie" class="anchor-navigation-ex-anchor" href="#set-cookie&#x548C;cookie"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Set-Cookie&#x548C;Cookie</h2>
+<p>&#x4E24;&#x4E2A;Http&#x5934;&#x90E8;&#x548C;Cookie&#x6709;&#x5173; : Set-Cookie&#x548C;Cookie</p>
+<p>&#x5F53;&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x4E00;&#x4E2A;Http&#x54CD;&#x5E94;&#x4FE1;&#x606F;&#x65F6;&#xFF0C;&#x5176;&#x4E2D;&#x5982;&#x679C;&#x5305;&#x542B;Set-Cookie&#x8FD9;&#x4E2A;&#x5934;&#x90E8;&#xFF0C;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ol>
+<li>&#x6307;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;cookie</li>
+<li>&#x5728;&#x540E;&#x7EED;&#x7684;Http&#x8BF7;&#x6C42;&#x4E2D;&#x81EA;&#x52A8;&#x53D1;&#x9001;&#x8FD9;&#x4E2A;cookie&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF0C;&#x76F4;&#x5230;&#x8FD9;&#x4E2A;cookie&#x8FC7;&#x671F;&#x3002;</li>
+<li>&#x5982;&#x679C;cookie&#x7684;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x662F;&#x6574;&#x4E2A;&#x4F1A;&#x8BDD;&#x671F;&#x95F4;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5C06; cookie &#x4FDD;&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C; &#x6D4F;&#x89C8;&#x5668;&#x5173;&#x95ED;&#x65F6;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6E05;&#x9664;&#x8FD9;&#x4E2A;cookie&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5C06; cookie &#x4FDD;&#x5B58;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x786C;&#x76D8;&#x4E2D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5173;&#x95ED;&#x7684;&#x8BDD;&#xFF0C;&#x8BE5; cookie &#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;&#x6E05;&#x9664;&#xFF0C; &#x4E0B;&#x6B21;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7F51;&#x7AD9;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;cookie&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x3002;</li>
+</ol>
+<p>&#x4E00;&#x4E2A;cookie&#x7684;&#x8BBE;&#x7F6E;&#x4EE5;&#x53CA;&#x53D1;&#x9001;&#x8FC7;&#x7A0B;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x56DB;&#x6B65;&#xFF1A;</p>
+<ul>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;</p>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x54CD;&#x5E94;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;Set-Cookie&#x5934;&#x90E8;</p>
+</li>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x8BF7;&#x6C42;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;Cookie&#x5934;&#x90E8;</p>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x9001;&#x4E00;&#x4E2A;http&#x54CD;&#x5E94;&#x5230;&#x5BA2;&#x6237;&#x7AEF;
+<img src="https://mmbiz.qpic.cn/mmbiz_jpg/Av1dvP97Xd0WWBhoQsXQYWDYul6p3ficxbIcXv8A6LwUcVrHhDiayhB4I51GnCeicnIgXibsEL87NbS68UKojMGd4w/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt=""></p>
+</li>
+</ul>
+<p>&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7B2C;&#x4E8C;&#x6B21;&#x8BF7;&#x6C42;&#x4E2D;&#x5305;&#x542B;Cookie&#x5934;&#x90E8;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;&#x4E86;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x7684;&#x4FE1;&#x606F;&#x3002; &#x8FD9;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E5F;&#x5C31;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x5BA2;&#x6237;&#x7AEF;&#x662F;&#x5426;&#x542F;&#x7528;&#x4E86;cookie&#x3002; &#x5C3D;&#x7BA1;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x5728;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4EA4;&#x4E92;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x7A81;&#x7136;&#x7981;&#x7528;cookie&#x7684;&#x4F7F;&#x7528;&#xFF0C; &#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;&#x60C5;&#x51B5;&#x57FA;&#x672C;&#x662F;&#x4E0D;&#x592A;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4E0D;&#x52A0;&#x4EE5;&#x8003;&#x8651;&#xFF0C;&#x8FD9;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x4E5F;&#x88AB;&#x8BC1;&#x660E;&#x662F;&#x5BF9;&#x7684;&#x3002;</p>
+<h2 id="cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;"><a name="cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;" class="anchor-navigation-ex-anchor" href="#cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. Cookie&#x7684;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x884C;</h2>
+<p>&#x5F88;&#x591A;&#x7F51;&#x7AD9;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;Cookie&#x3002;&#x4F8B;&#x5982;&#xFF0C;Google&#x4F1A;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x9881;&#x53D1;Cookie&#xFF0C;Baidu&#x4E5F;&#x4F1A;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x9881;&#x53D1;Cookie&#x3002; &#x90A3;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;Google&#x4F1A;&#x4E0D;&#x4F1A;&#x4E5F;&#x643A;&#x5E26;&#x4E0A;Baidu&#x9881;&#x53D1;&#x7684;Cookie&#x5462;&#xFF1F;&#x6216;&#x8005;Google&#x80FD;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;Baidu&#x9881;&#x53D1;&#x7684;Cookie&#x5462;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;&#x662F;&#x5426;&#x5B9A;&#x7684;&#x3002;Cookie&#x5177;&#x6709;&#x4E0D;&#x53EF;&#x8DE8;&#x57DF;&#x540D;&#x6027;&#x3002; &#x6839;&#x636E;Cookie&#x89C4;&#x8303;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;Google&#x53EA;&#x4F1A;&#x643A;&#x5E26;Google&#x7684;Cookie&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x643A;&#x5E26;Baidu&#x7684;Cookie&#x3002; Google&#x4E5F;&#x53EA;&#x80FD;&#x64CD;&#x4F5C;Google&#x7684;Cookie&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x64CD;&#x4F5C;Baidu&#x7684;Cookie&#x3002;</p>
+<p>Cookie&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x662F;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x7BA1;&#x7406;&#x7684;&#x3002; &#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;Google&#x53EA;&#x4F1A;&#x64CD;&#x4F5C;Google&#x7684;Cookie&#x800C;&#x4E0D;&#x4F1A;&#x64CD;&#x4F5C;Baidu&#x7684;Cookie&#xFF0C;&#x4ECE;&#x800C;&#x4FDD;&#x8BC1;&#x7528;&#x6237;&#x7684;&#x9690;&#x79C1;&#x5B89;&#x5168;&#x3002; &#x6D4F;&#x89C8;&#x5668;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#x662F;&#x5426;&#x80FD;&#x64CD;&#x4F5C;&#x53E6;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;Cookie&#x7684;&#x4F9D;&#x636E;&#x662F;&#x57DF;&#x540D;&#x3002; Google&#x4E0E;Baidu&#x7684;&#x57DF;&#x540D;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x56E0;&#x6B64;Google&#x4E0D;&#x80FD;&#x64CD;&#x4F5C;Baidu&#x7684;Cookie&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;
+&#x867D;&#x7136;&#x7F51;&#x7AD9;images.google.com&#x4E0E;&#x7F51;&#x7AD9;google.com&#x540C;&#x5C5E;&#x4E8E;Google&#xFF0C; &#x4F46;&#x662F;&#x57DF;&#x540D;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x4E8C;&#x8005;&#x540C;&#x6837;&#x4E0D;&#x80FD;&#x4E92;&#x76F8;&#x64CD;&#x4F5C;&#x5F7C;&#x6B64;&#x7684;Cookie&#x3002;</p>
+<p>&#x7528;&#x6237;&#x767B;&#x5F55;&#x7F51;&#x7AD9;google.com&#x4E4B;&#x540E;&#x4F1A;&#x53D1;&#x73B0;&#x8BBF;&#x95EE;images.google.com&#x65F6;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x4ECD;&#x7136;&#x6709;&#x6548;&#xFF0C;&#x800C;&#x666E;&#x901A;&#x7684;Cookie&#x662F;&#x505A;&#x4E0D;&#x5230;&#x7684;&#x3002; &#x8FD9;&#x662F;&#x56E0;&#x4E3A;Google&#x505A;&#x4E86;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="session&#x7B80;&#x4ECB;"><a name="session&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#session&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. Session&#x7B80;&#x4ECB;</h2>
+<p>Session&#x662F;&#x4E00;&#x79CD;&#x8BB0;&#x5F55;&#x5BA2;&#x6237;&#x72B6;&#x6001;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x4E0D;&#x540C;&#x4E8E;Cookie&#x7684;&#x662F;Cookie&#x4FDD;&#x5B58;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x800C;Session&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002; &#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x4FE1;&#x606F;&#x4EE5;&#x67D0;&#x79CD;&#x5F62;&#x5F0F;&#x8BB0;&#x5F55;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x3002;&#x8FD9;&#x5C31;&#x662F;Session&#x3002; &#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x518D;&#x6B21;&#x8BBF;&#x95EE;&#x65F6;&#x53EA;&#x9700;&#x8981;&#x4ECE;&#x8BE5;Session&#x4E2D;&#x67E5;&#x627E;&#x8BE5;&#x5BA2;&#x6237;&#x7684;&#x72B6;&#x6001;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8BF4;Cookie&#x673A;&#x5236;&#x662F;&#x901A;&#x8FC7;&#x68C0;&#x67E5;&#x5BA2;&#x6237;&#x8EAB;&#x4E0A;&#x7684;&quot;&#x901A;&#x884C;&#x8BC1;&quot;&#x6765;&#x786E;&#x5B9A;&#x5BA2;&#x6237;&#x8EAB;&#x4EFD;&#x7684;&#x8BDD;&#xFF0C; &#x90A3;&#x4E48;Session&#x673A;&#x5236;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x68C0;&#x67E5;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&quot;&#x5BA2;&#x6237;&#x660E;&#x7EC6;&#x8868;&quot;&#x6765;&#x786E;&#x8BA4;&#x5BA2;&#x6237;&#x8EAB;&#x4EFD;&#x3002; Session&#x76F8;&#x5F53;&#x4E8E;&#x7A0B;&#x5E8F;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5EFA;&#x7ACB;&#x7684;&#x4E00;&#x4EFD;&#x5BA2;&#x6237;&#x6863;&#x6848;&#xFF0C; &#x5BA2;&#x6237;&#x6765;&#x8BBF;&#x7684;&#x65F6;&#x5019;&#x53EA;&#x9700;&#x8981;&#x67E5;&#x8BE2;&#x5BA2;&#x6237;&#x6863;&#x6848;&#x8868;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h2 id="session&#x673A;&#x5236;"><a name="session&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#session&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. Session&#x673A;&#x5236;</h2>
+<p>&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x4E00;&#x7CFB;&#x5217;&#x4EA4;&#x4E92;&#x7684;&#x52A8;&#x4F5C;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A; Session&#x3002; &#x4ECE;&#x8FD9;&#x4E2A;&#x8BED;&#x4E49;&#x51FA;&#x53D1;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x63D0;&#x5230;Session&#x6301;&#x7EED;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x63D0;&#x5230;&#x5728;Session&#x8FC7;&#x7A0B;&#x4E2D;&#x8FDB;&#x884C;&#x4E86;&#x4EC0;&#x4E48;&#x64CD;&#x4F5C;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;Session&#x6307;&#x7684;&#x662F;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x6240;&#x5F00;&#x8F9F;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x8BE5;&#x7A7A;&#x95F4;&#x4FDD;&#x5B58;&#x7684;&#x4FE1;&#x606F;&#x5C31;&#x662F;&#x7528;&#x4E8E;&#x4FDD;&#x6301;&#x72B6;&#x6001;&#x3002; &#x4ECE;&#x8FD9;&#x4E2A;&#x8BED;&#x4E49;&#x51FA;&#x53D1;&#xFF0C;&#x6211;&#x4EEC;&#x5219;&#x4F1A;&#x63D0;&#x5230;&#x5F80;Session&#x4E2D;&#x5B58;&#x653E;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x4F55;&#x6839;&#x636E;&#x952E;&#x503C;&#x4ECE;Session&#x4E2D;&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#x7B49;&#x3002;</p>
+<p>&#x8981;&#x4F7F;&#x7528;Session&#xFF0C;&#x5F53;&#x7136;&#x662F;&#x5148;&#x8981;&#x521B;&#x5EFA;Session&#x3002;&#x90A3;&#x4E48;Session&#x5728;&#x4F55;&#x65F6;&#x521B;&#x5EFA;&#x5462;&#xFF1F;
+Session&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x7684;&#xFF0C;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x4E0D;&#x540C;&#x521B;&#x5EFA;Session&#x7684;&#x65B9;&#x6CD5;&#xFF0C; &#x5728;Java&#x4E2D;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528;HttpServletRequest&#x7684;getSession&#x65B9;&#x6CD5;(&#x4F7F;&#x7528;true&#x4F5C;&#x4E3A;&#x53C2;&#x6570;)&#x521B;&#x5EFA;&#x7684;&#x3002; &#x521B;&#x5EFA;Session&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x4E3A;&#x8BE5;Session&#x751F;&#x6210;&#x552F;&#x4E00;&#x7684;session id&#xFF0C; &#x8FD9;&#x4E2A;session id&#x5728;&#x968F;&#x540E;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x4F1A;&#x88AB;&#x7528;&#x6765;&#x91CD;&#x65B0;&#x83B7;&#x5F97;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x7684;Session
+Session&#x88AB;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;Session&#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#x5F80;Session&#x4E2D;&#x589E;&#x52A0;&#x5185;&#x5BB9;&#x4E86;&#xFF0C; &#x800C;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x53EA;&#x4F1A;&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x53D1;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x53EA;&#x6709;session id
+&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x5C06;&#x8FD9;&#x4E2A;session id&#x5E26;&#x4E0A;&#xFF0C; &#x670D;&#x52A1;&#x5668;&#x63A5;&#x53D7;&#x5230;&#x8BF7;&#x6C42;&#x4E4B;&#x540E;&#x5C31;&#x4F1A;&#x4F9D;&#x636E;session id&#x627E;&#x5230;&#x76F8;&#x5E94;&#x7684;Session&#xFF0C;&#x4ECE;&#x800C;&#x518D;&#x6B21;&#x4F7F;&#x7528;Session&#x3002;</p>
+<h2 id="session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;"><a name="session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;" class="anchor-navigation-ex-anchor" href="#session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. Session&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</h2>
+<p>Session&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x3002;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x66F4;&#x9AD8;&#x7684;&#x5B58;&#x53D6;&#x901F;&#x5EA6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4E00;&#x822C;&#x628A;Session&#x653E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x3002; &#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;Session&#x3002; &#x5982;&#x679C;Session&#x5185;&#x5BB9;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#xFF0C;&#x5F53;&#x5927;&#x91CF;&#x5BA2;&#x6237;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#x3002; &#x56E0;&#x6B64;&#xFF0C;Session&#x91CC;&#x7684;&#x4FE1;&#x606F;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x7CBE;&#x7B80;&#x3002;</p>
+<p>Session&#x5728;&#x7528;&#x6237;&#x7B2C;&#x4E00;&#x6B21;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x3002; &#x9700;&#x8981;&#x6CE8;&#x610F;&#x53EA;&#x6709;&#x8BBF;&#x95EE;JSP&#x3001;Servlet&#x7B49;&#x7A0B;&#x5E8F;&#x65F6;&#x624D;&#x4F1A;&#x521B;&#x5EFA;Session&#xFF0C; &#x53EA;&#x8BBF;&#x95EE;HTML&#x3001;IMAGE&#x7B49;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5E76;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA;Session&#x3002; &#x5982;&#x679C;&#x5C1A;&#x672A;&#x751F;&#x6210;Session&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;request.getSession(true)&#x5F3A;&#x5236;&#x751F;&#x6210;Session&#x3002;</p>
+<p>Session&#x751F;&#x6210;&#x540E;&#xFF0C;&#x53EA;&#x8981;&#x7528;&#x6237;&#x7EE7;&#x7EED;&#x8BBF;&#x95EE;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x66F4;&#x65B0;Session&#x7684;&#x6700;&#x540E;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x7EF4;&#x62A4;&#x8BE5;Session&#x3002; &#x7528;&#x6237;&#x6BCF;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#x4E00;&#x6B21;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x8BFB;&#x5199;Session&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x8BA4;&#x4E3A;&#x8BE5;&#x7528;&#x6237;&#x7684;Session&quot;&#x6D3B;&#x8DC3;(active)&quot;&#x4E86;&#x4E00;&#x6B21;&#x3002;</p>
+<h2 id="session&#x7684;&#x6709;&#x6548;&#x671F;"><a name="session&#x7684;&#x6709;&#x6548;&#x671F;" class="anchor-navigation-ex-anchor" href="#session&#x7684;&#x6709;&#x6548;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Session&#x7684;&#x6709;&#x6548;&#x671F;</h2>
+<p>&#x7531;&#x4E8E;&#x4F1A;&#x6709;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x56E0;&#x6B64;Session&#x4E5F;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x3002; &#x4E3A;&#x9632;&#x6B62;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x628A;&#x957F;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x6D3B;&#x8DC3;&#x7684;Session&#x4ECE;&#x5185;&#x5B58;&#x5220;&#x9664;&#x3002; &#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5C31;&#x662F;Session&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x4E86;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x6CA1;&#x8BBF;&#x95EE;&#x8FC7;&#x670D;&#x52A1;&#x5668;&#xFF0C;Session&#x5C31;&#x81EA;&#x52A8;&#x5931;&#x6548;&#x4E86;&#x3002;</p>
+<p>Session&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x4E3A;maxInactiveInterval&#x5C5E;&#x6027;&#xFF0C; &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9;&#x5E94;&#x7684;getMaxInactiveInterval()&#x83B7;&#x53D6;&#xFF0C;&#x901A;&#x8FC7;setMaxInactiveInterval(longinterval)&#x4FEE;&#x6539;&#x3002;</p>
+<p>Session&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;web.xml&#x4E2D;&#x4FEE;&#x6539;&#x3002; &#x53E6;&#x5916;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;Session&#x7684;invalidate()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F7F;Session&#x5931;&#x6548;&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;"><a name="&#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x5B9E;&#x73B0;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#x7684;&#x6280;&#x672F;</h2>
+<h3 id="1-cookie"><a name="1-cookie" class="anchor-navigation-ex-anchor" href="#1-cookie"><i class="fa fa-link" aria-hidden="true"></i></a>1.10.1. 1. Cookie</h3>
+<p>&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;Cookie</p>
+<pre><code>Cookie c =new Cookie(&quot;name&quot;,&quot;value&quot;); //&#x521B;&#x5EFA;Cookie
+c.setMaxAge(60*60*24); //&#x8BBE;&#x7F6E;&#x6700;&#x5927;&#x65F6;&#x6548;&#xFF0C;&#x6B64;&#x5904;&#x8BBE;&#x7F6E;&#x7684;&#x6700;&#x5927;&#x65F6;&#x6548;&#x4E3A;&#x4E00;&#x5929;
+response.addCookie(c); //&#x628A;Cookie&#x653E;&#x5165;&#x5230;HTTP&#x54CD;&#x5E94;&#x4E2D;
+</code></pre><p>&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x8BFB;&#x53D6;Cookie&#xFF1A;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A; &#x6570;&#x636E;&#x53EF;&#x4EE5;&#x6301;&#x4E45;&#x4FDD;&#x5B58;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#xFF0C;&#x7B80;&#x5355;&#xFF0C;&#x57FA;&#x4E8E;&#x6587;&#x672C;&#x7684;key-value
+&#x7F3A;&#x70B9;&#xFF1A;&#x5927;&#x5C0F;&#x53D7;&#x5230;&#x9650;&#x5236;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8B66;&#x7528;Cookie&#x529F;&#x80FD;&#xFF0C;&#x7531;&#x4E8E;&#x4FDD;&#x5B58;&#x5728;&#x672C;&#x5730;&#xFF0C;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5B89;&#x5168;&#x98CE;&#x9669;&#x3002;</p>
+<h3 id="2-url&#x91CD;&#x5199;"><a name="2-url&#x91CD;&#x5199;" class="anchor-navigation-ex-anchor" href="#2-url&#x91CD;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10.2. 2. URL&#x91CD;&#x5199;</h3>
+<p>&#x5728;URL&#x4E2D;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#x7684;&#x4FE1;&#x606F;&#x4F5C;&#x4E3A;&#x8BF7;&#x6C42;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x552F;&#x4E00;&#x7684;&#x4F1A;&#x8BDD;ID&#x6DFB;&#x52A0;&#x5230;URL&#x7ED3;&#x5C3E;&#x4E00;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x4F1A;&#x8BDD;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;&#x5728;Cookie&#x88AB;&#x7981;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+&#x7F3A;&#x70B9;&#xFF1A;&#x5FC5;&#x987B;&#x5BF9;&#x7F51;&#x7AD9;&#x7684;URL&#x8FDB;&#x884C;&#x7F16;&#x7801;&#xFF0C;&#x6240;&#x6709;&#x9875;&#x9762;&#x5FC5;&#x987B;&#x52A8;&#x6001;&#x751F;&#x6210;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x9884;&#x5148;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#x7684;URL&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x3002;</p>
+<h3 id="3-&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;"><a name="3-&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;" class="anchor-navigation-ex-anchor" href="#3-&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10.3. 3. &#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x57DF;</h3>
+<pre><code>&lt;input type=&quot;hidden&quot; name =&quot;session&quot; value=&quot;...&quot;/&gt;
+</code></pre><p>&#x4F18;&#x70B9;&#xFF1A;Cookie&#x88AB;&#x7981;&#x6B62;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+&#x7F3A;&#x70B9;&#xFF1A;&#x6240;&#x6709;&#x9875;&#x9762;&#x5FC5;&#x987B;&#x662F;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;</p>
+<h3 id="4-session"><a name="4-session" class="anchor-navigation-ex-anchor" href="#4-session"><i class="fa fa-link" aria-hidden="true"></i></a>1.10.4. 4. Session</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7B2C;&#x4E00;&#x6B21;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x7F51;&#x7AD9;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;HttpSession&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5B83;&#x81EA;&#x5DF1;&#x7684;HttpSession&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;HttpServletRequest&#x5BF9;&#x8C61;&#x7684;getSession&#x65B9;&#x6CD5;&#x83B7;&#x5F97;HttpSession&#x3002;&#x901A;&#x8FC7;HttpSession&#x7684;setAttribute&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x503C;&#x653E;&#x5728;HttpSession&#x4E2D;&#xFF0C; &#x901A;&#x8FC7;&#x8C03;&#x7528; HttpSession&#x5BF9;&#x8C61;&#x7684;getAttribute&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x4F20;&#x5165;&#x5C5E;&#x6027;&#x540D;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4FDD;&#x5B58;&#x5728;HttpSession&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x4E0E;&#x4E0A;&#x9762;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;HttpSession&#x653E;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#x4E0D;&#x8981;&#x5C06;&#x8FC7;&#x5927;&#x7684;&#x5BF9;&#x8C61;&#x653E;&#x5728;&#x91CC;&#x9762;&#x3002; &#x5373;&#x4F7F;&#x76EE;&#x524D;&#x7684;Servlet&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x5728;&#x5185;&#x5B58;&#x5C06;&#x6EE1;&#x65F6;&#x5C06; HttpSession &#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x79FB;&#x5230;&#x5176;&#x4ED6;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x52BF;&#x5FC5;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x3002; &#x6DFB;&#x52A0;&#x5230; HttpSession &#x4E2D;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;Java&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6700;&#x597D;&#x5B9E;&#x73B0;&#x4E86; Serializable&#x63A5;&#x53E3;&#xFF0C; &#x8FD9;&#x6837;Servlet&#x5BB9;&#x5668;&#x5728;&#x5FC5;&#x8981;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5E8F;&#x5217;&#x5316;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x5728;&#x5E8F;&#x5217;&#x5316;&#x65F6;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x3002;</p>
+<h2 id="cookie&#x548C;session&#x7684;&#x7684;&#x533A;&#x522B;"><a name="cookie&#x548C;session&#x7684;&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#cookie&#x548C;session&#x7684;&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. Cookie&#x548C;Session&#x7684;&#x7684;&#x533A;&#x522B;</h2>
+<ol>
+<li>HTTP&#x534F;&#x8BAE;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x7528;&#x67D0;&#x79CD;&#x673A;&#x5236;&#x6765;&#x8BC6;&#x522B;&#x5177;&#x4F53;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x4E2A;&#x673A;&#x5236;&#x5C31;&#x662F;Session&#x3002; Session&#x5178;&#x578B;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x5C31;&#x662F;&#x8D2D;&#x7269;&#x8F66;&#xFF0C;&#x5F53;&#x70B9;&#x51FB;&#x4E0B;&#x5355;&#x6309;&#x94AE;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;HTTP&#x534F;&#x8BAE;&#x65E0;&#x72B6;&#x6001;&#xFF0C;&#x6240;&#x4EE5;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x662F;&#x54EA;&#x4E2A;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x7684;&#xFF0C; &#x6240;&#x4EE5;&#x670D;&#x52A1;&#x7AEF;&#x8981;&#x4E3A;&#x7279;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x521B;&#x5EFA;&#x4E86;&#x7279;&#x5B9A;&#x7684;Session&#xFF0C;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#xFF0C;&#x5E76;&#x4E14;&#x8DDF;&#x8E2A;&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x77E5;&#x9053;&#x8D2D;&#x7269;&#x8F66;&#x91CC;&#x9762;&#x7684;&#x5546;&#x54C1;&#x60C5;&#x51B5;&#x3002; &#x8FD9;&#x4E2A;Session&#x662F;&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x3002;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x4FDD;&#x5B58;Session&#x7684;&#x65B9;&#x6CD5;&#x5F88;&#x591A;&#xFF0C;&#x5185;&#x5B58;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x6587;&#x4EF6;&#x90FD;&#x6709;&#x3002; &#x96C6;&#x7FA4;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x8981;&#x8003;&#x8651;Session&#x7684;&#x8F6C;&#x79FB;&#xFF0C;&#x5728;&#x5927;&#x578B;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x6709;&#x4E13;&#x95E8;&#x7684;Session&#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#xFF0C; &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019; Session &#x4FE1;&#x606F;&#x90FD;&#x662F;&#x653E;&#x5728;&#x5185;&#x5B58;&#x7684;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;&#x4E00;&#x4E9B;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x6BD4;&#x5982;Memcached&#x4E4B;&#x7C7B;&#x7684;&#x6765;&#x653E; Session&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x4F7F;&#x7528;Cookie&#x6765;&#x8BC6;&#x522B;&#x7279;&#x5B9A;&#x7684;&#x5BA2;&#x6237;&#x3002;&#x6BCF;&#x6B21;HTTP&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x4F1A;&#x53D1;&#x9001;&#x76F8;&#x5E94;&#x7684;Cookie&#x4FE1;&#x606F;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x3002; &#x5B9E;&#x9645;&#x4E0A;&#x5927;&#x591A;&#x6570;&#x7684;&#x5E94;&#x7528;&#x90FD;&#x662F;&#x7528; Cookie &#x6765;&#x5B9E;&#x73B0;Session&#x8DDF;&#x8E2A;&#x7684;&#xFF0C; &#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;Session&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;&#x5728;HTTP&#x534F;&#x8BAE;&#x4E2D;&#x544A;&#x8BC9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x9700;&#x8981;&#x5728; Cookie &#x91CC;&#x9762;&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;session id&#xFF0C; &#x4EE5;&#x540E;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x628A;&#x8FD9;&#x4E2A; session id&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7684;Seesion&#x4E86;&#x3002; &#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x7981;&#x7528;&#x4E86; Cookie &#x600E;&#x4E48;&#x529E;&#xFF1F; &#x4E00;&#x822C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x79CD;&#x53EB;&#x505A;URL&#x91CD;&#x5199;&#x7684;&#x6280;&#x672F;&#x6765;&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x8DDF;&#x8E2A;&#xFF0C; &#x5373;&#x6BCF;&#x6B21;HTTP&#x4EA4;&#x4E92;&#xFF0C;URL&#x540E;&#x9762;&#x90FD;&#x4F1A;&#x88AB;&#x9644;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x8BF8;&#x5982; sid=xxxxx &#x8FD9;&#x6837;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x636E;&#x6B64;&#x6765;&#x8BC6;&#x522B;&#x7528;&#x6237;&#x3002;</li>
+<li>Cookie&#x5176;&#x5B9E;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x4E00;&#x4E9B;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x7684;&#x573A;&#x666F;&#x4E0B;&#xFF0C; &#x8BBE;&#x60F3;&#x4F60;&#x67D0;&#x6B21;&#x767B;&#x9646;&#x8FC7;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#xFF0C;&#x4E0B;&#x6B21;&#x767B;&#x5F55;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x60F3;&#x518D;&#x6B21;&#x8F93;&#x5165;&#x8D26;&#x53F7;&#x4E86;&#xFF0C;&#x600E;&#x4E48;&#x529E;&#xFF1F; &#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5199;&#x5230;Cookie&#x91CC;&#x9762;&#xFF0C;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x7F51;&#x7AD9;&#x9875;&#x9762;&#x7684;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x81EA;&#x52A8;&#x5E2E;&#x4F60;&#x628A;&#x7528;&#x6237;&#x540D;&#x7ED9;&#x586B;&#x4E86;&#xFF0C; &#x80FD;&#x591F;&#x65B9;&#x4FBF;&#x4E00;&#x4E0B;&#x7528;&#x6237;&#x3002;&#x8FD9;&#x4E5F;&#x662F;Cookie&#x540D;&#x79F0;&#x7684;&#x7531;&#x6765;&#xFF0C;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x4E00;&#x70B9;&#x751C;&#x5934;&#x3002;</li>
+</ol>
+<h2 id="&#x603B;&#x7ED3;&#xFF1A;"><a name="&#x603B;&#x7ED3;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. &#x603B;&#x7ED3;&#xFF1A;</h2>
+<ul>
+<li>Session&#x662F;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x4FDD;&#x5B58;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x7528;&#x6765;&#x8DDF;&#x8E2A;&#x7528;&#x6237;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4FDD;&#x5B58;&#x5728;&#x96C6;&#x7FA4;&#x3001;&#x6570;&#x636E;&#x5E93;&#x3001;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</li>
+<li>Cookie&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x662F;&#x5B9E;&#x73B0;Session&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/coco723" target="_blank">guoyanhong</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-05-06 16:26:56 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="URL的最大长度是多少？.html" class="navigation navigation-prev " aria-label="Previous page: URL的最大长度是多少？">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="HTTP切面流程.html" class="navigation navigation-next " aria-label="Next page: HTTP切面流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"深入理解Session和Cookie","level":"1.5.8","depth":2,"next":{"title":"HTTP切面流程","level":"1.5.9","depth":2,"path":"Browser/HTTP切面流程.md","ref":"Browser/HTTP切面流程.md","articles":[]},"previous":{"title":"URL的最大长度是多少？","level":"1.5.7","depth":2,"path":"Browser/URL的最大长度是多少？.md","ref":"Browser/URL的最大长度是多少？.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","-lunr","-search","search-pro","donate","splitter","disqus","baidu-tongji-with-multiple-channel","katex-ng","advanced-emoji","livereload"],"ignores":["_book","node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"coco723"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/coco723/blog/tree/master"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"page-footer-ex":{"copyright":"By [guoyanhong](https://github.com/coco723)，使用[知识共享署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","alipayText":"支付宝捐赠","button":"Donate","title":"","wechat":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"katex-ng":{},"github-buttons":{"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"guoyanhong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"郭雁宏的博客","links":{"sidebar":{"Home":"https://coco723.github.io"}},"gitbook":"*"},"file":{"path":"Browser/深入理解Session和Cookie.md","mtime":"2021-05-06T08:26:56.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-06T08:41:35.730Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
