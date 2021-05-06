@@ -1,12 +1,15 @@
 language: node_js   #运行环境为nodejs
 node_js:            #设置版本号
   - "10"
+
 branches:
   only:
     - master
+
 cache:
   directories:
   - node_modules # 依赖缓存的目录
+  
 before_install:
   - export TZ='Asia/Shanghai'  # 设置时区
 
