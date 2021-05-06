@@ -126,7 +126,6 @@
   * [Linux上部署Node服务-外网无法访问](Linux/Linux上部署Node服务-外网无法访问.md)
   * [服务器中启动服务的时候的IP选择](Linux/服务器中启动服务的时候的IP选择.md)
   * [怎样修改CentOS 7 SSH端口](Linux/怎样修改CentOS7SSH端口.md)
-  * [shell入门](Shell/shell入门.md)
 * [设计模式](Design/README.md)
   * [javaScript设计模式笔记一](Design/javaScript设计模式笔记一.md)
   * [javaScript设计模式笔记二](Design/javaScript设计模式笔记二.md)
