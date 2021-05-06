@@ -30,24 +30,14 @@ script:                              #script阶段 运行脚本
   - gitbook build                    #gitbook编译，生成静态网站站点_book
   
  
-# after_script:                        #script阶段之后执行
-#   - cd _book                         #进入_book目录
-#   - git init                         
-#   - git remote add origin https://${REF}    #设置要托管到的仓库名
-#   - git add .                               #添加_book目录下的所有文件
-#   - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages" 
-#   - git branch -M master
-#   - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages  #强制推送到gh-pages分支
-
-  deploy:
-    provider: pages
-    skip-cleanup: true
-    github-token: $TOKEN # github 上的token环境变量
-    local-dir: ./_book/ ## 根据情况自定义到静态文件输出目录
-    target-branch: gh-pages
-    verbose: true
-    on:
-      branch: master
+after_script:                        #script阶段之后执行
+  - cd _book                         #进入_book目录
+  - git init                         
+  - git remote add origin https://${REF}    #设置要托管到的仓库名
+  - git add .                               #添加_book目录下的所有文件
+  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages" 
+  - git branch -M master
+  - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages  #强制推送到gh-pages分支
  
 env:
   global:
