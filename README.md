@@ -1,6 +1,6 @@
 # 目录
 
-* [笔记总结](README.md)
+* [目录](./README.md)
 * [工具](Tools/README.md)
   * [Gitbook 安装及使用](Tools/GitBook.md)
   * [Markdown中使用HTML标签](Tools/Markdown中使用HTML标签.md)

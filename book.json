@@ -1,9 +1,9 @@
 {
+  "root": "./",
   "title": "郭雁宏的博客",
-  "links": {
-    "sidebar": {
-      "Home": "https://coco723.github.io"
-    }
+  "language": "zh-hans",
+  "structure": {
+    "readme": "README.md"
   },
   "author": "guoyanhong",
   "plugins": [

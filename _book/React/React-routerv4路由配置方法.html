@@ -1,0 +1,2603 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>React-routerv4 路由配置方法 · 郭雁宏的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="guoyanhong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-ng/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="服务端渲染SSR.html" />
+    
+    
+    <link rel="prev" href="React生命周期.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/GitBook.html">
+            
+                <a href="../Tools/GitBook.html">
+            
+                    
+                    Gitbook 安装及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tools/Markdown中使用HTML标签.html">
+            
+                <a href="../Tools/Markdown中使用HTML标签.html">
+            
+                    
+                    Markdown中使用HTML标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Tools/Mac下chrome快捷键.html">
+            
+                <a href="../Tools/Mac下chrome快捷键.html">
+            
+                    
+                    Mac下chrome快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Tools/Mac安装mongodb.html">
+            
+                <a href="../Tools/Mac安装mongodb.html">
+            
+                    
+                    Mac安装mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Tools/mac上redis环境搭建.html">
+            
+                <a href="../Tools/mac上redis环境搭建.html">
+            
+                    
+                    mac上redis环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Tools/Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                <a href="../Tools/Docker与Kubernetes在Mac本地环境搭建与应用部署.html">
+            
+                    
+                    Docker与Kubernetes在Mac本地环境搭建与应用部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Tools/Docker使用.html">
+            
+                <a href="../Tools/Docker使用.html">
+            
+                    
+                    Docker使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Tools/centos7下yum安装和配置Nginx.html">
+            
+                <a href="../Tools/centos7下yum安装和配置Nginx.html">
+            
+                    
+                    centos7下yum安装和配置Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Tools/使用kubectl连接远程k8s集群.html">
+            
+                <a href="../Tools/使用kubectl连接远程k8s集群.html">
+            
+                    
+                    使用kubectl连接远程k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Tools/MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                <a href="../Tools/MacOS上安装DockerDesktop和Kubernetes.html">
+            
+                    
+                    MacOS上安装DockerDesktop和Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Tools/alinode.html">
+            
+                <a href="../Tools/alinode.html">
+            
+                    
+                    alinode使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Tools/iPic-Markdown图床、文件上传工具.html">
+            
+                <a href="../Tools/iPic-Markdown图床、文件上传工具.html">
+            
+                    
+                    iPic-Markdown图床、文件上传工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Tools/图片搬家神奇：iPicMover.html">
+            
+                <a href="../Tools/图片搬家神奇：iPicMover.html">
+            
+                    
+                    图片搬家神奇：iPic Mover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../Tools/ffmpeg音视频处理.html">
+            
+                <a href="../Tools/ffmpeg音视频处理.html">
+            
+                    
+                    ffmpeg音视频处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../Tools/ffmpeg音视频处理需求升级版.html">
+            
+                <a href="../Tools/ffmpeg音视频处理需求升级版.html">
+            
+                    
+                    ffmpeg音视频处理需求升级版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../Tools/七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                <a href="../Tools/七牛云存储中没有外链域名，无法下载的问题.html">
+            
+                    
+                    七牛云存储中没有外链域名，无法下载的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../Tools/基于WebAssembly的H265播放.html">
+            
+                <a href="../Tools/基于WebAssembly的H265播放.html">
+            
+                    
+                    基于WebAssembly的H265播放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../Tools/ffprobe与ffplay与ffmpeg常用的命令.md">
+            
+                <span>
+            
+                    
+                    ffprobe与ffplay与ffmpeg常用的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../Tools/使用TravisCI构建Gitbook.html">
+            
+                <a href="../Tools/使用TravisCI构建Gitbook.html">
+            
+                    
+                    使用TravisCI构建Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../Tools/持续集成和travisCI.html">
+            
+                <a href="../Tools/持续集成和travisCI.html">
+            
+                    
+                    持续集成和travisCI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../Tools/Nginx基础.html">
+            
+                <a href="../Tools/Nginx基础.html">
+            
+                    
+                    Nginx基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../Tools/Mac下安装nginx.html">
+            
+                <a href="../Tools/Mac下安装nginx.html">
+            
+                    
+                    Mac下安装nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../Tools/Mac上安装Elasticsearch，基本操作.html">
+            
+                <a href="../Tools/Mac上安装Elasticsearch，基本操作.html">
+            
+                    
+                    Mac上安装Elasticsearch，基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../Tools/学习笔记一.html">
+            
+                <a href="../Tools/学习笔记一.html">
+            
+                    
+                    学习笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="summery.html">
+            
+                <a href="summery.html">
+            
+                    
+                    React 总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="React高级开发.html">
+            
+                <a href="React高级开发.html">
+            
+                    
+                    React 高级开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="umi-request返回拦截处理.html">
+            
+                <a href="umi-request返回拦截处理.html">
+            
+                    
+                    umi-request 返回拦截处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="在隔离中开发组件.html">
+            
+                <a href="在隔离中开发组件.html">
+            
+                    
+                    在隔离中开发组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="React滚动加载实现.html">
+            
+                <a href="React滚动加载实现.html">
+            
+                    
+                    React 滚动加载实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                <a href="基于ReactCSSTransitionGroup实现react-router过渡动画.html">
+            
+                    
+                    基于ReactCSSTransitionGroup 实现 react-router 过渡动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="文本转换为markdown实现.html">
+            
+                <a href="文本转换为markdown实现.html">
+            
+                    
+                    文本转换为 markdown 实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="react项目中import文件路径优化.html">
+            
+                <a href="react项目中import文件路径优化.html">
+            
+                    
+                    react 项目中 import 文件路径优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="React组件开发指南.html">
+            
+                <a href="React组件开发指南.html">
+            
+                    
+                    React 组件开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="react通过脚手架创建项目.html">
+            
+                <a href="react通过脚手架创建项目.html">
+            
+                    
+                    react 通过脚手架创建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="componentWillReceiveProps的使用.html">
+            
+                <a href="componentWillReceiveProps的使用.html">
+            
+                    
+                    componentWillReceiveProps 的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="ant-design-pro-layout底部Footer更改.html">
+            
+                <a href="ant-design-pro-layout底部Footer更改.html">
+            
+                    
+                    ant-design-pro-layout 底部 Footer 更改
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="React生命周期.html">
+            
+                <a href="React生命周期.html">
+            
+                    
+                    React 生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.14" data-path="React-routerv4路由配置方法.html">
+            
+                <a href="React-routerv4路由配置方法.html">
+            
+                    
+                    React-routerv4 路由配置方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="服务端渲染SSR.html">
+            
+                <a href="服务端渲染SSR.html">
+            
+                    
+                    服务端渲染 SSR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="href属性使用js代码段在React下warning问题.html">
+            
+                <a href="href属性使用js代码段在React下warning问题.html">
+            
+                    
+                    href属性使用js代码段在React下warning 问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Charts/">
+            
+                <a href="../Charts/">
+            
+                    
+                    图表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                <a href="../Charts/三大图标库:ECharts、BizCharts和G2，该如何选择.html">
+            
+                    
+                    三大图标库:ECharts、BizCharts 和 G2，该如何选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Charts/three.js在React中的运用.html">
+            
+                <a href="../Charts/three.js在React中的运用.html">
+            
+                    
+                    three.js 在 React 中的运用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Browser/">
+            
+                <a href="../Browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                <a href="../Browser/一个TCP连接可以发送多少个HTTP请求.html">
+            
+                    
+                    一个 TCP 连接可以发送多少个 HTTP 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                <a href="../Browser/使用http-proxy-middleware代理跨域.html">
+            
+                    
+                    使用 http-proxy-middleware 代理跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Browser/跨域方式实现原理.html">
+            
+                <a href="../Browser/跨域方式实现原理.html">
+            
+                    
+                    跨域方式实现原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                <a href="../Browser/常见HTTP请求头，响应头，实体.html">
+            
+                    
+                    常见 HTTP 请求头，响应头，实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Browser/CORS跨域详解.html">
+            
+                <a href="../Browser/CORS跨域详解.html">
+            
+                    
+                    CORS 跨域详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Browser/SEO小技巧.html">
+            
+                <a href="../Browser/SEO小技巧.html">
+            
+                    
+                    SEO小技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Browser/URL的最大长度是多少？.html">
+            
+                <a href="../Browser/URL的最大长度是多少？.html">
+            
+                    
+                    URL的最大长度是多少？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Browser/深入理解Session和Cookie.html">
+            
+                <a href="../Browser/深入理解Session和Cookie.html">
+            
+                    
+                    深入理解Session和Cookie
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Browser/HTTP切面流程.html">
+            
+                <a href="../Browser/HTTP切面流程.html">
+            
+                    
+                    HTTP切面流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Browser/Node与浏览器之间的区别.html">
+            
+                <a href="../Browser/Node与浏览器之间的区别.html">
+            
+                    
+                    Node与浏览器之间的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Browser/JavaScript如何在浏览器和Node中工作.html">
+            
+                <a href="../Browser/JavaScript如何在浏览器和Node中工作.html">
+            
+                    
+                    JavaScript如何在浏览器和Node中工作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Webpack/">
+            
+                <a href="../Webpack/">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Webpack/webpack5更新日志.html">
+            
+                <a href="../Webpack/webpack5更新日志.html">
+            
+                    
+                    Webpack5 更新日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Webpack/Webpack中实现静态资源内联.html">
+            
+                <a href="../Webpack/Webpack中实现静态资源内联.html">
+            
+                    
+                    Webpack 中实现静态资源内联
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../CSS/">
+            
+                <a href="../CSS/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../CSS/flex布局.html">
+            
+                <a href="../CSS/flex布局.html">
+            
+                    
+                    flex 布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../CSS/移动端适配1px的问题.html">
+            
+                <a href="../CSS/移动端适配1px的问题.html">
+            
+                    
+                    移动端适配 1px 的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Node/">
+            
+                <a href="../Node/">
+            
+                    
+                    Node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Node/npm依赖管理之peerDependencies.html">
+            
+                <a href="../Node/npm依赖管理之peerDependencies.html">
+            
+                    
+                    npm 依赖管理之 peerDependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                <a href="../Node/如何解决npm-unmet-peer-dependency.html">
+            
+                    
+                    如何解决 npm unmet peer dependency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Node/如何发布一个npm包.html">
+            
+                <a href="../Node/如何发布一个npm包.html">
+            
+                    
+                    如何发布一个npm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Node/node版本管理工具.html">
+            
+                <a href="../Node/node版本管理工具.html">
+            
+                    
+                    Node版本管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Node/clinic快速定位性能问题.html">
+            
+                <a href="../Node/clinic快速定位性能问题.html">
+            
+                    
+                    使用node-clinic快速定位性能问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Node/cluster：扩展你的node应用.html">
+            
+                <a href="../Node/cluster：扩展你的node应用.html">
+            
+                    
+                    cluster：扩展你的node应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Node/如何保存价值上千万的Node源代码.html">
+            
+                <a href="../Node/如何保存价值上千万的Node源代码.html">
+            
+                    
+                    如何保存价值上千万的Node源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Node/6个Async、Await优于Promise的方面.html">
+            
+                <a href="../Node/6个Async、Await优于Promise的方面.html">
+            
+                    
+                    6个Async、Await优于Promise的方面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Node/npm安装包时的几个命令区别.html">
+            
+                <a href="../Node/npm安装包时的几个命令区别.html">
+            
+                    
+                    npm安装包时的几个命令区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Node/Moment进入维护状态.html">
+            
+                <a href="../Node/Moment进入维护状态.html">
+            
+                    
+                    Moment进入维护状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Node/package.json中的workspaces.html">
+            
+                <a href="../Node/package.json中的workspaces.html">
+            
+                    
+                    package.json中的workspaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../Node/项目开发中的规范.html">
+            
+                <a href="../Node/项目开发中的规范.html">
+            
+                    
+                    项目开发中的规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Node/npm库：AJV，JSON模式验证.html">
+            
+                <a href="../Node/npm库：AJV，JSON模式验证.html">
+            
+                    
+                    npm库：AJV，JSON模式验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Node/pm2深入学习.html">
+            
+                <a href="../Node/pm2深入学习.html">
+            
+                    
+                    pm2深入学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                <a href="../Node/pm2的cluster模式与fork模式的区别.html">
+            
+                    
+                    pm2的cluster模式与fork模式的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../Node/Node原生模块整理.html">
+            
+                <a href="../Node/Node原生模块整理.html">
+            
+                    
+                    Node原生模块整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../Node/koa-bodyparser中间件.html">
+            
+                <a href="../Node/koa-bodyparser中间件.html">
+            
+                    
+                    koa-bodyparser中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                <a href="../Node/koa-multer实现文件上传并自定义文件名和目录.html">
+            
+                    
+                    koa-multer实现文件上传并自定义文件名和目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.19" data-path="../Node/egg体系.html">
+            
+                <a href="../Node/egg体系.html">
+            
+                    
+                    egg体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.20" data-path="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                <a href="../Node/egg应用自定义4xx和5xx的方案.html">
+            
+                    
+                    egg应用自定义4xx和5xx的方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.21" data-path="../Node/egg的Http请求.html">
+            
+                <a href="../Node/egg的Http请求.html">
+            
+                    
+                    egg的Http请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.22" data-path="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                <a href="../Node/怎么开发一个像egg-init的脚手架.html">
+            
+                    
+                    怎么开发一个像egg-init的脚手架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.23" data-path="../Node/结合源码揭秘egg运行原理.html">
+            
+                <a href="../Node/结合源码揭秘egg运行原理.html">
+            
+                    
+                    结合源码揭秘egg运行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.24" data-path="../Node/脚手架之egg-init.html">
+            
+                <a href="../Node/脚手架之egg-init.html">
+            
+                    
+                    脚手架之egg-init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.25" data-path="../Node/egg框架中的参数校验.html">
+            
+                <a href="../Node/egg框架中的参数校验.html">
+            
+                    
+                    egg框架中的参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.26" data-path="../Node/egg的Controller最佳实践.html">
+            
+                <a href="../Node/egg的Controller最佳实践.html">
+            
+                    
+                    egg的Controller最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.27" data-path="../Node/egg基于egg-validate的定制化升级.html">
+            
+                <a href="../Node/egg基于egg-validate的定制化升级.html">
+            
+                    
+                    egg基于egg-validate的定制化升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.28" data-path="../Node/egg中cookie与Session的使用笔记.html">
+            
+                <a href="../Node/egg中cookie与Session的使用笔记.html">
+            
+                    
+                    egg中cookie与Session的使用笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.29" data-path="../Node/egg-bin源码解析笔记.html">
+            
+                <a href="../Node/egg-bin源码解析笔记.html">
+            
+                    
+                    egg-bin源码解析笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.30" data-path="../Node/egg框架与nest框架的对比.html">
+            
+                <a href="../Node/egg框架与nest框架的对比.html">
+            
+                    
+                    egg框架与nest框架的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.31" data-path="../Node/egg常见问题笔.html">
+            
+                <a href="../Node/egg常见问题笔.html">
+            
+                    
+                    egg常见问题笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.32" data-path="../Node/VScode调试Egg.html">
+            
+                <a href="../Node/VScode调试Egg.html">
+            
+                    
+                    VScode调试Egg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.33" data-path="../Node/Make命令教程.html">
+            
+                <a href="../Node/Make命令教程.html">
+            
+                    
+                    Make命令教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Frame/">
+            
+                <a href="../Frame/">
+            
+                    
+                    架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Frame/BFF.html">
+            
+                <a href="../Frame/BFF.html">
+            
+                    
+                    BFF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Frame/前端应用层框架.html">
+            
+                <a href="../Frame/前端应用层框架.html">
+            
+                    
+                    前端应用层框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Frame/前端UI组件库.html">
+            
+                <a href="../Frame/前端UI组件库.html">
+            
+                    
+                    前端 UI 组件库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Frame/跨平台.html">
+            
+                <a href="../Frame/跨平台.html">
+            
+                    
+                    跨平台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Frame/工程智能化.html">
+            
+                <a href="../Frame/工程智能化.html">
+            
+                    
+                    工程智能化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Frame/WebAssembly完全入门了解wasm的前世今生.md">
+            
+                <span>
+            
+                    
+                    WebAssembly完全入门了解wasm的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                <a href="../Frame/Next与create-react-app应用程序性能更高.html">
+            
+                    
+                    Next与create-react-app 应用程序性能更高
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Frame/基于NodeWeb框架Chair.html">
+            
+                <a href="../Frame/基于NodeWeb框架Chair.html">
+            
+                    
+                    基于NodeWeb框架Chair
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Frame/淘宝网的后台架构发展.html">
+            
+                <a href="../Frame/淘宝网的后台架构发展.html">
+            
+                    
+                    淘宝网的后台架构发展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Frame/应用场景数据库选型.html">
+            
+                <a href="../Frame/应用场景数据库选型.html">
+            
+                    
+                    应用场景数据库选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git发布部署相关
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Git/Mac下配置多个Git账户.html">
+            
+                <a href="../Git/Mac下配置多个Git账户.html">
+            
+                    
+                    Mac下配置多个Git账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Git/删除远程仓库的某次错误提交.html">
+            
+                <a href="../Git/删除远程仓库的某次错误提交.html">
+            
+                    
+                    删除远程仓库的某次错误提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Git/使用GithubActions进行版本发布.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布.html">
+            
+                    
+                    使用Github Actions进行版本发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                <a href="../Git/使用GithubActions进行版本发布（一）.html">
+            
+                    
+                    使用Github Actions进行版本发布(一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Git/gitsubtree教程.html">
+            
+                <a href="../Git/gitsubtree教程.html">
+            
+                    
+                    Git subtree教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Git/git分支开发规范.html">
+            
+                <a href="../Git/git分支开发规范.html">
+            
+                    
+                    git分支开发规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../Git/Git规范和Changelog生成.html">
+            
+                <a href="../Git/Git规范和Changelog生成.html">
+            
+                    
+                    Git规范和Changelog生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../Git/语义化Semantic规范格式.md">
+            
+                <span>
+            
+                    
+                    语义化Semantic规范格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                <a href="../Git/使用AppVeyor和Travis，自动构建和发布Electron应用.html">
+            
+                    
+                    使用AppVeyor和Travis，自动构建和发布Electron应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../Git/跨平台桌面应用Electron.html">
+            
+                <a href="../Git/跨平台桌面应用Electron.html">
+            
+                    
+                    跨平台桌面应用Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../Git/企业级分布式，EDAS模式.html">
+            
+                <a href="../Git/企业级分布式，EDAS模式.html">
+            
+                    
+                    企业级分布式，EDAS模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../Git/Gitlab使用CICD管道配置参考.md">
+            
+                <span>
+            
+                    
+                    Gitlab使用CICD管道配置参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Linux/">
+            
+                <a href="../Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                <a href="../Linux/Linux上部署Node服务-外网无法访问.html">
+            
+                    
+                    Linux上部署Node服务-外网无法访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                <a href="../Linux/服务器中启动服务的时候的IP选择.html">
+            
+                    
+                    服务器中启动服务的时候的IP选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                <a href="../Linux/怎样修改CentOS7SSH端口.html">
+            
+                    
+                    怎样修改CentOS 7 SSH端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Design/">
+            
+                <a href="../Design/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Design/javaScript设计模式笔记一.html">
+            
+                <a href="../Design/javaScript设计模式笔记一.html">
+            
+                    
+                    javaScript设计模式笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Design/javaScript设计模式笔记二.html">
+            
+                <a href="../Design/javaScript设计模式笔记二.html">
+            
+                    
+                    javaScript设计模式笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Design/javaScript设计模式笔记三.html">
+            
+                <a href="../Design/javaScript设计模式笔记三.html">
+            
+                    
+                    javaScript设计模式笔记三
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Design/javaScript设计模式笔记四.html">
+            
+                <a href="../Design/javaScript设计模式笔记四.html">
+            
+                    
+                    javaScript设计模式笔记四
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Design/javascript设计模式笔记五.html">
+            
+                <a href="../Design/javascript设计模式笔记五.html">
+            
+                    
+                    javascript设计模式笔记五
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../Design/javaScript设计模式笔记六.html">
+            
+                <a href="../Design/javaScript设计模式笔记六.html">
+            
+                    
+                    javaScript设计模式笔记六
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../Design/javaScript设计模式笔记七.html">
+            
+                <a href="../Design/javaScript设计模式笔记七.html">
+            
+                    
+                    javaScript设计模式笔记七
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../Design/javaScript设计模式笔记八.html">
+            
+                <a href="../Design/javaScript设计模式笔记八.html">
+            
+                    
+                    javaScript设计模式笔记八
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../Design/javaScript设计模式笔记九.html">
+            
+                <a href="../Design/javaScript设计模式笔记九.html">
+            
+                    
+                    javaScript设计模式笔记九
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Database/">
+            
+                <a href="../Database/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../ORM/ORM框架选型.html">
+            
+                <a href="../ORM/ORM框架选型.html">
+            
+                    
+                    ORM框架选型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../ORM/Knexjs笔记.html">
+            
+                <a href="../ORM/Knexjs笔记.html">
+            
+                    
+                    Knexjs笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../ORM/bookshelf笔记.html">
+            
+                <a href="../ORM/bookshelf笔记.html">
+            
+                    
+                    bookshelf笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Database/MySQL一：delete和truncate的区别和联系.md">
+            
+                <span>
+            
+                    
+                    MySQL一：delete和truncate的区别和联系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Database/MySQL二：having与where.md">
+            
+                <span>
+            
+                    
+                    MySQL二：having与where
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Database/MySQL三：pluck.md">
+            
+                <span>
+            
+                    
+                    MySQL三：pluck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Database/MySQL四：first.md">
+            
+                <span>
+            
+                    
+                    MySQL四：first
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../Database/MySQL五：references.md">
+            
+                <span>
+            
+                    
+                    MySQL五：references
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../Database/MySQL七：in和exists二者之间的区别和性能影响.md">
+            
+                <span>
+            
+                    
+                    MySQL七：in和exists二者之间的区别和性能影响
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../TypeScript/">
+            
+                <a href="../TypeScript/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../TypeScript/基础笔记一.html">
+            
+                <a href="../TypeScript/基础笔记一.html">
+            
+                    
+                    基础笔记一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../TypeScript/基础笔记二.html">
+            
+                <a href="../TypeScript/基础笔记二.html">
+            
+                    
+                    基础笔记二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../TypeScript/函数笔记.html">
+            
+                <a href="../TypeScript/函数笔记.html">
+            
+                    
+                    函数笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../TypeScript/泛型笔记.html">
+            
+                <a href="../TypeScript/泛型笔记.html">
+            
+                    
+                    泛型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../TypeScript/枚举笔记.html">
+            
+                <a href="../TypeScript/枚举笔记.html">
+            
+                    
+                    枚举笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../TypeScript/类型兼容性笔记.html">
+            
+                <a href="../TypeScript/类型兼容性笔记.html">
+            
+                    
+                    类型兼容性笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../TypeScript/高级类型笔记.html">
+            
+                <a href="../TypeScript/高级类型笔记.html">
+            
+                    
+                    高级类型笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                <a href="../TypeScript/.d.ts和源文件.ts有什么区别?.html">
+            
+                    
+                    .d.ts和源文件.ts有什么区别?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                <a href="../TypeScript/使用TypeScript装饰器装饰你的代码.html">
+            
+                    
+                    使用TypeScript装饰器装饰你的代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >React-routerv4 路由配置方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#react-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;"><b>1. </b>React-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9759;&#x6001;&#x8DEF;&#x7531;static-routing"><b>1.1. </b>&#x9759;&#x6001;&#x8DEF;&#x7531;/Static Routing</a></li><li><span class="title-icon "></span><a href="#&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><b>1.2. </b>&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x8DEF;&#x7531;"><b>1.3. </b>&#x52A8;&#x6001;&#x8DEF;&#x7531;</a></li><li><span class="title-icon "></span><a href="#&#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;"><b>1.4. </b>&#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;</a></li><li><span class="title-icon "></span><a href="#&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><b>1.5. </b>&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x603B;&#x7ED3;"><b>1.6. </b>&#x603B;&#x7ED3;</a></li></ul></ul></div><a href="#react-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="react-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;"><a name="react-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#react-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1. React-routerv4&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;</h1>
+<p><a href="https://github.com/wayou/wayou.github.io/issues/16" target="_blank">&#x8F6C;&#x8F7D;</a></p>
+<p>react-router v4 &#x7684;&#x5230;&#x6765;&#x5DF2;&#x7ECF;&#x8FC7;&#x4E86;&#x4E00;&#x4E9B;&#x65F6;&#x65E5;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x5230;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6709;&#x7BC7;&#x4ECB;&#x7ECD;&#x5176;&#x65B0;&#x5F0F;&#x8BBE;&#x8BA1;&#x54F2;&#x5B66;&#x7684;&#x6587;&#x7AE0;&#x3002;&#x5176;&#x4E2D;&#x533A;&#x5206;&#x4E86;&#x4F20;&#x7EDF;&#x9759;&#x6001;&#x8DEF;&#x7531;&#xFF08;Static Routing&#xFF09;&#x548C;&#x65B0;&#x7248;&#x4E2D;&#x5F15;&#x5165;&#x7684;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#xFF08;Dynamic Routing&#xFF09;&#x3002;</p>
+<p>&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x4E48;&#xFF0C;Interesting&#xFF08;&#x5475;&#x5475;&#xFF09;&#x3002; &#x542C;&#x8D77;&#x6765;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x65B0;&#x9C9C;&#xFF0C;&#x4F46;&#x5176;&#x5B9E;&#x60F3;&#x5F53;&#x7136;&#x4E86;&#x3002;&#x8FD9;&#x91CC;&#x9762;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7406;&#x89E3;&#x8BEF;&#x533A;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x7684; Dynamic Routing&#xFF0C;&#x4ED6;&#x4E0D;&#x662F;&#x6307;&#x521D;&#x59CB;&#x5316;&#x8DEF;&#x7531;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x52A0;&#x70B9;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x53BB;&#x52A8;&#x6001;&#x751F;&#x6210;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x6307;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#xFF08;query&#xFF09;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x63A7;&#x5236;&#x9875;&#x9762;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x5B83;&#x629B;&#x5F00;&#x4E86;&#x4F20;&#x7EDF;&#x9759;&#x6001;&#x8DEF;&#x7531;&#x5728;&#x7A0B;&#x5E8F;&#x6E32;&#x67D3;&#x524D;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x91C7;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x4E2D;&#x52A8;&#x6001;&#x751F;&#x6210;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x9759;&#x6001;&#x8DEF;&#x7531;static-routing"><a name="&#x9759;&#x6001;&#x8DEF;&#x7531;static-routing" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x8DEF;&#x7531;static-routing"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x9759;&#x6001;&#x8DEF;&#x7531;/Static Routing</h2>
+<p>&#x5148;&#x6765;&#x770B;&#x6211;&#x4EEC;&#x719F;&#x6089;&#x5E76;&#x60EF;&#x7528;&#x7684;&#x4F20;&#x7EDF;&#x9759;&#x6001;&#x8DEF;&#x7531;&#x3002;</p>
+<pre><code class="lang-js">React.render((
+  &lt;Router&gt;
+    &lt;Route path=&quot;/&quot; component={App}&gt;
+      &lt;Route path=&quot;about&quot; component={About} /&gt;
+      &lt;Route path=&quot;inbox&quot; component={Inbox} /&gt;
+    &lt;/Route&gt;
+  &lt;/Router&gt;
+), document.body)
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x8DEF;&#x7531;&#x8FDB;&#x884C;&#x96C6;&#x4E2D;&#x914D;&#x7F6E;&#xFF0C;UI &#x4E0E;&#x8DEF;&#x7531;&#x5F3A;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p>&#x4F20;&#x7EDF;&#x9759;&#x6001;&#x8DEF;&#x7531;&#x662F;&#x5728;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x524D;&#x58F0;&#x660E;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x3002;&#x50CF; Angular&#xFF0C;Express, Ember&#xFF0C;&#x90FD;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x8FC7;&#x5176;&#x4E2D;&#x67D0;&#x4E2A;&#x6846;&#x67B6;&#xFF0C;&#x4E00;&#x5B9A;&#x4E0D;&#x4F1A;&#x964C;&#x751F;&#x3002;react-router v4 &#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4E5F;&#x662F;&#x6CBF;&#x88AD;&#x8FD9;&#x4E00;&#x65B9;&#x5F0F;&#x7684;&#x3002;</p>
+<h2 id="&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><a name="&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;</h2>
+<p>v4 &#x7248;&#x672C;&#x5C06;&#x6574;&#x4E2A;&#x5E93;&#x8FDB;&#x884C;&#x91CD;&#x6784;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x62CD;&#x8111;&#x888B;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x6309;&#x7167;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E0A;&#x7684;&#x8BB0;&#x8F7D;&#xFF0C;Michael &#x548C; Ryan &#xFF08;&#x5E93;&#x7684;&#x6838;&#x5FC3;&#x4F5C;&#x8005;&#xFF09;&#x611F;&#x89C9;&#x73B0;&#x6709;&#x7684;&#x5B9E;&#x73B0;&#x4E25;&#x91CD;&#x5730;&#x53D7; React API &#x7684;&#x5236;&#x7EA6;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E5F;&#x4E0D;&#x591F;&#x4F18;&#x96C5;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x8BB2;&#xFF09;&#x3002;&#x53CD;&#x6B63;&#x5C31;&#x662F;&#x5199;&#x8D77;&#x6765;&#x7528;&#x8D77;&#x6765;&#x90FD;&#x4E0D;&#x723D;&#x3002;</p>
+<p>v4 &#x7248;&#x672C;&#x5C06;&#x6574;&#x4E2A;&#x5E93;&#x8FDB;&#x884C;&#x91CD;&#x6784;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x62CD;&#x8111;&#x888B;&#x51B3;&#x5B9A;&#x7684;&#x3002;&#x6309;&#x7167;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E0A;&#x7684;&#x8BB0;&#x8F7D;&#xFF0C;Michael &#x548C; Ryan &#xFF08;&#x5E93;&#x7684;&#x6838;&#x5FC3;&#x4F5C;&#x8005;&#xFF09;&#x611F;&#x89C9;&#x73B0;&#x6709;&#x7684;&#x5B9E;&#x73B0;&#x4E25;&#x91CD;&#x5730;&#x53D7; React API &#x7684;&#x5236;&#x7EA6;&#xFF0C;&#x5E76;&#x4E14;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E5F;&#x4E0D;&#x591F;&#x4F18;&#x96C5;&#xFF08;&#x540E;&#x9762;&#x4F1A;&#x8BB2;&#xFF09;&#x3002;&#x53CD;&#x6B63;&#x5C31;&#x662F;&#x5199;&#x8D77;&#x6765;&#x7528;&#x8D77;&#x6765;&#x90FD;&#x4E0D;&#x723D;&#x3002;</p>
+<p>&#x7F18;&#xFF0C;&#x5999;&#x4E0D;&#x53EF;&#x8A00;&#x3002;</p>
+<p>&#x4E24;&#x4EBA;&#x5FC3;&#x7167;&#x4E0D;&#x5BA3;&#x5730;&#x60F3;&#x5230;&#x4E86;&#x4E00;&#x5757;&#xFF0C;&#x90FD;&#x4ECE;&#x8FD9;&#x6B21;&#x5DE5;&#x4F5C;&#x574A;&#x7684;&#x5206;&#x4EAB;&#x5185;&#x5BB9;&#x4E2D;&#x83B7;&#x5F97;&#x4E86;&#x7075;&#x611F;&#xFF0C;&#x5373; v4 &#x4E2D;&#x5F15;&#x5165;&#x7684;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x6B21;&#x91CD;&#x6784;&#x662F;&#x7EBF;&#x4E0B;&#x78B0;&#x649E;&#x51FA;&#x6765;&#x7684;&#x706B;&#x82B1;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x9759;&#x6001;&#x8DEF;&#x7531;&#xFF0C;&#x5230;&#x5E95;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x3002;&#x672C;&#x6765;&#x7528;&#x5F97;&#x597D;&#x597D;&#x7684;&#xFF0C;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x4E0D;&#x514D;&#x5FC3;&#x751F;&#x7591;&#x60D1;&#x3002;&#x8BDA;&#x7136;&#xFF0C;&#x8981;&#x8BF4;&#x95EE;&#x9898;&#xFF08;Gotchas&#xFF09;&#xFF0C;&#x90A3;&#x80AF;&#x5B9A;&#x662F;&#x6709;&#x7684;&#x3002;&#x6CA1;&#x6709;&#x5B8C;&#x7F8E;&#x7684;&#x5E93;&#x89E3;&#x51B3;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x7136;&#x4F60;&#x4EE5;&#x4E3A;&#x8FD9; 4000+ &#x7684; issue &#x6570;&#x600E;&#x4E48;&#x6765;&#x7684;&#x3002;</p>
+<p>&#x8BDD;&#x9898;&#x56DE;&#x5230;&#x9759;&#x6001;&#x8DEF;&#x7531;&#x4E0A;&#x6765;&#x3002;&#x57FA;&#x4E8E;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8BA9;&#x7248;&#x672C;&#x6765;&#x5230; v3 &#x7684; react-router&#xFF0C;&#x96BE;&#x4EE5;&#x4E3A;&#x7EE7;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x4ECE;&#x8BE5;&#x5E93;&#x8EAB;&#x4E0A;&#x671F;&#x671B;&#x7684;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x3002;&#x524D;&#x9762; issue &#x4E2D;&#xFF0C;&#x53EA;&#x662F;&#x7528;&#x6237;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F5C;&#x4E3A;&#x5E93;&#x7684;&#x5F00;&#x53D1;&#x7EF4;&#x62A4;&#x8005;&#xFF0C;&#x6240;&#x8003;&#x8651;&#x7684;&#x662F;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x53CA;&#x7A0B;&#x5E8F;&#x6269;&#x5C55;&#x6027;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x6838;&#x5FC3;&#x8D21;&#x732E;&#x8005;&#xFF0C;&#x60F3;&#x5FC5;&#x5F88;&#x96BE;&#x4F53;&#x5473;&#x5176;&#x4E2D;&#x7684;&#x97F5;&#x5473;&#x3002;&#x6240;&#x4EE5;&#x5728; v4.0.0-beta &#x8FD9;&#x4E2A;&#x5F00;&#x53D1;&#x5206;&#x652F;&#x7684; README  &#x4E2D;&#xFF0C;react-router &#x56E2;&#x961F;&#x5BF9;&#x9762;&#x4E34;&#x7684;&#x6311;&#x6218;&#x548C;&#x5B58;&#x5728;&#x7684;&#x95EE;&#x9898;&#x8FDB;&#x884C;&#x4E86;&#x7B80;&#x8981;&#x9610;&#x8FF0;&#xFF0C;&#x987A;&#x4FBF;&#x7B54;&#x4E00;&#x4E9B;&#x7591;&#x89E3;&#x4E00;&#x4E9B;&#x60D1;&#xFF08;FAQ &#x79C0;&#x4E00;&#x6CE2;&#xFF09;&#x3002;</p>
+<p>&#x5176;&#x4E2D;Why a major version bump? &#x8FD9;&#x4E00;&#x6BB5;&#x4FBF;&#x8BF4;&#x51FA;&#x4E86;&#x73B0;&#x5728;&#x7684;&#x4E00;&#x4E9B;&#x75DB;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x8DEF;&#x7531;&#x5199;&#x6CD5;&#x5219;&#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x7EA6;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4F60;&#x751A;&#x81F3;&#x90FD;&#x4E0D;&#x80FD;&#x5C06; <route> &#x8131;&#x79BB; <router> &#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x4EFB;&#x610F;&#x7EC4;&#x5408;&#x3002;&#x5766;&#x767D;&#x5730;&#x8BF4;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x4E5F;&#x4E0D; React&#x3002;React &#x7406;&#x5FF5;&#x662F;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x5F0F;&#x7075;&#x6D3B;&#x6027;&#x8FDB;&#x884C;&#x7EC4;&#x4EF6;&#x7EC4;&#x88C5;&#x7684;&#xFF08;Declarative Composability&#xFF09;&#x3002;</router></route></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// NOPE!</span>
+<span class="hljs-keyword">const</span> CoolRoute = (props) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">cool</span>=<span class="hljs-string">{true}</span>/&gt;</span>
+</span></code></pre>
+<ul>
+<li>&#x56E0;&#x4E3A;&#x5176;&#x5B9E;<code>&lt;Router /&gt;</code> &#x63A5;&#x7BA1;&#x4E86;&#x4F60;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x90E8;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;<code>createElement</code>&#xFF0C;<code>render</code>&#x548C;<code>createRouterMiddleware</code>&#x7B49;&#x65B9;&#x6CD5;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;&#x56DE;&#x8C03;&#xFF0C;<code>onEnter</code>,<code>onLeave</code>&#x53CA;<code>onChange</code>&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x751F;&#x547D;&#x5468;&#x671F;React&#x672C;&#x8EAB;&#x5C31;&#x6709;<code>componentWillMount</code>, <code>componentWillReceiveProps</code> &#x53CA; <code>componentWillUnmount</code>&#x3002;</li>
+</ul>
+<p>v3 Router.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> propTypes = {
+  history: object,
+  children: routes,
+  routes, <span class="hljs-comment">// alias for children</span>
+  render: func,
+  createElement: func,
+  onError: func,
+  onUpdate: func,
+
+  <span class="hljs-comment">// PRIVATE: For client-side rehydration of server match.</span>
+  matchContext: object
+}
+</code></pre>
+<ul>
+<li>&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x7684;&#x8FC7;&#x7A0B;&#x4E5F;&#x662F;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x91CD;&#x73B0;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E00;&#x7EA7;&#x4E00;&#x7EA7;&#x7684;&#x5D4C;&#x5957;&#xFF0C;&#x548C;&#x7EC4;&#x4EF6;&#x5728;&#x6D01;&#x9762;&#x7684;&#x5B9E;&#x56FE;&#x5927;&#x81F4;&#x5BF9;&#x5E94;&#x3002;&#x4F46;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x5728;&#x5199;&#x9875;&#x9762;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5806;&#x79EF;&#x7EC4;&#x4EF6;&#x65F6;&#xFF0C;&#x5C31;&#x5DF2;&#x7ECF;&#x4F53;&#x73B0;&#x51FA;&#x7A0B;&#x5E8F;&#x7684;&#x7ED3;&#x6784;&#x5C42;&#x7EA7;&#x4E86;&#x3002;</li>
+<li>&#x4E3A;&#x4E86;&#x9002;&#x5E94;&#x4EE3;&#x7801;&#x62C6;&#x5206;&#xFF08;code split&#xFF09;&#xFF0C;&#x5F15;&#x5165;legetComponent&#x548C;getChildRoutes&#x3002;&#x4E3A;&#x4E86;&#x652F;&#x6301;&#x70ED;&#x66FF;&#x6362;&#xFF08;hot module replacement&#xFF09;&#xFF0C;&#x53C8;&#x5F97;&#x6574;&#x4E00;&#x5806;&#x5F88;hack&#x7684;&#x4E1C;&#x897F;&#x51FA;&#x6765;</li>
+<li>...</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4E4B;&#x524D;&#x5E94;&#x8BE5;&#x662F;&#x65B9;&#x5411;&#x4E0A;&#x51FA;&#x4E86;&#x70B9;&#x504F;&#x5DEE;&#x3002;&#x8981;&#x662F;&#x63A5;&#x4E0B;&#x6765;&#x7684; v4 &#x7248;&#x672C;&#x6CA1;&#x80FD;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x662F;&#x8981;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#xFF08;&#x6211;&#x6307;&#x7684;&#x662F;&#x5BF9;&#x793E;&#x533A;&#xFF09;&#x3002;</p>
+<h2 id="&#x52A8;&#x6001;&#x8DEF;&#x7531;"><a name="&#x52A8;&#x6001;&#x8DEF;&#x7531;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x8DEF;&#x7531;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x52A8;&#x6001;&#x8DEF;&#x7531;</h2>
+<p>&#x600E;&#x4E48;&#x8BB2;&#xFF1F;&#x5C31;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#x8DEF;&#x7531;&#x7684;&#x6982;&#x5FF5;&#x4E86;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x5C31;&#x65E0;&#x9700;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
+<p>&#x90A3;&#x6211;&#x4EEC;&#x8FD8;&#x600E;&#x4E48;&#x5207;&#x9875;&#x9762;&#xFF1F;</p>
+<p>&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x6765;&#x5207;&#x9875;&#x9762;&#x3002;</p>
+<p>react-router v4 &#x4E2D;&#xFF0C;&#x8BF7;&#x628A;&#x8DEF;&#x7531;&#x770B;&#x6210;&#x666E;&#x901A;&#x7684; React &#x7EC4;&#x4EF6;&#xFF0C;&#x4F20;&#x9012; props &#x6765;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF08;&#x4E4B;&#x524D;<route>&#x4F1A;&#x5FFD;&#x7565;&#x6389;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#xFF09;&#xFF0C;&#x501F;&#x52A9;&#x5B83;&#x6765;&#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#x7684;&#x5C55;&#x73B0;&#x3002;&#x5C55;&#x793A;&#x7684;&#x903B;&#x8F91;&#x53CA;&#x6743;&#x5229;&#x56DE;&#x5F52;&#x5230;&#x4E86;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#xFF0C;&#x56DE;&#x5F52;&#x5230;&#x4E86;&#x719F;&#x6089;&#x7684; React&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6CA1;&#x6709;&#x4E86;&#x9759;&#x6001;&#x914D;&#x7F6E;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x5728;&#x8FD0;&#x884C;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x4E2D;&#x52A8;&#x6001;&#x63A7;&#x5236;&#x7684;&#x5C55;&#x73B0;&#x3002;</route></p>
+<p>&#x8FD9;&#x4FBF;&#x662F; v4 &#x4E2D;&#x79F0;&#x4E4B;&#x4E3A;&#x7684;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x3002;</p>
+<p>&#x5F53;&#x8DEF;&#x7531; <route> &#x56DE;&#x5F52;&#x7EC4;&#x4EF6;&#x540E;&#xFF0C;react-router &#x63D0;&#x4F9B;&#x7684;&#x90A3;&#x4E9B; API&#xFF0C;&#x50CF;&#x4E0A;&#x9762;&#x8BA8;&#x8BBA;&#x7684;&#x90A3;&#x4E9B;&#xFF0C;&#x5C31;&#x4E0D;&#x590D;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x666E;&#x901A;&#x7684; React &#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x7684; API &#x5C31;&#x662F; React &#x63D0;&#x4F9B;&#x7684;&#x90A3;&#x4E9B; API&#x3002;</route></p>
+<p>&#x66FE;&#x8BB0;&#x5426;&#xFF0C;Linus &#x5927;&#x795E;&#x7684;&#x8B66;&#x4E16;&#x7BB4;&#x8A00;&#x300C;Talk is cheap. Show me the code.&#x300D;&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x4E00;&#x6BB5;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x5C55;&#x793A;&#x4E24;&#x4E2A;&#x8DEF;&#x7531;&#x9875;&#x7684;&#x7A0B;&#x5E8F;&#x5728; v3 &#x4E0E; v4 &#x4E2D;&#x5206;&#x522B;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6765;&#x81EA;&#x6587;&#x7AE0;<a href="https://css-tricks.com/react-router-4/" target="_blank">All About React Router 4</a></p>
+<p>v3:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Router, Route, IndexRoute } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>
+
+<span class="hljs-keyword">const</span> PrimaryLayout = props =&gt; (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;primary-layout&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+      Our React Router 3 App
+    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span>&gt;</span>
+      {props.children}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+
+<span class="hljs-keyword">const</span> HomePage =() =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Home Page<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">const</span> UsersPage = () =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Users Page<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+  &lt;Router history={browserHistory}&gt;
+    &lt;Route path=&quot;/&quot; component={PrimaryLayout}&gt;
+      &lt;IndexRoute component={HomePage} /&gt;
+      &lt;Route path=&quot;/users&quot; component={UsersPage} /&gt;
+    &lt;/Route&gt;
+  &lt;/Router&gt;
+)
+</code></pre>
+<p>v4:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { BrowserRouter, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+
+<span class="hljs-keyword">const</span> PrimaryLayout = () =&gt; (
+  &lt;div className=&quot;primary-layout&quot;&gt;
+    &lt;header&gt;
+      Our React Router 4 App
+    &lt;/header&gt;
+    &lt;main&gt;
+      &lt;Route path=&quot;/&quot; exact component={HomePage} /&gt;
+      &lt;Route path=&quot;/users&quot; component={UsersPage} /&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+)
+
+const HomePage =() =&gt; &lt;div&gt;Home Page&lt;/div&gt;
+const UsersPage = () =&gt; &lt;div&gt;Users Page&lt;/div&gt;
+
+const App = () =&gt; (
+  &lt;BrowserRouter&gt;
+    &lt;PrimaryLayout /&gt;
+  &lt;/BrowserRouter&gt;
+)
+
+render(&lt;App /&gt;, document.getElementById(&apos;root&apos;))
+</code></pre>
+<p>v4 &#x4E2D;react-router&#x4ED3;&#x5E93;&#x62C6;&#x5206;&#x6210;&#x4E86;&#x8BB8;&#x591A;&#x4E2A;&#x5305;&#x8FDB;&#x884C;&#x53D1;&#x5E03;</p>
+<ul>
+<li><code>react-router</code>&#x8DEF;&#x7531;&#x57FA;&#x7840;&#x5E93;</li>
+<li><code>react-router-dom</code> &#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5C01;&#x88C5;</li>
+<li><code>react-router-native</code> React native&#x5C01;&#x88C5;</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#x4E2D;<code>BrowserRouter</code>&#x7EC4;&#x4EF6;&#x4FBF;&#x6765;&#x81EA;<code>react-router-dom</code>&#x8FD9;&#x4E2A;&#x5305;</p>
+<p>&#x5982;&#x679C;&#x4E4B;&#x524D;&#x9759;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x89C2;&#x5FF5;&#x6839;&#x690D;&#x4E8E;&#x5FC3;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x5728; v4 &#x7684;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x4F3C;&#x4E4E;&#x770B;&#x4E0D;&#x5230;&#x8DEF;&#x7531;&#x7684;&#x5F71;&#x5B50;&#x4E86;&#xFF0C;&#x5B83;&#x7A7F;&#x63D2;&#x5728;&#x4E86;&#x5404;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x5728;&#x9700;&#x8981;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#xFF08;Nested Routes&#xFF09;&#x7684;&#x573A;&#x666F;&#x65F6;&#x5C24;&#x4E3A;&#x660E;&#x663E;&#x3002;</p>
+<p>&#x6765;&#x81EA;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> App = () =&gt; (
+  &lt;BrowserRouter&gt;
+    {/* here&apos;s a div */}
+    &lt;div&gt;
+      {/* here&apos;s a Route */}
+      &lt;Route path=&quot;/tacos&quot; component={Tacos}/&gt;
+    &lt;/div&gt;
+  &lt;/BrowserRouter&gt;
+)
+
+// when the url matches `/tacos` this component renders
+const Tacos  = ({ match }) =&gt; (
+  // here&apos;s a nested div
+  &lt;div&gt;
+    {/* here&apos;s a nested Route,
+        match.url helps us make a relative path */}
+    &lt;Route
+      path={match.url + &apos;/carnitas&apos;}
+      component={Carnitas}
+    /&gt;
+  &lt;/div&gt;
+)
+</code></pre>
+<p>&#x4E0A;&#x9762;&#xFF0C;<tacos> &#x7EC4;&#x4EF6;&#x5C55;&#x793A;&#x4E0E;&#x5426;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x5F53;&#x524D;&#x8DEF;&#x7531;&#x662F;&#x5426;&#x4E0E; /tacos &#x5339;&#x914D;&#x3002;&#x800C; <route> &#x5219;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x578B;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5C06;&#x4F20;&#x5165;&#x7684; path &#x4E0E;&#x5F53;&#x524D;&#x7684; location &#x6BD4;&#x8F83;&#xFF0C;&#x5339;&#x914D;&#x5219;&#x6E32;&#x67D3; component &#x5C5E;&#x6027;&#x4F20;&#x5165;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5426;&#x5219; return null&#xFF08;&#x5B9E;&#x9645;&#x5B9E;&#x73B0;&#x4EE5;&#x6E90;&#x7801;&#x4E3A;&#x51C6;&#xFF09;&#x3002;</route></tacos></p>
+<p>&#x7531; react-router v3 &#x8F6C;&#x5230; v4&#xFF0C;&#x5728;&#x601D;&#x60F3;&#x4E0A;&#x7684;&#x8F6C;&#x53D8;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x4E9B;&#x65F6;&#x95F4;&#x6765;&#x78E8;&#x5408;&#x3002;&#x6B63;&#x5982; react-router &#x521A;&#x53D1;&#x5E03;&#x65F6;&#xFF0C;&#x5BF9;&#x4E8E;&#x5C06;&#x8DEF;&#x7531;&#x5199;&#x5728; jsx &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x62D2;&#x7EDD;&#x7684;&#x3002;</p>
+<h2 id="&#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;"><a name="&#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;" class="anchor-navigation-ex-anchor" href="#&#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x54CD;&#x5E94;&#x5F0F;&#x8DEF;&#x7531;</h2>
+<p>&#x8BF4;&#x51FA;&#x6765;&#x4F60;&#x53EF;&#x80FD;&#x4E0D;&#x4FE1;&#xFF0C;&#x6539;&#x4E3A;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x540E;&#xFF0C;&#x5176;&#x5C55;&#x73B0;&#x5B8C;&#x5168;&#x7531;&#x7EC4;&#x4EF6;&#x63A7;&#x5236;&#xFF0C;&#x6240;&#x4EE5;&#x7ADF;&#x7136;&#x53EF;&#x4EE5;&#x548C;&#x5A92;&#x4F53;&#x67E5;&#x8BE2;&#xFF08;Media queries&#xFF09;&#x7ED3;&#x5408;&#xFF0C;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x5C4F;&#x5E55;&#x5927;&#x5C0F;&#x8DEF;&#x7531;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x754C;&#x9762;&#x6837;&#x5F0F;&#x3002;&#x5B98;&#x65B9;&#x7684;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4FBF;&#x5C55;&#x793A;&#x4E86;&#x8FD9;&#x4E00;&#x9A9A;&#x6C14;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> App = () =&gt; (
+  &lt;AppLayout&gt;
+    &lt;Route path=&quot;/invoices&quot; component={Invoices}/&gt;
+  &lt;/AppLayout&gt;
+)
+
+const Invoices = () =&gt; (
+  &lt;Layout&gt;
+
+    {/* always show the nav */}
+    &lt;InvoicesNav/&gt;
+
+    &lt;Media query={PRETTY_SMALL}&gt;
+      {screenIsSmall =&gt; screenIsSmall
+        // small screen has no redirect
+        ? &lt;Switch&gt;
+            &lt;Route exact path=&quot;/invoices/dashboard&quot; component={Dashboard}/&gt;
+            &lt;Route path=&quot;/invoices/:id&quot; component={Invoice}/&gt;
+          &lt;/Switch&gt;
+        // large screen does!
+        : &lt;Switch&gt;
+            &lt;Route exact path=&quot;/invoices/dashboard&quot; component={Dashboard}/&gt;
+            &lt;Route path=&quot;/invoices/:id&quot; component={Invoice}/&gt;
+            &lt;Redirect from=&quot;/invoices&quot; to=&quot;/invoices/dashboard&quot;/&gt;
+          &lt;/Switch&gt;
+      }
+    &lt;/Media&gt;
+  &lt;/Layout&gt;
+)
+</code></pre>
+<p><a href="https://github.com/ReactTraining/react-media" target="_blank">react-media</a></p>
+<h2 id="&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><a name="&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x52A8;&#x6001;&#x8DEF;&#x7531;&#x7684;&#x95EE;&#x9898;</h2>
+<p>&#x5C3D;&#x8BF4;&#x4E86;&#x4F18;&#x70B9;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x7F8E;&#x597D;&#xFF0C;&#x90A3;&#x65B0;&#x7248;&#x7684;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF0C;&#x793E;&#x533A;&#x7684;&#x4EBA;&#x4E70;&#x4E0D;&#x4E70;&#x5E10;&#xFF0C;&#x5E7F;&#x5927;&#x4EBA;&#x6C11;&#x7FA4;&#x4F17;&#x540C;&#x610F;&#x4E0D;&#x540C;&#x610F;&#x5462;&#xFF1F;</p>
+<p>&#x5728;&#x6211;&#x770B;&#x6765;&#xFF0C;</p>
+<ul>
+<li>&#x4E0D;&#x591F;&#x76F4;&#x89C2;&#x4E86;&#x3002;&#x4F60;&#x65E0;&#x6CD5;&#x77E5;&#x9053;&#x7A0B;&#x5E8F;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x8DEF;&#x7531;&#xFF08;&#x662F;&#x65F6;&#x5019;&#x9020;&#x4E00;&#x4E2A; sitemap &#x7684;&#x8F6E;&#x5B50;&#x4E86;&#xFF09;&#x3002;</li>
+<li>&#x6D4B;&#x8BD5;&#x6210;&#x4E86;&#x8001;&#x5927;&#x96BE;&#x7684;&#x95EE;&#x9898;&#x3002;&#x7EC4;&#x4EF6;&#x4E2D;&#x63BA;&#x6742;&#x4E86;&#x8DEF;&#x7531;&#x903B;&#x8F91;&#xFF0C;&#x539F;&#x672C;&#x5BF9;&#x9488;&#x5BF9;&#x7EC4;&#x4EF6;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF08;&#x529F;&#x80FD;&#x5C42;&#x9762;&#xFF09;&#x5B8C;&#x5168;&#x4E0D;&#x9700;&#x8981;&#x77E5;&#x9053;&#x8DEF;&#x7531;&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x800C;&#x73B0;&#x5728;&#x5C31;&#x8981;&#x8003;&#x8651;&#x4E86;&#x3002;&#x6B63;&#x5982;&#x6587;&#x7AE0;You might not need React Router
+&#x4E0B;&#x9762;&#x7684;&#x8BC4;&#x8BBA;&#xFF1A;</li>
+</ul>
+<h2 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x603B;&#x7ED3;</h2>
+<p>&#x672C;&#x8D28;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F;&#x9875;&#x9762;&#x81EA;&#x5DF1;&#x63A7;&#x5236;&#x4E86;&#x9875;&#x9762;&#xFF0C;&#x8FD9;&#x4E2A;&#x903B;&#x8F91;&#x7ED9;&#x5230;&#x4E86;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7531;&#x9876;&#x7EA7;&#x8DEF;&#x7531;&#x914D;&#x7F6E;&#x6765;&#x51B3;&#x5B9A;&#x9875;&#x9762;&#x7684;&#x5C55;&#x793A;&#xFF0C;&#x66F4;&#x52A0;&#x7684;&#x7075;&#x6D3B;&#x3002;&#x8DEF;&#x7531;&#x56DE;&#x5F52;&#x5230;&#x4E86;&#x7EC4;&#x4EF6;&#x7684;&#x672C;&#x8D28;&#xFF0C;&#x62E5;&#x62B1;&#x66F4;&#x52A0;&#x7EAF;&#x6B63;&#x7684; React&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x5728;&#x4F7F;&#x7528; v4 &#x7684;&#x65F6;&#x5019;&#x8FD8;&#x9047;&#x5230;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x5E94;&#x8BE5;&#x662F;&#x4F7F;&#x7528; React &#x80FD;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x8FD8;&#x6709;&#x4E00;&#x70B9;&#x597D;&#x5904;&#x662F;&#x57FA;&#x4E8E;&#x539F;&#x751F; React &#x7EC4;&#x4EF6;&#x540E;&#xFF0C;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x9020;&#x7684;&#x751F;&#x6DA9;&#x8F6E;&#x5B50;&#xFF0C;&#x642D;&#x5EFA;&#x597D;&#x57FA;&#x7840;&#x5E73;&#x53F0;&#x540E;&#x793E;&#x533A;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E; React &#x8D21;&#x732E;&#x66F4;&#x591A;&#x63D2;&#x4EF6;&#x3002;</p>
+<p>&#x66F4;&#x52A0;&#x8BE6;&#x5C3D;&#x7684;&#x5173;&#x4E8E; react-router v4 &#x7684;&#x4E1C;&#x897F;&#x63A8;&#x8350;&#x9605;&#x8BFB;All About React Router 4&#xFF08;&#x8BB2;&#x771F;&#x6211;&#x5F88;&#x5947;&#x602A;&#x8FD9;&#x6587;&#x7AE0;&#x4E3A;&#x4EC0;&#x4E48;&#x53D1;&#x5728;&#x4E86; css-tricks&#xFF0C;&#x9ED1;&#x4EBA;&#x95EE;&#x53F7;&#xFF1F;&#xFF09; &#xFF0C;&#x6216;&#x8005;&#x67E5;&#x770B;&#x8FD9;&#x4E2A;&#x5728;&#x7EBF; Demo&#x3002;</p>
+<p>&#x4E0D;&#x50CF;&#x786C;&#x6C14;&#x7684; iOS &#x6BCF;&#x6B21;&#x90FD;&#x5899;&#x88C2;&#x5EFA;&#x8BAE;&#x6240;&#x6709;&#x7528;&#x6237;&#x5347;&#x7EA7;&#xFF08;&#x7ED3;&#x679C;&#x8BC1;&#x660E;&#x8D8A;&#x5347;&#x8D8A;&#x6162;&#xFF09;&#xFF0C;v4 beta &#x6587;&#x6863;&#x91CC;&#x5173;&#x4E8E;&#x300C;Do I have to upgrade? &#x300D;&#x7684;&#x56DE;&#x7B54;&#x663E;&#x5F97;&#x7279;&#x522B;&#x52A1;&#x5B9E;&#xFF1A;</p>
+<p>&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x5347;&#x7EA7;&#xFF0C;v2/3 &#x4F1A;&#x6301;&#x7EED;&#x7EF4;&#x62A4;&#xFF08;&#x5F53;&#x7136;&#x4E0D;&#x4F1A;&#x544A;&#x8BC9;&#x4F60;&#x6240;&#x8C13;&#x7684;&#x7EF4;&#x62A4;&#x4EC5;&#x4EC5;&#x662F;&#x6307;&#x5408;&#x5E76;&#x793E;&#x533A;&#x8D21;&#x732E;&#x7684; bug fix&#xFF09;&#x3002;&#x4E0D;&#x8FC7;&#x65B0;&#x9879;&#x76EE;&#x5012;&#x662F;&#x53EF;&#x4EE5;&#x628A;&#x73A9;&#x4E00;&#x4E0B;&#x7684;&#xFF0C;&#x8C01;&#x4E0D;&#x559C;&#x65B0;&#x538C;&#x65E7;&#x5462;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/coco723" target="_blank">guoyanhong</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB;&#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-05-06 16:26:57 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="React生命周期.html" class="navigation navigation-prev " aria-label="Previous page: React 生命周期">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="服务端渲染SSR.html" class="navigation navigation-next " aria-label="Next page: 服务端渲染 SSR">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"React-routerv4 路由配置方法","level":"1.3.14","depth":2,"next":{"title":"服务端渲染 SSR","level":"1.3.15","depth":2,"path":"React/服务端渲染SSR.md","ref":"React/服务端渲染SSR.md","articles":[]},"previous":{"title":"React 生命周期","level":"1.3.13","depth":2,"path":"React/React生命周期.md","ref":"React/React生命周期.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","github-buttons","editlink","copy-code-button","page-footer-ex","anchor-navigation-ex","expandable-chapters-small","-lunr","-search","search-pro","donate","splitter","disqus","baidu-tongji-with-multiple-channel","katex-ng","advanced-emoji","livereload"],"ignores":["_book","node_modules"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"coco723"},"editlink":{"label":"Edit This Page","multilingual":false,"base":"https://github.com/coco723/blog/tree/master"},"livereload":{},"baidu-tongji-with-multiple-channel":{"multipleChannelConfig":{},"url":"https://hm.baidu.com/hm.js"},"page-footer-ex":{"copyright":"By [guoyanhong](https://github.com/coco723)，使用[知识共享署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","alipayText":"支付宝捐赠","button":"Donate","title":"","wechat":"https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"katex-ng":{},"github-buttons":{"buttons":[{"user":"guoyanhong","repo":"blog","type":"star","size":"small"}]},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"guoyanhong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"郭雁宏的博客","language":"zh-hans","gitbook":"*"},"file":{"path":"React/React-routerv4路由配置方法.md","mtime":"2021-05-06T08:26:57.006Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-06T11:20:52.815Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji-with-multiple-channel/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
