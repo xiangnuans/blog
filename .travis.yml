@@ -30,13 +30,14 @@ script:                              #script阶段 运行脚本
   - gitbook build                    #gitbook编译，生成静态网站站点_book
   
  
-after_script:                        #script阶段之后执行
-  - cd _book                         #进入_book目录
-  - git init                         
-  - git remote add origin https://${REF}    #设置要托管到的仓库名
+after_script:                        #script阶段之后执行        
   - git add .                               #添加_book目录下的所有文件
   - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages" 
-  - git branch -M master
+  - git checkout gh-pages
+  - rm -rf *     #清空一下分支
+  - git checkout master --_book   #然后将master分支下的_book静态页面文件内容全部复制到gh-pages分支下
+  - mv _book/*./.       #将_book中的子文件全部移到外层，并删除_book
+  - rm -rf _book
   - git push --force --quiet "https://${TOKEN}@${REF}" master:gh-pages  #强制推送到gh-pages分支
  
 env:
