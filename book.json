@@ -9,7 +9,6 @@
     "disqus",
     "github-buttons",
     "editlink",
-    "bibtex-indexed-cite",
     "anchor-navigation-ex",
     "page-footer-ex",
     "splitter",
@@ -43,8 +42,7 @@
           "user": "coco723",
           "repo": "book",
           "type": "star",
-          "size": "small",
-          "count": true
+          "size": "small"
         }
       ]
     },
@@ -62,9 +60,6 @@
       "markdown": true,
       "update_label": "此页面修订于：",
       "update_format": "YYYY-MM-DD HH:mm:ss"
-    },
-    "bibtex-indexed-cite": {
-      "path": "/"
     },
     "donate": {
       "wechat": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
