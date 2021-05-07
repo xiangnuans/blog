@@ -14,9 +14,7 @@
     "splitter",
     "copy-code-button",
     "expandable-chapters-small",
-    "donate",
-    "-highlight",
-    "prism"
+    "donate"
   ],
   "pluginsConfig": {
     "search-pro": {
@@ -32,7 +30,7 @@
       "shortName": "book"
     },
     "editlink": {
-      "base": "https://github.com/coco723/book/blob/master",
+      "base": "https://github.com/coco723/blog/blob/master",
       "label": "Edit",
       "multilingual": false
     },
@@ -44,15 +42,6 @@
           "type": "star",
           "size": "small"
         }
-      ]
-    },
-    "prism": {
-      "ignore": [
-        "mermaid",
-        "eval-js"
-      ],
-      "css": [
-        "prismjs/themes/prism-solarizedlight.css"
       ]
     },
     "page-footer-ex": {
