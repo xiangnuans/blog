@@ -1,60 +1,78 @@
 {
-  "root": "./",
   "title": "郭雁宏的博客",
-  "language": "zh-hans",
-  "structure": {
-    "readme": "README.md"
-  },
   "author": "guoyanhong",
   "plugins": [
-    "expandable-chapters",
-    "github-buttons",
-    "editlink",
-    "copy-code-button",
-    "page-footer-ex",
-    "anchor-navigation-ex",
-    "expandable-chapters-small",
     "-lunr",
     "-search",
     "search-pro",
-    "donate",
-    "splitter",
+    "-sharing",
     "disqus",
-    "baidu-tongji-with-multiple-channel",
-    "katex-ng",
-    "advanced-emoji"
+    "github-buttons",
+    "editlink",
+    "bibtex-indexed-cite",
+    "anchor-navigation-ex",
+    "page-footer-ex",
+    "splitter",
+    "copy-code-button",
+    "expandable-chapters-small",
+    "donate",
+    "-highlight",
+    "prism"
   ],
   "pluginsConfig": {
+    "search-pro": {
+      "cutWordLib": "nodejieba",
+      "defineWord": [
+        "Gitbook Use"
+      ]
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    },
     "disqus": {
-      "shortName": "coco723"
+      "shortName": "book"
     },
     "editlink": {
-      "base": "https://github.com/coco723/blog/tree/master",
-      "label": "Edit This Page"
+      "base": "https://github.com/coco723/book/blob/master",
+      "label": "Edit",
+      "multilingual": false
     },
     "github-buttons": {
       "buttons": [
         {
-          "user": "guoyanhong",
-          "repo": "blog",
+          "user": "coco723",
+          "repo": "book",
           "type": "star",
-          "size": "small"
+          "size": "small",
+          "count": true
         }
       ]
     },
+    "prism": {
+      "ignore": [
+        "mermaid",
+        "eval-js"
+      ],
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    },
     "page-footer-ex": {
-      "copyright": "By [guoyanhong](https://github.com/coco723)，使用[知识共享署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
+      "copyright": "By [guoyanhong](https://github.com/coco723)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
       "markdown": true,
-      "update_label": "<i>updated</i>",
+      "update_label": "此页面修订于：",
       "update_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "bibtex-indexed-cite": {
+      "path": "/"
     },
     "donate": {
       "wechat": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
       "alipay": "https://tva1.sinaimg.cn/large/008i3skNly1gpybxpywl9j30u014q761.jpg",
       "title": "",
-      "button": "Donate",
-      "alipayText": "支付宝捐赠",
-      "wechatText": "微信捐赠"
+      "button": "赏",
+      "alipayText": "支付宝打赏",
+      "wechatText": "微信打赏"
     }
   },
   "ignores": [
