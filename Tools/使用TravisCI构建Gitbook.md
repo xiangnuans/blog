@@ -20,7 +20,7 @@ Travis的构建基于`.travis.yml`文件进行的，因此，为了让Travis CI�
 
 在弹出的界面中填入文件名 `.travis.yml`
 
-```yml
+```yaml
 language: node_js
 
 node_js:

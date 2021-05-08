@@ -20,7 +20,7 @@ ffprobe 文件
 
 - 输出文件的格式信息（包括时长，文件爱你大小，格式信息等等）
 
-```shell
+```bash
 ffprobe -show_format 文件路径
 ```
 
@@ -96,7 +96,7 @@ ffplay 文件路径 -sync ext // 外部时钟
 
 ### 通用参数
 
-```shell
+```bash
 -f fmt 指定格式（音频或视频格式）
 -i filename (音频或视频格式)
 -y 覆盖已有文件
@@ -108,7 +108,7 @@ ffplay 文件路径 -sync ext // 外部时钟
 
 ### 视频参数
 
-```shell
+```bash
 -b 指定比特率（bit/s），似乎ffmpeg是自动VBR的，指定了就大概是平均比特率
 -bitexact 使用标准比特率
 -vb 指定视频比特率（bit/s）
@@ -135,7 +135,7 @@ ffplay 文件路径 -sync ext // 外部时钟
 
 ### 高级视频选项
 
-```shell
+```bash
 -pix_fmt format set pixel format, 'list' as argument shows all the pixel formats supported
 - intra 仅适用帧内编码
 - qscale q 以<数值>质量为基础的VBR，取之0.01-255，约小质量越好
@@ -151,7 +151,7 @@ ffplay 文件路径 -sync ext // 外部时钟
 
 ### 音频参数
 
-```shell
+```bash
 
 -ab 设置比特率（单位：bit/s，也许老版是kb/s）前面-ac设为立体声时，要以一般比特率来设置，比如192kbps的就设为96，转换 默认比特率都比较小，要听到较高品质声音的话建议设到160kbps(80)以上
 -aframes number 设置转换多少帧（frame）的音频
@@ -166,7 +166,7 @@ ffplay 文件路径 -sync ext // 外部时钟
 
 ### 字幕参数
 
-```shell
+```bash
 -sn 取消字幕
 -scodec codec 设置字幕编码（‘copy’ to copy stream）
 -newsubtitle 在当前字幕后新增

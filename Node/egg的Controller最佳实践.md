@@ -118,7 +118,7 @@ async updateUser(username) {
 
 - TypeScript
 
-```ts
+```js
 @route('/api/user', {
     method: 'post'
 })

@@ -58,7 +58,7 @@ Git提交格式：
 
 安装husky
 
-```shell
+```bash
 
 npm install husky --save-dev
 

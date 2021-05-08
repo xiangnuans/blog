@@ -1,6 +1,11 @@
 {
-  "title": "郭雁宏的博客",
+  "title": "book",
   "author": "guoyanhong",
+  "links": {
+    "sidebar": {
+      "Home": "https://coco723.github.io/blog"
+    }
+  },
   "plugins": [
     "-lunr",
     "-search",
@@ -14,7 +19,9 @@
     "splitter",
     "copy-code-button",
     "expandable-chapters-small",
-    "donate"
+    "donate",
+    "-highlight",
+    "prism"
   ],
   "pluginsConfig": {
     "search-pro": {
@@ -40,8 +47,22 @@
           "user": "coco723",
           "repo": "book",
           "type": "star",
-          "size": "small"
+          "size": "small",
+          "count": true
         }
+      ]
+    },
+    "prism": {
+      "ignore": [
+        "mermaid",
+        "eval-js"
+      ],
+      "lang": {
+        "shell": "bash",
+        "ts": "javascript"
+      },
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
       ]
     },
     "page-footer-ex": {

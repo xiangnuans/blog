@@ -35,7 +35,7 @@
 - install安装项目依赖
 - script运行测试用例
 
-```yml
+```yaml
 language: node_js
 
 sudo: false

@@ -7,7 +7,7 @@
 
 ## 图片转视频加背景音乐
 
-```shell
+```bash
 ffmpeg -f image2 \
        -loop 1 \
        -i img.jpg \
@@ -22,7 +22,7 @@ ffmpeg -f image2 \
 
 ## 视频拼接
 
-```shell
+```bash
 ffmpeg -i v4.mp4 -i v2.mp4 \
    -filter_complex '[0:v]scale=720:1280[in1];
                     [1:v]scale=720:1280[in2];
@@ -35,7 +35,7 @@ ffmpeg -i v4.mp4 -i v2.mp4 \
 
 ## 视频拼接并去除声音
 
-```shell
+```bash
 ffmpeg -i v4.mp4 -i v2.mp4 \
    -filter_complex '[0:v]scale=720:1280[in1];
                     [1:v]scale=720:1280[in2];
@@ -45,7 +45,7 @@ ffmpeg -i v4.mp4 -i v2.mp4 \
 
 ## 视频（去除声音）拼接、音频合成
 
-```shell
+```bash
 ffmpeg -i v4.mp4 -i v2.mp4 -i audio.wav \
    -filter_complex '[0:v]scale=720:1280[in1];
                     [1:v]scale=720:1280[in2];
@@ -55,7 +55,7 @@ ffmpeg -i v4.mp4 -i v2.mp4 -i audio.wav \
 
 # 图片转视频封面、加背景音乐、拼接视频、加音频合成
 
-```shell
+```bash
 ffmpeg -i WechatIMG612.png \
        -i v4.mp4 \
        -i v2.mp4 \
@@ -81,7 +81,7 @@ ffmpeg -i WechatIMG612.png \
 
 **方案一：amerge：但音频会按最短音频输出**
 
-```shell
+```bash
 ffmpeg -i t.wav \
        -i audio.mp3 \
        -filter_complex '[0:a][1:a] amerge [a]' \
@@ -90,7 +90,7 @@ ffmpeg -i t.wav \
 
 **方案二：join,和merge同样的**
 
-```shell
+```bash
 
 ffmpeg -i t.wav \
        -i audio.mp3 \
@@ -100,7 +100,7 @@ ffmpeg -i t.wav \
 
 **方案三：-shortest：测试结果只支持 单音频时，可以这样实现**
 
-```shell
+```bash
 ffmpeg -i v1.mp4 \
        -i audio.mp3 \
        -filter_complex "[0:a][1:a]amerge=inputs=2[a]" \
@@ -109,7 +109,7 @@ ffmpeg -i v1.mp4 \
 
 **方案四：-t在最后指定播放总时长(目前只能使用这种方式)**
 
-```shell
+```bash
 ffmpeg -i WechatIMG612.png \
        -i v4.mp4 \
        -i v2.mp4 \
@@ -126,7 +126,7 @@ ffmpeg -i WechatIMG612.png \
 
 ## 图片转视频默认只有一帧，设定持续时长
 
-```shell
+```bash
 ffmpeg -i f.png \
        -i 1.mp4 \
        -i 2.mp4 \
@@ -147,7 +147,7 @@ ffmpeg -i f.png \
 
 ## 音频延迟播放
 
-```shell
+```bash
 ffmpeg -i f.png \
        -i 1.mp4 \
        -i 2.mp4 \
@@ -168,7 +168,7 @@ ffmpeg -i f.png \
 
 ## 推流
 
-```shell
+```bash
 ffmpeg -i f.jpg \
        -i 1.mp4 \
        -i long.mp4 \
@@ -192,7 +192,7 @@ ffmpeg -i f.jpg \
 
 ## 本地拉流
 
-```shell
+```bash
 ffmpeg -i "https://"
        -codec copy \
        -f mp4 rr.mp4
@@ -202,7 +202,7 @@ ffmpeg -i "https://"
 
 ### 图片水印
 
-```shell
+```bash
 ffmpeg -i 4.mp4 \
        -i sy.png \
        -filter_complex "overlay=10:10" birds2.mp4
@@ -210,14 +210,14 @@ ffmpeg -i 4.mp4 \
 
 ### 添加文字水印
 
-```shell
+```bash
 ffmpeg -i 4.mp4 \
    -vf "drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=white@0.7" output.mp4
 ```
 
 ### 添加水印后推流
 
-```shell
+```bash
 
 ffmpeg -i f.jpg \
        -i 1.mp4 \
@@ -244,7 +244,7 @@ ffmpeg -i f.jpg \
 
 ### 循环推流
 
-```shell
+```bash
 ## 循环推流
 
 ffmpeg -re \
