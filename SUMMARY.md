@@ -2,7 +2,6 @@
 
 * [目录](./README.md)
 * [工具](./Tools/README.md)
-  * [Mac下Chrome快捷键](./Tools/Mac下Chrome快捷键.md)
   * [Gitbook 安装及使用](./Tools/GitBook.md)
   * [Markdown中使用HTML标签](./Tools/Markdown中使用HTML标签.md)
   * [Mac下chrome快捷键](./Tools/Mac下chrome快捷键.md)
