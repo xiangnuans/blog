@@ -1,1 +1,1 @@
-# 想着自己怎么开发一个像egg-init, umi create的脚手架
+# 怎么开发一个像egg-init的脚手架

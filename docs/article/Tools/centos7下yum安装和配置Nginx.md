@@ -1,8 +1,9 @@
-# 前言
+# centos7下yum安装和配置Nginx
+## 前言
 
 Nginx (engine x) 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP/POP3/SMTP 服务器。。 本例演示 CentOS 7 下安装和配置 Nginx 的基本步骤。
 
-# 环境
+## 环境
 
 查看Linux环境
 ```
@@ -10,9 +11,9 @@ cat /etc/redhat-release
 CentOS Linux release 7.6.1810 (Core) 
 ```
 
-# 步骤
+## 步骤
 
-## 1. 添加yum源
+### 1. 添加yum源
 Nginx不在默认的yum源中，可以使用epel或者官网的yum源，本例使用官网的yum源。
 
 ```
@@ -46,13 +47,13 @@ repolist: 26,603
 
 可以发现**nginx repo**已经安装到本机了。
 
-## 步骤二：安装
+### 步骤二：安装
 yum 安装Nginx，非常简单，一条命令
 ```
 yum install nginx
 ```
 
-## 步骤三：配置Nginx服务
+### 步骤三：配置Nginx服务
 
 设置开机启动
 ```
@@ -73,7 +74,7 @@ systemctl restart nginx
 systemctl reload nginx
 ```
 
-## 步骤四：打开防火墙端口
+### 步骤四：打开防火墙端口
 默认Centos使用的防火墙firewalld是关闭http服务的（打开80端口）
 ```
 $ sudo firewall-cmd --zone=public --permanent --add-service=http
@@ -89,7 +90,7 @@ firewall-cmd --list-service
 
 可以看到系统已经打开了http服务
 
-# 反向代理
+## 反向代理
 
 Nginx 是一个很方便的反向代理，配置反向代理可以参考[Module ngx_http_proxy_module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html)。本文不做赘述
 
@@ -99,7 +100,7 @@ Nginx 是一个很方便的反向代理，配置反向代理可以参考[Module 
 setsebool httpd_can_network_connect 1 
 ```
 
-# 绑定其他端口
+## 绑定其他端口
 
 Nginx 默认绑定的端口是 http 协议的默认端口，端口号为：80，如果需要绑定其他端口，需要注意 SELinux 的配置
 

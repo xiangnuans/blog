@@ -1,4 +1,4 @@
-# Mac 下 chrome 快捷键[【转载】](https://blog.csdn.net/fjh658/article/details/8860967)
+# Mac 下 chrome 快捷键
 
 浏览器的刷新快捷键 F5，强制刷新 Ctrl+F5
 Mac 系统下浏览器的刷新快捷键 command+R, 强制刷新快捷键为 command+shift+R

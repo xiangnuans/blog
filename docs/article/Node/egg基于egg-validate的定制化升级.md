@@ -1,4 +1,3 @@
-[转载](http://www.fly63.com/article/detial/4021)
 # egg基于egg-validate的定制化升级
 
 ## 简单讲一下这个egg-validate

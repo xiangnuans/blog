@@ -1,6 +1,8 @@
+# Docker与Kubernetes在Mac本地环境搭建与应用部署
+
 [Docker官网](https://docs.docker.com/ee/)
 
-# Homebrew安装
+## Homebrew安装
 macOS我们可以使用Homebrew来安装docker
 Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：
 ```
@@ -16,7 +18,7 @@ brew cask install docker
   docker was successfully installed!
 ```
 
-# 手动安装
+## 手动安装
 下载最新的Docker for Mac或者Edge版本，即可以看到内置的kubernets集群，直接点击安装即可
 
 ![](https://upload-images.jianshu.io/upload_images/9403248-e287d34bf5d15034.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -198,7 +200,7 @@ $ docker stack remove demo
 $ kubectl delete deployment kubernetes-dashboard --namespace kube-system
 ```
 
-# 镜像加速
+## 镜像加速
 
 鉴于国内网络问题，后续拉取Docker镜像十分缓慢，我们需要配置加速期来解决，
 

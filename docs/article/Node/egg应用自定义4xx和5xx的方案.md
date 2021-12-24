@@ -1,10 +1,13 @@
+# egg应用自定义4XX和5XX的方案
+
+
 [转载](https://github.com/eggjs/egg/issues/1086)
 
 现在的错误处理插件是[egg-onerror](https://github.com/eggjs/egg-onerror)，但这个插件主要是优雅处理为捕获异常，也就是为了让应用不挂进行兜底，但是现在没有一种同意的业务员错误处理方案。
 
-# 问题
+## 问题
 
-## 业务校验
+### 业务校验
 
 比如参数校验、业务演这个等等，这些并不术语异常，一般会在响应时专程对应的数据格式。常见的处理方式是接口返回错误，并在response转换
 
@@ -46,24 +49,24 @@ class User extends Controller {
 
 然后再中间件处理这个异常
 
-# 异常类型区分
+## 异常类型区分
 
 上面的示例也同样抛出Error，如果不写中间件处理同样回走到[oneror](https://github.com/eggjs/egg-onerror)插件，根据惠泽会打印错误日志并返回500.
 
 这不是我们期望的，开发者希望但会正确的格式，比如status是422，body是一个含错误信息的json。所以我们需要明确已知异常和为捕获异常，并对他们做差异处理
 
-# 标准化响应
+## 标准化响应
 
 如果在写一个api server的时候，希望响应格式是规范的，而开发者一般都比较关注正常结果，异常时会返回格式，所以对于一个API Server来说这也是非常重要的。
 
-# 内容协商
+## 内容协商
 
 有些应用会根据content-type来返回对应数据，这种情况错误处理也需要根据这种场景来返回相应的结果
 
-# Spec
+### Spec
 
-## 错误定义
-### 种类
+### 错误定义
+#### 种类
 
 错误分为三种未捕获异常、系统异常、业务异常，以下是分类比较
 
@@ -94,7 +97,7 @@ BaseError.check(Error); // false
 即成的错误可增加额外的属性，比如HttpError可增加额外属性，比如HttpError可增加status属性作为处理函数的输入
 
 
-### 字段
+#### 字段
 标准字段包括
 
 - name：一般为类名，如NotFoundError
@@ -104,7 +107,7 @@ http扩展
 
 - status: http状态码，400
 
-## 错误抛出
+### 错误抛出
 自行在代码里面引入对应的类
 ```
 import { http } from 'egg-errors';
@@ -137,7 +140,7 @@ class CustomError extends BaseError {
 throw new CustomError('xxx');
 ```
 
-## 错误处理
+### 错误处理
 
 错误处理是最核心的功能，有如下规则：
 

@@ -3,7 +3,6 @@ home: true
 heroImage: ./logo.png
 actionText: 开始阅读 →
 actionLink: /article/
-siderbar: auto
 features:
 - title: React
   details: 掌握高级React技巧。

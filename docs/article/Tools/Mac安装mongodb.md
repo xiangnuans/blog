@@ -1,10 +1,11 @@
-# 一. 更新Homebrew包
+# Mac上按转mongodb
+## 一. 更新Homebrew包
 
 ```
 brew update
 ```
 
-# 二. 安装Mongodb
+## 二. 安装Mongodb
 
 ```
 brew install mongodb
@@ -12,9 +13,9 @@ brew install mongodb
 
 安装需要一些时间，默认安装在/usr/local/Cellar/mongodb/4.0.3_1(我的版本)目录下安装好了，还需要配置一下，否则是无法正常启动服务的
 
-# 三. 配置mongodb
+## 三. 配置mongodb
 
-## 1. 创建一个db目录，用户mongodb写数据
+### 1. 创建一个db目录，用户mongodb写数据
 ```
 mkdir -p /data/db
 ```
@@ -23,7 +24,7 @@ mkdir -p /data/db
 sudo mkdir -p /data/db
 ```
 
-## 2. 给**/data/db**文件夹赋予权限
+### 2. 给**/data/db**文件夹赋予权限
 
 ```
 sudo chown id -u /data/db
@@ -33,7 +34,7 @@ username
 $ sudo chown username /data/db
 ```
 
-## 3. 配置mongodb环境配置
+### 3. 配置mongodb环境配置
 
 - 打开.zshrc文件
   

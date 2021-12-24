@@ -1,4 +1,5 @@
-# 什么时componentWillReceiveProps？
+# componentWillReceiveProps的使用
+## 什么时componentWillReceiveProps？
 
 componentWillReceiveProps是React生命周期中的一个环节，有关React的生命周期，同学们可以在这里详细了解。
 componentWillReceiveProps在初始化render的时候不会执行，它会在Component接受到新的状态(Props)时被触发，一般用于父组件状态更新时子组件的重新渲染。这个东西十分好用，但是一旦用错也会造成十分严重的后果。

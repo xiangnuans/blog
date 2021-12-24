@@ -1,11 +1,13 @@
-# 什么是kubectl
+# 使用kubectl连接远程k8s集群
+
+## 什么是kubectl
 
 - kubectl是kubernetes的客户顿啊程序
 - 是用于运行kubernetes集群命令的管理工具
 - 提供了大量子命令可以让用户和集群进行交互
 - 不一定部署在master上，用户可以通过kubectl 连接到master上
 
-# 安装
+## 安装
 
 macOS下直接使用homebrew 管理工具进行安装
 
@@ -19,13 +21,13 @@ brew install kubernetes-cli
 kubectl version
 ```
 
-# 基本语法
+## 基本语法
 
 ```
 kubectl [command] [TYPE] [NAME] [flags]
 ```
 
-# 配置kubectl
+## 配置kubectl
 ```
 # 配置集群名称与服务地址
 kubectl config --kubeconfig=${HOME}/.kube/config set-cluster cluster-name --server=https://{IP} --inspecure-skip-tls-verify
@@ -40,7 +42,7 @@ kubectl config --kubeconfig=${HOME}/.kube/config set-context admin --cluster-clu
 kubectl config --kubeconfig=${HOME}/.kube/config use-context admin
 ```
 
-# 预览配置
+## 预览配置
 ```
 $ kubectl config view
 apiVersion: v1
@@ -65,7 +67,7 @@ users:
     username: username
 ```
 
-# 验证配置
+## 验证配置
 ```
 $ kubectl cluster-info
 Kubernetes master is running at https://{IP}
