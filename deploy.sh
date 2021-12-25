@@ -12,8 +12,10 @@ cd docs/.vuepress/dist
 # 发布到自定义域名
 echo '${yourname}.github.io' > CNAME
 
-git add -A
-git commit -m 'deploy'
+git init
+git remote add origin https://${REF}
+git add .
+git commit -m "Updated By Deploy With Build For Github Pages"
 
 # 推到仓库的 master 分支
 git push -f --quiet "https://${TOKEN}@${REF}" master:gh-pages
