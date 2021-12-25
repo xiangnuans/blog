@@ -1,0 +1,42 @@
+language: node_js
+node_js:
+  - lts/*
+cache:
+  directories:
+    - node_modules
+  yarn: true
+
+before_install:
+  - export TZ='Asia/Shanghai' # 设置时区
+
+notifications:
+  email:
+    recipients:
+      - 1352118502@qq.com # 设置通知邮件
+    on_success: change
+    on_failure: always
+
+install:
+  - yarn install
+
+
+script:
+  - yarn docs:build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: docs/.vuepress/dist
+  github-token: $TOKEN
+  target-branch: gh-pages
+  verbose: true
+  keep-history: true
+  name: coco723
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - REF=github.com/coco723/blog.git # 设置 github 地址
