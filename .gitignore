@@ -66,3 +66,5 @@ typings/
 docs/.vuepress/dist/
 
 docs/.vuepress/config.js
+
+node_modules
