@@ -9,4 +9,4 @@
 
 官网：[umi-request](https://github.com/umijs/umi-request)
 
-![](../public/images/umi-request.jpg)
+<!-- ![](../public/images/umi-request.jpg) -->

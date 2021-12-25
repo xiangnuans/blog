@@ -301,20 +301,20 @@ sudo ln -s ~/Applications/calibre.app/Contents/MacOS/ebook-convert /usr/bin
 [GitBook.com](https://www.gitbook.com)是使用GitBook格式创建和托管图书的在线平台。它提供托管，协作功能和抑郁使用的编辑器。
 
 创建组织
-![](../public/images/gitbook1.png)
+<!-- ![](../public/images/gitbook1.png) -->
 
 设置组织
-![](../public/images/gitbook2.png)
+<!-- ![](../public/images/gitbook2.png) -->
 
 在组织中新建space
-![](../public/images/gitbook3.png)
+<!-- ![](../public/images/gitbook3.png) -->
 注：免费的GitBook一个组织下只能新建一个space
 
 点击新建好的space->INTEGRATIONS
-![](../public/images/gitbook4.png)
+<!-- ![](../public/images/gitbook4.png) -->
 
 这里我用的GitHub(在GitHub上选择已经新建好的仓库关联)
-![](../public/images/gitbook5.png)
+<!-- ![](../public/images/gitbook5.png) -->
 
 只要你指定的GitHub仓库中的文档内容符合GitBook规范，GitBook就会自动根据你的梅西更新区构建生成电子书网站。默认访问地址是
 ```
