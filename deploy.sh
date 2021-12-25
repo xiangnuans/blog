@@ -10,7 +10,7 @@ npm run build
 cd docs/.vuepress/dist
 
 # 发布到自定义域名
-echo '${yourname}.github.io' > CNAME
+echo "${yourname}.github.io" > CNAME
 
 git init
 git remote add origin https://${REF}
