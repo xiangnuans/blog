@@ -19,4 +19,4 @@ git add -A
 git commit -m 'deploy'
 
 # 推到仓库的 master 分支
-git push -f git@github.com:${yourname}/${yourname}.github.io.git master
+git push -f git@github.com:${yourname}/blog.git master
