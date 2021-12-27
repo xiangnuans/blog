@@ -15,11 +15,11 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  local_dir: /blog//docs/.vuepress/dist
+  local_dir: docs/.vuepress/dist
   github-token: $TOKEN
   target-branch: gh-pages
   verbose: true
-  keep-history: true 
+  keep-history: true
   name: coco723
 
 branches:
