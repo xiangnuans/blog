@@ -14,5 +14,8 @@
   },
   "keywords": [],
   "author": "guoyanhong",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.9.5"
+  }
 }

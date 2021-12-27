@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: ./logo.png
+heroImage: logo.png
 actionText: 开始阅读 →
-actionLink: /article/
+actionLink: article/
 features:
 - title: React
   details: 掌握高级React技巧。
