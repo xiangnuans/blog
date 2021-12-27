@@ -17,11 +17,11 @@ notifications:
     on_failure: always
 
 install:
-  - yarn install
+  - npm install
 
 
 script:
-  - yarn docs:build
+  - npm run docs:build
 
 deploy:
   provider: pages
