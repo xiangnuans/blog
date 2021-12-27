@@ -4,23 +4,13 @@ node_js:
 cache:
   directories:
     - node_modules
-
+  yarn: true
 before_install:
   - export TZ='Asia/Shanghai' # 设置时区
-
-notifications:
-  email:
-    recipients:
-      - 1352118502@qq.com # 设置通知邮件
-    on_success: change
-    on_failure: always
-
 install:
-  - npm install
-
-
+  - yarn install
 script:
-  - npm run docs:build
+  - yarn docs:build
 
 deploy:
   provider: pages
