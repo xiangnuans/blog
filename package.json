@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "> 写代码 = 数据结构 + 算法 + ...",
+  "description": "郭雁宏的博客",
   "main": "index.js",
   "directories": {
     "doc": "docs"
