@@ -94,7 +94,7 @@ module.exports = {
           title: "Webpack进阶",
           collapsable: true,
           children: [
-            "/article/Webpack/Webpack5更新日志",
+            // "/article/Webpack/Webpack5更新日志",
             "/article/Webpack/Webpack中实现静态资源内联",
           ],
         },
@@ -128,7 +128,7 @@ module.exports = {
             "/article/Node/egg框架框架nest框架对比",
             "/article/Node/egg框架中的参数校验",
             "/article/Node/egg体系",
-            "/article/Node/egg应用自定义4XX和5XX的方案",
+            // "/article/Node/egg应用自定义4XX和5XX的方案",
             "/article/Node/egg中cookie与Session的使用笔记",
             "/article/Node/koa-bodyparser中间件",
             "/article/Node/koa-multer实现文件上传并自定义文件名和目录",
