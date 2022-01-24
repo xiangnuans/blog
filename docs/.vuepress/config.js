@@ -3,7 +3,7 @@
 module.exports = {
   title: "郭雁宏的博客",
   description: "知识图谱",
-  base: "/docs/.vuepress/dist/",
+  base: "/docs/",
   themeConfig: {
     sidebarDepth: 2,
     lastUpdated: "Last Updated",
