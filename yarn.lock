@@ -1121,6 +1121,21 @@
     anymatch "^3.0.0"
     source-map "^0.6.0"
 
+"@vssue/utils@^1.4.7":
+  version "1.4.7"
+  resolved "https://registry.nlark.com/@vssue/utils/download/@vssue/utils-1.4.7.tgz#58a9ec2687d26080aa04cab17e8f87049f1342c3"
+  integrity sha1-WKnsJofSYICqBMqxfo+HBJ8TQsM=
+  dependencies:
+    date-fns "^1.29.0"
+    qs "^6.6.0"
+
+"@vssue/vuepress-plugin-vssue@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.nlark.com/@vssue/vuepress-plugin-vssue/download/@vssue/vuepress-plugin-vssue-1.4.8.tgz#37b8ada338c1222a143eb648555372d2959f4624"
+  integrity sha1-N7itozjBIioUPrZIVVNy0pWfRiQ=
+  dependencies:
+    vssue "^1.4.8"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
   resolved "https://registry.nlark.com/@vue/babel-helper-vue-jsx-merge-props/download/@vue/babel-helper-vue-jsx-merge-props-1.2.1.tgz#31624a7a505fb14da1d58023725a4c5f270e6a81"
@@ -2952,6 +2967,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@^1.29.0:
+  version "1.30.1"
+  resolved "https://registry.npmmirror.com/date-fns/download/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+  integrity sha1-LnG/CxGRU9u0zE6I2epaz7UNwFw=
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.nlark.com/de-indent/download/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -3977,6 +3997,11 @@ getpass@^0.1.1:
   integrity sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=
   dependencies:
     assert-plus "^1.0.0"
+
+github-markdown-css@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmmirror.com/github-markdown-css/download/github-markdown-css-3.0.1.tgz#d08db1060d2e182025e0d07d547cfe2afed30205"
+  integrity sha1-0I2xBg0uGCAl4NB9VHz+Kv7TAgU=
 
 glob-parent@^3.1.0:
   version "3.1.0"
@@ -6532,6 +6557,13 @@ qs@6.9.6:
   resolved "https://registry.npmmirror.com/qs/download/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
   integrity sha512-TIRk4aqYLNoJUbd+g2lEdz5kLWIuTMRagAXxl78Q0RiVjAOugHmeKNGdd3cwo/ktpf9aL9epCfFqWDEKysUlLQ==
 
+qs@^6.6.0:
+  version "6.10.3"
+  resolved "https://registry.npmmirror.com/qs/download/qs-6.10.3.tgz#d6cde1b2ffca87b5aa57889816c5f81535e22e8e"
+  integrity sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==
+  dependencies:
+    side-channel "^1.0.4"
+
 qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.npmmirror.com/qs/download/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
@@ -7958,10 +7990,31 @@ vm-browserify@^1.0.1:
   resolved "https://registry.nlark.com/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
+vssue@^1.4.8:
+  version "1.4.8"
+  resolved "https://registry.nlark.com/vssue/download/vssue-1.4.8.tgz#e0de059d16bf870dd7d72735d71761dfedfcfeb5"
+  integrity sha1-4N4FnRa/hw3X1yc11xdh3+38/rU=
+  dependencies:
+    "@vssue/utils" "^1.4.7"
+    github-markdown-css "^3.0.1"
+    vue "^2.6.10"
+    vue-i18n "^8.11.2"
+    vue-property-decorator "^8.1.1"
+
+vue-class-component@^7.1.0:
+  version "7.2.6"
+  resolved "https://registry.nlark.com/vue-class-component/download/vue-class-component-7.2.6.tgz#8471e037b8e4762f5a464686e19e5afc708502e4"
+  integrity sha1-hHHgN7jkdi9aRkaG4Z5a/HCFAuQ=
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.nlark.com/vue-hot-reload-api/download/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha1-UylVzB6yCKPZkLOp+acFdGV+CPI=
+
+vue-i18n@^8.11.2:
+  version "8.27.0"
+  resolved "https://registry.npmmirror.com/vue-i18n/download/vue-i18n-8.27.0.tgz#3e3b3ed2c107ccbd7f20dbdd7a96763a9990253e"
+  integrity sha512-SX35iJHL5PJ4Gfh0Mo/q0shyHiI2V6Zkh51c+k8E9O1RKv5BQyYrCxRzpvPrsIOJEnLaeiovet3dsUB0e/kDzw==
 
 vue-loader@^15.7.1:
   version "15.9.8"
@@ -7973,6 +8026,13 @@ vue-loader@^15.7.1:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-property-decorator@^8.1.1:
+  version "8.5.1"
+  resolved "https://registry.nlark.com/vue-property-decorator/download/vue-property-decorator-8.5.1.tgz#571a91cf8d2b507f537d79bf8275af3184572fff"
+  integrity sha1-VxqRz40rUH9TfXm/gnWvMYRXL/8=
+  dependencies:
+    vue-class-component "^7.1.0"
 
 vue-router@^3.4.5:
   version "3.5.3"
