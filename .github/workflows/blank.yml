@@ -1,0 +1,51 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        # 设置node的版本
+        with:
+          node-version: '14'
+        # 执行步骤的名称
+      - name: Compiling start
+        # 执行的具体脚本
+        run: echo Compiling start!
+        # 如果在执行的时候报错，提示需要用户名跟邮箱，那么需要单独设置下邮箱跟用户名
+      - run: git config --global user.email "your email address"
+      - run: git config --global user.name "your user name"
+        # 执行安装跟打包命令
+      - run: npm install && npm run docs:build
+      - name: Deploy
+        # 这个是第三方提供的库，可以推送打包后的内容到指定分支
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # 这边需要设置第二步获取到的deploy key，否则会提示没有权限推送代码
+          deploy_key: ${{ secrets.blog }}
+          # 推送到该仓库中，地址格式为github名称/仓库名
+          external_repository: coco723/blog
+          # 推送的分支
+          publish_branch: gh-pages
+          # 推送的内容
+          publish_dir: docs/.vuepress/dist
