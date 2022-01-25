@@ -1,3 +1,7 @@
+## 一、travis部署配置
+使用travis部署服务到GitHub服务器上，脚本
+
+```yml
 language: node_js
 node_js:
   - 12.18.2
@@ -29,3 +33,11 @@ branches:
 env:
   global:
     - REF=github.com/coco723/blog.git # 设置 github 地址
+```
+
+## 二、GitHub action部署配置
+
+```yml
+
+
+```

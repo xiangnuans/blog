@@ -7,7 +7,7 @@
 <!-- 完善的知识体系： [【自检】前端知识清单](./综合/【自检】前端知识清单.html) -->
 
 
-![前端知识图谱](https://tva1.sinaimg.cn/large/008i3skNly1gyov4yjhiij30kr0f8dhg.jpg)
+![前端知识图谱](../logo.png)
 
 ### React进阶
 
