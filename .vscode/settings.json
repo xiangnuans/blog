@@ -1,3 +1,8 @@
 {
-  "eggHelper.serverPort": 35684
+  "eggHelper.serverPort": 35684,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  }
 }
