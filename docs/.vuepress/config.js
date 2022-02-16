@@ -231,6 +231,13 @@ module.exports = {
             "/article/TypeScript/使用TypeScript装饰器装饰你的代码",
           ],
         },
+        {
+          title: "知识图谱清单",
+          collapsable: true,
+          children: [
+            "/article/知识图谱清单/前端知识清单"
+          ],
+        },
       ],
     },
   },
