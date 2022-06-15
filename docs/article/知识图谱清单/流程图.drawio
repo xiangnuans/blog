@@ -1,1 +1,76 @@
-<mxfile host="app.diagrams.net" modified="2022-06-14T08:18:30.050Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="EuFeZCZolwZtRn4wqBMH" version="20.0.1" type="github"><diagram id="Q7MyJe70ai9-6Z1EUdAv" name="Page-1">jZJNb4MwDIZ/DcdJhVR0PW6sZTvsMDF1vUbEJZECQSGMj1+/sDgFhCbtFPuxYzuvE5Ck7FNNa/6uGMgg2rE+IC9BFIX7KLbHRAZHDse9A4UWDJNmkIkREO6QtoJBs0o0Skkj6jXMVVVBblaMaq26ddpNyXXXmhawAVlO5ZZ+CWa4o4/RYeavIAruO4fx0UVK6pPxJQ2nTHULRE4BSbRSxllln4CcxPO6uHvnP6L3wTRU5j8XGtqMl2t2eUrH8/WtIsmn/njAKt9UtvhgHNYMXgGt2orBVGQXkOeOCwNZTfMp2tmdW8ZNKa0XWnM7lO8A2kC/QDhkCqoEowebglHiBcMfExL0u1n/0OfwhfYxMoorL+6lZ1WsgcJ4d17Ab2zxjcnpBw==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-06-15T08:13:32.114Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.61 Safari/537.36" etag="l6dEyqScYTjpmJ2erRIv" version="20.0.1" type="github" pages="2">
+  <diagram id="Q7MyJe70ai9-6Z1EUdAv" name="登录页">
+    <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QjhQn0Ivsydmfb3ZoHNR-3" target="QjhQn0Ivsydmfb3ZoHNR-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="190" />
+              <mxPoint x="310" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-9" value="账号密码登录" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QjhQn0Ivsydmfb3ZoHNR-7">
+          <mxGeometry x="-0.7875" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-3" value="登录页" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="170" y="80" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QjhQn0Ivsydmfb3ZoHNR-5" target="QjhQn0Ivsydmfb3ZoHNR-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="190" />
+              <mxPoint x="310" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-10" value="链接跳转&lt;br&gt;ERP与乐桃账号互通，免登录" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="QjhQn0Ivsydmfb3ZoHNR-8">
+          <mxGeometry x="-0.75" y="-2" relative="1" as="geometry">
+            <mxPoint x="2" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-5" value="ERP外链" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="330" y="80" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-6" value="工作台" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="170" y="210" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="QjhQn0Ivsydmfb3ZoHNR-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="90" as="sourcePoint" />
+            <mxPoint x="190" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="85" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-15" value="乐桃账号" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="1">
+          <mxGeometry x="30" y="40" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QjhQn0Ivsydmfb3ZoHNR-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QjhQn0Ivsydmfb3ZoHNR-19" value="对于前端来说是直接跳转，实际上会走后端的认证返回认证后携带token参数的URL链接" style="shape=card;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="50" width="130" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="PGGU8aGgXXVMCRwF5fqa" name="工作台">
+    <mxGraphModel dx="1426" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
