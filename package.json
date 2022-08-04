@@ -4,19 +4,68 @@
   "description": "郭雁宏的博客",
   "main": "index.js",
   "directories": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
     "doc": "docs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "start": "serve "
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
-  "keywords": [],
-  "author": "guoyanhong",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coco723/blog.git"
+  },
+  "keywords": [
+    "郭雁宏的技术博客",
+    "前端博客",
+    "https://coco723.github.io/blog/",
+    "前端"
+  ],
+  "author": {
+    "name": "郭雁宏",
+    "email": "1352118502@qq.com",
+    "url": "https://coco723.github.io/blog/",
+    "wxPublic": "欢迎关注微信前端talks公众号"
+  },
+  "bugs": {
+    "url": "https://github.com/coco723/blog/issues"
+  },
+  "homepage": "https://github.com/coco723/blog",
   "license": "ISC",
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
-    "vuepress": "^1.9.5"
+    "@vuepress/plugin-active-header-links": "^1.9.5",
+    "@vuepress/plugin-back-to-top": "^1.9.5",
+    "@vuepress/plugin-google-analytics": "^1.9.5",
+    "@vuepress/plugin-medium-zoom": "^1.9.5",
+    "@vuepress/plugin-nprogress": "^1.9.5",
+    "@vuepress/plugin-pwa": "^1.9.5",
+    "async-validator": "1.11.5",
+    "axios": "^0.24.0",
+    "codemirror": "^5.63.3",
+    "core-js": "^3.24.1",
+    "diff-match-patch": "^1.0.5",
+    "echarts": "^4.9.0",
+    "element-ui": "^2.15.6",
+    "sass-loader": "^13.0.2",
+    "sortablejs": "^1.15.0",
+    "vant": "^3.5.3",
+    "vue-clipboard2": "^0.3.3",
+    "vue-echarts": "^6.2.3",
+    "vuedraggable": "^2.24.3",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-auto-sidebar": "^2.3.2",
+    "vuepress-plugin-baidu-autopush": "^1.0.1",
+    "vuepress-plugin-clean-urls": "^1.1.2",
+    "vuepress-plugin-demo-code": "^0.6.0",
+    "vuepress-plugin-element-ui": "^1.1.0",
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-img-lazy": "^1.0.4",
+    "vuepress-plugin-meting": "^0.3.1",
+    "vuepress-plugin-reading-progress": "^1.0.10",
+    "vuepress-plugin-smooth-scroll": "0.0.10",
+    "vuepress-plugin-table-of-contents": "^1.1.7"
   }
 }

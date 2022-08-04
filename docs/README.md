@@ -1,8 +1,10 @@
 ---
 home: true
-heroImage: ./logo.png
+heroImage: /images/logo.png
+heroText: 郭雁宏
+tagline: 待定
 actionText: 开始阅读 →
-actionLink: /article/
+actionLink: /latestarticle/
 features:
 - title: React
   details: 掌握高级React技巧。
