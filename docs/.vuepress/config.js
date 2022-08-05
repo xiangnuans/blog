@@ -5,6 +5,7 @@ const plugins = require('./configs/plugin')
 
 module.exports = {
   title: "郭雁宏的博客",
+  base: "/blog/",
   description: "郭雁宏,郭雁宏的博客",
   keywords: "郭雁宏的博客,郭雁宏,前端博客",
   head,
