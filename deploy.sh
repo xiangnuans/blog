@@ -17,9 +17,9 @@ git add -A
 git commit -m '部署coco723'
 
 # 如果发布到 https://<USERNAME>.github.io
-# git push -f https://github.com/coco723/coco723.github.io.git  master:gh-pages
+# git push -f https://github.com/coco723/coco723.github.io.git  master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:coco723/<coco723>.git master:gh-pages
+git push -f https://github.com/coco723/blog.git master:gh-pages
 
 cd -

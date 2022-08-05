@@ -36,7 +36,7 @@ jobs:
       - run: git config --global user.email "your email address"
       - run: git config --global user.name "your user name"
         # 执行安装跟打包命令
-      - run: npm install && npm run docs:build
+      - run: npm install && npm run build
       - name: Deploy
         # 这个是第三方提供的库，可以推送打包后的内容到指定分支
         uses: peaceiris/actions-gh-pages@v3
