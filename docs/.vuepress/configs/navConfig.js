@@ -8,14 +8,17 @@ module.exports =  [
         link: "/latestarticle/" 
     },
     {
-        text: 'React生态',
+        text: 'react生态',
         items: [
             { text: "react", link: '/react/react/' },
         ] 
     },
     {
         text: "工具", 
-        link: '/tools/'
+        items: [
+            { text: "常用", link: '/tools/common/'},
+            { text: "linux", link: '/tools/linux/'}
+        ]
     },
     {
         text: '浏览器相关',
@@ -24,7 +27,7 @@ module.exports =  [
     {
         text: '打包编译',
         items: [
-            {   text: "Webpack", link: '/compile/webpack/'    }
+            {   text: "webpack", link: '/compile/webpack/'    }
         ] 
     },
     {
@@ -39,9 +42,9 @@ module.exports =  [
         ] 
     },
     {
-        text: 'Node相关',
+        text: 'node相关',
         items: [
-            {   text: "实践", link: '/node/' }
+            {   text: "实践笔记", link: '/node/' }
         ] 
     },
     {
@@ -53,10 +56,8 @@ module.exports =  [
     {
         text: '数据库',
         items: [
-            {   text: "MySQL", link: '/database/'    }
-            // {    text: "ORM", link: '/ORM'  }
+            {   text: "MySQL", link: '/database/mysql/'    },
+            {   text: "ORM", link: '/database/orm/'  }
         ] 
     },
-    
-    
   ]

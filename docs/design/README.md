@@ -1,10 +1,16 @@
-# 设计模式
-* [javaScript设计模式笔记一](javaScript设计模式笔记一.md)
-* [javaScript设计模式笔记二](javaScript设计模式笔记二.md)
-* [javaScript设计模式笔记三](javaScript设计模式笔记三.md)
-* [javaScript设计模式笔记四](javaScript设计模式笔记四.md)
-* [javascript设计模式笔记五](javascript设计模式笔记五.md)
-* [javaScript设计模式笔记六](javaScript设计模式笔记六.md)
-* [javaScript设计模式笔记七](javaScript设计模式笔记七.md)
-* [javaScript设计模式笔记八](javaScript设计模式笔记八.md)
-* [javaScript设计模式笔记九](javaScript设计模式笔记九.md)
+---
+title: 目录
+---
+
+<!-- ## 快速导航
+
+<TOC /> -->
+# 设计模式方式
+
+* [策略模式](策略模式)
+* [代理模式](代理模式)
+* [单例模式](单例模式)
+* [观察者模式](观察者模式)
+* [外观模式](外观模式)
+* [中介者模式](中介者模式)
+* [装饰器模式](装饰器模式)

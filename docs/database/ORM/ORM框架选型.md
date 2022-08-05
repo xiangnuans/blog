@@ -1,4 +1,4 @@
-# ORM框架选型(笔记)
+# ORM框架选型
 
 
 选型标准：实现O/R mapping，基于promise，支持原生SQL语句，支持连接池，支持事物，支持ES6/ES7

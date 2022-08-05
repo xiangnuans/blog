@@ -1,4 +1,10 @@
-# Webpack
+---
+title: 目录
+---
 
-* [webpack5更新日志](webpack5更新日志.md)
+<!-- ## 快速导航
+
+<TOC /> -->
+# webpack
+- [webpack5更新日志](webpack5更新日志.md)
 
