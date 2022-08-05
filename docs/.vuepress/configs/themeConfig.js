@@ -5,7 +5,7 @@ const nav = require('./navConfig');
 module.exports = {
     repoLabel: "GitHub",
     docsDir: 'docs',
-    repo:  "https://github.com/coco723/blog/",
+    repo:  "coco723/blog",
     editLinks: true, // 通过配置editLinks来设置是否出现编辑链接
     editLinkText: '发现有错误?前往GitHub指正', // 指明编辑功能的文字内容
     smoothScroll: true, // 点击左侧侧边栏,页面滚动效果,smoothScroll 选项来启用页面滚动效果,true为启动,false禁用

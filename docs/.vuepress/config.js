@@ -13,8 +13,8 @@ module.exports = {
   themeConfig,
   plugins,
   // 解决引入element报错问题
-  chainWebpack: config => {
-    config.resolve.alias.set('core-js/library/fn', 'core-js/features')
-    config.plugins
- }
+//   chainWebpack: config => {
+//     config.resolve.alias.set('core-js/library/fn', 'core-js/features')
+//     config.plugins
+//  }
 };
