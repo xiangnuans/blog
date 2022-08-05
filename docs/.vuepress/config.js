@@ -1,4 +1,4 @@
-const head = require("./configs/sidebar")
+const head = require("./configs/headConfig")
 const markdown = require("./configs/markdown")
 const themeConfig = require("./configs/themeConfig");
 const plugins = require('./configs/plugin')
@@ -11,5 +11,10 @@ module.exports = {
   lastUpdated: "上次更新",
   markdown,
   themeConfig,
-  plugins
+  plugins,
+  // 解决引入element报错问题
+  chainWebpack: config => {
+    config.resolve.alias.set('core-js/library/fn', 'core-js/features')
+    config.plugins
+ }
 };
