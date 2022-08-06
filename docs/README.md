@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.png
+heroImage: /images/knowledge-graph.png
 heroText: 郭雁宏
 tagline: 待定
 actionText: 开始阅读 →
