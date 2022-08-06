@@ -25,7 +25,7 @@ module.exports =  [
         link: '/browser/'
     },
     {
-        text: '打包编译',
+        text: '前端工程化',
         items: [
             {   text: "webpack", link: '/compile/webpack/'    }
         ] 
