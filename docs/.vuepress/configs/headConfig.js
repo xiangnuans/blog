@@ -1,5 +1,22 @@
+const secret = require('./secretKey')
+
+
 module.exports = [
     // ['link', { rel: 'icon', href: '/icons/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+    [
+      // 添加百度统计代码
+      'script',
+      {},
+      `
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?${secret.baiduTongJiId}";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+      `,
+    ],
     [
         'meta',
         {

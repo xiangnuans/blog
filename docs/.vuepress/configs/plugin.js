@@ -1,3 +1,5 @@
+const secret = require("./secretKey")
+
 module.exports = [
     '@vuepress/back-to-top', // 返回到到顶部插件
     '@vuepress/nprogress', // 进度条插件
@@ -58,13 +60,13 @@ module.exports = [
           ],
         },
     ],
-    // [
-    //     // 添加谷歌分析
-    //     '@vuepress/google-analytics',
-    //     {
-    //       ga: secret.googleGa, // UA-00000000-0
-    //     },
-    // ],
+    [
+        // 添加谷歌分析
+        '@vuepress/google-analytics',
+        {
+          ga: secret.googleGa, // UA-00000000-0
+        },
+    ],
     [
         {
           // 右边固定栏
