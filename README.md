@@ -7,14 +7,9 @@
 <!-- 完善的知识体系： [【自检】前端知识清单](./综合/【自检】前端知识清单.html) -->
 
 
-<<<<<<< HEAD
-![前端知识图谱](/docs/.vuepress/dist/images/logo.png)
-=======
 ![前端知识图谱](/docs/.vuepress/public/images/knowledge-graph.png)
->>>>>>> 94dfefe6159ff274bad371a83af9d32847338a8f
 
 
-<<<<<<< HEAD
 ## 必备基础
 
 
