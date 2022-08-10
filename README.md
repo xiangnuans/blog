@@ -7,7 +7,7 @@
 <!-- 完善的知识体系： [【自检】前端知识清单](./综合/【自检】前端知识清单.html) -->
 
 
-![前端知识图谱](/docs/.vuepress/dist/images/logo.png)
+![前端知识图谱](/docs/.vuepress/public/images/logo.png)
 
 ### React进阶
 
