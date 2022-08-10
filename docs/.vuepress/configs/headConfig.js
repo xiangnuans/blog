@@ -49,7 +49,7 @@ module.exports = [
       {
         async: 'async',
         name: 'google-site-verification',
-        content: 'FP4Faz4ea2CqBTr-Y_6MmMRhtZtL_e5_JKVcCFbuecc',
+        content: 'nH3yTcAhj2mMCsTogPEBH6GHVZL81dxy4df5I_SbbHI',
       },
     ],
     [
