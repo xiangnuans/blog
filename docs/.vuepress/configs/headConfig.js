@@ -41,7 +41,7 @@ module.exports = [
     //   'meta',
     //   {
     //     name: 'baidu_union_verify',
-    //     content: 'c8f90a7f2296fb45fbb69e5397e9c98e',
+    //     content: 'code-C87tLEnqNR',
     //   },
     // ],
     [
@@ -51,6 +51,13 @@ module.exports = [
         name: 'google-site-verification',
         content: 'FP4Faz4ea2CqBTr-Y_6MmMRhtZtL_e5_JKVcCFbuecc',
       },
+    ],
+    [
+      'meta', 
+      { 
+        name: 'baidu-site-verification', 
+        content: 'code-C87tLEnqNR' 
+      }
     ],
     [
       // 添加百度统计代码
