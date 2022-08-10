@@ -2,7 +2,7 @@
 const secret = {
   appId: 'Wy8dQOxGEdSIW61vxRIwKVcL-gzGzoHsz', // valine评论组件,依赖leancloud的appId
   appKey: 'Ta0zfnUbEkYXStO5y2WCjz6J', // valine评论组件,依赖leancloud的appKey
-  baiduTongJiId: '2d375b95edc42c669eb345908f92154c', // 百度访问量统计代码的ID
+  baiduTongJiId: 'edc4bcec71692608cb4081eadb57b100', // 百度访问量统计代码的ID
   googleGa: 'G-W2E5VF6NC3', // 添加谷歌分析
 };
 
