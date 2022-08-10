@@ -4,8 +4,6 @@ title: react高级开发
 
 ## react高级开发
 
-## 快速导航
-
 <TOC />
 
 ## 1.  React中npm包：命令、包管理流程

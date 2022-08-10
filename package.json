@@ -62,6 +62,7 @@
     "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-demo-code": "^0.6.0",
     "vuepress-plugin-element-ui": "^1.1.0",
+    "vuepress-plugin-flexsearch": "^0.3.0",
     "vuepress-plugin-flowchart": "^1.4.3",
     "vuepress-plugin-img-lazy": "^1.0.4",
     "vuepress-plugin-meting": "^0.3.1",

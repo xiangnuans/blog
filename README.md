@@ -7,208 +7,215 @@
 <!-- 完善的知识体系： [【自检】前端知识清单](./综合/【自检】前端知识清单.html) -->
 
 
-![前端知识图谱](./docs/.vuepress/dist/images/logo.png)
-
-### React进阶
-
-- [React高级开发](./React/React高级开发.html)
-- [umi-request返回拦截处理](./React/umi.html)
-- [在隔离中开发组件](./React/在隔离中开发组件.html)
-- [React滚动加载实现](./React/React滚动加载实现.html)
-- [基于ReactCSSTransitionGroup实现react-router过渡动画](./React/过渡动画.html)
-- [文本转换为markdown实现](./React/文本转换实现.html)
-- [import文件路径优化](./React/import文件路径优化.html)
-- [React组件开发指南](./React/React组件开发指南.html)
-- [react通过脚手架创建项目](./React/react通过脚手架创建项目.html)
-- [componentWillReceiveProps的使用](./React/componentWillReceiveProps的使用.html)
-- [antd底部Footer更改](./React/antd底部Footer更改.html)
-- [React生命周期](./React/React生命周期.html)
-- [routerv4路由配置方法](./React/routerv4路由配置方法.html)
-- [服务端渲染SSR](./React/服务端渲染SSR.html)
+![前端知识图谱](/docs/.vuepress/dist/images/logo.png)
 
 
+## 必备基础
 
-### 工具
 
-- [GitBook安装使用](./Tools/GitBook安装使用.html)
-- [Markdown中使用HTML标签](./Tools/Markdown中使用HTML标签.html)
-- [Mac下chrome快捷键](./Tools/Mac下chrome快捷键.html)
-- [Mac安装mongodb](./Tools/Mac安装mongodb.html)
-- [mac上redis环境搭建](./Tools/mac上redis环境搭建.html)
-- [Docker与Kubernetes在Mac本地环境搭建与应用部署](./Tools/Docker与Kubernetes在Mac本地环境搭建与应用部署.html)
+### TypeScript进阶
+
+- [基础笔记](/blog/docs/base/typeScript/基础笔记.md)
+- [基础笔记二](/blog/docs/base/typeScript/基础笔记二.md)
+- [类型文件后缀有什么区别](/blog/docs/base/typeScript/%E7%B1%BB%E5%9E%8B%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB.md)
+- [泛型笔记](/blog/docs/base/typeScript/%E6%B3%9B%E5%9E%8B%E7%AC%94%E8%AE%B0.md)
+- [高级类型笔记](/blog/docs/base/typeScript/%E9%AB%98%E7%BA%A7%E7%B1%BB%E5%9E%8B%E7%AC%94%E8%AE%B0.md)
+- [函数笔记](/blog/docs/base/typeScript/%E5%87%BD%E6%95%B0%E7%AC%94%E8%AE%B0.md)
+- [类型兼容性笔记](/blog/docs/base/typeScript/类型兼容性笔记.md)
+- [枚举笔记](/blog/docs/base/typeScript/枚举笔记.md)
+- [使用TypeScript装饰器装饰你的代码](/blog/docs/base/typeScript/%E4%BD%BF%E7%94%A8TypeScript%E8%A3%85%E9%A5%B0%E5%99%A8%E8%A3%85%E9%A5%B0%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81.md)
+
+### 样式
+- [移动端适配1px的问题](/blog/docs/base/style/移动端适配1px的问题.md)
+- [flex布局](/blog/docs/base/style/flex布局.md)
+  
+## react
+
+- [react高级开发](/docs/react/react/react高级开发.md)
+- [umi-request返回拦截处理](/docs/react/react/umi.md)
+- [在隔离中开发组件](/docs/react/react/在隔离中开发组件.md)
+- [react滚动加载实现](/docs/react/react/react滚动加载实现.md)
+- [基于ReactCSSTransitionGroup实现react-router过渡动画](/docs/react/react/过渡动画.md)
+- [文本转换为markdown实现](/docs/react/react/文本转换实现.md)
+- [import文件路径优化](/docs/react/react/import文件路径优化.md)
+- [react组件开发指南](/blog/docs/react/react/react组件开发指南.md)
+- [react通过脚手架创建项目](/blog/docs/react/react/react通过脚手架创建项目.md)
+- [componentWillReceiveProps的使用](/blog/docs/react/react/componentWillReceiveProps的使用.md)
+- [antd底部Footer更改](/blog/docs/react/react/antd底部Footer更改.md)
+- [react生命周期](/blog/docs/react/react/react生命周期.md)
+- [服务端渲染SSR](/blog/docs/react/react/服务端渲染SSR.md)
+
+
+
+## 工具
+
+### 常用
+
+- [GitBook安装使用](/blog/docs/tools/common/GitBook安装使用.md)
+- [Markdown中使用HTML标签](/blog/docs/tools/common/Markdown%E4%B8%AD%E4%BD%BF%E7%94%A8HTML%E6%A0%87%E7%AD%BE.md)
+- [Mac下chrome快捷键](/blog/docs/tools/common/Mac%E4%B8%8Bchrome%E5%BF%AB%E6%8D%B7%E9%94%AE.md)
+- [Mac安装mongodb](/blog/docs/tools/common/Mac安装mongodb.md)
+- [mac上redis环境搭建](/blog/docs/tools/common/mac上redis环境搭建.md)
+- [Docker与Kubernetes在Mac本地环境搭建与应用部署](/blog/docs/tools/common/Docker与Kubernetes在Mac本地环境搭建与应用部署.md)
 - [Docker使用](./Tools/Docker使用.html)
-- [centos7下yum安装和配置Nginx](./Tools/centos7下yum安装和配置Nginx.html)
-- [使用kubectl连接远程k8s集群](./Tools/使用kubectl连接远程k8s集群.html)
-- [alinode使用](./Tools/alinode使用.html)
-- [Markdown图床、文件上传工具](./Tools/Markdown图床、文件上传工具.html)
-- [图片搬家神器iPic](./Tools/图片搬家神器iPic.html)
-- [ffmpeg音视频处理](./Tools/ffmpeg音视频处理.html)
-- [ffmpeg音视频处理需求升级版](./Tools/ffmpeg音视频处理需求升级版.html)
-- [七牛云存储中没有外链域名无法下载的问题](./Tools/七牛云存储中没有外链域名无法下载的问题.html)
-- [基于WebAssembly的H265播放](./Tools/基于WebAssembly的H265播放.html)
-- [ffprobe与ffplay与ffmpeg常用的命令](./Tools/ffprobe与ffplay与ffmpeg常用的命令.html)
-- [使用TravisCI构建Gitbook](./Tools/使用TravisCI构建Gitbook.html)
-- [持续集成和travisCI](./Tools/持续集成和travisCI.html)
-- [kubernetes研究](./Tools/kubernetes研究.html)
-- [Mac上安装Elasticsearch基本操作](./Tools/Mac上安装Elasticsearch基本操作.html)
-- [Markdown中使用HTML标签](./Tools/Markdown中使用HTML标签.html)
-- [Mac下安装nginx](./Tools/Mac下安装nginx.html)
-- [GitBook安装使用](./Tools/GitBook安装使用.html)
-- [Nginx基础](./Tools/Nginx基础.html)
+- [centos7下yum安装和配置Nginx](/blog/docs/tools/common/centos7下yum安装和配置Nginx.md)
+- [使用kubectl连接远程k8s集群]()
+- [alinode使用](/blog/docs/tools/common/alinode使用.md)
+- [Markdown图床、文件上传工具](/blog/docs/tools/common/Markdown中使用HTML标签.md)
+- [图片搬家神器iPic](/blog/docs/tools/common/图片搬家神器iPic-Mover.md)
+- [ffmpeg音视频处理](/blog/docs/tools/common/ffmpeg音视频处理.md)
+- [ffmpeg音视频处理需求升级版](/blog/docs/tools/common/ffmpeg音视频处理需求升级版.md)
+- [七牛云存储中没有外链域名无法下载的问题](/blog/docs/tools/common/七牛云存储中没有外链域名无法下载的问题.md)
+- [基于WebAssembly的H265播放](/blog/docs/tools/common/基于WebAssembly的H265播放.md)
+- [ffprobe与ffplay与ffmpeg常用的命令](/blog/docs/tools/common/ffprobe与ffplay与ffmpeg常用的命令.md)
+- [使用TravisCI构建Gitbook](/blog/docs/tools/common/使用TravisCI构建Gitbook.md)
+- [持续集成和travisCI](/blog/docs/tools/common/持续集成和travisCI.md)
+- [kubernetes研究](/blog/docs/tools/common/kubernetes研究.md)
+- [Mac上安装Elasticsearch基本操作](/blog/docs/tools/common/Mac上安装Elasticsearch基本操作.md)
+- [Mac下安装nginx](/blog/docs/tools/common/Mac下安装nginx.md)
+- [GitBook安装使用](/blog/docs/tools/common/GitBook安装使用.md)
+- [Nginx基础](/blog/docs/tools/common/Nginx基础.md)
+
+
+### Linux应用
+
+- [服务器中启动服务的时候的IP选择](/blog/docs/tools/linux/服务器中启动服务的时候的IP选择.md)
+- [怎样修改CentOS的SSH端口](/blog/docs/tools/linux/怎样修改CentOS的SSH端口.md)
+- [Linux上部署node服务外网无法访问](/blog/docs/tools/linux/Linux上部署Node服务外网无法访问.md)
 
 
 
-### 图表
+## 可视化
 
-- [三大图标库ECharts与BizCharts和G2该如何选择](./Charts/三大图标库ECharts与BizCharts和G2该如何选择.html)
-- [three.js在React中的运用](./Charts/three.js在React中的运用.html)
-
-
-### 浏览器与网络
-
-- [一个TCP连接可以发送多少个HTTP请求](./Browser/一个TCP连接可以发送多少个HTTP请求.html)
-- [使用http-proxy-middleware代理跨域](./Browser/使用http-proxy-middleware代理跨域.html)
-- [跨域方式实现原理](./Browser/跨域方式实现原理.html)
-- [常见HTTP请求头，响应头，实体](./Browser/常见HTTP请求头，响应头，实体.html)
-- [CORS跨域详解](./Browser/CORS跨域详解.html)
-- [深入理解Session和Cookie](./Browser/深入理解Session和Cookie.html)
-- [HTTP切面流程](./Browser/HTTP切面流程.html)
-- [JavaScript如何在浏览器和Node中工作](./Browser/JavaScript如何在浏览器和Node中工作.html)
-- [Node与浏览器之间的区别](./Browser/Node与浏览器之间的区别.html)
-- [SEO小技巧](./Browser/SEO小技巧.html)
-- [URL的最大长度是多少](./Browser/URL的最大长度是多少.html)
+- [三大图标库ECharts与BizCharts和G2该如何选择](/blog/docs/visualization/三大图标库ECharts与BizCharts和G2该如何选择.md)
+- [three.js在React中的运用](/blog/docs/visualization/three.js在React中的运用.md)
 
 
+## 浏览器与网络
 
-### Webpack进阶
+- [一个TCP连接可以发送多少个HTTP请求](/blog/docs/browser/一个TCP连接可以发送多少个HTTP请求.md)
+- [使用http-proxy-middleware代理跨域](/blog/docs/browser/使用http-proxy-middleware代理跨域.md)
+- [跨域方式实现原理](/blog/docs/browser/跨域方式实现原理.md)
+- [常见HTTP请求头，响应头，实体](/blog/docs/browser/常见HTTP请求头，响应头，实体.md)
+- [CORS跨域详解](/blog/docs/browser/CORS跨域详解.md)
+- [深入理解Session和Cookie](/blog/docs/browser/HTTP切面流程.md)
+- [HTTP切面流程](/blog/docs/browser/HTTP%E5%88%87%E9%9D%A2%E6%B5%81%E7%A8%8B.md)
+- [JavaScript如何在浏览器和node中工作](/blog/docs/browser/JavaScript%E5%A6%82%E4%BD%95%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E5%92%8CNode%E4%B8%AD%E5%B7%A5%E4%BD%9C.md)
+- [node与浏览器之间的区别](/blog/docs/browser/Node%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+- [SEO小技巧](/blog/docs/browser/SEO小技巧.md)
+- [URL的最大长度是多少](/blog/docs/browser/URL%E7%9A%84%E6%9C%80%E5%A4%A7%E9%95%BF%E5%BA%A6%E6%98%AF%E5%A4%9A%E5%B0%91.md)
 
-- [Webpack5更新日志](./Webpack/Webpack5更新日志.html)
-- [Webpack中实现静态资源内联](./Webpack/Webpack中实现静态资源内联.html)
+
+
+## 编译
+
+- [webpack5更新日志](/blog/docs/compile/webpack/webpack5.md)
+- [webpack中实现静态资源内联](/blog/docs/compile/webpack/webpack中实现静态资源内联.md)
   
 
-### 浏览器策略
+## 浏览器策略
 
 - [当浏览器全面禁用三方 Cookie](./浏览器策略/当浏览器全面禁用三方Cookie.html)
 - [Chrome 81 正式发布 ！消灭混合内容最后一步~](./浏览器策略/chrome81.html)
 - [两个你必须要知道的 Chrome 80 策略更新](./浏览器策略/两个你必须要知道的Chrome80策略更新.html)
 
 
-### 样式
 
-- [移动端适配1px的问题](./Style/移动端适配1px的问题.html)
-- [flex布局](./Style/flex布局.html)
+## node实践
 
-
-
-### Node实践
-
-- [6个Async优于Promise的方面](./Node/6个Async优于Promise的方面.html)
-- [脚手架之egg-init](./Node/脚手架之egg-init.html)
-- [结合源码揭秘egg运行原理](./Node/结合源码揭秘egg运行原理.html)
-- [如何保存价值上千万的Node源代码](./Node/如何保存价值上千万的Node源代码.html)
-- [如何发布一个npm包](./Node/如何发布一个npm包.html)
-- [如何解决npm-unmet-peer-dependency](./Node/如何解决npm-unmet-peer-dependency.html)
-- [项目开发中的规范](./Node/项目开发中的规范.html)
-- [怎么开发一个像egg-init的脚手架](./Node/怎么开发一个像egg-init的脚手架.html)
-- [clinic快速定位性能问题](./Node/clinic快速定位性能问题.html)
-- [cluster扩展你的node应用](./Node/cluster扩展你的node应用.html)
-- [egg-bin源码解析笔记](./Node/egg-bin源码解析笔记.html)
-- [egg常见问题笔记](./Node/egg常见问题笔记.html)
-- [egg的Controller最佳实践](./Node/egg的Controller最佳实践.html)
-- [egg的HTTP请求](./Node/egg的HTTP请求.html)
-- [egg基于egg-validate的定制化升级](./Node/egg基于egg-validate的定制化升级.html)
-- [egg框架框架nest框架对比](./Node/egg框架框架nest框架对比.html)
-- [egg框架中的参数校验](./Node/egg框架中的参数校验.html)
-- [egg体系](./Node/egg体系.html)
-- [egg应用自定义4XX和5XX的方案](./Node/egg应用自定义4XX和5XX的方案.html)
-- [egg中cookie与Session的使用笔记](./Node/egg中cookie与Session的使用笔记.html)
-- [koa-bodyparser中间件](./Node/koa-bodyparser中间件.html)
-- [koa-multer实现文件上传并自定义文件名和目录](./Node/koa-multer实现文件上传并自定义文件名和目录.html)
-- [Make命令教程](./Node/Make命令教程.html)
-- [Moment进入维护状态](./Node/Moment进入维护状态.html)
-- [node版本管理工具](./Node/node版本管理工具.html)
-- [Node原生模块整理](./Node/Node原生模块整理.html)
-- [npm安装包时的几个命令区别](./Node/npm安装包时的几个命令区别.html)
-- [AJV与JSON模式验证](./Node/AJV与JSON模式验证.html)
-- [npm依赖管理之peerDependencies](./Node/npm依赖管理之peerDependencies.html)
-- [package.json中的workspaces](./Node/package.json中的workspaces.html)
-- [pm2的cluster模式与fork模式的区别](./Node/pm2的cluster模式与fork模式的区别.html)
-- [pm2深入学习](./Node/pm2深入学习.html)
-- [VScode调试Egg](./Node/VScode调试Egg.html)
+- [6个Async优于Promise的方面](./node/6个Async优于Promise的方面.html)
+- [脚手架之egg-init](./node/脚手架之egg-init.html)
+- [结合源码揭秘egg运行原理](./node/结合源码揭秘egg运行原理.html)
+- [如何保存价值上千万的node源代码](./node/如何保存价值上千万的node源代码.html)
+- [如何发布一个npm包](./node/如何发布一个npm包.html)
+- [如何解决npm-unmet-peer-dependency](./node/如何解决npm-unmet-peer-dependency.html)
+- [项目开发中的规范](./node/项目开发中的规范.html)
+- [怎么开发一个像egg-init的脚手架](./node/怎么开发一个像egg-init的脚手架.html)
+- [clinic快速定位性能问题](./node/clinic快速定位性能问题.html)
+- [cluster扩展你的node应用](./node/cluster扩展你的node应用.html)
+- [egg-bin源码解析笔记](./node/egg-bin源码解析笔记.html)
+- [egg常见问题笔记](./node/egg常见问题笔记.html)
+- [egg的Controller最佳实践](./node/egg的Controller最佳实践.html)
+- [egg的HTTP请求](./node/egg的HTTP请求.html)
+- [egg基于egg-validate的定制化升级](./node/egg基于egg-validate的定制化升级.html)
+- [egg框架框架nest框架对比](./node/egg框架框架nest框架对比.html)
+- [egg框架中的参数校验](./node/egg框架中的参数校验.html)
+- [egg体系](./node/egg体系.html)
+- [egg应用自定义4XX和5XX的方案](./node/egg应用自定义4XX和5XX的方案.html)
+- [egg中cookie与Session的使用笔记](./node/egg中cookie与Session的使用笔记.html)
+- [koa-bodyparser中间件](./node/koa-bodyparser中间件.html)
+- [koa-multer实现文件上传并自定义文件名和目录](./node/koa-multer实现文件上传并自定义文件名和目录.html)
+- [Make命令教程](./node/Make命令教程.html)
+- [Moment进入维护状态](./node/Moment进入维护状态.html)
+- [node版本管理工具](./node/node版本管理工具.html)
+- [node原生模块整理](./node/node原生模块整理.html)
+- [npm安装包时的几个命令区别](./node/npm安装包时的几个命令区别.html)
+- [AJV与JSON模式验证](./node/AJV与JSON模式验证.html)
+- [npm依赖管理之peerDependencies](./node/npm依赖管理之peerDependencies.html)
+- [package.json中的workspaces](./node/package.json中的workspaces.html)
+- [pm2的cluster模式与fork模式的区别](./node/pm2的cluster模式与fork模式的区别.html)
+- [pm2深入学习](./node/pm2深入学习.html)
+- [VScode调试Egg](./node/VScode调试Egg.html)
 
 
 
 
 ### 前端工程化
 
-- [工程智能化](./Frame/工程智能化.html)
-- [基于NodeWeb框架Chair](./Frame/基于NodeWeb框架Chair.html)
+- [工程智能化](/blog/docs/frame/工程智能化.md)
+- [基于nodeWeb框架Chair](/blog/docs/frame/%E5%9F%BA%E4%BA%8ENodeWeb%E6%A1%86%E6%9E%B6Chair.md)
 - [跨平台](./Frame/跨平台.html)
-- [前端应用层框架](./Frame/前端应用层框架.html)
-- [前端UI组件库](./Frame/前端UI组件库.html)
-- [淘宝网的后台架构发展](./Frame/淘宝网的后台架构发展.html)
-- [应用场景数据库选型](./Frame/应用场景数据库选型.html)
-- [BFF](./Frame/BFF.html)
-- [Next与CRA应用程序性能更高](./Frame/Next与CRA应用程序性能更高.html)
-- [WebAssembly了解wasm的前世今生](./Frame/WebAssembly了解wasm的前世今生.html)
+- [前端应用层框架](/blog/docs/frame/跨平台.md)
+- [前端UI组件库](/blog/docs/frame/%E5%89%8D%E7%AB%AFUI%E7%BB%84%E4%BB%B6%E5%BA%93.md)
+- [淘宝网的后台架构发展](/blog/docs/frame/淘宝网的后台架构发展.md)
+- [应用场景数据库选型](/blog/docs/frame/应用场景数据库选型.md)
+- [BFF](/blog/docs/frame/BFF.md)
+- [Next与CRA应用程序性能更高](/blog/docs/frame/Next%E4%B8%8ECRA%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD%E6%9B%B4%E9%AB%98.md)
+- [WebAssembly了解wasm的前世今生](/blog/docs/frame/WebAssembly了解wasm的前世今生.md)
 
 
 ### CI/CD
 
-- [跨平台桌面应用Electron](./CI/跨平台桌面应用Electron.html)
-- [企业级分布式EDAS模式](./CI/企业级分布式EDAS模式.html)
-- [删除远程仓库的末次错误提交](./CI/删除远程仓库的末次错误提交.html)
-- [使用AppVeyor和Travis自动构建和发布Electron应用](./CI/使用AppVeyor和Travis自动构建和发布Electron应用.html)
-- [使用GithubActions进行版本发布](./CI/使用GithubActions进行版本发布.html)
-- [语义化Semantic规范格式](./CI/语义化Semantic规范格式.html)
-- [git分支开发规范](./CI/git分支开发规范.html)
-- [Git规范和Changelog生成](./CI/Git规范和Changelog生成.html)
-- [Gitlab的CI管道配置参考](./CI/Gitlab的CI管道配置参考.html)
-- [gitsubtree教程](./CI/gitsubtree教程.html)
-- [Mac下配置多个Git账户](./CI/Mac下配置多个Git账户.html)
+- [跨平台桌面应用Electron](/blog/docs/frame/CI/跨平台桌面应用Electron.md)
+- [企业级分布式EDAS模式](/blog/docs/frame/CI/%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%88%86%E5%B8%83%E5%BC%8FEDAS%E6%A8%A1%E5%BC%8F.md)
+- [删除远程仓库的末次错误提交](/blog/docs/frame/CI/%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E6%9C%AB%E6%AC%A1%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4.md)
+- [使用AppVeyor和Travis自动构建和发布Electron应用](/blog/docs/frame/CI/%E4%BD%BF%E7%94%A8AppVeyor%E5%92%8CTravis%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83Electron%E5%BA%94%E7%94%A8.md)
+- [使用GithubActions进行版本发布](/blog/docs/frame/CI/使用GithubActions进行版本发布.md)
+- [语义化Semantic规范格式](/blog/docs/frame/CI/%E8%AF%AD%E4%B9%89%E5%8C%96Semantic%E8%A7%84%E8%8C%83%E6%A0%BC%E5%BC%8F.md)
+- [git分支开发规范](/blog/docs/frame/CI/git%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83.md)
+- [Git规范和Changelog生成](/blog/docs/frame/CI/Git%E8%A7%84%E8%8C%83%E5%92%8CChangelog%E7%94%9F%E6%88%90.md)
+- [Gitlab的CI管道配置参考](/blog/docs/frame/CI/Gitlab的CI管道配置参考.md)
+- [gitsubtree教程](/blog/docs/frame/CI/gitsubtree%E6%95%99%E7%A8%8B.md)
+- [Mac下配置多个Git账户](/blog/docs/frame/CI/Mac%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGit%E8%B4%A6%E6%88%B7.md)
 
-
-### Linux应用
-
-- [服务器中启动服务的时候的IP选择](./Linux/服务器中启动服务的时候的IP选择.html)
-- [怎样修改CentOS的SSH端口](./Linux/怎样修改CentOS的SSH端口.html)
-- [Linux上部署Node服务外网无法访问](./Linux/Linux上部署Node服务外网无法访问.html)
 
 
 ### 设计模式
 
-- [单例模式](./Design/单例模式.html)
-- [工厂模式](./Design/工厂模式.html)
-- [迭代器模式](./Design/迭代器模式.html)
-- [装饰器模式](./Design/装饰器模式.html)
-- [策略模式](./Design/策略模式.html)
-- [外观模式](./Design/外观模式.html)
-- [代理模式](./Design/代理模式.html)
-- [中介者模式](./Design/中介者模式.html)
-- [观察者模式](./Design/观察者模式.html)
+- [单例模式](/blog/docs/design/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.md)
+- [工厂模式](/blog/docs/design/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.md)
+- [迭代器模式](/blog/docs/design/迭代器模式.md)
+- [装饰器模式](/blog/docs/design/%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.md)
+- [策略模式](/blog/docs/design/策略模式.md)
+- [外观模式](/blog/docs/design/观察者模式.md)
+- [代理模式](/blog/docs/design/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F.md)
+- [中介者模式](/blog/docs/design/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F.md)
+- [观察者模式](/blog/docs/design/观察者模式.md)
 
 
-### 数据库
+## 数据库
 
-- [语法一：delete和truncate的区别和联系](./Database/语法一：delete和truncate的区别和联系.html)
-- [语法二：having与where](./Database/语法二：having与where.html)
-- [语法三：references](./Database/语法三：references.html)
-- [语法四：where1](./Database/语法四：where1.html)
-- [语法七：in和exists二者之间的区别和性能影响](./Database/语法七：in和exists二者之间的区别和性能影响.html)
-- [bookshelf笔记](./Database/bookshelf笔记.html)
-- [Knextjs笔记](./Database/Knextjs笔记.html)
-- [ORM框架选型](./Database/ORM框架选型.html)
+### mysql
 
+- [语法一：delete和truncate的区别和联系](/blog/docs/database/mysql/%E8%AF%AD%E6%B3%95%E4%B8%80%EF%BC%9Adelete%E5%92%8Ctruncate%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E8%81%94%E7%B3%BB.md)
+- [语法二：having与where](/blog/docs/database/mysql/%E8%AF%AD%E6%B3%95%E4%BA%8C%EF%BC%9Ahaving%E4%B8%8Ewhere.md)
+- [语法三：references](/blog/docs/database/mysql/%E8%AF%AD%E6%B3%95%E4%B8%89%EF%BC%9Areferences.md)
+- [语法四：where1](/blog/docs/database/mysql/%E8%AF%AD%E6%B3%95%E5%9B%9B%EF%BC%9Awhere1.md)
+- [语法七：in和exists二者之间的区别和性能影响](/blog/docs/database/mysql/语法七：in和exists二者之间的区别和性能影响.md)
 
-### TypeScript进阶
+### ORM
+- [bookshelf笔记](/blog/docs/database/orm/bookshelf%E7%AC%94%E8%AE%B0.md)
+- [Knextjs笔记](/blog/docs/database/orm/knexjs%E7%AC%94%E8%AE%B0.md)
+- [ORM框架选型](/blog/docs/database/orm/ORM框架选型.md)
 
-- [基础笔记](./TypeScript/基础笔记.html)
-- [基础笔记二](./TypeScript/基础笔记二.html)
-- [类型文件后缀有什么区别](./TypeScript/类型文件后缀有什么区别.html)
-- [泛型笔记](./TypeScript/泛型笔记.html)
-- [高级类型笔记](./TypeScript/高级类型笔记.html)
-- [函数笔记](./TypeScript/函数笔记.html)
-- [类型兼容性笔记](./TypeScript/类型兼容性笔记.html)
-- [枚举笔记](./TypeScript/枚举笔记.html)
-- [使用TypeScript装饰器装饰你的代码](./TypeScript/使用TypeScript装饰器装饰你的代码.html)
 

@@ -1,16 +1,17 @@
 const secret = require("./secretKey")
 
 module.exports = [
-    '@vuepress/back-to-top', // 返回到到顶部插件
-    '@vuepress/nprogress', // 进度条插件
-    'reading-progress', // 阅读进度插件
-    'img-lazy', // 图片的懒加载
+    '@vuepress/back-to-top',
+    '@vuepress/nprogress', 
+    'reading-progress', 
+    'img-lazy', 
     'vuepress-plugin-baidu-autopush', // 注入百度url-auto-push脚本，以优化您的百度SEO网站
-    'vuepress-plugin-smooth-scroll', // 你的 VuePress 站点中使用平滑滚动
+    'vuepress-plugin-smooth-scroll',
     'vuepress-plugin-table-of-contents', // 为你的 VuePress 站点增加目录组件,支持在md和vue中写<TOC />,生成目录树
-    'element-ui', // 添加element-ui组件
-    'flowchart', // 流程图表
-    'demo-code', // 在线写demo
+    'element-ui',
+    'flowchart',
+    'demo-code',
+    "vuepress-plugin-flexsearch",
     // 'vuepress-plugin-element-tabs', // tab切换
     [
         '@vuepress/active-header-links',
@@ -32,7 +33,7 @@ module.exports = [
         },
     ],
     [
-        '@vuepress/pwa', // 以@开头的都是官方维护的插件, pwa配置
+        '@vuepress/pwa',
         {
           serviceWorker: true, // 如果设置为 true，VuePress 将自动生成并注册一个 Service Worker，用于缓存页面的内容以供离线使用（仅会在生产环境中启用）
           updatePopup: {
@@ -65,20 +66,6 @@ module.exports = [
         '@vuepress/google-analytics',
         {
           ga: secret.googleGa, // UA-00000000-0
-        },
-    ],
-    [
-        {
-          // 右边固定栏
-          name: 'page-plugin',
-          globalUIComponents: [
-            'global-AttionFixed',
-            'global-ToBottom',
-            'global-RightBar',
-            'global-Cat',
-            'global-Copy',
-            // 'global-AdvertiSpace',
-          ],
         },
     ],
     [
