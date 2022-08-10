@@ -7,9 +7,14 @@
 <!-- 完善的知识体系： [【自检】前端知识清单](./综合/【自检】前端知识清单.html) -->
 
 
+<<<<<<< HEAD
 ![前端知识图谱](/docs/.vuepress/dist/images/logo.png)
+=======
+![前端知识图谱](/docs/.vuepress/public/images/knowledge-graph.png)
+>>>>>>> 94dfefe6159ff274bad371a83af9d32847338a8f
 
 
+<<<<<<< HEAD
 ## 必备基础
 
 
@@ -44,6 +49,22 @@
 - [antd底部Footer更改](/docs/react/react/antd底部Footer更改.md)
 - [react生命周期](/docs/react/react/react生命周期.md)
 - [服务端渲染SSR](/docs/react/react/服务端渲染SSR.md)
+=======
+- [react高级开发](/docs/react/react/react高级开发.md)
+- [umi-request返回拦截处理](./React/umi.html)
+- [在隔离中开发组件](./React/在隔离中开发组件.html)
+- [React滚动加载实现](./React/React滚动加载实现.html)
+- [基于ReactCSSTransitionGroup实现react-router过渡动画](./React/过渡动画.html)
+- [文本转换为markdown实现](./React/文本转换实现.html)
+- [import文件路径优化](./React/import文件路径优化.html)
+- [React组件开发指南](./React/React组件开发指南.html)
+- [react通过脚手架创建项目](./React/react通过脚手架创建项目.html)
+- [componentWillReceiveProps的使用](./React/componentWillReceiveProps的使用.html)
+- [antd底部Footer更改](./React/antd底部Footer更改.html)
+- [React生命周期](./React/React生命周期.html)
+- [routerv4路由配置方法](./React/routerv4路由配置方法.html)
+- [服务端渲染SSR](./React/服务端渲染SSR.html)
+>>>>>>> 94dfefe6159ff274bad371a83af9d32847338a8f
 
 
 
