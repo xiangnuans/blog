@@ -44,7 +44,6 @@
 - [antd底部Footer更改](/docs/react/react/antd底部Footer更改.md)
 - [react生命周期](/docs/react/react/react生命周期.md)
 - [服务端渲染SSR](/docs/react/react/服务端渲染SSR.md)
-=======
 - [react高级开发](/docs/react/react/react高级开发.md)
 - [umi-request返回拦截处理](./React/umi.html)
 - [在隔离中开发组件](./React/在隔离中开发组件.html)
@@ -59,7 +58,6 @@
 - [React生命周期](./React/React生命周期.html)
 - [routerv4路由配置方法](./React/routerv4路由配置方法.html)
 - [服务端渲染SSR](./React/服务端渲染SSR.html)
->>>>>>> 94dfefe6159ff274bad371a83af9d32847338a8f
 
 
 
