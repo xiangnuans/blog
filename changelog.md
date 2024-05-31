@@ -24,7 +24,7 @@ deploy:
   target-branch: gh-pages
   verbose: true
   keep-history: true
-  name: coco723
+  name: xiangnuans
 
 branches:
   only:
@@ -32,7 +32,7 @@ branches:
 
 env:
   global:
-    - REF=github.com/coco723/blog.git # 设置 github 地址
+    - REF=github.com/xiangnuans/blog.git # 设置 github 地址
 ```
 
 ## 二、GitHub action部署配置
