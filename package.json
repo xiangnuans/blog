@@ -44,7 +44,7 @@
     "@vuepress/plugin-nprogress": "^1.9.5",
     "@vuepress/plugin-pwa": "^1.9.5",
     "async-validator": "1.11.5",
-    "axios": "^0.24.0",
+    "axios": "^0.28.0",
     "codemirror": "^5.63.3",
     "core-js": "^3.24.1",
     "diff-match-patch": "^1.0.5",
