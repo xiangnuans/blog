@@ -16,24 +16,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coco723/blog.git"
+    "url": "git+https://github.com/xiangnuans/blog.git"
   },
   "keywords": [
     "郭雁宏的技术博客",
     "前端博客",
-    "https://coco723.github.io/blog/",
+    "https://xiangnuans.github.io/blog/",
     "前端"
   ],
   "author": {
     "name": "郭雁宏",
     "email": "1352118502@qq.com",
-    "url": "https://coco723.github.io/blog/",
+    "url": "https://xiangnuans.github.io/blog/",
     "wxPublic": "欢迎关注微信前端talks公众号"
   },
   "bugs": {
-    "url": "https://github.com/coco723/blog/issues"
+    "url": "https://github.com/xiangnuans/blog/issues"
   },
-  "homepage": "https://github.com/coco723/blog",
+  "homepage": "https://github.com/xiangnuans/blog",
   "license": "ISC",
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
