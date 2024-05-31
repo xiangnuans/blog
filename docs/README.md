@@ -1,16 +1,16 @@
 ---
 home: true
 heroImage: /images/knowledge-graph.png
-heroText: 郭雁宏
+heroText: 知识网络
 tagline: 灵魂要想走的远，身体必须在路上
 actionText: 开始阅读 →
-actionLink: /latestarticle/
-features:
-- title: React
-  details: 掌握高级React技巧。
-- title: Node
-  details: Node服务端应用和前端工程化应用
-- title: 数据库
-  details: 数据库语言
+actionLink: /react/react/
+# features:
+# - title: React
+#   details: 掌握高级React技巧。
+# - title: 服务端
+#   details: 服务端应用和前端工程化应用
+# - title: 数据库
+#   details: 数据库语言
 footer: MIT Licensed | Copyright © 2021-present guoyanhong
 ---
