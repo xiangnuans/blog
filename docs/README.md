@@ -2,7 +2,7 @@
 home: true
 heroImage: /images/knowledge-graph.png
 heroText: 郭雁宏
-tagline: 待定
+tagline: 灵魂要想走的远，身体必须在路上
 actionText: 开始阅读 →
 actionLink: /latestarticle/
 features:
