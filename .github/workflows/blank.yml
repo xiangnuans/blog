@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v2
         # 设置node的版本
         with:
-          node-version: '14'
+          node-version: "14"
         # 执行步骤的名称
       - name: Compiling start
         # 执行的具体脚本
@@ -44,7 +44,7 @@ jobs:
           # 这边需要设置第二步获取到的deploy key，否则会提示没有权限推送代码
           deploy_key: ${{ secrets.blog }}
           # 推送到该仓库中，地址格式为github名称/仓库名
-          external_repository: coco723/blog
+          external_repository: xiangnuans/blog
           # 推送的分支
           publish_branch: gh-pages
           # 推送的内容
