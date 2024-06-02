@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  vuepress-plugin-nprogress:
+    specifier: ^1.1.8
+    version: 1.1.8
+
 devDependencies:
   '@vssue/vuepress-plugin-vssue':
     specifier: ^1.4.8
@@ -7267,7 +7272,6 @@ packages:
 
   /nprogress@0.2.0:
     resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
-    dev: true
 
   /nth-check@1.0.2:
     resolution: {integrity: sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==}
@@ -10130,6 +10134,12 @@ packages:
     transitivePeerDependencies:
       - vue
     dev: true
+
+  /vuepress-plugin-nprogress@1.1.8:
+    resolution: {integrity: sha512-MCM6/TN/klljh5s5pso1YM3XR89BQ1yOPyYqrI8NG8u6f/w3tAa8wKhmle789yeC02WSXbcLE7t6VTRTOWst+A==}
+    dependencies:
+      nprogress: 0.2.0
+    dev: false
 
   /vuepress-plugin-reading-progress@1.0.10:
     resolution: {integrity: sha512-7OxcjNEDf9gqFTns0YnXrqPnTRlX6wvxWFr7D8tlfyMPpsZwJkh/MkJveRrEaKcU0gk8QGmPHnXLAZ3soTThVg==}

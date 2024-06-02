@@ -5,7 +5,7 @@ const nav = require('./navConfig');
 module.exports = {
     repoLabel: "GitHub",
     docsDir: 'docs',
-    repo: "xiangnuans/blog",
+    repo: "xiangnuans/xiangnuans",
     editLinks: true,
     editLinkText: '发现有错误?前往GitHub指正',
     smoothScroll: true,

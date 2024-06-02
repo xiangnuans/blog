@@ -1,63 +1,42 @@
-module.exports =  [
-    { 
-        text: "首页", 
-        link: "/" 
-    },
-    { 
-        text: "最新文章", 
-        link: "/latestarticle/" 
+module.exports = [
+    {
+        text: "首页",
+        link: "/"
     },
     {
-        text: 'react生态',
+        text: '全栈',
         items: [
-            { text: "react", link: '/react/react/' },
-        ] 
-    },
-    {
-        text: "工具", 
-        items: [
-            { text: "常用", link: '/tools/common/'},
-            { text: "linux", link: '/tools/linux/'}
+            { text: 'next.js', link: '/fullStack/next' }
         ]
     },
     {
-        text: '浏览器相关',
-        link: '/browser/'
-    },
-    {
-        text: '前端工程化',
+        text: '客户端',
         items: [
-            {   text: "webpack", link: '/compile/webpack/'    }
-        ] 
+            { text: "react", link: '/client/react/' },
+            { text: '浏览器', link: '/client/browser/' },
+            { text: "webpack", link: '/client/webpack/' },
+            { text: '工程化', link: '/client/frame/' },
+            { text: "typescript", link: '/client/typescript/' },
+            { text: "style", link: '/client/style/' },
+        ],
     },
     {
-        text: '可视化', 
-        link: '/visualization/'
-    },
-    {
-        text: '基础知识',
+        text: '服务端',
         items: [
-            {   text: "style", link: '/base/style/'  },
-            {   text: "typescript", link: '/base/typescript/'  }
-        ] 
+            { text: 'egg', link: '/client/egg/' },
+            { text: 'koa', link: '/client/koa/' },
+            { text: "MySQL", link: '/service/mysql/' },
+            { text: "ORM", link: '/service/orm/' },
+            { text: "实践笔记", link: '/service/node/' }
+        ]
     },
     {
-        text: 'node相关',
+        text: '其他',
         items: [
-            {   text: "实践笔记", link: '/node/' }
-        ] 
-    },
-    {
-        text: '设计模式',
-        items: [
-            {   text: "设计模式", link: '/design/'   }
-        ] 
-    },
-    {
-        text: '数据库',
-        items: [
-            {   text: "MySQL", link: '/database/mysql/'    },
-            {   text: "ORM", link: '/database/orm/'  }
-        ] 
-    },
-  ]
+            { text: 'git', link: '/other/git/' },
+            { text: "常用工具", link: '/other/tools/' },
+            { text: "linux", link: '/other/linux/' },
+            { text: "设计模式", link: '/other/design/' }
+        ]
+    }
+]
