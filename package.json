@@ -1,5 +1,5 @@
 {
-  "name": "xiangnuan",
+  "name": "xiangnuans",
   "version": "1.0.0",
   "description": "郭雁宏的博客",
   "main": "index.js",
@@ -16,24 +16,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiangnuans/xiangnuan.git"
+    "url": "git+https://github.com/xiangnuans/xiangnuans.git"
   },
   "keywords": [
     "郭雁宏的技术博客",
     "前端博客",
-    "https://xiangnuans.github.io/xiangnuan/",
+    "https://xiangnuans.github.io/xiangnuans/",
     "前端"
   ],
   "author": {
     "name": "郭雁宏",
     "email": "1352118502@qq.com",
-    "url": "https://xiangnuans.github.io/xiangnuan/",
+    "url": "https://xiangnuans.github.io/xiangnuans/",
     "wxPublic": "欢迎关注微信前端talks公众号"
   },
   "bugs": {
-    "url": "https://github.com/xiangnuans/xiangnuan/issues"
+    "url": "https://github.com/xiangnuans/xiangnuans/issues"
   },
-  "homepage": "https://github.com/xiangnuans/xiangnuan",
+  "homepage": "https://github.com/xiangnuans/xiangnuans",
   "license": "ISC",
   "devDependencies": {
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
