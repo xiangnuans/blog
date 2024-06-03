@@ -23,8 +23,8 @@ module.exports = [
     {
         text: '服务端',
         items: [
-            { text: 'egg', link: '/client/egg/' },
-            { text: 'koa', link: '/client/koa/' },
+            { text: 'egg', link: '/service/egg/' },
+            { text: 'koa', link: '/service/koa/' },
             { text: "MySQL", link: '/service/mysql/' },
             { text: "ORM", link: '/service/orm/' },
             { text: "实践笔记", link: '/service/node/' }
@@ -36,7 +36,8 @@ module.exports = [
             { text: 'git', link: '/other/git/' },
             { text: "常用工具", link: '/other/tools/' },
             { text: "linux", link: '/other/linux/' },
-            { text: "设计模式", link: '/other/design/' }
+            { text: "设计模式", link: '/other/design/' },
+            { text: '知识图谱', link: '/other/graph/' },
         ]
     }
 ]

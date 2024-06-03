@@ -1,10 +1,11 @@
 ---
 home: true
-heroImage: /images/knowledge-graph.png
+heroImage: /技能网络.png
 heroText: 知识网络
 tagline: 灵魂要想走的远，身体必须在路上
 actionText: 开始阅读 →
-actionLink: /react/react/
+actionLink: /client/react
+# actionLink: /images/knowledge-graph.png
 # features:
 # - title: React
 #   details: 掌握高级React技巧。
