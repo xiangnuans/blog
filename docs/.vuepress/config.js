@@ -4,7 +4,7 @@ const themeConfig = require("./configs/themeConfig");
 const plugins = require('./configs/plugin')
 
 module.exports = {
-  title: "博客",
+  title: "向暖的博客",
   base: "/xiangnuans/",
   description: "郭雁宏,郭雁宏的博客",
   keywords: "郭雁宏的博客,郭雁宏,前端博客",
