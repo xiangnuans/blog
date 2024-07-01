@@ -6,7 +6,7 @@ module.exports = [
     {
         text: '全栈',
         items: [
-            { text: 'next.js', link: '/fullStack/next' }
+            { text: 'next.js', link: '/fullStack/next/' }
         ]
     },
     {

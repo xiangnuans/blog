@@ -1,12 +1,4 @@
----
-title: 目录
----
-
-## 快速导航
-
-<TOC />
-
-## react
+# 快速导航
 
 - [react高级开发](./react高级开发)
 - [react滚动加载实现](./react滚动加载实现)
@@ -16,10 +8,6 @@ title: 目录
 - [componentWillReceiveProps的使用](./componentWillReceiveProps的使用)
 - [href属性使用js代码段在React下warning问题](./href属性使用js代码段在React下warning问题)
 - [umi](./umi)
-
-
-## 其他
-
 - [import文件路径优化](./import文件路径优化)
 - [在隔离中开发组件](./在隔离中开发组件)
 - [antd底部Footer更改](./antd底部Footer更改)
