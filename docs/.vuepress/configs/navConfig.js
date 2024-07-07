@@ -6,9 +6,6 @@ module.exports = [
     {
         text: 'Web3',
         link: '/web3/'
-        // items: [
-        //     { text: '', link: '/web3/' }
-        // ]
     },
     {
         text: '全栈',
