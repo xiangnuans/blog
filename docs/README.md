@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /技能网络.png
-heroText: 知识网络
+heroText: 技术栈+实践
 tagline: 灵魂要想走的远，身体必须在路上
 actionText: 开始阅读 →
 actionLink: /client/react/#快速导航
