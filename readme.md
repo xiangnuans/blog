@@ -6,7 +6,7 @@ Hi, I'm xiangnuan(向暖)😄, a Fronted Engineer from China🇨🇳. The tech s
  
 - [Learning to Sort Out Brain Maps](/docs/web3/README.md)
 - Web3 Project
-  - Open Source Project Contribution: https://github.com/xiangnuans/Faucet-FrontEnd/tree/main
+  - Open Source Project Contribution: [https://github.com/xiangnuans/Faucet-FrontEnd/tree/main](https://github.com/faucet-terminal/Faucet-FrontEnd)
   - Open class project practice: https://github.com/openbuildxyz/Web3-Frontend-Bootcamp/tree/main/members/xiangnuans
 
 
