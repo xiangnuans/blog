@@ -4,6 +4,13 @@ module.exports = [
         link: "/"
     },
     {
+        text: 'Web3',
+        link: '/web3/'
+        // items: [
+        //     { text: '', link: '/web3/' }
+        // ]
+    },
+    {
         text: '全栈',
         items: [
             { text: 'next.js', link: '/fullStack/next/' }
