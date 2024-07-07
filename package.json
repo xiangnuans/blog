@@ -1,7 +1,7 @@
 {
   "name": "xiangnuans",
   "version": "1.0.0",
-  "description": "郭雁宏的博客",
+  "description": "向暖的博客",
   "main": "index.js",
   "directories": {
     "dev": "vuepress dev docs",
@@ -19,13 +19,13 @@
     "url": "git+https://github.com/xiangnuans/xiangnuans.git"
   },
   "keywords": [
-    "郭雁宏的技术博客",
+    "向暖的技术博客",
     "前端博客",
     "https://xiangnuans.github.io/xiangnuans/",
     "前端"
   ],
   "author": {
-    "name": "郭雁宏",
+    "name": "向暖",
     "email": "1352118502@qq.com",
     "url": "https://xiangnuans.github.io/xiangnuans/",
     "wxPublic": "欢迎关注微信前端talks公众号"
