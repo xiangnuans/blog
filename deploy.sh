@@ -14,10 +14,10 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'xiangnuans'
+git commit -m 'chore: xiangnuans to blog'
 
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/xiangnuans/xiangnuans.git master:gh-pages
+git push -f https://github.com/xiangnuans/blog.git master:gh-pages
 
 cd -

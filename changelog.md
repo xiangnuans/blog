@@ -32,7 +32,7 @@ branches:
 
 env:
   global:
-    - REF=github.com/xiangnuans/xiangnuans.git # 设置 github 地址
+    - REF=github.com/xiangnuans/blog.git # 设置 github 地址
 ```
 
 ## 二、GitHub action部署配置
