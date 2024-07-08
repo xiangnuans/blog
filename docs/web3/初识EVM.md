@@ -1,4 +1,10 @@
-# 初识EVM
+---
+title: "初识EVM"
+description: ""
+date: "2024-06-24"
+repository: 
+published: true
+---
 
 以太坊虚拟机（Ethereum Virtual Machine，简称 EVM）是以太坊平台的核心组件，它在以太坊网络上执行智能合约和去中心化应用（DApps）。EVM 是一种完全图灵完备的虚拟机，能够执行任意复杂的计算操作。以下是关于 EVM 的详细介绍：
 
