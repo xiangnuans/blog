@@ -3,10 +3,7 @@ module.exports = [
         text: "首页",
         link: "/"
     },
-    {
-        text: 'Web3',
-        link: '/web3/'
-    },
+
     {
         text: '全栈',
         items: [
@@ -33,6 +30,10 @@ module.exports = [
             { text: "ORM", link: '/service/orm/' },
             { text: "实践笔记", link: '/service/node/' }
         ]
+    },
+    {
+        text: 'Web3',
+        link: '/web3/'
     },
     {
         text: '其他',
