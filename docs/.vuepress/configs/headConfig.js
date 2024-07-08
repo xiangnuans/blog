@@ -2,7 +2,7 @@ const secret = require('./secretKey')
 
 
 module.exports = [
-  // ['link', { rel: 'icon', href: '/icons/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+  ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon(网页标签的图标)
   [
     'meta',
     {
