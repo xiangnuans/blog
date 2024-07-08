@@ -2,16 +2,16 @@ const secret = require('./secretKey')
 
 
 module.exports = [
-  // ['link', { rel: 'icon', href: '/icons/favicon.ico' }], // 增加一个自定义的 favicon(网页标签的图标)
+  ['link', { rel: 'icon', href: '/favicon.png' }], // 增加一个自定义的 favicon(网页标签的图标)
   [
     'meta',
     {
       rel: 'keywords',
       content:
-        '郭雁宏,郭雁宏的博客,前端博客,https://xiangnuans.github.io',
+        '向暖,向暖的博客,前端博客,https://xiangnuans.github.io',
     },
   ],
-  ['meta', { name: 'Author', content: '郭雁宏' }],
+  ['meta', { name: 'Author', content: '向暖' }],
   [
     'meta',
     { 'http-equiv': 'Content-Type', content: 'text/html', charset: 'UTF-8' },
