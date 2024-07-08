@@ -8,10 +8,10 @@ module.exports = [
     {
       rel: 'keywords',
       content:
-        '郭雁宏,郭雁宏的博客,前端博客,https://xiangnuans.github.io',
+        '向暖,向暖的博客,前端博客,https://xiangnuans.github.io',
     },
   ],
-  ['meta', { name: 'Author', content: '郭雁宏' }],
+  ['meta', { name: 'Author', content: '向暖' }],
   [
     'meta',
     { 'http-equiv': 'Content-Type', content: 'text/html', charset: 'UTF-8' },
