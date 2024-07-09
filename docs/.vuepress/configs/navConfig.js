@@ -22,7 +22,7 @@ module.exports = [
     {
         text: '服务端',
         items: [
-            { text: 'nest', link: '/client/nest/' },
+            { text: 'nest', link: '/service/nest/' },
             { text: 'egg', link: '/service/egg/' },
             { text: 'koa', link: '/service/koa/' },
             { text: "MySQL", link: '/service/mysql/' },
