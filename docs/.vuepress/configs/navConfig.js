@@ -3,11 +3,10 @@ module.exports = [
         text: "首页",
         link: "/"
     },
-
     {
         text: '全栈',
         items: [
-            { text: 'next.js', link: '/fullStack/next/' }
+            { text: 'next.js', link: '/fullStack/next/' },
         ]
     },
     {
@@ -16,7 +15,6 @@ module.exports = [
             { text: "react", link: '/client/react/' },
             { text: '浏览器', link: '/client/browser/' },
             { text: "webpack", link: '/client/webpack/' },
-            { text: '工程化', link: '/client/frame/' },
             { text: "typescript", link: '/client/typescript/' },
             { text: "style", link: '/client/style/' },
         ],
@@ -24,6 +22,7 @@ module.exports = [
     {
         text: '服务端',
         items: [
+            { text: 'nest', link: '/client/nest/' },
             { text: 'egg', link: '/service/egg/' },
             { text: 'koa', link: '/service/koa/' },
             { text: "MySQL", link: '/service/mysql/' },
@@ -39,10 +38,11 @@ module.exports = [
         text: '其他',
         items: [
             { text: 'git', link: '/other/git/' },
-            { text: "常用工具", link: '/other/tools/' },
+            { text: '工程化', link: '/other/frame/' },
+            { text: "工具箱", link: '/other/tools/' },
             { text: "linux", link: '/other/linux/' },
             { text: "设计模式", link: '/other/design/' },
-            { text: '知识图谱', link: '/other/graph/' },
+            { text: '知识网络', link: '/other/graph/' },
         ]
     }
 ]

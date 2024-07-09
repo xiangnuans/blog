@@ -1,9 +1,7 @@
 ---
-title: "一个月的学习梳理总结"
-description: ""
-date: "2024-06-29"
-repository: mock6
-published: true
+title: 2024.6 学习总结
+description: 参加社区Web3训练营
+date: 2024-06-29
 ---
 
 ![网络图谱](/Web3训练营学习笔记.png)
