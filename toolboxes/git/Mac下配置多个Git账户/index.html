@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mac下配置多个Git账户 | 向暖的博客</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/blog/favicon.png">
+    <link rel="manifest" href="/blog/js/manifest.json">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?edc4bcec71692608cb4081eadb57b100";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+      </script>
+    <meta name="description" content="向暖,向暖的博客">
+    <meta rel="keywords" content="向暖,向暖的博客,前端博客,https://xiangnuans.github.io">
+    <meta name="Author" content="向暖">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta async="async" http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta async="async" name="google-site-verification" content="nH3yTcAhj2mMCsTogPEBH6GHVZL81dxy4df5I_SbbHI">
+    <meta name="baidu-site-verification" content="code-C87tLEnqNR">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.10652d6e.css" as="style"><link rel="preload" href="/blog/assets/js/app.a90658e3.js" as="script"><link rel="preload" href="/blog/assets/js/2.d9410ec7.js" as="script"><link rel="preload" href="/blog/assets/js/1.3b207968.js" as="script"><link rel="preload" href="/blog/assets/js/138.9b00a98a.js" as="script"><link rel="preload" href="/blog/assets/js/20.8d794c0b.js" as="script"><link rel="prefetch" href="/blog/assets/js/100.c106bfc6.js"><link rel="prefetch" href="/blog/assets/js/101.af1c978d.js"><link rel="prefetch" href="/blog/assets/js/102.1a6879b8.js"><link rel="prefetch" href="/blog/assets/js/103.239b1d2e.js"><link rel="prefetch" href="/blog/assets/js/104.0f8a08a0.js"><link rel="prefetch" href="/blog/assets/js/105.aa7859e4.js"><link rel="prefetch" href="/blog/assets/js/106.0cae671d.js"><link rel="prefetch" href="/blog/assets/js/107.7f4f0847.js"><link rel="prefetch" href="/blog/assets/js/108.6054a621.js"><link rel="prefetch" href="/blog/assets/js/109.f0a2810e.js"><link rel="prefetch" href="/blog/assets/js/11.ea6467ba.js"><link rel="prefetch" href="/blog/assets/js/110.1dbb5391.js"><link rel="prefetch" href="/blog/assets/js/111.f0ceedb0.js"><link rel="prefetch" href="/blog/assets/js/112.1789d727.js"><link rel="prefetch" href="/blog/assets/js/113.ab76635e.js"><link rel="prefetch" href="/blog/assets/js/114.34b46bd1.js"><link rel="prefetch" href="/blog/assets/js/115.67e18a90.js"><link rel="prefetch" href="/blog/assets/js/116.bae27058.js"><link rel="prefetch" href="/blog/assets/js/117.9a416c33.js"><link rel="prefetch" href="/blog/assets/js/118.b2d98653.js"><link rel="prefetch" href="/blog/assets/js/119.cea0fa2a.js"><link rel="prefetch" href="/blog/assets/js/12.3adf4e64.js"><link rel="prefetch" href="/blog/assets/js/120.0fc33248.js"><link rel="prefetch" href="/blog/assets/js/121.78ae482c.js"><link rel="prefetch" href="/blog/assets/js/122.6b112348.js"><link rel="prefetch" href="/blog/assets/js/123.4609dfff.js"><link rel="prefetch" href="/blog/assets/js/124.7ef6ad9e.js"><link rel="prefetch" href="/blog/assets/js/125.d1758b0a.js"><link rel="prefetch" href="/blog/assets/js/126.6558f5e4.js"><link rel="prefetch" href="/blog/assets/js/127.45ee97cd.js"><link rel="prefetch" href="/blog/assets/js/128.eb8246d1.js"><link rel="prefetch" href="/blog/assets/js/129.da38f8ff.js"><link rel="prefetch" href="/blog/assets/js/13.85bc2cf5.js"><link rel="prefetch" href="/blog/assets/js/130.05bde18b.js"><link rel="prefetch" href="/blog/assets/js/131.7d7bb54e.js"><link rel="prefetch" href="/blog/assets/js/132.638c4bea.js"><link rel="prefetch" href="/blog/assets/js/133.d03a84e2.js"><link rel="prefetch" href="/blog/assets/js/134.363c91ec.js"><link rel="prefetch" href="/blog/assets/js/135.c9964a9e.js"><link rel="prefetch" href="/blog/assets/js/136.48919975.js"><link rel="prefetch" href="/blog/assets/js/137.483fd994.js"><link rel="prefetch" href="/blog/assets/js/139.e7f1dc0e.js"><link rel="prefetch" href="/blog/assets/js/14.65a4f979.js"><link rel="prefetch" href="/blog/assets/js/140.729b639d.js"><link rel="prefetch" href="/blog/assets/js/141.66ff5b78.js"><link rel="prefetch" href="/blog/assets/js/142.1451268b.js"><link rel="prefetch" href="/blog/assets/js/143.a31220cc.js"><link rel="prefetch" href="/blog/assets/js/144.7ebf5b21.js"><link rel="prefetch" href="/blog/assets/js/145.09ef3ba1.js"><link rel="prefetch" href="/blog/assets/js/146.1c1fefc9.js"><link rel="prefetch" href="/blog/assets/js/147.f4145391.js"><link rel="prefetch" href="/blog/assets/js/148.7a9acecc.js"><link rel="prefetch" href="/blog/assets/js/149.ea95c694.js"><link rel="prefetch" href="/blog/assets/js/15.59d8bf46.js"><link rel="prefetch" href="/blog/assets/js/150.cbe96b02.js"><link rel="prefetch" href="/blog/assets/js/151.0aed80ac.js"><link rel="prefetch" href="/blog/assets/js/152.29faf818.js"><link rel="prefetch" href="/blog/assets/js/153.2e68c146.js"><link rel="prefetch" href="/blog/assets/js/154.8b8580a8.js"><link rel="prefetch" href="/blog/assets/js/155.2a8b6251.js"><link rel="prefetch" href="/blog/assets/js/156.8cc556a3.js"><link rel="prefetch" href="/blog/assets/js/157.b59493b8.js"><link rel="prefetch" href="/blog/assets/js/158.43b726ff.js"><link rel="prefetch" href="/blog/assets/js/159.ed932d6d.js"><link rel="prefetch" href="/blog/assets/js/16.5574c036.js"><link rel="prefetch" href="/blog/assets/js/160.3694a110.js"><link rel="prefetch" href="/blog/assets/js/161.10d745db.js"><link rel="prefetch" href="/blog/assets/js/162.4bd1c2d7.js"><link rel="prefetch" href="/blog/assets/js/163.a10e6118.js"><link rel="prefetch" href="/blog/assets/js/164.ea035100.js"><link rel="prefetch" href="/blog/assets/js/165.6ca0479b.js"><link rel="prefetch" href="/blog/assets/js/166.371e5c95.js"><link rel="prefetch" href="/blog/assets/js/167.7766db68.js"><link rel="prefetch" href="/blog/assets/js/168.cc4dfeb6.js"><link rel="prefetch" href="/blog/assets/js/169.24d62de4.js"><link rel="prefetch" href="/blog/assets/js/17.7370728c.js"><link rel="prefetch" href="/blog/assets/js/170.b12646f8.js"><link rel="prefetch" href="/blog/assets/js/171.311d96e6.js"><link rel="prefetch" href="/blog/assets/js/172.df71fbff.js"><link rel="prefetch" href="/blog/assets/js/173.58d876f1.js"><link rel="prefetch" href="/blog/assets/js/174.a69e0bab.js"><link rel="prefetch" href="/blog/assets/js/175.79728f04.js"><link rel="prefetch" href="/blog/assets/js/176.a5ce3ceb.js"><link rel="prefetch" href="/blog/assets/js/177.686b6ef9.js"><link rel="prefetch" href="/blog/assets/js/178.427ef8da.js"><link rel="prefetch" href="/blog/assets/js/179.fe278d74.js"><link rel="prefetch" href="/blog/assets/js/18.39437f55.js"><link rel="prefetch" href="/blog/assets/js/180.af71533e.js"><link rel="prefetch" href="/blog/assets/js/181.1586a1c6.js"><link rel="prefetch" href="/blog/assets/js/182.553c548c.js"><link rel="prefetch" href="/blog/assets/js/183.b9bb42c8.js"><link rel="prefetch" href="/blog/assets/js/184.e32b0381.js"><link rel="prefetch" href="/blog/assets/js/185.436b6b82.js"><link rel="prefetch" href="/blog/assets/js/186.a026f406.js"><link rel="prefetch" href="/blog/assets/js/187.8fc9ddc8.js"><link rel="prefetch" href="/blog/assets/js/188.758bf6bc.js"><link rel="prefetch" href="/blog/assets/js/189.5bef4f7b.js"><link rel="prefetch" href="/blog/assets/js/19.785b55b2.js"><link rel="prefetch" href="/blog/assets/js/190.5cea9708.js"><link rel="prefetch" href="/blog/assets/js/191.e92b3e56.js"><link rel="prefetch" href="/blog/assets/js/192.2ec1cb2b.js"><link rel="prefetch" href="/blog/assets/js/193.b350706a.js"><link rel="prefetch" href="/blog/assets/js/21.e5ca3c9d.js"><link rel="prefetch" href="/blog/assets/js/22.46890153.js"><link rel="prefetch" href="/blog/assets/js/23.59e96bcd.js"><link rel="prefetch" href="/blog/assets/js/24.dfdd0bbb.js"><link rel="prefetch" href="/blog/assets/js/25.1017b276.js"><link rel="prefetch" href="/blog/assets/js/26.31bb6897.js"><link rel="prefetch" href="/blog/assets/js/27.90b296bc.js"><link rel="prefetch" href="/blog/assets/js/28.801465c8.js"><link rel="prefetch" href="/blog/assets/js/29.330ef74c.js"><link rel="prefetch" href="/blog/assets/js/3.a422ba8e.js"><link rel="prefetch" href="/blog/assets/js/30.560cb9a3.js"><link rel="prefetch" href="/blog/assets/js/31.70749c92.js"><link rel="prefetch" href="/blog/assets/js/32.0b0a7473.js"><link rel="prefetch" href="/blog/assets/js/33.d50f341a.js"><link rel="prefetch" href="/blog/assets/js/34.5d6a1408.js"><link rel="prefetch" href="/blog/assets/js/35.d70f7029.js"><link rel="prefetch" href="/blog/assets/js/36.d47e8ed9.js"><link rel="prefetch" href="/blog/assets/js/37.23c8e540.js"><link rel="prefetch" href="/blog/assets/js/38.3c138454.js"><link rel="prefetch" href="/blog/assets/js/39.70e29d27.js"><link rel="prefetch" href="/blog/assets/js/4.106d94bd.js"><link rel="prefetch" href="/blog/assets/js/40.bdad198d.js"><link rel="prefetch" href="/blog/assets/js/41.fb7141e5.js"><link rel="prefetch" href="/blog/assets/js/42.d60c7968.js"><link rel="prefetch" href="/blog/assets/js/43.0c904de3.js"><link rel="prefetch" href="/blog/assets/js/44.d3f14ca6.js"><link rel="prefetch" href="/blog/assets/js/45.51b0b7a2.js"><link rel="prefetch" href="/blog/assets/js/46.30a3be5d.js"><link rel="prefetch" href="/blog/assets/js/47.d2d0ae82.js"><link rel="prefetch" href="/blog/assets/js/48.cf95ca68.js"><link rel="prefetch" href="/blog/assets/js/49.42bfc078.js"><link rel="prefetch" href="/blog/assets/js/5.7358064c.js"><link rel="prefetch" href="/blog/assets/js/50.a89fc797.js"><link rel="prefetch" href="/blog/assets/js/51.8293119a.js"><link rel="prefetch" href="/blog/assets/js/52.fbcd1616.js"><link rel="prefetch" href="/blog/assets/js/53.9d03e46f.js"><link rel="prefetch" href="/blog/assets/js/54.458d0554.js"><link rel="prefetch" href="/blog/assets/js/55.2ac519e0.js"><link rel="prefetch" href="/blog/assets/js/56.ea5a860d.js"><link rel="prefetch" href="/blog/assets/js/57.9ffa19bf.js"><link rel="prefetch" href="/blog/assets/js/58.a9f6ecee.js"><link rel="prefetch" href="/blog/assets/js/59.a4d13282.js"><link rel="prefetch" href="/blog/assets/js/6.1de616f3.js"><link rel="prefetch" href="/blog/assets/js/60.c448c3f1.js"><link rel="prefetch" href="/blog/assets/js/61.e250ddb7.js"><link rel="prefetch" href="/blog/assets/js/62.8fc03faf.js"><link rel="prefetch" href="/blog/assets/js/63.fcef8be5.js"><link rel="prefetch" href="/blog/assets/js/64.4dacd8ca.js"><link rel="prefetch" href="/blog/assets/js/65.82eac769.js"><link rel="prefetch" href="/blog/assets/js/66.39569e17.js"><link rel="prefetch" href="/blog/assets/js/67.53b7dfac.js"><link rel="prefetch" href="/blog/assets/js/68.5edd40d9.js"><link rel="prefetch" href="/blog/assets/js/69.dd0982af.js"><link rel="prefetch" href="/blog/assets/js/7.4ed1500b.js"><link rel="prefetch" href="/blog/assets/js/70.84fd6832.js"><link rel="prefetch" href="/blog/assets/js/71.dae2dfac.js"><link rel="prefetch" href="/blog/assets/js/72.088c1900.js"><link rel="prefetch" href="/blog/assets/js/73.a00b4709.js"><link rel="prefetch" href="/blog/assets/js/74.8b6b7d06.js"><link rel="prefetch" href="/blog/assets/js/75.f3b98775.js"><link rel="prefetch" href="/blog/assets/js/76.be18e9ec.js"><link rel="prefetch" href="/blog/assets/js/77.7e87b4a4.js"><link rel="prefetch" href="/blog/assets/js/78.f617a85b.js"><link rel="prefetch" href="/blog/assets/js/79.785acccd.js"><link rel="prefetch" href="/blog/assets/js/80.f6c5a1be.js"><link rel="prefetch" href="/blog/assets/js/81.f20af530.js"><link rel="prefetch" href="/blog/assets/js/82.521ded6c.js"><link rel="prefetch" href="/blog/assets/js/83.c7557b2a.js"><link rel="prefetch" href="/blog/assets/js/84.70b2a6c8.js"><link rel="prefetch" href="/blog/assets/js/85.a5968c1a.js"><link rel="prefetch" href="/blog/assets/js/86.ed1570d0.js"><link rel="prefetch" href="/blog/assets/js/87.3e09b68d.js"><link rel="prefetch" href="/blog/assets/js/88.c292162d.js"><link rel="prefetch" href="/blog/assets/js/89.d45f2c5e.js"><link rel="prefetch" href="/blog/assets/js/90.2179d50b.js"><link rel="prefetch" href="/blog/assets/js/91.c6511541.js"><link rel="prefetch" href="/blog/assets/js/92.68562c24.js"><link rel="prefetch" href="/blog/assets/js/93.24280b13.js"><link rel="prefetch" href="/blog/assets/js/94.4e1d3f99.js"><link rel="prefetch" href="/blog/assets/js/95.e4ef3ed4.js"><link rel="prefetch" href="/blog/assets/js/96.eaecbe3b.js"><link rel="prefetch" href="/blog/assets/js/97.8179a339.js"><link rel="prefetch" href="/blog/assets/js/98.50205d69.js"><link rel="prefetch" href="/blog/assets/js/99.bf33fb01.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.f9d2099f.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.9a08101b.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.10652d6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">向暖的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="全栈" class="dropdown-title"><span class="title">全栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="全栈" class="mobile-dropdown-title"><span class="title">全栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fullStack/next/" class="nav-link">
+  next.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="客户端" class="dropdown-title"><span class="title">客户端</span> <span class="arrow down"></span></button> <button type="button" aria-label="客户端" class="mobile-dropdown-title"><span class="title">客户端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/client/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/typescript/" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/style/" class="nav-link">
+  style
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/service/nest/" class="nav-link">
+  nest
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/egg/" class="nav-link">
+  egg
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/koa/" class="nav-link">
+  koa
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/orm/" class="nav-link">
+  ORM
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/node/" class="nav-link">
+  实践笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          构建打包
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/rollup/" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/parcel/" class="nav-link">
+  Parcel
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/gulp/" class="nav-link">
+  Gulp
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/tools.html" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/git/" class="nav-link router-link-active">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/design/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/graph/" class="nav-link">
+  知识网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web3" class="dropdown-title"><span class="title">Web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web3" class="mobile-dropdown-title"><span class="title">Web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/web3/solidity.html" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/color.html" class="nav-link">
+  web3.js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/ether.js.html" class="nav-link">
+  ether.js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/viem.html" class="nav-link">
+  viem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/hardware.html" class="nav-link">
+  hardhat
+</a></li></ul></div></div> <a href="https://github.com/xiangnuans/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="全栈" class="dropdown-title"><span class="title">全栈</span> <span class="arrow down"></span></button> <button type="button" aria-label="全栈" class="mobile-dropdown-title"><span class="title">全栈</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/fullStack/next/" class="nav-link">
+  next.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="客户端" class="dropdown-title"><span class="title">客户端</span> <span class="arrow down"></span></button> <button type="button" aria-label="客户端" class="mobile-dropdown-title"><span class="title">客户端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/client/react/" class="nav-link">
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/browser/" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/typescript/" class="nav-link">
+  typescript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/client/style/" class="nav-link">
+  style
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="服务端" class="dropdown-title"><span class="title">服务端</span> <span class="arrow down"></span></button> <button type="button" aria-label="服务端" class="mobile-dropdown-title"><span class="title">服务端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/service/nest/" class="nav-link">
+  nest
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/egg/" class="nav-link">
+  egg
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/koa/" class="nav-link">
+  koa
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/mysql/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/orm/" class="nav-link">
+  ORM
+</a></li><li class="dropdown-item"><!----> <a href="/blog/service/node/" class="nav-link">
+  实践笔记
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          构建打包
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/rollup/" class="nav-link">
+  Rollup
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/parcel/" class="nav-link">
+  Parcel
+</a></li><li class="dropdown-subitem"><a href="/blog/toolboxes/buildTools/gulp/" class="nav-link">
+  Gulp
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/tools.html" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/git/" class="nav-link router-link-active">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/linux/" class="nav-link">
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/design/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/blog/toolboxes/graph/" class="nav-link">
+  知识网络
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Web3" class="dropdown-title"><span class="title">Web3</span> <span class="arrow down"></span></button> <button type="button" aria-label="Web3" class="mobile-dropdown-title"><span class="title">Web3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/web3/solidity.html" class="nav-link">
+  solidity
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/color.html" class="nav-link">
+  web3.js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/ether.js.html" class="nav-link">
+  ether.js
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/viem.html" class="nav-link">
+  viem
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web3/hardware.html" class="nav-link">
+  hardhat
+</a></li></ul></div></div> <a href="https://github.com/xiangnuans/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/toolboxes/git/" aria-current="page" class="sidebar-link">Git以及代码规范</a></li><li><a href="/blog/toolboxes/git/Gitlab%E7%9A%84CI%E7%AE%A1%E9%81%93%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/" class="sidebar-link">Gitlab CI CD管道配置参考</a></li><li><a href="/blog/toolboxes/git/Git%E8%A7%84%E8%8C%83%E5%92%8CChangelog%E7%94%9F%E6%88%90/" class="sidebar-link">Git规范和Changelog生成</a></li><li><a href="/blog/toolboxes/git/Mac%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGit%E8%B4%A6%E6%88%B7/" aria-current="page" class="active sidebar-link">Mac下配置多个Git账户</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/toolboxes/git/Mac%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGit%E8%B4%A6%E6%88%B7/#应用场景" class="sidebar-link">应用场景</a></li><li class="sidebar-sub-header"><a href="/blog/toolboxes/git/Mac%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGit%E8%B4%A6%E6%88%B7/#准备工作" class="sidebar-link">准备工作</a></li><li class="sidebar-sub-header"><a href="/blog/toolboxes/git/Mac%E4%B8%8B%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAGit%E8%B4%A6%E6%88%B7/#_4-公钥添加到托管网站" class="sidebar-link">4. 公钥添加到托管网站</a></li></ul></li><li><a href="/blog/toolboxes/git/gitsubtree%E6%95%99%E7%A8%8B/" class="sidebar-link">git subtree教程</a></li><li><a href="/blog/toolboxes/git/git%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" class="sidebar-link">git分支开发规范</a></li><li><a href="/blog/toolboxes/git/%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%88%86%E5%B8%83%E5%BC%8FEDAS%E6%A8%A1%E5%BC%8F/" class="sidebar-link">企业级分布式，EDAS模式</a></li><li><a href="/blog/toolboxes/git/%E4%BD%BF%E7%94%A8AppVeyor%E5%92%8CTravis%E8%87%AA%E5%8A%A8%E6%9E%84%E5%BB%BA%E5%92%8C%E5%8F%91%E5%B8%83Electron%E5%BA%94%E7%94%A8/" class="sidebar-link">使用AppVeyor和Travis自动构建和发布Electron应用</a></li><li><a href="/blog/toolboxes/git/%E4%BD%BF%E7%94%A8GithubActions%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" class="sidebar-link">使用Github Actions进行版本发布</a></li><li><a href="/blog/toolboxes/git/%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E6%9C%AB%E6%AC%A1%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4/" class="sidebar-link">删除远程仓库的末次错误提交</a></li><li><a href="/blog/toolboxes/git/%E8%AF%AD%E4%B9%89%E5%8C%96Semantic%E8%A7%84%E8%8C%83%E6%A0%BC%E5%BC%8F/" class="sidebar-link">语义化（Semantic Versioning）规范格式</a></li><li><a href="/blog/toolboxes/git/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8Electron/" class="sidebar-link">跨平台桌面应用Electron</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mac下配置多个git账户"><a href="#mac下配置多个git账户" class="header-anchor">#</a> Mac下配置多个Git账户</h1> <h2 id="应用场景"><a href="#应用场景" class="header-anchor">#</a> 应用场景</h2> <p>我们经常将代码托管到gitlab、github这样的网站，为了避免每次push代码都要输入用户名和 密码，通常回选择ssh协议，将公约保存到托管网站上。在实际开发中，往往要将代码托管到多个不同的网站上。比如公司的代码需要托管到gitlab，自己的开源代码托管到github上，每个托管站上都对应一个git账户。默认情况下，一台电脑的Git对应一个账户，只能网一个网站上push代码，非常不方便。这篇博客将介绍如何在一个终端中配置多个账户。同时管理多个托管网站的代码。</p> <h2 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作</h2> <p>首先，需要准备好对git的全局用户进行配置。在初次安装Git时，往往会使用如下命令配置全局用户名和邮箱。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git config --global user.name  'xxxx'   //配置全局的用户名，比如Github上注册的yonghuming
+git config --global user.email  'xxxx'  // 配置全局邮箱，比如GitHub上配置的邮箱
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这个--global选项，是只这里配置的user.name和user.email是像杜预全局进行配置的，即不同的Git仓库默认的用户名和邮箱都是这个值。由于需要管理多个账户，所以仅仅使用这个全局全局值是不够的，需要在每个仓库中单独配置。对此，有两种处理方法：</p> <p>如果之前已经使用该命令进行配置，则先使用如下命令进行清楚</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git config --global --unset user.name
+git config --global --unset user.email
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>如果不确定是否已经配置过，可以使用下面的命令查看</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git config --global user.name
+git config --global user.email
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_1-对每个账户生成一对密钥"><a href="#_1-对每个账户生成一对密钥" class="header-anchor">#</a> 1. 对每个账户生成一对密钥</h3> <p>首先进入保护密钥的目录：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd ~/.ssh // 进入目录，该目录下保存生成的密钥
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后，根据账户邮箱生成密钥。例如我在GitHub上的邮箱是<strong>1352118502@qq.com</strong>，则命令为</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh-keygen -t rsa -C &quot;1352118502@qq.com&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>输入完成后，会有如下提示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Generating public/private rsa key pair.
+Enter file in while to save the key (/Users/coco/.ssh/id_rsa):
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这里要求对密钥进行命名，默认的文件是<strong>id_rsa</strong>。为了方便区分，我这里命名为<strong>id_rsa_github</strong>。接下来的提示都直接进行enter，直到密钥生成。通过<strong>ls</strong>命令，可以看到刚刚生成的密钥对<strong>id_rsa_github</strong>和<strong>id_rsa_github.pub</strong>。其中<strong>id_rsa_github.pub</strong>是公钥。</p> <p>同样，对于GitLab上的账户，我是用另一个邮箱注册的，按照同样的步骤生成<strong>id_rsa_github</strong>的密钥对。接下来的步骤，除额外说明外，两个账户的操作完全相同。</p> <h3 id="_2-私钥添加到本地"><a href="#_2-私钥添加到本地" class="header-anchor">#</a> 2. 私钥添加到本地</h3> <p>SSH协议的原理，就是托管网站上使用的公钥，在本地使用私钥，这样本地仓库就可以和远程仓库进行通信。在上一步已经生成了密钥晚间，接下来需要私钥文件，首先是在本地使用密钥文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh-add ~/.ssh/id_rsa_github // 将GitHub私钥添加到本地
+ssh-add ~/.ssh/id_rsa_gitlab // 将GitLab私钥添加到本地
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>为了检验本地是否添加成功，可以使用<strong>ssh-add -l</strong>命令查看</p> <h3 id="_3-对本地密钥进行配置"><a href="#_3-对本地密钥进行配置" class="header-anchor">#</a> 3. 对本地密钥进行配置</h3> <p>由于添加了多个密钥文件，所以需要对这多个密钥进行管理。在.ssh目录下新建一个config文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>touch config
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>文件的内容如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Host github
+HostName github.com
+User CoCoyh
+IdentityFile ~/.ssh/id_rsa
+
+
+Host gitlab
+HostName gitlab.com
+User CoCoyh
+IdentityFile ~/.ssh/id_rsa_gitlab
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="_4-公钥添加到托管网站"><a href="#_4-公钥添加到托管网站" class="header-anchor">#</a> 4. 公钥添加到托管网站</h2> <p>以GitHub为例，先在本地复制公钥。进入<strong>ssh</strong>目录，使用<strong>cat id_rsa_github.pub</strong>查看生成的GitHub公钥，全选进行复制。</p> <p>登陆GitHub，点击右上角头像选择<strong>settings</strong>，在打开的页面中选择SSH and GPG keys，至此，托管网站的公钥添加完成。总结来说，就是针对每个托管网站分别生成一对密钥，然后分别添加到本地和托管网站。这时候，可以测试一下是否成功，测试命令使用别名。例如，对于GitHub，本来应该使用的测试命令是:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh -T git@github.com
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在config文件中，给GitHub网站配置的别名就是gitHub，所以直接使用别名，就是</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ssh -T git@github
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/xiangnuans/blog/edit/master/docs/toolboxes/git/Mac下配置多个Git账户.md" target="_blank" rel="noopener noreferrer">发现有错误?前往GitHub指正</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/10/2024, 9:26:49 AM</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/blog/assets/js/app.a90658e3.js" defer></script><script src="/blog/assets/js/2.d9410ec7.js" defer></script><script src="/blog/assets/js/1.3b207968.js" defer></script><script src="/blog/assets/js/138.9b00a98a.js" defer></script><script src="/blog/assets/js/20.8d794c0b.js" defer></script>
+  </body>
+</html>
