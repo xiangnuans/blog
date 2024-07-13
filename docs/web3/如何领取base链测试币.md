@@ -1,3 +1,9 @@
+---
+title: 如何领取base链测试币
+description: 
+date: 2024-06-24
+---
+
 # 如何领取base链测试币
 要在 Base 测试网上领取测试币（测试代币），通常可以通过 Base 测试网水龙头（faucet）来获得。以下是领取 Base 测试币的步骤：
 
