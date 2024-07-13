@@ -2,7 +2,7 @@
 title: "初次搭建Uniswap V2 APP"
 description: ""
 date: "2024-06-24"
-repository: 
+repository: https://github.com/xiangnuans/My-Fist-Uniswap
 published: true
 ---
 # 使用Uniswap SDK 在React中搭建一个
