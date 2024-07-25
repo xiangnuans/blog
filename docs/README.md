@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /技能网络.png
+heroImage: https://github.com/user-attachments/assets/a5e55eff-aeac-4788-85d5-e3bffa17f679
 heroText: 技术栈+实践
 tagline: 灵魂要想走的远，身体必须在路上
 actionText: 开始阅读 →
