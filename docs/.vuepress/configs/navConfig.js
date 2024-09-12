@@ -10,12 +10,23 @@ module.exports = [
         ]
     },
     {
+        text: 'Web3',
+        items: [
+            { text: '入门', link: '/web3/' },
+            { text: 'Ethereum', link: '/web3/Ethereum/' },
+            { text: 'Ton', link: '/web3/Ton/' },
+            { text: 'Solona', link: '/web3/Solona/' },
+        ]
+    },
+    {
         text: '客户端',
         items: [
             { text: "react", link: '/client/react/' },
             { text: '浏览器', link: '/client/browser/' },
             { text: "typescript", link: '/client/typescript/' },
             { text: "style", link: '/client/style/' },
+            { text: "React Native", link: "/client/reactNative/" },
+
         ],
     },
     {
@@ -62,16 +73,6 @@ module.exports = [
             { text: "linux", link: '/toolboxes/linux/' },
             { text: "设计模式", link: '/toolboxes/design/' },
             { text: '知识网络', link: '/toolboxes/graph/' },
-        ]
-    },
-    {
-        text: 'Web3',
-        items: [
-            { text: 'solidity', link: '/web3/solidity' },
-            { text: 'web3.js', link: '/web3/color' },
-            { text: 'ether.js', link: '/web3/ether.js' },
-            { text: 'viem', link: '/web3/viem' },
-            { text: 'hardhat', link: '/web3/hardware' },
         ]
     },
 ]
