@@ -1,10 +1,8 @@
 ---
-title: 目录
+title: 快速导航
 ---
 
-<!-- ## 快速导航
-
-<TOC /> -->
 # webpack
-- [webpack5更新日志](webpack5更新日志.md)
+- [webpack5](./webpack5.md)
+- [webpack中实现静态资源内联](./webpack中实现静态资源内联.md)
 
