@@ -25,7 +25,7 @@ module.exports = [
             { text: '浏览器', link: '/client/browser/' },
             { text: "typescript", link: '/client/typescript/' },
             { text: "style", link: '/client/style/' },
-            { text: "React Native", link: "/client/reactNative/" },
+            { text: "react native", link: "/client/reactNative/" },
 
         ],
     },
@@ -35,7 +35,7 @@ module.exports = [
             { text: 'nest', link: '/service/nest/' },
             { text: 'egg', link: '/service/egg/' },
             { text: 'koa', link: '/service/koa/' },
-            { text: "MySQL", link: '/service/mysql/' },
+            { text: "mysql", link: '/service/mysql/' },
             { text: "ORM", link: '/service/orm/' },
             { text: "实践笔记", link: '/service/node/' }
         ]
@@ -44,29 +44,24 @@ module.exports = [
         text: '工具箱',
         items: [
             {
-                text: '构建打包',
-                items: [
-                    {
-                        text: 'Webpack',
-                        link: '/toolboxes/buildTools/webpack/'
-                    },
-                    {
-                        text: 'Vite',
-                        link: '/toolboxes/buildTools/vite/'
-                    },
-                    {
-                        text: 'Rollup',
-                        link: '/toolboxes/buildTools/rollup/'
-                    },
-                    {
-                        text: 'Parcel',
-                        link: '/toolboxes/buildTools/parcel/'
-                    },
-                    {
-                        text: 'Gulp',
-                        link: '/toolboxes/buildTools/gulp/'
-                    }
-                ]
+                text: 'webpack',
+                link: '/toolboxes/buildTools/webpack/'
+            },
+            {
+                text: 'vite',
+                link: '/toolboxes/buildTools/vite/'
+            },
+            {
+                text: 'rollup',
+                link: '/toolboxes/buildTools/rollup/'
+            },
+            {
+                text: 'parcel',
+                link: '/toolboxes/buildTools/parcel/'
+            },
+            {
+                text: 'gulp',
+                link: '/toolboxes/buildTools/gulp/'
             },
             { text: '工具', link: "/toolboxes/tools" },
             { text: 'git', link: '/toolboxes/git/' },
