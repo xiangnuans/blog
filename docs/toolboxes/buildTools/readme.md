@@ -15,3 +15,9 @@ date: "2018-05-16"
 # Rollup
 - [rollup](./rollup/readme.md)
 配置、插件、对比Webpack等。
+
+# Parcel
+- [parcel](./parcel/readme.md)
+
+# Gulp
+- [Gulp](./gulp/readme.md)

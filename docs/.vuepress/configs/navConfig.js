@@ -63,7 +63,7 @@ module.exports = [
                 text: 'gulp',
                 link: '/toolboxes/buildTools/gulp/'
             },
-            { text: '工具', link: "/toolboxes/tools" },
+            { text: '工具', link: "/toolboxes/tools/" },
             { text: 'git', link: '/toolboxes/git/' },
             { text: "linux", link: '/toolboxes/linux/' },
             { text: "设计模式", link: '/toolboxes/design/' },
