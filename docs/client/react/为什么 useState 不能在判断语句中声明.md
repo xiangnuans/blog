@@ -1,6 +1,6 @@
 ---
 title: 为什么 useState 不能在判断语句中声明?
-
+# autoGroup-0: react 
 ---
 
 官网里写了只在最顶层使用 Hooks。不要在循环，条件或嵌套函数中调用 Hook，确保总是在你的 React 函数的最顶层以及任何 return 之前调用他们。

@@ -1,5 +1,6 @@
 ---
 title: create-react-app脚手架本地调试
+autoGroup-2: create-react-app脚手架核心源码
 ---
 
 # 本地怎么从`create-react-app`到`react-scripts`

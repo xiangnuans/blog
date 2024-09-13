@@ -1,5 +1,6 @@
 ---
 title: Qiankun+umi搭建的主应用子应用动态图标怎么实现？
+autoGroup-1: 微前端qiankun
 ---
 
 微前端的主应用是基于qiankun和umi框架搭建而成，主应用注册了多个子应用，子应用的ico需要动态设置显示后端获取的图标数据

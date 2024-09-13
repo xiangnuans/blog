@@ -1,5 +1,6 @@
 ---
 title: qiankun的JS沙箱设置和使用
+autoGroup-1: 微前端qiankun
 ---
 
 在 Qiankun 微前端框架中，JS 沙箱是一项关键的技术，用于隔离和保护子应用之间的 JavaScript 执行环境。JS 沙箱的主要目标是确保每个微前端子应用的 JavaScript 执行环境都是相互隔离的，避免全局变量污染和冲突。

@@ -1,6 +1,6 @@
 ---
 title: ant-design-pro-layout底部Footer更改
-autoGroup-1: 其他
+autoGroup-5: umi
 ---
 
 ## ant-design-pro-layout底部Footer更改

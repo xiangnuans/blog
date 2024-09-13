@@ -1,6 +1,6 @@
 ---
 title: import文件路径优化
-autoGroup-1: 其他
+autoGroup-99: 其他
 ---
 
 ## import文件路径优化

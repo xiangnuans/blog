@@ -1,6 +1,6 @@
 ---
 title: react组件开发指南
-autoGroup-1: 其他
+autoGroup-99: 其他
 ---
 
 # react组件开发指南

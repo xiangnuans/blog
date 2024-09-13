@@ -1,6 +1,6 @@
 ---
 title: 微前端主应用hash路由和history路由支持
-
+autoGroup-1: 微前端qiankun
 ---
 
 微前端，选型使用的是Qiankun，Qiankun 是一个基于微前端架构的 JavaScript 库，用于构建支持多个独立的、协同工作的前端应用。在 Qiankun 中，你可以选择使用 hash 路由或 history 路由，这主要取决于你的项目需求以及对路由的选择。

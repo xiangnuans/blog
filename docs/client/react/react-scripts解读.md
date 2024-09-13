@@ -1,6 +1,11 @@
 ---
-title: create-react-app脚手架核心源码之/packages/react-scripts解读
+title: react-scripts解读
+autoGroup-2: create-react-app脚手架核心源码
 ---
+
+
+> 掘金迁移过来，图片有问题，有兴趣可以查看我的掘金文章
+原文：https://juejin.cn/post/7122436068812521479
 
 # React官方脚手架
 
