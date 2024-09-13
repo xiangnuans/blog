@@ -12,8 +12,7 @@ Hi, I'm xiangnuan(向暖)😄, a Fronted Engineer from China🇨🇳. The tech s
 
 
 
-![Personal Skills Mapping](/docs/.vuepress/public/技能网络.png)
-<!-- ![前端知识图谱](/docs/.vuepress/public/images/knowledge-graph.png) -->
+![Personal Skills Mapping](https://github.com/user-attachments/assets/39cef9d6-0e96-45a1-8ea7-dad57076e170)
 
 
 
