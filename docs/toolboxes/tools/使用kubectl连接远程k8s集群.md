@@ -1,4 +1,7 @@
-# 使用kubectl连接远程k8s集群
+---
+title: 使用kubectl连接远程k8s集群
+autoGroup-4: K8s/docker
+---
 
 ## 什么是kubectl
 

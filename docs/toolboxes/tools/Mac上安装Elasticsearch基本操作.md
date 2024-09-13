@@ -1,4 +1,7 @@
-# Mac上安装Elasticsearch，基本操作
+---
+title: Mac上安装Elasticsearch
+autoGroup-5: 安装
+---
 
 ## 简介
 

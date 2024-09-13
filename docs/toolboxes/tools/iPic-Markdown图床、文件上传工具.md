@@ -1,4 +1,7 @@
-# iPic-Markdown图床、文件上传工具
+---
+title: iPic-Markdown图床、文件上传工具
+autoGroup-3: 存储
+---
 
 https://apps.apple.com/cn/app/id1101244278?mt=12
 

@@ -1,4 +1,7 @@
-# kubernetes研究
+---
+title:  kubernetes研究
+autoGroup-4: K8s/docker
+---
 
 ## 什么是 Kubernetes？
 

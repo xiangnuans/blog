@@ -1,4 +1,7 @@
-# ffmpeg音视频处理需求升级版
+---
+title: fffmpeg音视频处理需求升级版
+autoGroup-6: ffmpeg
+---
 
 ## 需求
 图片转视频、视屏拼接、音频合并、音视频合成，加视频封面（目前这条还没合并在一条命令）
@@ -266,7 +269,7 @@ ffmpeg -re \
 
 合并中，最重要的命令-filter_complex支持的参数
 
-```
+```shell
 Filters:
   T.. = Timeline support // 时间线支持
   .S. = Slice threading  // 切片线程

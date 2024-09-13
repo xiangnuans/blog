@@ -1,10 +1,14 @@
-# ffprobe ffplay ffmpeg常用的命令
+---
+title: ffprobe ffplay ffmpeg常用的命令
+autoGroup-6: ffmpeg
+---
+
 
 ## ffprobe
 
 ### 查看媒体文件信息
 
-```
+```shell
 ffprobe 文件
 ```
 先看一个音频文件：
@@ -26,19 +30,19 @@ ffprobe -show_format 文件路径
 
 - 以json格式输出每个流量详细的信息，例如视频宽高信息，是否有B帧，视频帧的总数目，编码格式，显示比例，音频的省道，编码格式等等。
 
-```
+```shell
 ffprobe -print_format json -show_streams 文件路径
 ```
 
 - 显示帧信息
 
-```
+```shell
 ffprobe -show_frames file
 ```
 
 查看包信息
 
-```
+```shell
 ffprobe -show_packets file
 ```
 
@@ -46,20 +50,20 @@ ffprobe -show_packets file
 
 ### 播放音视频文件
 
-```
+```shell
 ffplay file
 ```
 
 可以利用键盘方向键操作，W是绘制波形，按S键则进入frame-step模式，按一次就会展示下一帧的图像
 
 ### 循环播放
-```
+```shell
 ffplay file -loop 循环次数
 ```
 
 ### 播放指定流
 
-```
+```shell
 音频
 ffplay 文件路径 -ast 流字数
 
@@ -69,7 +73,7 @@ ffplay 文件路径 -vst 流数字
 
 ### 播放数据
 
-```
+```shell
 音频
 
 ffplay 原始文件（pcm文件） -f 格式  -channels 声道数 -ar 采样率
@@ -86,7 +90,7 @@ ffplay -f rawvideo -pixel_format rgb24 -s 480*480 texture.rgb
 
 ### ffplay对齐方式（音画同步）的设置
 
-```
+```shell
 ffpaly 文件路径 -sync audio // 以音频为基准
 ffplay 文件路径 -sync video // 以视频为基准
 ffplay 文件路径 -sync ext // 外部时钟
@@ -179,43 +183,58 @@ ffplay 文件路径 -sync ext // 外部时钟
 ## 举例：
 
 ### 列出ffmpeg支持的所有格式
+```shell
 ffmpeg -formats
-
+```
 ### 剪切一段媒体文件
+```shell
 ffmpeg -i input.mp4 -ss 00:00:50.0 -codec copy -t 20 output,mp4
-
+```
 ### 将文件从50秒开始剪切20秒,输入到新文件,-ss是指定时间,-t是指定时长，提取一个视频中的音频文件
+```shell
 ffmpeg -i input.mp4 -vn -acodec copy output.m4a
-
+```
 ### 使一个视频中的音频静音
+```shell
 ffmpeg -i input.mp4 -an -vcodec copy output.mp4
-
+```
 ### 从MP4文件中到处H264裸流
+```shell
 ffmpeg -i output.mp4 -an -vcodec copy -bsf:v h264_mp4toannexb output.h264
-
+```
 ### 使用aac和h264文件生成mp4文件
+```shell
 ffmpeg -i input.aac -i input.h264 -acodec copy -bsf:a aac_adtstoasc -vcodec copy -f mp4 output.mp4
-
+```
 ### 对音频文件的编码做转换
+```shell
 ffmpeg -i input.wav -acodec libfdk_aac output.aac
-
+```
 ### 从wav文件导出pcm裸数据
+```shell
 ffmpeg -i input.wav -acodec pcm_s16le -f s16le output.pcm
-
+```
 ### 将mp4导出为gif,参数设置为宽度100,帧率10,只处理前五秒
+```shell
 ffmpeg -i input.mp4 -vf sacle=100:-1 -t 5 -r 10 output.gif
-
+```
 ### 将视频画面生成图片,参数为每四秒截取一张,生成缩略图
+```shell
 ffmpeg -i input.mp4 -r 0.25 frames_%04d.png
-
+```
 ### 将两路声音合并,例如添加背景音乐,输出时间是以较短的为准
+```shell
 ffmpeg -i input.wav -i bgm.wav -filter_complex amix=inputs=2:deration=shortest output.wav
-
+```
 ### 视频添加水印,视频宽度为100,水印宽度为20
+```shell
 ffmpeg -i input.mp4 -i image.png -filter_complex '[0:v][1:v]overlay=100-20-10:10:1[out]' -map '[out]' output.mp4
-
+```
 #### 将视频推送到流媒体服务器(-re表示实际速度)
+```shell
 ffmpeg -re -i input.mp4 -acodec copy-vcodec copy -f flv rtmp://xxx
-
+```
 ### 将流媒体服务器的流dump到本地
+```shell
 ffmpeg -i http://xxx.flv -acodec copy -vcodec copy -f flv output.flv
+```

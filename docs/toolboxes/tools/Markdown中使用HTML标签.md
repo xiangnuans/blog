@@ -1,4 +1,6 @@
-# Markdown中使用HTML标签
+---
+title: Markdown中使用HTML标签
+---
 
 在Markdown中写html标签文本
 ```html
@@ -12,8 +14,6 @@
 网站为避免XSS攻击，例如React中无法在jsx中直接插入HTML（innerHTML）
 
 ```jsx
-
-// state
 {
   html: '<div>Markdown</div>'
 }

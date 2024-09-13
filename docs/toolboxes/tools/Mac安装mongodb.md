@@ -1,4 +1,8 @@
-# Mac上按转mongodb
+---
+title: Mac上按转mongodb
+autoGroup-5: 安装
+---
+
 ## 一. 更新Homebrew包
 
 ```

@@ -1,4 +1,9 @@
-# centos7下yum安装和配置Nginx
+---
+title: centos7下yum安装和配置Nginx
+autoGroup-5: 安装
+---
+
+
 ## 前言
 
 Nginx (engine x) 是一个高性能的 HTTP 和反向代理服务器，也是一个 IMAP/POP3/SMTP 服务器。。 本例演示 CentOS 7 下安装和配置 Nginx 的基本步骤。
