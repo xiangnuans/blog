@@ -1,6 +1,5 @@
 ---
 title: Mac下配置多个Git账户
-auto
 ---
 
 ## 应用场景
@@ -12,7 +11,7 @@ auto
 
  首先，需要准备好对git的全局用户进行配置。在初次安装Git时，往往会使用如下命令配置全局用户名和邮箱。
 
- ```
+ ```shell
  git config --global user.name  'xxxx'   //配置全局的用户名，比如Github上注册的yonghuming
  git config --global user.email  'xxxx'  // 配置全局邮箱，比如GitHub上配置的邮箱
 ```
@@ -20,14 +19,14 @@ auto
 
  如果之前已经使用该命令进行配置，则先使用如下命令进行清楚
 
- ```
+ ```shell
 git config --global --unset user.name
 git config --global --unset user.email
  ```
 
  如果不确定是否已经配置过，可以使用下面的命令查看
 
-```
+```shell
 git config --global user.name
 git config --global user.email
 ```
@@ -35,18 +34,18 @@ git config --global user.email
 ### 1. 对每个账户生成一对密钥
 
 首先进入保护密钥的目录：
-```
+```shell
 cd ~/.ssh // 进入目录，该目录下保存生成的密钥
 ```
 
 然后，根据账户邮箱生成密钥。例如我在GitHub上的邮箱是**1352118502@qq.com**，则命令为
 
-```
+```shell
 ssh-keygen -t rsa -C "1352118502@qq.com"
 ```
 
 输入完成后，会有如下提示：
-```
+```shell
 Generating public/private rsa key pair.
 Enter file in while to save the key (/Users/coco/.ssh/id_rsa):
 ```
@@ -59,7 +58,7 @@ Enter file in while to save the key (/Users/coco/.ssh/id_rsa):
 
 SSH协议的原理，就是托管网站上使用的公钥，在本地使用私钥，这样本地仓库就可以和远程仓库进行通信。在上一步已经生成了密钥晚间，接下来需要私钥文件，首先是在本地使用密钥文件：
 
-```
+```shell
 ssh-add ~/.ssh/id_rsa_github // 将GitHub私钥添加到本地
 ssh-add ~/.ssh/id_rsa_gitlab // 将GitLab私钥添加到本地
 ```
@@ -70,12 +69,12 @@ ssh-add ~/.ssh/id_rsa_gitlab // 将GitLab私钥添加到本地
 
 由于添加了多个密钥文件，所以需要对这多个密钥进行管理。在.ssh目录下新建一个config文件：
 
-```
+```shell
 touch config
 ```
 文件的内容如下：
 
-```
+```shell
 Host github
 HostName github.com
 User CoCoyh
@@ -94,11 +93,11 @@ IdentityFile ~/.ssh/id_rsa_gitlab
 
 登陆GitHub，点击右上角头像选择**settings**，在打开的页面中选择SSH and GPG keys，至此，托管网站的公钥添加完成。总结来说，就是针对每个托管网站分别生成一对密钥，然后分别添加到本地和托管网站。这时候，可以测试一下是否成功，测试命令使用别名。例如，对于GitHub，本来应该使用的测试命令是:
 
-```
+```shell
 ssh -T git@github.com
 ```
 在config文件中，给GitHub网站配置的别名就是gitHub，所以直接使用别名，就是
 
-```
+```shell
 ssh -T git@github
 ```
