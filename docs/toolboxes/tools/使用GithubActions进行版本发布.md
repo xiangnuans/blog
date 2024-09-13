@@ -1,4 +1,7 @@
-# 使用Github Actions进行版本发布
+---
+title: 使用Github Actions进行版本发布
+autoGroup-0: Git
+---
 
 > Github Actions: Github提供的Workflow工具，基于Events提供了一个容器运行环境。
 
@@ -8,7 +11,7 @@
 
 GitHub Config
 .gitHub/main.workflow
-```
+```shell
 ## workflow
 workflow "Push" {
   on = "push"

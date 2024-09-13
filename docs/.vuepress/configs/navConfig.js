@@ -48,8 +48,6 @@ module.exports = [
                 link: '/toolboxes/build/'
             },
             { text: '工具', link: "/toolboxes/tools/" },
-            { text: 'git', link: '/toolboxes/git/' },
-            { text: "linux", link: '/toolboxes/linux/' },
             { text: "设计模式", link: '/toolboxes/design/' },
             { text: '知识网络', link: '/toolboxes/graph/' },
         ]

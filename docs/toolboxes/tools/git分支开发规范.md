@@ -1,4 +1,7 @@
-# git分支开发规范
+---
+title: git分支开发规范
+autoGroup-0: Git
+---
 
 ## 分支管理
 

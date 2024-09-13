@@ -1,4 +1,9 @@
-# 语义化（Semantic Versioning）规范格式
+---
+title: 语义化（Semantic Versioning）规范格式
+# autoGroup-0: Git
+---
+
+# 
 
 ## 开源项目版本信息案例
 

@@ -1,4 +1,7 @@
-# Gitlab CI CD管道配置参考
+---
+title: Gitlab CI CD管道配置参考
+autoGroup-0: Git
+---
 
 使用在每个项目中调用的YAML文件配置GitLab CI/CD管道 `.gitlab-ci.yml`
 

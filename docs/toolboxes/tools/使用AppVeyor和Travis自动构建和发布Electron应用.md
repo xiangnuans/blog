@@ -1,3 +1,7 @@
+---
+title: 持续集成和travisCI
+autoGroup-1: travisCI
+---
 
 # 使用AppVeyor和Travis自动构建和发布Electron应用
 

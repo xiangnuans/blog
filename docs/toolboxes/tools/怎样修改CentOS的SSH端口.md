@@ -1,4 +1,8 @@
-# 怎样修改CentOS的SSH端口
+---
+title: 怎样修改CentOS的SSH端口
+autoGroup-7: Linux
+---
+
 ## 场景
 
 一般centos默认的ssh登陆端口是22，很容易受到攻击登陆，为了安全型考虑，最好修改一下

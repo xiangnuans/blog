@@ -1,4 +1,8 @@
-# Linux上部署Node服务外网无法访问
+---
+title: Linux上部署Node服务外网无法访问
+autoGroup-7: Linux
+---
+
 最近在一台新的Centos 7服务器上部署了Node服务，服务启动成功后，在Mac上访问这个网站，无法访问
 
 解决思路：

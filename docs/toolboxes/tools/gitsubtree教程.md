@@ -1,4 +1,7 @@
-# git subtree教程
+---
+title: git subtree教程
+autoGroup-0: Git
+---
 
 关于子仓库或者说是仓库公用，git官方推荐的工具是git  subtree。我自己也用了一段时间的git subtree，感觉比git submodule好用，到那时也有一些缺点，在可接受的范围内。
 所以对于仓库的公用，在git subtree与git submodule之中选择的话，我推荐git subtree。

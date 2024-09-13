@@ -1,4 +1,7 @@
-# Mac下配置多个Git账户
+---
+title: Mac下配置多个Git账户
+auto
+---
 
 ## 应用场景
  

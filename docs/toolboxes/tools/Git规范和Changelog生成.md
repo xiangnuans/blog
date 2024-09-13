@@ -1,4 +1,7 @@
-# Git规范和Changelog生成
+---
+title: Git规范和Changelog生成
+autoGroup-0: Git
+---
 
 良好的Git commit规范优势：
 
