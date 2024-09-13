@@ -1,5 +1,6 @@
 ---
 title: Parcel 初探：零配置的打包体验
+autoGroup-5: Parcel
 ---
 
 ### 1. 引言

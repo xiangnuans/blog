@@ -1,5 +1,6 @@
 ---
 title: 初探 Rollup：模块化时代的打包神器
+autoGroup-3: Rollup
 ---
 
 ### 1. 引言

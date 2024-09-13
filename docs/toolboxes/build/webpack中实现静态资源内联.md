@@ -1,3 +1,8 @@
+---
+title: webpack中实现静态资源内联
+autoGroup-1: webpack
+---
+
 # Webpack中实现静态资源内联
 
 ## 什么是静态资源内联（inline source）

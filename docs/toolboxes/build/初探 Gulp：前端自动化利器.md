@@ -1,5 +1,6 @@
 ---
 title: 初探 Gulp：前端自动化利器
+autoGroup-4: Gulp
 ---
 
 ### 1. 引言

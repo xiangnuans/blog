@@ -1,6 +1,7 @@
 ---
 title: 初探 Vite：Web 开发的全新构建工具
 date: 2024-04-08
+autoGroup-2: Vite
 ---
 
 
