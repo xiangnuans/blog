@@ -1,4 +1,6 @@
-# Gitbook使用
+---
+title: Gitbook使用
+---
 
 ## 概述
 GitBook是使用Github/Git和Markdown构建漂亮书籍的命令行工具。

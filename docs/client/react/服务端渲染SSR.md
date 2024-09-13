@@ -1,5 +1,6 @@
 ---
 title: 服务端渲染SSR（React）
+autoGroup-1: SSR
 ---
 
 ## 服务端渲染SSR（React）

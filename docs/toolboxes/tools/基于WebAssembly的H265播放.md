@@ -1,4 +1,7 @@
-# 基于WebAssembly的H265播放
+---
+title: 基于WebAssembly的H265播放
+autoGroup-2: WebAssembly
+---
 
 
 ## 为什么视频编码很重要

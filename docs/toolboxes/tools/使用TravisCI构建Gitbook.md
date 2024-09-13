@@ -1,4 +1,7 @@
-# 使用TravisCI构建Gitbook
+---
+title: 使用TravisCI构建Gitbook
+autoGroup-1: travisCI
+---
 
 ## 为什么要使用Travis CI构建Gitbook？
 

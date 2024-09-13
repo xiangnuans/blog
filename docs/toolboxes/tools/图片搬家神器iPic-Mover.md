@@ -1,4 +1,7 @@
-# 图片搬家神奇：iPic Mover
+---
+title: 图片搬家神奇：iPic Mover
+autoGroup-3: 存储
+---
 
 ## 图片搬家神奇：iPic Mover
 

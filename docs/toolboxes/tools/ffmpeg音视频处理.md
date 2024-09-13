@@ -1,27 +1,30 @@
-# ffmpeg音视频处理
+---
+title: ffmpeg音视频处理
+autoGroup-6: ffmpeg
+---
 
 ## 去除音视频中的视频
 
-```
+```shell
 ffmpeg -i ./1573535886182365.mp4 -map 0:0 -vcodec copy out.mp4
 ```
 
 ## 去除音视频中的音频
 
-```
+```shell
 ffmpeg -i 1573535886182365.mp4 -vcodec copy -an 2.mp4
 ```
 ## 视频拼接
 
 mpg拼接（问题：拼接成功但只显示第一个）
-```
+```shell
 ffmpeg -i "concat:video1.mpg|video2.mpg" -c copy output.mpg
 ```
 
 拼接视频不一致的格式时，需要转码
 
 例子：
-```
+```shell
 ffmpeg -i out11.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts
 
 ffmpeg -i 2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate2.ts
@@ -31,30 +34,30 @@ ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoas
 
 # 截取音频
 
-```
+```shell
 ffmpeg -i out.mp4 -ss 00:10 -t 00:40 -acodec copy out1.mp4
 ```
 
 ## 将图片转换成视频
 1. 生成.mpg
-```
+```shell
 ffmpeg -i image%3d.jpeg output.mpg
 ```
 或
-```
+```shell
 ffmpeg -f image2 -i image00%d.jpeg video.mpg
 ```
 2. 生成.mp4
 
 简单的生成
-```
+```shell
 ffmpeg -i image%3d.jpeg -pix_fmt yuv420p a.mp4
 ```
 -pix_fmt yuv420p
 
 
 设定参数
-```
+```shell
 ffmpeg -r 25 -loop 1 -i image%3d.jpeg -pix_fmt yuv420p -vcodec libx264 -b:v 600k -r:v 25 -preset medium -crf 30 -s 720x576 -vframes 250 -r 25 -t 3 a.mp4
 ```
 
@@ -62,7 +65,7 @@ ffmpeg -r 25 -loop 1 -i image%3d.jpeg -pix_fmt yuv420p -vcodec libx264 -b:v 600k
 
 1. 带音频合成：
 
-```
+```shell
 ffmpeg -threads 2 -y -r 1 -i image%3d.jpeg  -i audio.wav -pix_fmt yuv420p image.mp4
 ```
 
@@ -72,29 +75,29 @@ ffmpeg -threads 2 -y -r 1 -i image%3d.jpeg  -i audio.wav -pix_fmt yuv420p image.
 - -absf aac_adtstoasc：编码音频格式，使之能在一些设备上能播放
 1. 不带音频合成
 
-```
+```shell
 ffmpeg -loop 1 -f image2 -i image%3d.jpeg -pix_fmt yuv420p -vcodec libx264 -r 10 -t 10 output.mp4
 ```
 
 
 ## 将一张图片做成视频封面
-```
+```shell
 ffmpeg -i 2.mp4 -i image1.png -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic output_video.mp4
 ```
 ## 在特定的时间显示图片
 
 在0～5秒内显示图片,图片的x坐标为60，否则为-500(移出屏幕)，y坐标一直为50不变
-```
+```shell
 ffmpeg -y -i 1573535886182365.mp4 -i t016e3f183704154203.jpg -filter_complex "overlay=x='if(between(t,0,5),0,-5000)':y=0" -f mp4 left3.mp4
 ```
 ## 音频提前或延迟N秒
-```
+```shell
 ffmpeg -i 1573535886182365.mp4 -filter_complex "adelay=3000|3000" revideo.mp4
 ```
 
 ## 合并音频视频或替换音频流
 如果输入的视频已经包含音频，并且想要替换它，需要告诉ffmpeg采取哪个音频流：
-```
+```shell
 ffmpeg -i output1.mp4 -i out.mp4  \-c:v copy -c:a aac -strict experimental \-map 0:v:0 -map  1:a:0 output2.mp4
 ```
 
@@ -103,14 +106,14 @@ ffmpeg -i output1.mp4 -i out.mp4  \-c:v copy -c:a aac -strict experimental \-map
 
 上述命令转码音频，因为MP4不能携带PCM音频流。如果需要，可以使用任何其他所需的音频编解码器
 
-```
+```shell
 ffmpeg -i out.mp4 -i 2.mp4 \-c:v copy -c:a aac -strict experimental output.mp4
 ```
 
 ## 实例
 1. 视频去除音频
 
-```
+```shell
 ffmpeg -i v4.mp4 -vcodec copy -an dv2.mp4
 
 ffmpeg -i v3.mp4 -vcodec copy -an dv1.mp4
@@ -121,7 +124,7 @@ ffmpeg -i v3.mp4 -vcodec copy -an dv1.mp4
 
 1. 拼接视频
 
-```
+```shell
 ffmpeg -i dv1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts
 
 
@@ -135,19 +138,19 @@ ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c:a copy -bsf:a aac_adtsto
 
 3. 插入封面图片
 
-```
+```shell
 ffmpeg -i dv12.mp4 -i image1.png -map 0 -map 1 -c copy -c:v:1 png -disposition:v:1 attached_pic idv12.mp4
 ```
 
 4. 合成音频
 
-```
+```shell
 ffmpeg -i idv12.mp4  -i audio.wav \-c:v copy -c:a aac -strict experimental chen.mp4
 ```
 
 ## 管道pipe
 
-```
+```shell
 ffmpeg -f image2 -loop 1 -i img.jpg \
        -f s16le -ac 1 -ar 16k -i wd.pcm -t 6 \
        -f nut pipe: | \

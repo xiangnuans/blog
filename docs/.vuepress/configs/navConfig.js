@@ -24,7 +24,7 @@ module.exports = [
             { text: "react", link: '/client/react/' },
             { text: '浏览器', link: '/client/browser/' },
             { text: "typescript", link: '/client/typescript/' },
-            { text: "style", link: '/client/style/' },
+            { text: "样式", link: '/client/style/' },
             { text: "react native", link: "/client/reactNative/" },
 
         ],
@@ -44,28 +44,10 @@ module.exports = [
         text: '工具箱',
         items: [
             {
-                text: 'webpack',
-                link: '/toolboxes/buildTools/webpack/'
-            },
-            {
-                text: 'vite',
-                link: '/toolboxes/buildTools/vite/'
-            },
-            {
-                text: 'rollup',
-                link: '/toolboxes/buildTools/rollup/'
-            },
-            {
-                text: 'parcel',
-                link: '/toolboxes/buildTools/parcel/'
-            },
-            {
-                text: 'gulp',
-                link: '/toolboxes/buildTools/gulp/'
+                text: '编译打包',
+                link: '/toolboxes/build/'
             },
             { text: '工具', link: "/toolboxes/tools/" },
-            { text: 'git', link: '/toolboxes/git/' },
-            { text: "linux", link: '/toolboxes/linux/' },
             { text: "设计模式", link: '/toolboxes/design/' },
             { text: '知识网络', link: '/toolboxes/graph/' },
         ]

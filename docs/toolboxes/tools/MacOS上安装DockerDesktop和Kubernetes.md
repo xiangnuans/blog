@@ -1,4 +1,7 @@
-# MacOS上安装Docker Desktop和Kubernetes
+---
+title: MacOS上安装Docker Desktop和Kubernetes
+autoGroup-5: 安装
+---
 
 
 相关链接：

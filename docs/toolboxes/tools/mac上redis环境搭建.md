@@ -1,4 +1,7 @@
-# mac上redis环境搭建
+---
+title: mac上redis环境搭建
+autoGroup-5: 安装
+---
 
 ## 下载
 

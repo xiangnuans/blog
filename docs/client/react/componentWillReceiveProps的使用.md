@@ -1,5 +1,6 @@
 ---
 title: componentWillReceiveProps的使用
+# autoGroup-0: react 
 ---
 
 ## componentWillReceiveProps的使用

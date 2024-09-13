@@ -1,4 +1,6 @@
-# Nginx基础
+---
+title: Nginx基础
+---
 
 nginx是一款自由的、开源的、高性能的HTTP服务器和反响代理服务器；同时也是一个IMAP、POP3、SMT代理服务器。
 

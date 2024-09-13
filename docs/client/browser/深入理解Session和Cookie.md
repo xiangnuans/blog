@@ -1,4 +1,7 @@
-# 深入理解Session和Cookie
+---
+title: 深入理解Session和Cookie
+autoGroup-3: 缓存
+---
 
 最近在写Web服务，顺便梳理了一下Cookie和Session的知识
 

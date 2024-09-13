@@ -1,3 +1,8 @@
+---
+title: 常见HTTP请求头，响应头，实体
+autoGroup-1: HTTP协议
+---
+
 # 常见HTTP请求头，响应头，实体
 
 ## 一、常用的http请求头

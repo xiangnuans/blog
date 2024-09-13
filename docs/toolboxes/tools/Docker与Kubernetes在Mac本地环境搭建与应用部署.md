@@ -1,11 +1,14 @@
-# Docker与Kubernetes在Mac本地环境搭建与应用部署
+---
+title: Docker与Kubernetes在Mac本地环境搭建与应用部署
+autoGroup-4: K8s/docker
+---
 
 [Docker官网](https://docs.docker.com/ee/)
 
 ## Homebrew安装
 macOS我们可以使用Homebrew来安装docker
 Homebrew 的 Cask 已经支持 Docker for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：
-```
+```shell
 # 安装命令
 brew cask install docker
 
@@ -25,7 +28,7 @@ brew cask install docker
 
 安装完毕后，如果页勾选了Show system containers选项，那么使用如下的Docker命令，能看到自动安装的kubernetes相关容器：
 
-```
+```shell
 ➜  ~ docker container ls --format "table{{.Names}}\t{{.Image }}\t{{.Command}}"
 NAMES                                                                                                                   IMAGE                                                    COMMAND
 k8s_compose_compose-75f8bb4779-stxv9_docker_3c963862-f9f4-11e7-93cc-025000000001_0                                      docker/kube-compose-controller                           "/compose-controller…"
@@ -47,13 +50,13 @@ k8s_POD_etcd-docker-for-desktop_kube-system_56a21c0a5f545c0cca5388c457bb1b3b_0
 ```
 
 关于各个容器的作用，可以残月[这里](https://github.com/kubernetes/kubernetes/tree/master/build)。在安装过程中，Docker页为我们安装了kubectl控制命令：
-```
+```shell
 $ kubectl get namespaces
 $ kubectl get posts --namespace kube-system
 ```
 
 接下来我们可以使用kubectl命令来创建简单的kubernets-dashboard服务：
-```
+```shell
 ➜  ~ kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml
 secret "kubernetes-dashboard-certs" created
 serviceaccount "kubernetes-dashboard" created
@@ -64,7 +67,7 @@ service "kubernetes-dashboard" created
 ```
 
 服务安装完毕后可以查看部署的容器和服务：
-```
+```shell
 ➜  ~ kubectl get deployments --namespace kube-system
 NAME                   DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 kube-dns               1         1         1            1           22m
@@ -77,7 +80,7 @@ kubernetes-dashboard   ClusterIP   10.111.242.95   <none>        443/TCP        
 
 在Dashboard启动完毕后，可以使用kubectl提供的Proxy服务来访问该面板：
 
-```
+```shell
 $ kubectl proxy
 
 # 打开如下地址：
@@ -86,7 +89,7 @@ $ kubectl proxy
 
 如果访问出错，可以尝试kubernetes-dashboard服务，或者查阅[这里](https://github.com/kubernetes/dashboard/wiki/Accessing-Dashboard---1.7.X-and-above)
 
-```
+```shell
 $ kubectl -n kube-system edit service kubernetes-dashboard
 
 # Please edit the object below. Lines beginning with a '#' will be ignored,
@@ -123,7 +126,7 @@ status:
 
 Docker同样为我们提供了简单的应用示范，可以直接使用如下的Docker Compose配置文件：
 
-```
+```json
 version: '3.3'
 
 services:
@@ -154,7 +157,7 @@ services:
 ```
 然后使用stack命令创建应用栈：
 
-```
+```shell
 $ docker stack deploy --compose-file stack.yml demo
 
 Stack demo was created
@@ -164,7 +167,7 @@ Waiting for the stack to be stable and running...
 
 应用栈创建完毕后，可以使kubectl查看创建的Pods:
 
-```
+```shell
 $ kubectl get pods
 
 NAME                     READY     STATUS    RESTARTS   AGE
@@ -178,7 +181,7 @@ words-54bf6c5d57-w2q82   1/1       Running   0          2m
 ```
 也可以来查看部署的集群与服务：
 
-```
+```shell
 $ kubectl get deployments
 NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 db        1         1         1            1           3m
@@ -195,7 +198,7 @@ words        ClusterIP      None           <none>        55555/TCP      3m
 
 可以看到这里的web有所谓的LoadBalancer类型，机可以对外提供服务。最后我们可以用stack与kubectl名利ing来删除应用：
 
-```
+```shell
 $ docker stack remove demo
 $ kubectl delete deployment kubernetes-dashboard --namespace kube-system
 ```

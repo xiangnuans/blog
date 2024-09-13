@@ -1,4 +1,8 @@
-# Mac下安装nginx
+---
+title: Mac下安装nginx
+autoGroup-5: 安装
+---
+
 
 ## 必备工具
 homebrew[https://brew.sh/index_zh-cn.html](https://brew.sh/index_zh-cn.html)（安装方法自行搜索）

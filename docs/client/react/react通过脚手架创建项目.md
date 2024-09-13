@@ -1,6 +1,6 @@
 ---
 title: react通过脚手架创建项目
-autoGroup-1: 其他
+autoGroup-99: 其他
 ---
 
 ## react通过脚手架创建项目

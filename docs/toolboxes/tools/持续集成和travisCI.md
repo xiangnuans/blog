@@ -1,4 +1,8 @@
-# 持续集成和travisCI
+---
+title: 持续集成和travisCI
+autoGroup-1: travisCI
+---
+
 
 ## 持续集成的作用
 

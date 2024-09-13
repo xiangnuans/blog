@@ -1,3 +1,9 @@
+---
+title: 三大图标库：ECharts、BizCharts、G2，该如何选择
+autoGroup-4: 图表
+---
+
+
 # 三大图标库：ECharts、BizCharts、G2，该如何选择？
 
 阿里开源的BizCharts图标哭库基于React技术栈，各个图表项皆采用了组件的形式，贴近React的使用特点。同时BizCharts基于G2进行封装，BizCharts也继承了G2相关特性。公司目前同意使用的是ECharts图表库， 下文对3种图标库进行分析对比
