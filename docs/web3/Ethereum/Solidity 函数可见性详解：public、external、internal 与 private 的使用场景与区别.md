@@ -1,6 +1,7 @@
 ---
 title: Solidity 函数可见性详解：public、external、internal 与 private 的使用场景与区别
 date: 2024-9-14
+autoGroup-1: solidity
 ---
 
 在 Solidity 中，函数的可见性（visibility）决定了函数在合约内部或外部的可访问性。Solidity 提供了四种不同的可见性修饰符，它们分别是：
