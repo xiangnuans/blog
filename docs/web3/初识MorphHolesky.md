@@ -1,8 +1,6 @@
 ---
-title: "初识Morph Holesky"
-description: ""
+title: 初识Morph Holesky
 date: "2024-06-24"
-repository: 
 ---
 
 # 初识Morph Holesky

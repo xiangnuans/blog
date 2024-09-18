@@ -1,11 +1,8 @@
 ---
-title: 快速导航
+title: 以太坊官网学习
 date: 2024-09-08
 ---
 
-- [solidity](./solidity/readme.md)
-- [hardhat](./hardhat/readme.md)
-- [ethers.js](./ethers/readme.md)
+# 官网文档学习梳理
 
-# 总结梳理
-![网络图谱](/以太坊.png)
+![图谱](/以太坊.png)
