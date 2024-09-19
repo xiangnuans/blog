@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[204],{623:function(t,n,o){"use strict";o.r(n);var s=o(2),e=Object(s.a)({},(function(){var t=this._self._c;return t("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[t("ul",[t("li",[t("RouterLink",{attrs:{to:"/web3/Ton/solidity/"}},[this._v("Ton钱包")])],1)])])}),[],!1,null,null,null);n.default=e.exports}}]);
