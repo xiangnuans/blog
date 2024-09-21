@@ -13,6 +13,7 @@ module.exports = [
         text: 'Web3',
         items: [
             { text: '入门', link: '/web3/' },
+            { text: '比特币', link: '/web3/Binance/' },
             { text: 'Ethereum', link: '/web3/Ethereum/' },
             { text: 'Ton', link: '/web3/Ton/' },
             { text: 'Solona', link: '/web3/Solona/' },
