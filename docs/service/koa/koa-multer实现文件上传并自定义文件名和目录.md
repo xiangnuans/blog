@@ -1,4 +1,6 @@
-# koa-multer实现文件上传并自定义文件名和目录
+---
+title:  koa-multer实现文件上传并自定义文件名和目录
+---
 
 之前使用express的时候，使用multer进行文件上传，而`koa-multer`是`koa-modules`提供的文件上传中间件
 
