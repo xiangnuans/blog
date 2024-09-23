@@ -1,5 +1,6 @@
 ---
 title: 技术设计方案：基于 UEditor Plus 的 React 组件封装（第一版）
+autoGroup-6: 组件
 ---
 
 ### 技术设计方案：基于 UEditor Plus 的 React 组件封装（第一版）
