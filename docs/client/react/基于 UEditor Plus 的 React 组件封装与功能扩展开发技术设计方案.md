@@ -127,3 +127,8 @@ autoGroup-6: 组件
 1. 根据版本规划，开始第一版 React 组件封装的开发。
 2. 在第二版开始前，与领导确认上传功能的后端实现方式，以决定对接中台或自行开发。
 3. 按计划逐步实现高级插件和扩展功能，确保每个版本的组件具备良好的扩展性和兼容性。
+
+
+### 资料：
+https://open-doc.modstart.com/ueditor-plus/
+https://latex.emoryhuang.cn/guide/
