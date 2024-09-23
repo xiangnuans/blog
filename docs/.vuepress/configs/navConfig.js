@@ -37,7 +37,8 @@ module.exports = [
             { text: 'koa', link: '/service/koa/' },
             { text: "mysql", link: '/service/mysql/' },
             { text: "ORM", link: '/service/orm/' },
-            { text: "实践笔记", link: '/service/node/' }
+            { text: "实践笔记", link: '/service/node/' },
+            { text: "", link: "/service/medusaJS" }
         ]
     },
     {
