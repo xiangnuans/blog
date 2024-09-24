@@ -42,6 +42,14 @@ module.exports = [
         ]
     },
     {
+        text: '产品设计与运营',
+        items: [
+            { text: '产品', link: '/product/product/' },
+            { text: '设计', link: '/product/design/' },
+            { text: '运营', link: '/product/operation/' },
+        ]
+    },
+    {
         text: '工具箱',
         items: [
             {
