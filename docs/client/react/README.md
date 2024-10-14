@@ -2,10 +2,8 @@
 title: React有哪些优化性能的手段？
 ---
 
-谈到React性能优化，给大家推荐两个工具：
 
 **React DevTools**
-
 React DevTools 提供了一套强大的工具，可用于分析组件层次结构、性能和状态。它能够帮助你定位性能问题，了解组件的渲染过程。
 
 **React Profiler**
