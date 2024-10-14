@@ -22,7 +22,7 @@ module.exports = [
     {
         text: '客户端',
         items: [
-            { text: "game", link: '/client/game' },
+            { text: "game", link: '/client/game/' },
             { text: "react", link: '/client/react/' },
             { text: '浏览器', link: '/client/browser/' },
             { text: "typescript", link: '/client/typescript/' },
