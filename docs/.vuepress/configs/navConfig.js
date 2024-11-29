@@ -17,6 +17,7 @@ module.exports = [
             { text: 'Ethereum', link: '/web3/Ethereum/' },
             { text: 'Ton', link: '/web3/Ton/' },
             { text: 'Solona', link: '/web3/Solona/' },
+            { text: 'Telegram', link: '/web3/telegram/' },
         ]
     },
     {
