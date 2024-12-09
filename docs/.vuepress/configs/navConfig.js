@@ -37,6 +37,7 @@ module.exports = [
         text: '服务端',
         items: [
             { text: 'nest', link: '/service/nest/' },
+            { text: '实践', link: '/service/practice/' },
             { text: 'egg', link: '/service/egg/' },
             { text: 'koa', link: '/service/koa/' },
             { text: "mysql", link: '/service/mysql/' },
