@@ -25,6 +25,7 @@ module.exports = [
         items: [
             { text: "game", link: '/client/game/' },
             { text: "react", link: '/client/react/' },
+            { text: "three.js", link: '/client/three/' },
             { text: '插件', link: '/client/extension/' },
             { text: '浏览器', link: '/client/browser/' },
             { text: "typescript", link: '/client/typescript/' },

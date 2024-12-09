@@ -1,5 +1,5 @@
 ---
-title: DeFi：去中心化金融的崛起与未来趋势
+title: 基于Telegram Mini App的图文海报生成与社交分享功能实现方案
 date: 2024-11-29
 ---
 
