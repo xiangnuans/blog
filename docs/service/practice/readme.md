@@ -152,7 +152,7 @@ setInterval(async () => {
 
 ## 方案选择建议
 
-	•	实时性要求高: 使用 WebSocket。
-	•	轻量实时推送: 使用 SSE。
-	•	离线推送需求: 使用 Web Push。
-	•	实现简单: 使用 HTTP Polling。
+-	实时性要求高: 使用 WebSocket。
+-	轻量实时推送: 使用 SSE。
+-	离线推送需求: 使用 Web Push。
+-	实现简单: 使用 HTTP Polling。
